@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Module implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer mouldeId;                         //模块ID
+    private long mouldeId;                         //模块ID
     private String moduleName;                        //模块名字
     private Integer moduleLevel;                      //模块等级
 

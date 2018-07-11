@@ -10,4 +10,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @description:
  **/
 public interface UserRepository extends JpaRepository<User, Long>,JpaSpecificationExecutor<User> {
+    User findById(long userId);
+
 }

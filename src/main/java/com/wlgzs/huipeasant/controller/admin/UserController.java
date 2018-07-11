@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -23,9 +24,9 @@ public class UserController extends BaseController {
     @RequestMapping("/adminUserList")
     public String list(Model model, @RequestParam(value = "page",defaultValue = "0") int page,
                        @RequestParam(value = "limit",defaultValue = "10") int limit) {
-        String user_name="";
+        String nickName="";
         if(page != 0) page--;
-        Page pages = userService.findUserPage(user_name,page,limit);
+        Page pages = userService.findUserPage(nickName,page,limit);
         model.addAttribute("TotalPages", pages.getTotalPages());//查询的页数
         model.addAttribute("Number", pages.getNumber()+1);//查询的当前第几页
         List<User> users = pages.getContent();
@@ -33,6 +34,40 @@ public class UserController extends BaseController {
         return "admin/adminUserList";
     }
 
-    
+    //搜索用户
+    @RequestMapping("/adminFindUser")
+    public  String findUserName(Model model,String user_name,@RequestParam(value = "page",defaultValue = "0") int page,
+                                @RequestParam(value = "limit",defaultValue = "10") int limit){
+        if(page != 0) page--;
+        Page pages = userService.findUserPage(user_name,page,limit);
+        model.addAttribute("TotalPages", pages.getTotalPages());//查询的页数
+        model.addAttribute("Number", pages.getNumber()+1);//查询的当前第几页
+        List<User> users = pages.getContent();
+        model.addAttribute("users", users);//查询的当前页的集合
+        model.addAttribute("user_name",user_name);
+        return "admin/adminUserList";
+    }
 
+    //增加用户
+    @RequestMapping("/adminAddUser")
+    public String add(User user) {
+        userService.save(user);
+        return "redirect:/AdminUserController/adminUserList";
+    }
+
+    //修改用户
+    @RequestMapping("/adminEditUser")
+    public String edit(Model model,User user) {
+        String mag = userService.edit(user);
+        model.addAttribute("mag",mag);
+        return "redirect:/AdminUserController/adminUserList";
+    }
+
+    //删除用户
+    @RequestMapping("/adminDeleteUser")
+    public String delete(Model model,Long userId, HttpServletRequest request) {
+        String mag = userService.delete(userId, request);
+        model.addAttribute("mag",mag);
+        return "redirect:/AdminUserController/adminUserList";
+    }
 }

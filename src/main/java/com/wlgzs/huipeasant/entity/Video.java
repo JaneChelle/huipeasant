@@ -15,14 +15,15 @@ import java.util.Date;
 public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer videoId;                         //用户ID
+    private long videoId;                         //用户ID
     private String authorSuggests;                   //作者提示
     private String videoIntroduction;                //视频简介
-    private Integer videoHits;                       //视频点击量
+    private int videoHits;                       //视频点击量
     private Date uploadTime;                      //上传时间
     private String videoCover;                    //视频封面
     private String videoAddress;                   //视频地址
-    private Integer  moduleId;                    //模块id
+    private long  moduleId;                    //模块id
     private String   modelName;                    //模块名字
+    private String  modelTitle;                     //视频标题
 
 }

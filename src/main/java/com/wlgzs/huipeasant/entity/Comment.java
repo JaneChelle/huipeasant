@@ -15,9 +15,9 @@ import java.util.Date;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer commentId;                         //评论ID
-    private Integer dataId;                        //资料ID
-    private Integer userId;                        //用户ID
+    private long commentId;                         //评论ID
+    private long dataId;                        //资料ID
+    private long userId;                        //用户ID
     private String userName;                        //用户名
     private String commentContent;                  //评论内容
     private Date   commentDate;                     //评论时间

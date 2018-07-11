@@ -35,46 +35,11 @@ public class PageUtil<T> {
                 for (String s:strings){
                     Predicate _name = null;
                     Path<String> $name = root.get(s);
-                    if(s.equals("order_number") || s.equals("user_name")){
-                        System.out.println("精确查询");
-                        _name = criteriaBuilder.equal($name,searchKeywords);
-                    }else{
-                        _name = criteriaBuilder.like($name, "%" + searchKeywords + "%");
-                    }
+                    _name = criteriaBuilder.like($name, "%" + searchKeywords + "%");
                     predicates.add(_name);
                 }
                 return criteriaBuilder.or(predicates
                         .toArray(new Predicate[] {}));
-            }
-        };
-    }
-
-    /*
-     * @author 阿杰
-     * @param [attribute, userId, strings]
-     * @return org.springframework.data.jpa.domain.Specification<T>
-     * @description
-     */
-    public Specification<T> getPages(String userId, String...strings){
-        return  new Specification<T>() {
-            @Override
-            public Predicate toPredicate(Root<T> root,
-                                         CriteriaQuery<?> query,
-                                         CriteriaBuilder criteriaBuilder) {
-                List<Predicate> predicates = new ArrayList<Predicate>();
-                Path<Long> pathId = root.get(userId);
-                if(searchKeywords!=null&&searchKeywords!="") { //没有查询条件
-                    for (String s : strings) {
-                        Path<String> $name = root.get(s);
-                        Predicate _name = criteriaBuilder.like($name, "%" + searchKeywords + "%");
-                        predicates.add(_name);
-                    }
-                } else {
-                    return criteriaBuilder.equal(pathId,userId);//没有模糊查询
-                }
-                Predicate predicate = criteriaBuilder.or(criteriaBuilder.or(predicates
-                        .toArray(new Predicate[] {})));
-                return criteriaBuilder.and(predicate,criteriaBuilder.equal(pathId,userId));
             }
         };
     }
