@@ -21,5 +21,4 @@ import java.io.Serializable;
         private String headPortrait;                    //头像地址
         private String  nickName;                       // 昵称
         private Integer roleId;                         //角色id
-
     }
