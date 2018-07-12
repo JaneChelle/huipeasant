@@ -20,5 +20,6 @@ import java.io.Serializable;
         private String password;                        //密码
         private String headPortrait;                    //头像地址
         private String  nickName;                       // 昵称
+        private String reservedInf;                     //预留信息
         private long roleId;                         //角色id
     }
