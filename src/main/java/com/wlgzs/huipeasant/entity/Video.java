@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "t_video")
@@ -12,7 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Video {
+public class Video implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long videoId;                         //用户ID
