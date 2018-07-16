@@ -143,7 +143,7 @@ public class UserServiceImpl implements UserService {
         String userId = request.getParameter("userId");
         long id = Long.parseLong(userId);
         String realName = "";
-        String user_avatar = "";
+        String headPortrait = "";
         if (!myFileName.getOriginalFilename().equals("")) {
             String fileName = myFileName.getOriginalFilename();
             String fileNameExtension = fileName.substring(fileName.indexOf("."), fileName.length());
@@ -155,11 +155,11 @@ public class UserServiceImpl implements UserService {
             String realPath = session.getServletContext().getRealPath("/headPortrait");
             File uploadFile = new File(realPath, realName);
             myFileName.transferTo(uploadFile);
-            user_avatar = request.getContextPath() + "/headPortrait/" + realName;
+            headPortrait = request.getContextPath() + "/headPortrait/" + realName;
         } else {
-            user_avatar = request.getContextPath() + "/headPortrait/" + "morende.jpg";
+            headPortrait = request.getContextPath() + "/headPortrait/" + "morende.jpg";
         }
-        System.out.println(user_avatar);
+        System.out.println(headPortrait);
         Map<String, String[]> properties = request.getParameterMap();
         User user = userRepository.findById(id);
         try {
@@ -169,8 +169,8 @@ public class UserServiceImpl implements UserService {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-        user.setHeadPortrait(user_avatar);
-        userRepository.ModifyAvatar(user_avatar,id);
+        user.setHeadPortrait(headPortrait);
+        userRepository.ModifyAvatar(headPortrait,id);
         return user;
     }
 

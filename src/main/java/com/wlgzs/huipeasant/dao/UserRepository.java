@@ -22,10 +22,10 @@ public interface UserRepository extends JpaRepository<User, Long>,JpaSpecificati
     void changePhone(String phoneNumber,long userId);
 
     //修改用户头像路径
-    @Query("UPDATE User u SET u.user_avatar=user_avatar WHERE u.userId=id")
+    @Query("UPDATE User u SET u.headPortrait=headPortrait WHERE u.userId=id")
     @Modifying
     @Transactional
-    void ModifyAvatar(String user_avatar,long id);
+    void ModifyAvatar(String headPortrait,long id);
 
     //修改密码：判断用户输入密码是否正确
     @Query("FROM User u WHERE u.password=?1 and u.userId=?2")

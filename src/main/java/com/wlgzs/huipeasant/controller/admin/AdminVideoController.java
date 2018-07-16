@@ -76,11 +76,9 @@ public class AdminVideoController extends BaseController {
 
     //修改视频
     @RequestMapping("/adminEditProduct")
-    public ModelAndView edit(){
-
-
+    public ModelAndView edit(long videoId,@RequestParam("file") MultipartFile myFileName, HttpSession session,HttpServletRequest request){
+        videoService.edit(videoId,myFileName,session,request);
+        return new ModelAndView("redirect:/adminVideoList");
     }
-
-
 
 }
