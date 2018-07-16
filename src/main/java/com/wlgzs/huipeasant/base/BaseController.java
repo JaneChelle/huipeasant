@@ -2,6 +2,7 @@ package com.wlgzs.huipeasant.base;
 
 import com.wlgzs.huipeasant.service.LogUserService;
 import com.wlgzs.huipeasant.service.UserService;
+import com.wlgzs.huipeasant.service.VideoService;
 
 import javax.annotation.Resource;
 import java.io.Serializable;
@@ -14,7 +15,6 @@ import java.io.Serializable;
 public abstract class BaseController implements Serializable {
     @Resource
     protected LogUserService logUserService;
-
-    @Resource
     protected UserService userService;
+    protected VideoService videoService;
 }
