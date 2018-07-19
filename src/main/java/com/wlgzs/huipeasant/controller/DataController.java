@@ -5,7 +5,6 @@ import com.wlgzs.huipeasant.entity.Data;
 import com.wlgzs.huipeasant.entity.Module;
 import com.wlgzs.huipeasant.util.Result;
 import com.wlgzs.huipeasant.util.ResultCode;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +19,12 @@ import java.util.List;
 @RestController
 public class DataController extends BaseController {
     @RequestMapping("toindex")
-    public ModelAndView toindex(){
-        return new ModelAndView("toindex");
+    public ModelAndView toindex(Model model){
+         model.addAttribute("moudels",dataService.index());
+         model.addAttribute("question",dataService.question());
+         model.addAttribute("information",dataService.information());
+         model.addAttribute("rank",dataService.indexRank());
+        return new ModelAndView("index");
     }
     @RequestMapping("toaddData")
     public ModelAndView toaddData(Model model){

@@ -16,3 +16,5 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/.idea/
+/huipeasant.iml

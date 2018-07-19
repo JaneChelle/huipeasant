@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface MouduleDao extends JpaRepository<Module,Integer> {
+public interface MouduleDao extends JpaRepository<Module,Long> {
      List<Module> findByModuleLevel(int moduleLevel);
 }
