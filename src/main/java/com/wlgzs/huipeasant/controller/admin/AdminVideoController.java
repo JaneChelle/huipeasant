@@ -77,8 +77,7 @@ public class AdminVideoController extends BaseController {
     //修改视频
     @RequestMapping("/adminEditProduct")
     public ModelAndView edit(){
-
-
+        return null;
     }
 
 
