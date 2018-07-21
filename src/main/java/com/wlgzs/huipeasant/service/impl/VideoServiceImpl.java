@@ -38,15 +38,17 @@ public class VideoServiceImpl implements VideoService {
     @Autowired
     private VideoRepository videoRepository;
 
+    //遍历视频(后台)
     @Override
     public Page getVideoListPage(String videoKeyWord, int page, int limit) {
         Sort sort = new Sort(Sort.Direction.DESC, "productId");
         Pageable pageable = new PageRequest(page, limit, sort);
-        Specification<Video> specification = new PageUtil<Video>(videoKeyWord).getPage("modelTitle","videoIntroduction");
+        Specification<Video> specification = new PageUtil<Video>(videoKeyWord).getPage("modelTitle", "videoIntroduction");
         Page<Video> pages = videoRepository.findAll(specification, pageable);
         return pages;
     }
 
+    //上传视频
     @Override
     public void saveVideo(MultipartFile[] myFileNames, HttpSession session, HttpServletRequest request) {
         String realName = "";
@@ -67,11 +69,6 @@ public class VideoServiceImpl implements VideoService {
                 String fileNameExtension = fileName.substring(fileName.indexOf("."), fileName.length());
                 // 生成实际存储的真实文件名
                 realName = UUID.randomUUID().toString() + fileNameExtension;
-                if(checkImage.verifyImage(fileName)){
-                    video.setVideoCover(realName);
-                }else if(checkImage.isVedioFile(fileName)){
-                    video.setVideoAddress(realName);
-                }
                 // "/upload"是你自己定义的上传目录
                 String realPath = session.getServletContext().getRealPath("/upload");
                 File uploadFile = new File(realPath, realName);
@@ -79,6 +76,11 @@ public class VideoServiceImpl implements VideoService {
                     myFileNames[i].transferTo(uploadFile);
                 } catch (IOException e) {
                     e.printStackTrace();
+                }
+                if(checkImage.verifyImage(fileName)){
+                    video.setVideoCover(realPath+"/"+realName);
+                }else if(checkImage.isVedioFile(realPath+"/"+realName)){
+                    video.setVideoAddress(realPath);
                 }
             }
         }
@@ -94,10 +96,11 @@ public class VideoServiceImpl implements VideoService {
         videoRepository.save(video);
     }
 
+    //删除视频
     @Override
     public void delete(long videoId, HttpServletRequest request) {
         Video video = videoRepository.findById(videoId);
-        if(video != null){
+        if (video != null) {
             String path = request.getSession().getServletContext().getRealPath("/");
             String image = video.getVideoCover();
             String video1 = video.getVideoAddress();
@@ -115,16 +118,47 @@ public class VideoServiceImpl implements VideoService {
 
     //修改视频
     @Override
-    public void edit(long videoId, MultipartFile[] myFileNames, HttpSession session, HttpServletRequest request) {
-
-
-
+    public void edit(long videoId, MultipartFile myFileName, HttpSession session, HttpServletRequest request) {
+        Video video = videoRepository.findById(videoId);
+        Map<String, String[]> properties = request.getParameterMap();
+        try {
+            BeanUtils.populate(video, properties);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        CheckImage checkImage = new CheckImage();
+        String realName = "";
+        if (video != null) {
+            if (!myFileName.getOriginalFilename().equals("")) {
+                String fileName = myFileName.getOriginalFilename();
+                String fileNameExtension = fileName.substring(fileName.indexOf("."), fileName.length());
+                // 生成实际存储的真实文件名
+                realName = UUID.randomUUID().toString() + fileNameExtension;
+                // "/upload"是你自己定义的上传目录
+                String realPath = session.getServletContext().getRealPath("/upload");
+                File uploadFile = new File(realPath, realName);
+                try {
+                    myFileName.transferTo(uploadFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                video.setVideoCover(realPath+"/"+realName);
+            }
+            videoRepository.save(video);
+        }
     }
 
-//    @Override
-//    public List<Video> videoList() {
-//        List<Video> videos = videoRepository.findAllVideo();
-//        videos = videos.subList(videos.size()-8,videos.size());
-//        return videos;
-//    }
+    //遍历视频(前台)
+    @Override
+    public List<Video> videoList() {
+        return videoRepository.findAllVideo();
+    }
+
+    //视频详情页
+    @Override
+    public Video detailsVideo(long videoId) {
+        return videoRepository.findById(videoId);
+    }
 }

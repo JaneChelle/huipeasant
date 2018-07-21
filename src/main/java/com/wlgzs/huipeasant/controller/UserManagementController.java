@@ -126,5 +126,4 @@ public class UserManagementController extends BaseController {
         model.addAttribute("mgs", "修改成功");
         return new ModelAndView("login");
     }
-
 }

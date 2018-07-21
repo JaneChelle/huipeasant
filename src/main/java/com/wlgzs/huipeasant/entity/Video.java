@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "t_video")
@@ -13,7 +14,9 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Video{
+
+public class Video implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long videoId;                         //视频ID

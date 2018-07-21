@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "t_comment")
@@ -12,7 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comment {
+public class Comment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long commentId;                         //评论ID

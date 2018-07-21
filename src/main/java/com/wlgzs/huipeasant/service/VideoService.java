@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -14,8 +15,6 @@ import java.util.List;
  * @description:
  **/
 public interface VideoService {
-    //遍历视频(前台)
-//    List<Video> videoList();
 
     //遍历视频(后台)
     Page getVideoListPage(String videoKeyWord, int page, int limit);
@@ -27,6 +26,14 @@ public interface VideoService {
     void delete(long videoId,HttpServletRequest request);
 
     //修改视频
-    void edit(long videoId, MultipartFile[] myFileNames, HttpSession session,HttpServletRequest request);
+    void edit(long videoId, MultipartFile myFileName, HttpSession session,HttpServletRequest request);
+
+    //遍历视频(前台)
+    List<Video> videoList();
+
+    //视频详情页
+    Video detailsVideo(long videoId);
+
+    //添加视频
 
 }

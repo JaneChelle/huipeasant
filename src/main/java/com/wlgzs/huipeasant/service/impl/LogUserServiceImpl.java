@@ -2,6 +2,7 @@ package com.wlgzs.huipeasant.service.impl;
 
 import com.wlgzs.huipeasant.dao.LogUserRepository;
 import com.wlgzs.huipeasant.entity.User;
+
 import com.wlgzs.huipeasant.service.LogUserService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Map;
  * @description:
  **/
 @Service
-public class LogUserServiceImpl implements LogUserService{
+public class LogUserServiceImpl implements LogUserService {
 
     @Autowired
     private LogUserRepository logUserRepository;

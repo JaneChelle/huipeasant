@@ -1,0 +1,166 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+li{ list-style-type: none;}
+a{
+	text-decoration: none;
+	color: #000;
+}
+input,button{
+	outline: none;
+	border: none;
+}
+body{
+	background-color: aliceblue;
+}
+/*顶部导航栏*/
+.head{
+	background-color: mintcream;
+	min-width: 1200px;
+}
+.header{
+	height: 60px;
+	line-height: 60px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.header-left{
+	height: 60px;
+	width: 200px;
+	float: left;
+	margin-right: 12px;
+}
+.header-left a{
+	position: absolute;
+	height: 60px;
+	font-weight: 600;
+	font-size: 18px;
+}
+.header-left a:hover,.header-right a:hover{
+	text-decoration: none;
+}
+.header-left a img{
+	width: 120px;
+	height: 60px;
+}
+.header-left b{
+    font-size: 28px;
+    color: #A5CD38;
+    font-family: "宋体";
+    vertical-align: 20px;
+}
+.header-right{
+	float: right;
+}
+.header-right a{
+	display: inline-block;
+	margin: 0 18px;
+	transition: all 0.5s;
+	letter-spacing: 3px;
+	border-bottom: transparent 1px solid;
+}
+.header-right a i{
+	font-size: 16px;
+	margin-right: 8px;
+}
+.header-right a:hover{
+	color: #73A204;
+	border-bottom: #73A204 1px solid;
+}
+#qr-code{
+	margin-right: 32px;
+	cursor: pointer;
+}
+.search{
+	float: right;
+	position: relative;
+	right: 52px;
+}
+.search form { 
+	position: relative; 
+	top: 8px;
+}
+.search form input{
+	width: 0; 
+	height: 42px;
+	padding: 0 42px 0 15px; 
+	border-bottom: 2px solid transparent; 
+	background: transparent; 
+	transition: .3s linear; 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	z-index: 2;
+	padding-left: 13px;
+	letter-spacing: 2px;
+}
+.search form input:focus { 
+	width: 300px; 
+	z-index: 1; 
+	border-bottom: 2px solid #ff6600; 
+} 
+							
+.search button { 
+	width: 42px;
+	height: 42px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0; 
+	right: 0; 
+	background-color: #ff6600;
+	cursor: pointer;
+} 
+.search button:before { 
+	content: "搜索"; 
+	font-size: 16px; 
+	color: #fff; 
+} 
+/*二维码*/
+.qr-code{
+	width: 130px;
+	height: 135px;
+	padding: 12px;
+	position: absolute;
+	right: 12px;
+	top: 48px;
+	z-index: 99;
+	background-color: white;
+	display: none;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px grey;
+}
+.qr-code img{
+	width: 100%;
+	height: 130px;
+}
+/*尾部*/
+footer{
+    width:100%;
+    min-width: 1200px;
+    background-color: #15AB9F;
+}
+.divFt{
+    width: 1200px;
+    margin: 0 auto;
+    /*padding: 0 10px ;*/
+
+}
+dl{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 20px;
+    color: #fff;
+}
+dt{
+    padding: 6px 0;
+}
+.divFt dt img{
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+}
