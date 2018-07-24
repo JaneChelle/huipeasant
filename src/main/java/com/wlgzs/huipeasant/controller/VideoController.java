@@ -43,10 +43,4 @@ public class VideoController extends BaseController {
         model.addAttribute("videoList",videoList);
         return new ModelAndView("allVideoList");
     }
-
-//    //添加收藏
-//    @RequestMapping("addCollection")
-//    public ModelAndView addCollection(long videoId,Model model,HttpServletRequest request){
-//
-//    }
 }

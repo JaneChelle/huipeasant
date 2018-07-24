@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author:胡亚星
- * @createTime 2018-07-11 10:21
+ * @createTime 2018-07-24 9:27
  * @description:
  **/
 public interface LogUserService {

@@ -26,6 +26,6 @@ public class Video{
     private String videoAddress;                   //视频地址
     private long moduleId;                    //模块id
     private String modelName;                    //模块名字
-    private String modelTitle;                     //视频标题
+    private String videoTitle;                     //视频标题
 
 }

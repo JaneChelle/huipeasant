@@ -2,7 +2,6 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.User;
-import com.wlgzs.huipeasant.service.LogUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
