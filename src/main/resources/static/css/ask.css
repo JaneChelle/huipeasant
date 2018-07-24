@@ -1,0 +1,129 @@
+.border
+{
+	position: relative;
+	width: 1200px;
+	border: 1px solid #C0C0C0;
+	margin: 20px auto;
+	padding: 20px 0;
+	overflow: hidden;
+}
+.ask-left{
+	width: 750px;
+	float: left;
+}
+
+h3{
+	margin: 0 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.ask-left a{
+	display: inline-block;
+	width: 100%;
+	height: 25px;
+}
+.ask-time{
+	padding: 20px;
+	font-size: 14px;
+	border-bottom: 1px dashed #C0C0C0;
+}
+.ask-import{
+	padding: 20px;
+	font-size: 14px;
+}
+.ask-title{
+	text-indent: 2em;
+	min-height: 175px;
+}
+.ask-import img{
+	height: 450px;
+	height: 600px;
+	margin: 20px 0;
+}
+.ask-right{
+	width: 420px;
+	float: right;
+	height: 20px;
+	background-color: red;
+}
+img.time
+{
+	display: inline-block;
+	position:absolute;
+	top:-15px;
+	height:18px;
+}
+img.time:hover
+{ 
+	cursor: pointer;
+}
+p.time
+{
+	position: absolute;
+	left: 35px;
+	top: -17px;
+}
+p.problem
+{
+	position: absolute;
+	top: 130px;
+}
+div.picture
+{
+	position: relative;
+	top: 250px;
+}
+div.look
+{
+	border-bottom: 2px solid #F8F8F8;
+	height: 35px;
+	width: 160px;
+	position: absolute;
+	bottom: 965px;
+	left: 630px;
+	padding-left: 30px;
+}
+em
+{
+	color: #FF0000;
+	font-style: normal;
+}
+a.username
+{
+	position: absolute;
+    bottom: 930px;
+    left: 685px;
+}
+div.user
+{
+	border-top: 1px dashed #DDDDDD;
+	position:relative;
+	bottom: 705px;
+	right: -630px;
+	width: 155px;
+	padding-top: 20px;
+	padding-left: 35px;
+}
+table
+{
+	border-collapse:collapse;
+	position: relative;
+	bottom: 710px;
+	right:-640px;
+	width: 180px;
+}
+div.flower
+{
+	display: inline-block;
+	position: relative;
+	bottom: 620px;
+	left: 650px;
+}
+div.mark
+{
+	display: inline-block;
+	position: relative;
+	bottom: 590px;
+	left: 550px;
+}
