@@ -8,6 +8,8 @@ import com.wlgzs.huipeasant.service.CollectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author:胡亚星
  * @createTime 2018-07-18 17:22
@@ -36,6 +38,13 @@ public class CollectionServiceImpl implements CollectionService {
     @Override
     public void deleteCollection(long collectionId) {
         collectionRepository.deleteById(collectionId);
+    }
+
+    //查找收藏
+    @Override
+    public List<Collection> toCollection(long userId) {
+        List<Collection> collections = collectionRepository.findCollectionByUserId(userId);
+        return collections;
     }
 
 }

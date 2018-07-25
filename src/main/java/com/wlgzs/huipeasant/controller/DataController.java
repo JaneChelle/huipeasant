@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @RestController
 public class DataController extends BaseController {
     @RequestMapping("toindex")
@@ -24,6 +23,7 @@ public class DataController extends BaseController {
          model.addAttribute("question",dataService.question());
          model.addAttribute("information",dataService.information());
          model.addAttribute("rank",dataService.indexRank());
+         model.addAttribute("videoList",videoService.videoList());
         return new ModelAndView("index");
     }
     @RequestMapping("toaddData")

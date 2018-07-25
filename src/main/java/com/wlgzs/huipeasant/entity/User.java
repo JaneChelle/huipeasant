@@ -19,7 +19,9 @@ import java.io.Serializable;
         private String  phoneNumber;                     //用户手机号
         private String password;                        //密码
         private String headPortrait;                    //头像地址
-        private String  nickName;                       // 昵称
+        private String nickName;                       //昵称
+        private String sex;                             //性别
+        private String address;                         //地区
         private String reservedInf;                     //预留信息
         private long roleId;                         //角色id
     }

@@ -1,5 +1,9 @@
 package com.wlgzs.huipeasant.service;
 
+import com.wlgzs.huipeasant.entity.Collection;
+
+import java.util.List;
+
 /**
  * @author:胡亚星
  * @createTime 2018-07-18 17:21
@@ -12,4 +16,8 @@ public interface CollectionService {
 
     //删除收藏
     void deleteCollection(long collectionId);
+
+    //查看收藏
+    List<Collection> toCollection(long userId);
+
 }

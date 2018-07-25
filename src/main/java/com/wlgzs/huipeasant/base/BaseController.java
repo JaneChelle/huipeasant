@@ -38,4 +38,6 @@ public abstract class BaseController  {
     @Autowired
     protected VideoService videoService;
 
+    @Autowired
+    protected CollectionService collectionService;
 }

@@ -21,4 +21,6 @@ public interface LogUserService {
     //管理员退出
     void adminCancellation(HttpServletRequest request);
 
+    //验证手机号是否存在
+    boolean validationPhone(String phoneNumber);
 }

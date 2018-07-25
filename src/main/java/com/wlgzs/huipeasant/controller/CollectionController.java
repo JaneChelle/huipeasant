@@ -1,10 +1,14 @@
 package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
+import com.wlgzs.huipeasant.entity.Collection;
 import com.wlgzs.huipeasant.service.CollectionService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  * @author:胡亚星
@@ -29,4 +33,11 @@ public class CollectionController extends BaseController {
         return new ModelAndView("index");
     }
 
+    //查看收藏
+    @RequestMapping("")
+    public ModelAndView toCollection(long userId, Model model){
+        List<Collection> collections = collectionService.toCollection(userId);
+        model.addAttribute("collections",collections);
+        return new ModelAndView("");
+    }
 }

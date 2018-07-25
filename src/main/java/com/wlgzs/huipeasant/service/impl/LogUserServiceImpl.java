@@ -39,15 +39,15 @@ public class LogUserServiceImpl implements LogUserService {
         }
         user.setHeadPortrait("");
         user.setRoleId(2);
-        if(logUserRepository.checkPhoneNumber(user.getPhoneNumber()) != null){
-            return "手机号已被注册";
-        }else if(logUserRepository.checkNickName(user.getNickName()) != null){
-            return "该用户名已存在";
-        }else{
+//        if(logUserRepository.checkPhoneNumber(user.getPhoneNumber()) != null){
+//            return "手机号已被注册";
+//        }else if(logUserRepository.checkNickName(user.getNickName()) != null){
+//            return "该用户名已存在";
+//        }else{
             //保存
             logUserRepository.save(user);
             return "注册成功！";
-        }
+//        }
     }
 
     //登录
@@ -88,6 +88,15 @@ public class LogUserServiceImpl implements LogUserService {
         if(session.getAttribute("adminUser") != null){
             session.removeAttribute("adminUser");
         }
+    }
+
+    //验证手机号是否存在
+    @Override
+    public boolean validationPhone(String phoneNumber) {
+        if(logUserRepository.checkPhoneNumber(phoneNumber) != null){
+            return false;
+        }
+        return true;
     }
 
 

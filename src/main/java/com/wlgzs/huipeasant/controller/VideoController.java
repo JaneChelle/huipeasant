@@ -41,6 +41,15 @@ public class VideoController extends BaseController {
     public ModelAndView allVideoList(Model model){
         List<Video> videoList = videoService.videoList();
         model.addAttribute("videoList",videoList);
-        return new ModelAndView("allVideoList");
+        return new ModelAndView("VideoList");
     }
+
+    //按点击量查询视频
+    @RequestMapping("videoRanking")
+    public ModelAndView videoRanking(Model model){
+        List<Video> videoList = videoService.videoRanking();
+        model.addAttribute("videoList",videoList);
+        return new ModelAndView("VideoList");
+    }
+
 }
