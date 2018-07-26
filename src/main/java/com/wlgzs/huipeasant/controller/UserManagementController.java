@@ -33,10 +33,11 @@ public class UserManagementController extends BaseController {
 
     //修改昵称
     @RequestMapping("changeInformation")
-    public ModelAndView ModifyName(Model model, HttpServletRequest request) {
+    public ModelAndView ModifyName(Model model, HttpServletRequest request,String NickName) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        userService.ModifyName(request,user);
+        System.out.println("sessionuser"+user);
+        userService.ModifyName(request,user,NickName);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -126,4 +127,17 @@ public class UserManagementController extends BaseController {
         model.addAttribute("mgs", "修改成功");
         return new ModelAndView("login");
     }
+
+    //修改性别
+    @RequestMapping("changeSex")
+    public ModelAndView changeSex(){
+        return null;
+
+    }
+
+    //修改用户地区
+
+    //设置预留信息
+
+
 }

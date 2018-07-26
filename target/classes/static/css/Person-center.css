@@ -350,3 +350,11 @@ td{
     display: block;
     margin-bottom: 10px;
 }
+textarea{
+    width: 400px;
+    height: 32px;
+    line-height: 32px;
+    resize: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}

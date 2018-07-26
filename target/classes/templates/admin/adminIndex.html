@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>慧农后台管理系统</title>
+    <link rel="stylesheet" th:href="@{/css/adminIndex.css}">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/adminIndex.js}"></script>
+</head>
+<body>
+<div class="roof">
+    <!--收缩按钮-->
+    <div class="shrinkage">
+        <i class="iconfont" style="font-size: 40px">&#xe604;</i>
+    </div>
+    <!--展开按钮-->
+    <div class="unfold">
+        <i class="iconfont" style="font-size: 40px">&#xe622;</i>
+    </div>
+    <!--搜索框-->
+    <!--<div class="search bar7">-->
+        <!--<form>-->
+            <!--<input type="text" placeholder="请输入您要搜索的内容...">-->
+            <!--<button type="submit"><i class="iconfont" style="font-size: 30px;">&#xe60e;</i></button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <!--用户信息和退出-->
+    <div class="right">
+        <div class="user">欢迎王静晓</div>
+        <div class="back"><a href="">退出</a></div>
+    </div>
+
+</div>
+<!--左侧侧边栏-->
+<div class="side-left">
+    <h1>Master</h1>
+    <ul>
+        <li title="用户管理" class="user addColor">
+            <i class="iconfont" id="mr">&#xe626;</i>
+            <span class="master">用户管理</span>
+        </li>
+        <li title="视频管理" class="video addColor">
+            <i class="iconfont" id="mr">&#xe61f;</i>
+            <span class="master">视频管理</span>
+        </li>
+        <!--<li title="">-->
+            <!--<i class="iconfont" id="mr"></i>-->
+            <!--<span>管理备份</span>-->
+        <!--</li>-->
+        <!--<li title="">-->
+            <!--<i class="iconfont" id="mr"></i>-->
+            <!--<span>管理备份</span>-->
+        <!--</li>-->
+    </ul>
+</div>
+<!--右侧内容-->
+<div class="frame-div">
+    <iframe src="" frameborder="0" class="ifm"  scrolling="no"></iframe>
+</div>
+</body>
+</html>

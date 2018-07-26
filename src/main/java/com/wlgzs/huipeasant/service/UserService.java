@@ -30,7 +30,7 @@ public interface UserService {
     String delete(long userId, HttpServletRequest request);
 
     //修改用户名
-    void ModifyName(HttpServletRequest request,User user);
+    void ModifyName(HttpServletRequest request,User user,String NickName);
 
     //修改手机号
     User changePhone(HttpServletRequest request);

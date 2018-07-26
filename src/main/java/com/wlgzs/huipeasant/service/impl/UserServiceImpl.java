@@ -34,6 +34,7 @@ import java.util.regex.Pattern;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
     private LogUserRepository logUserRepository;
 
     //查找用户
@@ -96,22 +97,14 @@ public class UserServiceImpl implements UserService {
 
     //修改用户名
     @Override
-    public void ModifyName(HttpServletRequest request, User user) {
-        Map<String, String[]> properties = request.getParameterMap();
+    public void ModifyName(HttpServletRequest request, User user,String NickName) {
         System.out.println(user);
-        try {
-            BeanUtils.populate(user, properties);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
-        String NickName = user.getNickName();
-        String user_name = request.getParameter("NickName");//修改后
+        System.out.println(NickName);
         //判断用户名是否存在
         if(NickName != null && !NickName.equals("")){
-            if(logUserRepository.checkNickName(user_name) == null){
-                user.setNickName(user_name);
+            if(null == logUserRepository.checkNickName(NickName)){
+                System.out.println("=======");
+                user.setNickName(NickName);
                 userRepository.saveAndFlush(user);
                 //从新存入session
                 HttpSession session = request.getSession(true);
