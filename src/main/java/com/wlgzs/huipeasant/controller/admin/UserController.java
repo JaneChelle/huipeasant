@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -24,6 +25,7 @@ public class UserController extends BaseController {
     @RequestMapping("/adminUserList")
     public String list(Model model, @RequestParam(value = "page",defaultValue = "0") int page,
                        @RequestParam(value = "limit",defaultValue = "10") int limit) {
+        System.out.println("123456789");
         String nickName="";
         if(page != 0) page--;
         Page pages = userService.findUserPage(nickName,page,limit);
@@ -53,6 +55,14 @@ public class UserController extends BaseController {
     public String add(User user) {
         userService.save(user);
         return "redirect:/AdminUserController/adminUserList";
+    }
+
+    //跳转到修改用户
+    @RequestMapping("toAdminEditUser")
+    public ModelAndView toAdminEditUser(long userId,Model model){
+        User user = userService.findUserById(userId);
+        model.addAttribute("user",user);
+        return new ModelAndView("adminEditUser");
     }
 
     //修改用户

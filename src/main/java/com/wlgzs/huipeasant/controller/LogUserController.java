@@ -47,7 +47,7 @@ public class LogUserController extends BaseController {
         System.out.println(mag);
         model.addAttribute("mag",mag);
         if(mag.equals("管理员登录成功！")){
-            return "adminIndex";
+            return "admin/adminIndex";
         }else if(mag.equals("登录成功！")){
             return "index";
         }else{

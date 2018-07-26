@@ -126,4 +126,17 @@ public class UserManagementController extends BaseController {
         model.addAttribute("mgs", "修改成功");
         return new ModelAndView("login");
     }
+
+    //修改性别
+    @RequestMapping("changeSex")
+    public ModelAndView changeSex(){
+        return null;
+
+    }
+
+    //修改用户地区
+
+    //设置预留信息
+
+
 }

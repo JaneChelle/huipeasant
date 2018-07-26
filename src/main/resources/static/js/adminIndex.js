@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
     //菜单切换
     $(".user").click(function () {
-        $(".ifm").attr("src","adminUserList.html");
+        $(".ifm").attr("src","/adminUserController/adminUserList");
     });
     $(".video").click(function () {
         $(".ifm").attr("src","/AdminVideoController/adminVideoList");
