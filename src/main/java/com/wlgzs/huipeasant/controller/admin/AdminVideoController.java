@@ -24,6 +24,12 @@ import java.util.List;
 @RequestMapping("AdminVideoController")
 public class AdminVideoController extends BaseController {
 
+    //去后台
+    @RequestMapping("/toAdmin")
+    public ModelAndView toAdmin(){
+        return new ModelAndView("admin/adminIndex");
+    }
+
     //遍历视频
     @RequestMapping("/adminVideoList")
     public ModelAndView adminVideoList(Model model, @RequestParam(value = "page", defaultValue = "0") int page,
@@ -33,8 +39,8 @@ public class AdminVideoController extends BaseController {
         Page pages = videoService.getVideoListPage(videoKeyWord,page,limit);
         model.addAttribute("TotalPages", pages.getTotalPages());//查询的页数
         model.addAttribute("Number", pages.getNumber() + 1);//查询的当前第几页
-        List<Video> adminVideoList = pages.getContent();
-        model.addAttribute("adminVideoList",adminVideoList);
+        List<Video> adminVideoLists = pages.getContent();
+        model.addAttribute("adminVideoLists",adminVideoLists);
         return new ModelAndView("admin/adminVideoList");
     }
 
@@ -49,14 +55,14 @@ public class AdminVideoController extends BaseController {
         List<Video> adminVideoList = pages.getContent();
         model.addAttribute("adminVideoList", adminVideoList);//查询的当前页的集合
         model.addAttribute("videoKeyWord", videoKeyWord);
-        return new ModelAndView("admin/adminVideoList");
+        return new ModelAndView("admin/AdminVideoController/adminVideoList");
     }
 
-    //跳转到添加视频
-    @RequestMapping("/toAddVideo")
-    public ModelAndView toAddVideo(){
-        return new ModelAndView("admin/addVideo");
-    }
+//    //跳转到添加视频
+//    @RequestMapping("/toAddVideo")
+//    public ModelAndView toAddVideo(){
+//        return new ModelAndView("admin/addVideo");
+//    }
 
     //添加视频
     @RequestMapping("/addVideo")
@@ -64,14 +70,20 @@ public class AdminVideoController extends BaseController {
                                   HttpSession session,HttpServletRequest request){
         //添加视频
         videoService.saveVideo(myFileNames,session,request);
-        return new ModelAndView("redirect:/adminVideoList");
+        return new ModelAndView("redirect:/AdminVideoController/adminVideoList");
     }
 
     //按ID删除视频
     @RequestMapping("/adminDeleteVideo")
     public ModelAndView delete(Model model,long videoId ,HttpServletRequest request){
         videoService.delete(videoId,request);
-        return new ModelAndView("redirect:/adminVideoList");
+        return new ModelAndView("redirect:/AdminVideoController/adminVideoList");
+    }
+
+    //跳转到修改视频
+    @RequestMapping("/toEditVideo")
+    public ModelAndView toEditVideo(){
+        return new ModelAndView("admin/adminEditVideo");
     }
 
     //修改视频

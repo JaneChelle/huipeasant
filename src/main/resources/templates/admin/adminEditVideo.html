@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改视频</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/dist/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/Modify.css}" type="text/css">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/adminVideoList.js}"></script>
+</head>
+<body>
+<div class="windoww">
+    <div class="popup-windows">
+        <h2 style="text-align: center">修改视频</h2>
+        <form th:action="@{/AdminVideoController/adminEditProduct}" enctype="multipart/form-data">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>作者提示</th>
+                    <td>
+                        <input type="text" name="authorSuggests" class="form-control"  value="" id="userphone" required="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>视频封面</th>
+                    <td><input type="file" name="file" class="form-control" value="" id="pwd" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>模块名字</th>
+                    <td><input type="text" name="modelName" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>视频简介</th>
+                    <td><input type="text" name="videoIntroduction" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>视频标题</th>
+                    <td><input type="text" name="videoTitle" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="reset" value="重置" class="btn btn-primary" id="reset"/>
+                        <input type="submit" value="修改"  class="btn btn-success" id="add"  onclick="dd()"/>
+                        <a th:href="@{/AdminVideoController/adminVideoList}"><input type="button" value="取消"  class="btn btn-info"  style="background-color: orangered"/></a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

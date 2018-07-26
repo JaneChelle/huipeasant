@@ -13,7 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 @RequestMapping("/user")
+
 @RestController
 public class DataController extends BaseController {
     @RequestMapping("toindex")
@@ -22,6 +24,7 @@ public class DataController extends BaseController {
          model.addAttribute("question",dataService.question());
          model.addAttribute("information",dataService.information());
          model.addAttribute("rank",dataService.indexRank());
+         model.addAttribute("videoList",videoService.videoList());
         return new ModelAndView("index");
     }
     @RequestMapping("toipindex/{level}/{page}")

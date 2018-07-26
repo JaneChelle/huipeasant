@@ -1,11 +1,7 @@
 package com.wlgzs.huipeasant.base;
 
-
 import com.wlgzs.huipeasant.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.wlgzs.huipeasant.service.UserService;
-import com.wlgzs.huipeasant.service.VideoService;
-
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +19,6 @@ public abstract class BaseController  {
 
     @Resource
     protected UserService userService;
-
 
     @Autowired
     protected ModuleService moduleService;
@@ -43,4 +38,6 @@ public abstract class BaseController  {
     @Autowired
     protected VideoService videoService;
 
+    @Autowired
+    protected CollectionService collectionService;
 }

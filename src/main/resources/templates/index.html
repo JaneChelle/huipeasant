@@ -13,7 +13,7 @@
     <div class="header">
         <div class="header-left" title="慧农在线">
             <a href="index.html">
-                <img src="img/peasanter.png"/>
+                <img th:src="@{/img/peasanter.png}"/>
                 <b>慧农在线</b>
             </a>
         </div>
@@ -179,7 +179,7 @@
                         <tr class="trs" th:each="question: ${question}">
                             <td>
                                 <span>
-                               【 <a href="">问题</a>-<a href="">热门问题</a>】</span><a th:href="'/textview/'+${question.dataId}"><span th:text="${question.contentsTitle}"><!--</span></a><span class="sty">（0/18）</span>--></td>
+                               【 <a href="">问题</a>-<a href="">热门问题</a>】</span><a th:href="'/user/textview/'+${question.dataId}"><span th:text="${question.contentsTitle}"><!--</span></a><span class="sty">（0/18）</span>--></td>
                         </tr>
 
                     </tbody>
@@ -191,7 +191,7 @@
             <div class="main-body-left"  th:each="blogId,key : ${moudels}">
                 <div class="box-item">
                     <span class="font"><a href="material.html"><span th:text="${key.current.key.moduleName}"></span></a></span>
-                    <span style="float:right;"><a th:href="'/moduleview/'+${key.current.key.mouldeId}+'/1'">更多
+                    <span style="float:right;"><a th:href="'/user/moduleview/'+${key.current.key.mouldeId}+'/1'">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     </a>
@@ -431,7 +431,8 @@
     </div>
 </footer>
 </body>
-	<script th:src="@{js/jquery-3.3.1.min.js}"></script>
-    <script th:src="@{js/index.js} "></script>
-    <script type="text/javascript" th:src="@{js/train.js}" ></script>
+
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/index.js} "></script>
+    <script type="text/javascript" th:src="@{/js/train.js}" ></script>
 </html>
