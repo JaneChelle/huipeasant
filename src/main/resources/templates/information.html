@@ -67,10 +67,11 @@
                 <div class="range">
                     所在地区：
                     <div data-toggle="distpicker" style="display:inline-block;margin-left: 20px;">
-                        <select data-province="---- 选择省 ----"></select>
-                        <select data-city="---- 选择市 ----"></select>
-                        <select data-district="---- 选择区 ----"></select>
+                        <select data-province="---- 选择省 ----" class="pro"></select>
+                        <select data-city="---- 选择市 ----" class="city"></select>
+                        <select data-district="---- 选择区 ----" class="dis"></select>
                     </div>
+                    <input type="hidden" id="ipt">
                 </div>
                 <div class="range">
                     昵称：
@@ -79,7 +80,7 @@
                 </div>
                 <div class="range">
                     性别：
-                    <span th:text="${user.userId}">女</span>
+                    <span th:text="${user.sex}">女</span>
                 </div>
                 <div class="range">
                     手机号：

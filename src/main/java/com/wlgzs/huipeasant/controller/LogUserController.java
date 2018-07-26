@@ -2,13 +2,15 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.User;
-import com.wlgzs.huipeasant.service.LogUserService;
+import com.wlgzs.huipeasant.util.Result;
+import com.wlgzs.huipeasant.util.ResultCode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author:胡亚星
@@ -21,7 +23,7 @@ public class LogUserController extends BaseController {
     //去注册
     @RequestMapping("/toRegistered")
     public String toRegister() {
-        return "registered";
+        return "register";
     }
 
     //去登陆
@@ -35,18 +37,19 @@ public class LogUserController extends BaseController {
     public String register(Model model, HttpServletRequest request){
         String mag = logUserService.register(request);
         model.addAttribute("mag",mag);
-        return "login";
+        return "register-1";
     }
 
     //用户登录
     @RequestMapping("login")
     public String login(HttpServletRequest request, Model model, String phoneNumber, String password){
         String mag = logUserService.login(request,phoneNumber,password);
+        System.out.println(mag);
         model.addAttribute("mag",mag);
         if(mag.equals("管理员登录成功！")){
             return "adminIndex";
         }else if(mag.equals("登录成功！")){
-            return "Index";
+            return "index";
         }else{
             return "login";
         }
@@ -64,6 +67,16 @@ public class LogUserController extends BaseController {
     public String adminCancellation(HttpServletRequest request){
         logUserService.adminCancellation(request);
         return "redirect:/toLogin";
+    }
+
+    //验证手机号是否存在
+    @RequestMapping("validationPhone")
+    public Result validationPhone(String phoneNumber, HttpServletRequest request, Model model){
+        if(logUserService.validationPhone(phoneNumber)){
+            return new Result(ResultCode.SUCCESS, "手机号可用!");
+        }else{
+            return new Result(ResultCode.FAIL,"手机号已被注册!");
+        }
     }
 
 }

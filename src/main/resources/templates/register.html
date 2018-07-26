@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>慧农注册-农技培训</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+</head>
+<body style="background-color: #FFF;">
+<div id="header">
+    <div class="header">
+        <a th:href="@{/toindex}" title="返回首页" target="_blank">
+            <img th:src="@{/img/peasanter.png}"/>
+        </a>
+        <span>
+					<i>Hui-peasant</i>
+					<b>在线服务平台</b>
+				</span>
+    </div>
+</div>
+<div class="register">
+    <div class="steps">
+        <ul>
+            <li class="active ulist-1"><b>1.</b>填写账户信息</li>
+            <li class="ulist-2"><b>2.</b>设置用户名</li>
+            <li class="ulist-3"><b>3.</b>注册成功</li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <form th:action="@{/LogUserController/registered}" th:method="post">
+        <div class="register-list register-main-list" id="register-main">
+            <div class="register-group">
+                <div class="register-item">
+                    <span>手机号</span>
+                    <input type="tel" name="phoneNumber" id="tel" value="" placeholder="请输入你的手机号码" onchange="tel();"/>
+                    <b class="item-tel">
+                        <i class="fa fa-times"></i>
+                        请输入你的手机号码
+                    </b>
+                </div>
+                <div class="register-item">
+                    <span class="item-span">验 证</span>
+                    <div class="drag">
+                        <div class="bg"></div>
+                        <div class="text" onselectstart="return false;">请拖动滑块解锁</div>
+                        <div class="btn">&gt;&gt;</div>
+                    </div>
+                </div>
+                <div class="register-item">
+                    <div class="next-step register-button">下一步</div>
+                </div>
+            </div>
+        </div>
+        <div class="register-list register-main-list" id="register-info">
+            <div class="register-group">
+                <div class="register-item">
+                    <span>密 码</span>
+                    <input type="password" name="password" id="pword-1" value="" placeholder="请设置密码"
+                           onchange="passWord();"/>
+                    <b class="item-pword"></b>
+                    <div class="notes">密码，以字母开头，长度在6~18之间，只能包含字母、数字和下划线</div>
+                </div>
+                <div class="register-item">
+                    <span>确认密码</span>
+                    <input type="password" name="" id="pword-2" value="" placeholder="请确认密码" onchange="sureWord();"/>
+                    <b class="item-pword-2"></b>
+                    <div class="notes">密码，以字母开头，长度在6~18之间，只能包含字母、数字和下划线</div>
+                </div>
+                <div class="register-item">
+                    <span>验证码</span>
+                    <input type="text" name="" id="validCode" value="" placeholder="请输入右侧验证码，请先点击  不区分大小写"/>
+                    <b class="item-code"></b>
+                </div>
+                <div class="register-item" style="float: right;">
+                    <input type="text" onClick="createCode()" readonly="readonly" id="checkCode" class="unchanged"
+                           title="刷新验证码">
+                </div>
+                <div class="register-item " onclick="allStep(),allSteps()" style="position: relative; top: 59px; margin-bottom: 30px;">
+                    <input type="submit" th:value="下一步" class="next-step-second register-button" onclick="validate();" style="text-align: right;">
+                </div>
+            </div>
+        </div>
+    </form>
+        <div class="register-list register-main-list" id="register-done">
+            <div class="register-group">
+                <div class="register-item">
+                    <div class="item-ico"><i class="iconfont">&#xe627;</i></div>
+                </div>
+                <div class="register-item" style="text-align: center;">
+                    <div class="item-done">
+                        注册成功！欢迎您<a th:href="@{/LogUserController/toLogin}" target="_blank">登录</a>慧农
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+<script type="text/javascript" th:src="@{/js/register.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</html>

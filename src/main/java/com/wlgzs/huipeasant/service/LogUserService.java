@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author:胡亚星
- * @createTime 2018-07-11 10:21
+ * @createTime 2018-07-24 9:27
  * @description:
  **/
 public interface LogUserService {
@@ -21,4 +21,6 @@ public interface LogUserService {
     //管理员退出
     void adminCancellation(HttpServletRequest request);
 
+    //验证手机号是否存在
+    boolean validationPhone(String phoneNumber);
 }
