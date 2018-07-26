@@ -40,7 +40,7 @@ function passWord(){
 //登录
 function login(){
 	if(user() && passWord()){
-		alert("djbhf")
+        $(".sure-login").css("background-color","#5CB85C")
         return true;
 	}
 	else{

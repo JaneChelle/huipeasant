@@ -105,7 +105,7 @@ body{
 	border-color: #5CB85C;
 }
 .login-import p{
-	text-align: left;
+	text-align: right;
 	margin-left: 68px;
 	color: orangered;
 	height: 20px;
@@ -124,7 +124,7 @@ body{
 	top: 100px;
 	cursor: pointer;
 }
-.register-button,button{
+.register-button,input[type=submit]{
 	position: relative;
 	border: none;
 	outline: none;
@@ -132,7 +132,7 @@ body{
 	margin: 50px 0 0 0;
 	cursor: pointer;
 	text-align: center;
-	background-color: #DDDD;
+	background-color: #DDDDDD;
 }
 .login-in{
 	text-align: center;
@@ -265,7 +265,7 @@ body{
 	transition: all .5s;
 }
 /*第二步*/
-#register-info,#register-done{
+#register-info{
 	display: none;
 }
 /*注释*/
