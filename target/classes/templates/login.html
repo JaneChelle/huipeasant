@@ -25,7 +25,7 @@
 				<div class="section">
 					<h2>欢迎登录系统平台</h2>
 					<div class="login-import">
-						<form th:action="@{/LogUserController/login}" th:method="post" onsubmit = "return login();" >
+						<form th:action="@{/LogUserController/login}" th:method="post">
 							<span class="login-ico">
 								<i class="iconfont">&#xe60f;</i>
 							</span>
@@ -44,7 +44,7 @@
 								<label for="">记住此密码</label>
 								<span>无账号？现在去<a th:href="@{/LogUserController/toRegistered}" target="_blank">注册</a></span>
 							</div>
-							<button type="submit" class="login-in" onclick="login()">Login</button>
+							<input type="submit" th:value="Login" class="login-in" onclick="login(this.form)">
 						</form>
 					</div>
 				</div>

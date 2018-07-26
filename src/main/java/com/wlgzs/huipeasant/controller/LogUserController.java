@@ -37,18 +37,19 @@ public class LogUserController extends BaseController {
     public String register(Model model, HttpServletRequest request){
         String mag = logUserService.register(request);
         model.addAttribute("mag",mag);
-        return "login";
+        return "register-1";
     }
 
     //用户登录
     @RequestMapping("login")
     public String login(HttpServletRequest request, Model model, String phoneNumber, String password){
         String mag = logUserService.login(request,phoneNumber,password);
+        System.out.println(mag);
         model.addAttribute("mag",mag);
         if(mag.equals("管理员登录成功！")){
             return "adminIndex";
         }else if(mag.equals("登录成功！")){
-            return "Index";
+            return "index";
         }else{
             return "login";
         }

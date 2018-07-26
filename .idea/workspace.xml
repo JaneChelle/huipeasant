@@ -2,441 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d64f5142-49b7-438b-9c28-0f76bac6b0f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huipeasant.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/HuipeasantApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/base/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CommentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/DataDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/MouduleDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/VideoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Collection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Module.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/DataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/LogUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/ModuleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/VideoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/CheckImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/PageUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/PathConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/RandonNumberUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/ResultCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/Modify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/adminIndex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/adminVideoList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ask.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ipindex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/iplogin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ipvideo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/question.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/train.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/a90b21218f5276a8!500x500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/a90b21218f5276a8!500x500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/login.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/rb1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/rb2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg (5).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg (8).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg (9).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/yin1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/images/印.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/login.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/rb1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/rb2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (10).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (11).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (12).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (13).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (5).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (8).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg (9).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/yin1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/印.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flower.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/online_member.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/peasant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/peasanter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/timg (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/timg (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/timg (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminIndex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminVideoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/ipindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/move.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/train.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addVideo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminEditVideo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminIndex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminVideoList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload/2090624e-ca72-4ab9-904f-cee03918945e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload/85637ffa-a95f-488c-8358-929a50561dd3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload/a53c50db-bb14-4033-a0ce-0887e78da4dd.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload/f0251046-76ff-4c56-8c97-8d444cbce0ae.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/wlgzs/huipeasant/HuipeasantApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/HuipeasantApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/base/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/CollectionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/CommentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/LogUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/ModuleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/UserManagementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/VideoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/admin/AdminVideoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/admin/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/CollectionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/CommentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/DataDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/LogUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/MouduleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/VideoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Collection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Module.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Video.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/CollectionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/CommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/DataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/LogUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/ModuleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/VideoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/DataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/CheckImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/IoUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/PageUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/PageUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/PathConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/RandonNumberUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/ResultCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/Modify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/adminIndex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/adminVideoList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/ask.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/ipindex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/iplogin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/ipvideo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/question.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/train.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/a90b21218f5276a8!500x500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/a90b21218f5276a8!500x500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/login.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/rb1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/rb2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg (5).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg (8).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg (9).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/yin1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/images/印.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/login.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/rb1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/rb2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (10).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (11).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (12).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (13).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (5).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (8).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg (9).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/yin1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/印.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/flower.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/online_member.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/peasant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/peasant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/peasanter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/timg (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/timg (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/timg (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/timg (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/adminIndex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/adminVideoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/ipindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/move.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/train.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/addVideo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/adminEditVideo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/adminIndex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/adminUserList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/adminVideoList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/LogUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/LogUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/wlgzs/huipeasant/HuipeasantApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -451,11 +29,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <file leaf-file-name="Video.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="264">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register-1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register-1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="587">
+              <caret line="46" column="68" lean-forward="true" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -463,9 +63,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="huipeasant.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/huipeasant.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogUserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogUserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/LogUserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandonNumberUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/RandonNumberUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -473,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -491,7 +131,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/PageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/UserController.java" />
@@ -501,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoContorller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/RandonNumberUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/CheckImage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wlgzs/huipeasant/teat.java" />
@@ -534,11 +172,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/adminEditVideo.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/register.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/LogUserService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/register-1.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
       </list>
     </option>
   </component>
@@ -572,7 +214,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -589,6 +230,113 @@
             <path>
               <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
               <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
               <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -601,6 +349,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -618,7 +367,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -766,7 +515,10 @@
       <workItem from="1532476687691" duration="7171000" />
       <workItem from="1532487568279" duration="7551000" />
       <workItem from="1532504675190" duration="9822000" />
-      <workItem from="1532522462481" duration="201000" />
+      <workItem from="1532522462481" duration="950000" />
+      <workItem from="1532523580049" duration="331000" />
+      <workItem from="1532524015239" duration="166000" />
+      <workItem from="1532534531268" duration="2920000" />
     </task>
     <servers />
   </component>
@@ -776,7 +528,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150354000" />
+    <option name="totallyTimeSpent" value="154520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -788,10 +540,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="309" y="33" width="1588" height="1100" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5005208" side_tool="true" weight="0.3212766" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5010661" side_tool="true" weight="0.3293348" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -802,24 +555,24 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.62922573" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.031590413" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.0436205" />
+      <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22643979" />
       <window_info anchor="bottom" id="Problems" order="14" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.62922573" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
@@ -833,20 +586,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CommentService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/CheckImage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/HuipeasantApplication.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java" />
@@ -868,28 +616,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/VideoService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminVideoList.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminEditVideo.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/UserController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/login.css" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/register.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/LogUserService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/Result.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/ResultCode.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login.js" />
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -898,13 +634,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/huipeasant.iml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/HuipeasantApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/RandonNumberUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/LogUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="450">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="46" column="68" lean-forward="true" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

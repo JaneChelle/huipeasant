@@ -57,12 +57,6 @@
         <div class="register-list register-main-list" id="register-info">
             <div class="register-group">
                 <div class="register-item">
-                    <span>昵 称</span>
-                    <input type="text" name="nickName" id="nickName" value="" placeholder="请设置昵称" onchange="user();"/>
-                    <b class="item-user"></b>
-                    <div class="notes">昵称，只能中英文，数字，下划线，减号</div>
-                </div>
-                <div class="register-item">
                     <span>密 码</span>
                     <input type="password" name="password" id="pword-1" value="" placeholder="请设置密码"
                            onchange="passWord();"/>
@@ -85,10 +79,11 @@
                            title="刷新验证码">
                 </div>
                 <div class="register-item " onclick="allStep(),allSteps()" style="position: relative; top: 59px; margin-bottom: 30px;">
-                    <div class="next-step-second register-button" onclick="validate();" style="text-align: right;">下一步</div>
+                    <input type="submit" th:value="下一步" class="next-step-second register-button" onclick="validate();" style="text-align: right;">
                 </div>
             </div>
         </div>
+    </form>
         <div class="register-list register-main-list" id="register-done">
             <div class="register-group">
                 <div class="register-item">
@@ -101,7 +96,6 @@
                 </div>
             </div>
         </div>
-    </form>
 </div>
 </body>
 <script type="text/javascript" th:src="@{/js/register.js}"></script>
