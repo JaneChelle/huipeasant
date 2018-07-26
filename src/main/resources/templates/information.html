@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>会员管理中心</title>
+    <link rel="stylesheet" th:href="@{/css/Person-center.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/distpicker.js}"></script>
+    <script th:src="@{/js/Person-center.js}"></script>
+</head>
+<body>
+<div class="head" >
+    <div class="header">
+        <div class="header-left" title="慧农在线">
+            <a href="index.html">
+                <img th:src="@{/img/peasanter.png}"/>
+                <b>慧农在线</b>
+            </a>
+        </div>
+        <div class="header-right">
+            <a th:href="@{login.html}">
+                <i class="iconfont">&#xe61a;</i>
+                <span><a th:href="@{/UserManagementController/information}">个人中心</a></span>
+            </a>
+            <!--<a href="register.html">注册</a>-->
+            <a id="qr-code">
+                <span>手机端</span>
+                <i class="iconfont">&#xe622;</i>
+            </a>
+        </div>
+        <div class="qr-code">
+            <img th:src="@{img/code.png}"/>
+        </div>
+        <div class="search">
+            <form th:action="@{}">
+                <input type="text" name="" id="" value="" placeholder="请输入您要搜索的内容..."/>
+                <button type="submit"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="sty">
+    <div class="sty2">
+        <h1>个人中心</h1>
+        <h1 class="sty3"><a href="index.html">首页</a></h1>
+        <h2 class="sty4"><a th:href="@{/LogUserController/login}">退出</a></h2>
+        <span><a href="">地区排行</a></span>
+        <span><a href="">个人排行</a></span>
+    </div>
+</div>
+<div class="kuang">
+    <div class="container">
+        <div class="acount"><a th:href="@{/UserManagementController/information}">账户设置</a></div>
+        <div class="collection"><a href="myqusetion.html">我的庄稼医院</a></div>
+        <div class="trangle"></div>
+        <div class="content" style=" padding-bottom: 50px;">
+            <div class="left">
+                <div class="Avatar">
+                    <img th:src="${user.headPortrait}" alt="" style="width: 100px;height: 100px;border-radius: 100%">
+                </div>
+                <div class="editavatar">修改头像</div>
+            </div>
+            <div class="right">
+                <h2>个人信息</h2>
+                <div class="range">
+                    所在地区：
+                    <div data-toggle="distpicker" style="display:inline-block;margin-left: 20px;">
+                        <select data-province="---- 选择省 ----"></select>
+                        <select data-city="---- 选择市 ----"></select>
+                        <select data-district="---- 选择区 ----"></select>
+                    </div>
+                </div>
+                <div class="range">
+                    昵称：
+                    <span th:text="${user.nickName}">爱丽丝</span>
+                    <span class="editnickname modify">修改</span>
+                </div>
+                <div class="range">
+                    性别：
+                    <span th:text="${user.userId}">女</span>
+                </div>
+                <div class="range">
+                    手机号：
+                    <span th:text="${user.phoneNumber}">15536522365</span>
+                    <span class="modify editphone">修改</span>
+                </div>
+                <div class="range">
+                    预留信息：
+                    <span th:text="${user.reservedInf}"></span>
+
+                </div>
+            </div>
+        </div>
+        <!--//修改头像-->
+        <div class="new-window">
+            <div class="modal">
+                <h3>修改头像</h3>
+                <div>
+                    <p class="p-sty">请上传头像:</p>
+                    <div class="imgkuang" style="margin-top: 10px">
+                        <img src="images/rb2.jpg" alt="" style="width: 100px;height: 100px;border-radius: 100%">
+                    </div>
+                    <div class="operate">
+                        <div class="upload">
+                            <span class="sl-custom-file">
+                                <input type="button" value="上传" class="btn-file"/>
+                                <input type="file" class="ui-input-file" />
+                            </span>
+                        </div>
+                        <div class="md-close">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--修改昵称-->
+        <div class="new-window2">
+            <div class="modal">
+                <h3>修改昵称</h3>
+                <div>
+                    <p class="p-sty">请修改昵称:</p>
+                    <div class="imgkuang" style="padding: 10px 110px">
+                        <input type="text" placeholder="请输入昵称" class="nickname">
+                    </div>
+                    <div class="operate">
+                        <div class="upload">
+                            确定
+                        </div>
+                        <div class="md-close">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--修改手机号-->
+        <div class="new-window3">
+            <div class="modal">
+                <h3>修改手机号</h3>
+                <div>
+                    <p class="p-sty">请修改手机号:</p>
+                    <div class="imgkuang" style="padding: 10px 110px">
+                        <input type="text" placeholder="请输入手机号" class="nickname">
+                    </div>
+                    <div class="operate">
+                        <div class="upload">
+                            确定
+                        </div>
+                        <div class="md-close">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--修改关注的作物-->
+        <div class="new-window4">
+            <div class="modal">
+                <h3>修改关注的作物</h3>
+                <div>
+                    <p class="p-sty">请修改关注的作物:</p>
+                    <div class="imgkuang" style="padding: 10px 110px">
+                        <form action="" method="">
+                            <label><input name="Fruit" type="checkbox" value="" />苹果 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />桃子 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />香蕉 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />梨 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />苹果 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />桃子 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />香蕉 </label>
+                            <label><input name="Fruit" type="checkbox" value="" />梨 </label>
+                        </form>
+                    </div>
+                    <div class="operate">
+                        <div class="upload">
+                            确定
+                        </div>
+                        <div class="md-close">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>会员管理中心</title>
+    <link rel="stylesheet" href="css/Person-center.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="shortcut icon" href="images/login.ico" type="image/x-icon">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/Person-center.js"></script>
+</head>
+<body>
+<div class="head" >
+    <div class="header">
+        <div class="header-left" title="慧农在线">
+            <a href="index.html">
+                <img src="img/peasanter.png"/>
+                <b>慧农在线</b>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="login.html">
+                <i class="iconfont">&#xe61a;</i>
+                <span>个人中心</span>
+            </a>
+            <!--<a href="register.html">注册</a>-->
+            <a id="qr-code">
+                <span>手机端</span>
+                <i class="iconfont">&#xe622;</i>
+            </a>
+        </div>
+        <div class="qr-code">
+            <img src="img/code.png"/>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" name="" id="" value="" placeholder="请输入您要搜索的内容..."/>
+                <button type="submit"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="sty">
+    <div class="sty2">
+        <h1>个人中心</h1>
+        <h1 class="sty3"><a href="index.html">首页</a></h1>
+        <h2 class="sty4"><a href="login.html">退出</a></h2>
+    </div>
+</div>
+<div class="kuang">
+    <div class="container">
+        <div class="acount"><a href="information.html">账户设置</a></div>
+        <div class="collection"><a href="myqusetion.html">我的庄稼医院</a></div>
+        <div class="trangle" style="margin-left: 140px"></div>
+        <div class="content">
+           <div class="side">
+               <div>我的庄稼医院</div>
+               <ul>
+                   <li style="background-color: #599524;"><a href="myqusetion.html">我要问</a></li>
+                   <li><a href="asked.html">我问的</a></li>
+                   <li><a href="mycollection.html">我的收藏</a></li>
+               </ul>
+           </div>
+            <!--内容区域-->
+            <div class="right-kuang">
+                <div class="right-content">
+                    <div class="font">
+                        <div style="width: 600px;"><i class="iconfont">&#xe667;</i>温馨提醒：</div>
+                        <div style="width: 600px">专家没有实地指导，仅是主观描述，专家可给的帮助建议仅供参考，具体以实际情况在当地部门指导下进行
+                            <i class="iconfont">&#xe67b;</i>
+                        </div>
+                    </div>
+                    <div class="qusetion">
+                    	<div>
+                    		问题分类：
+                    		<form action="/example/html/form_action.asp" method="get">
+ 								 <label for=""><input type="checkbox" name="小麦" value="小麦" />小麦</label>
+  								<label for="">
+  									<input type="checkbox" name="玉米" value="玉米" checked="checked" />玉米
+  								</label>
+  								<label for="">
+  									<input type="checkbox" name="玉米" value="玉米" checked="checked" />大豆
+  								</label>
+  								<!--<input type="submit" value="Submit" />-->
+							</form>
+                    	</div>
+                        <p style="margin-bottom: 10px">问题描述：</p>
+                        <textarea name="" id="" cols="30" rows="10">
+                        </textarea>
+                        <p style="color:#999;font-size: 12px">注：详细说明问题的情况，描述得越仔细，获得准确回答的机会越大</p>
+                    </div>
+                    <div class="picture">
+                        <p style="margin-bottom: 10px">上传图片：</p>
+                        <div class="upload" style="border: none">
+                            <span class="sl-custom-file">
+                                <input type="button" value="上传" class="btn-file1"/>
+                                <input type="file" class="ui-input-file" />
+                            </span>
+                        </div>
+                        <!--<span>-->
+                        <input type="submit" value="完成" class="finish">
+                        <!--</span>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+.sty{
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    background-color: #599524;
+}
+.sty2{
+    width: 1200px;
+    margin: 0 auto;
+}
+.sty2>h1{
+    color: #fff;
+    line-height: 80px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.sty3>a{
+    color: #fff;
+    font-family: "楷体";
+    font-size: 30px;
+}
+.sty4{
+    float: right;
+    color: #fff;
+    line-height: 80px;
+    margin-right: -280px;
+}
+.sty4>a{
+    color: #fff;
+    font-size: 20px;
+    font-family: "楷体";
+}
+a{
+    text-decoration: none;
+}
+.kuang{
+    width: 1200px;
+    margin: 0 auto;
+    /*background-color: black;*/
+    /*height: 500px;*/
+}
+.title{
+
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.acount,.collection{
+    display: inline-block;
+    margin-right: 20px;
+}
+.acount>a,.collection>a{
+    font-size: 20px;
+    color: #000;
+    font-family: "楷体";
+}
+.content{
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #fff;
+    height: auto;
+   overflow: hidden;
+}
+.trangle{
+    display: block;
+    border-left:  30px solid transparent;
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #fff;
+    width: 0px;
+    margin-left: 15px;
+}
+.left{
+    width: 200px;
+    float: left;
+    margin: 0 auto;
+
+
+}
+.right{
+    width: 780px;
+    float: right;
+    margin-top: 50px;
+    padding-right: 20px;
+}
+.Avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 1px solid #999999;
+    margin: 70px 50px 0;
+}
+.editavatar{
+    margin: 20px 50px;
+    font-size: 16px;
+    font-family: "楷体";
+    text-align: center;
+    cursor: pointer;
+}
+.range{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 5px;
+    border-bottom: solid 2px gainsboro;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "黑体";
+}
+.range>span{
+    font-family: "黑体";
+    font-size: 16px;
+    padding-left: 10px;
+}
+.modify{
+    color: #599524;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.side{
+    width: 150px;
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+.side>ul{
+    list-style-type: none;
+}
+.side>ul>li{
+    padding: 10px 0;
+    cursor: pointer;
+
+}
+.new-window,.new-window2,.new-window3,.new-window4{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,.2);
+    display: none;
+}
+.modal{
+    width: 400px;
+    height: 270px;
+    margin: 0 auto;
+    background-color: #599524;
+    transform: translateX(20%);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -135px;
+    border-radius: 10px;
+    padding: 15px;
+}
+.modal>h3{
+    color: #fff;
+    padding: 10px;
+    font-family: "Arial Black";
+}
+.p-sty{
+    color: #fff;
+    padding-left: 10px;
+    font-family: "Arial Black";
+}
+.imgkuang{
+    padding: 10px 150px;
+    margin-top: 42px;
+}
+.operate{
+    padding: 10px 130px;
+    margin-top: 10px;
+}
+.upload,.md-close{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+/*上传图片按钮*/
+.sl-custom-file {
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    cursor: pointer;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.btn-file{
+    background-color: transparent !important;
+    color: #fff !important;
+    border: 1px solid transparent !important;
+    /*width: 150px !important;*/
+    border-radius: 0 !important;
+}
+.sl-custom-file .ui-input-file {
+    position: absolute;
+    right: 0;
+    top: 0;
+    _zoom: 30;
+    font-size: 300px \9;
+    height: 100%;
+    _height: auto;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+}
+.nickname{
+    width: 180px;
+    height: 35px;
+    background-color: #599524;
+    border: 2px solid #F9F0DA;
+    color: #fff;
+    padding-left: 5px;
+}
+.nickname:focus {
+    border-color: #311c24 ;
+}
+.nickname::-webkit-input-placeholder{
+    color:#fff;
+}
+.nickname::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#fff;
+}
+.nickname:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+}
+.nickname:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#fff;
+}
+/*我的庄稼医院*/
+.right-kuang{
+    width: 760px;
+    float: right;
+    padding: 20px;
+}
+.right-content{
+    border: 1px solid #e5e5e5;
+    border: 1px solid;
+    /*border-radius: 20px;*/
+    padding: 15px;
+
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 652364 */
+    src: url('//at.alicdn.com/t/font_652364_elbx1cobrgi.eot');
+    src: url('//at.alicdn.com/t/font_652364_elbx1cobrgi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_652364_elbx1cobrgi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_652364_elbx1cobrgi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_652364_elbx1cobrgi.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #599524;
+}
+.font{
+    height: 90px;
+    line-height: 30px;
+    background-color: lightgreen;
+    padding: 10px;
+
+    border: 1px solid;
+    border-radius: 20px;
+}
+.qusetion{
+    margin: 10px;
+}
+textarea{
+    width: 500px;
+    max-width: 500px;
+    max-height: 150px;
+    height: 200px;
+    margin-left: 100px;
+}
+.picture{
+    margin: 10px;
+}
+.btn-file1{
+    background-color:  #599524 !important;
+    color: #fff !important;
+    border: 1px solid  #599524 !important;
+    width: 150px !important;
+    border-radius: 10px !important;
+    height: 35px;
+}
+.finish{
+    padding: 10px 30px;
+    background: #599524;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    float: right;
+    margin-right:50px ;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+table{
+    width: 730px;
+    border: 1px solid #999;
+}
+th{
+    background-color: #999999;
+    border-right: 1px solid #5e5e5e;
+    border-right: 1px solid #999;
+}
+td,th{
+    text-align: center;
+    width: 250px;
+    height: 40px;
+}
+td{
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+.right-content>ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+.right-content>ul>li{
+    float: left;
+    margin-right: 10px;
+    width: 230px;
+    /*height: 230px;*/
+    border: 1px solid #999;
+}
+.right-content>ul>li:last-child{
+    padding-right: 0;
+}
+.videocure{
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
