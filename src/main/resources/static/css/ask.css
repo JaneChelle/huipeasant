@@ -1,9 +1,14 @@
+.big-boeder{
+	width: 1200px;
+	margin: 60px auto;
+}
 .border
 {
 	position: relative;
-	width: 1200px;
+	width: 1000px;
 	border: 1px solid #C0C0C0;
-	margin: 20px auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 20px 0;
 	overflow: hidden;
 }
@@ -17,6 +22,9 @@ h3{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+.ask-left{
+	border-right: 1px dashed #C0C0C0;
 }
 .ask-left a{
 	display: inline-block;
@@ -38,92 +46,59 @@ h3{
 }
 .ask-import img{
 	height: 450px;
-	height: 600px;
+	width: 375px;
 	margin: 20px 0;
 }
 .ask-right{
-	width: 420px;
 	float: right;
-	height: 20px;
-	background-color: red;
+	width: 240px;
 }
-img.time
-{
+.ask-img{
+	margin: 20px 0;
+	text-align: center;
+}
+.ask-img img{
+	width: 88px;
+	height: 88px;
+	border-radius: 100%;
+}
+.ask-area{
+	margin-bottom: 12px;
+	border-bottom: 1px dashed #C0C0C0;
+}
+.ask-area i{
+	color: #FCD62C;
 	display: inline-block;
-	position:absolute;
-	top:-15px;
-	height:18px;
+	height: 24px;
 }
-img.time:hover
-{ 
-	cursor: pointer;
+.area{
+	text-align: center;
+	margin: 12px 0;
 }
-p.time
-{
-	position: absolute;
-	left: 35px;
-	top: -17px;
-}
-p.problem
-{
-	position: absolute;
-	top: 130px;
-}
-div.picture
-{
-	position: relative;
-	top: 250px;
-}
-div.look
-{
-	border-bottom: 2px solid #F8F8F8;
-	height: 35px;
-	width: 160px;
-	position: absolute;
-	bottom: 965px;
-	left: 630px;
-	padding-left: 30px;
-}
-em
-{
-	color: #FF0000;
-	font-style: normal;
-}
-a.username
-{
-	position: absolute;
-    bottom: 930px;
-    left: 685px;
-}
-div.user
-{
-	border-top: 1px dashed #DDDDDD;
-	position:relative;
-	bottom: 705px;
-	right: -630px;
-	width: 155px;
-	padding-top: 20px;
-	padding-left: 35px;
-}
-table
-{
-	border-collapse:collapse;
-	position: relative;
-	bottom: 710px;
-	right:-640px;
-	width: 180px;
-}
-div.flower
-{
+.ask-area span{
 	display: inline-block;
-	position: relative;
-	bottom: 620px;
-	left: 650px;
+	height: 24px;
+	margin-left: 12px;
 }
-div.mark
-{
-	display: inline-block;
-	position: relative;
-	bottom: 590px;
-	left: 550px;
+.ask-area span:after{
+	content: ":";
+}
+.ask-area b{
+	font-weight: 400;
+	margin-left: 24px;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 755547 */
+  src: url('//at.alicdn.com/t/font_755547_i99je4p7ndp.eot');
+  src: url('//at.alicdn.com/t/font_755547_i99je4p7ndp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_755547_i99je4p7ndp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_755547_i99je4p7ndp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_755547_i99je4p7ndp.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }

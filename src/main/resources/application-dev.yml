@@ -9,9 +9,9 @@ spring:
             content-type: text/html
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wky
+    url: jdbc:mysql://120.79.249.80:3306/huipeasant
     username: root
-    password: root
+    password: wqj123
   jpa:
     hibernate:
       ddl-auto: update
