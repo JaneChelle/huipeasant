@@ -13,12 +13,13 @@
 <div class="windoww">
     <div class="popup-windows">
         <h2 style="text-align: center">修改视频</h2>
-        <form th:action="@{/AdminVideoController/adminEditProduct}" enctype="multipart/form-data">
+        <form th:action="@{/AdminVideoController/adminEditProduct}" enctype="multipart/form-data" th:method="post">
+            <input type="hidden" name="videoId" th:value="${video.videoId}"/>
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>作者提示</th>
                     <td>
-                        <input type="text" name="authorSuggests" class="form-control"  value="" id="userphone" required="required"/>
+                        <input type="text" name="authorSuggests" class="form-control"  th:value="${video.authorSuggests}" id="userphone" required="required"/>
                     </td>
                 </tr>
                 <tr>
@@ -27,15 +28,15 @@
                 </tr>
                 <tr>
                     <th>模块名字</th>
-                    <td><input type="text" name="modelName" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="modelName" class="form-control" th:value="${video.modelName}" required="required"/></td>
                 </tr>
                 <tr>
                     <th>视频简介</th>
-                    <td><input type="text" name="videoIntroduction" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="videoIntroduction" class="form-control" th:value="${video.videoIntroduction}" required="required"/></td>
                 </tr>
                 <tr>
                     <th>视频标题</th>
-                    <td><input type="text" name="videoTitle" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="videoTitle" class="form-control" th:value="${video.videoTitle}" required="required"/></td>
                 </tr>
                 <tr>
                     <td colspan="2">

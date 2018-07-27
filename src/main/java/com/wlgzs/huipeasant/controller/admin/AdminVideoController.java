@@ -75,14 +75,16 @@ public class AdminVideoController extends BaseController {
 
     //按ID删除视频
     @RequestMapping("/adminDeleteVideo")
-    public ModelAndView delete(Model model,long videoId ,HttpServletRequest request){
+    public ModelAndView delete(long videoId ,HttpServletRequest request){
         videoService.delete(videoId,request);
         return new ModelAndView("redirect:/AdminVideoController/adminVideoList");
     }
 
     //跳转到修改视频
     @RequestMapping("/toEditVideo")
-    public ModelAndView toEditVideo(){
+    public ModelAndView toEditVideo(Model model,long videoId){
+        Video video = videoService.findById(videoId);
+        model.addAttribute("video",video);
         return new ModelAndView("admin/adminEditVideo");
     }
 

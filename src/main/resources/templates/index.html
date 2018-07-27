@@ -12,17 +12,17 @@
 <div class="head">
     <div class="header">
         <div class="header-left" title="慧农在线">
-            <a href="index.html">
+            <a th:href="@{/user/toindex}">
                 <img th:src="@{/img/peasanter.png}"/>
                 <b>慧农在线</b>
             </a>
         </div>
         <div class="header-right">
-            <a href="login.html">
+            <a th:href="@{/LogUserController/toLogin}">
                 <i class="iconfont">&#xe61a;</i>
                 <span>登录</span>
             </a>
-            <a href="register.html">注册</a>
+            <a th:href="@{LogUserController/toRegistered}">注册</a>
             <a id="qr-code">
                 <span>手机端</span>
                 <i class="iconfont">&#xe622;</i>
@@ -87,11 +87,11 @@
             </div>
             <div class="box-content">
                 <ul>
-                    <li>
-                        <a th:href="@{/train.html}"><!--详情-->
-                            <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
+                    <li th:each="video : ${videoList}">
+                        <a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}"><!--详情-->
+                            <img th:src="'/Path/'+${video.videoCover}" alt="" style="width: 130px;height: 120px;">
                         </a>
-                        <p><a th:href="@{/}">新型庄稼医院展示</a></p>
+                        <p><a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}" th:text="${video.videoTitle}"></a></p>
                         <div style="margin-top: -106px;" class="bofang">
                             <i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
                         </div>

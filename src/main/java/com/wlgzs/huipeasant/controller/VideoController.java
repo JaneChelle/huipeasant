@@ -28,12 +28,12 @@ public class VideoController extends BaseController {
         return new ModelAndView("");
     }
 
-    //按ID查询视频
-    @RequestMapping("/detailsVideo")
+    //按ID查询视频（视频详情）
+    @RequestMapping("/videoDetails")
     public ModelAndView detailsVideo(long videoId,Model model){
         Video video = videoService.detailsVideo(videoId);
         model.addAttribute("video",video);
-        return new ModelAndView("detailsVideo");
+        return new ModelAndView("train");
     }
 
     //全部视频
@@ -50,6 +50,13 @@ public class VideoController extends BaseController {
         List<Video> videoList = videoService.videoRanking();
         model.addAttribute("videoList",videoList);
         return new ModelAndView("VideoList");
+    }
+
+    //视频播放页
+    @RequestMapping("toPcvideo")
+    public ModelAndView toPcvideo(Model model,String videoAddress){
+        model.addAttribute("videoAddress",videoAddress);
+        return new ModelAndView("pcvideo");
     }
 
 }

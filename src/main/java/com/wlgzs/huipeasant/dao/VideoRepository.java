@@ -18,7 +18,4 @@ public interface VideoRepository extends JpaRepository<Video, Long>,JpaSpecifica
     @Query(value = "SELECT * FROM Video",nativeQuery = true)
     List<Video> findAllVideo();
 
-    //视频点击
-    @Query("UPDATE Video v set v.videoHits=v.videoHits + 1 WHERE v.videoId = ?1")
-    void addVideoHits(long videoId);
 }
