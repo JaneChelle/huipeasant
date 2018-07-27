@@ -44,7 +44,7 @@
 <div class="sty">
     <div class="sty2">
         <h1>个人中心</h1>
-        <h1 class="sty3"><a href="">首页</a></h1>
+        <h1 class="sty3"><a th:href="@{/user/toindex}">首页</a></h1>
         <h2 class="sty4"><a th:href="@{/LogUserController/login}">退出</a></h2>
         <span><a href="" style="color: #fff;">地区排行</a></span>
         <span><a href="" style="color: #fff;">个人排行</a></span>
@@ -73,6 +73,7 @@
                         <!--<select data-district="&#45;&#45;&#45;&#45; 选择区 &#45;&#45;&#45;&#45;" class="dis"></select>-->
                     <!--</div>-->
                     <textarea></textarea>
+                    <span class="address modify">确认</span>
                 </div>
                 <div class="range">
                     昵称：
@@ -81,7 +82,12 @@
                 </div>
                 <div class="range">
                     性别：
-                    <span th:text="${user.sex}">女</span>
+                    <!--<span th:text="${user.sex}">女</span>-->
+                    <select id="test">
+                        <option value ="男">男</option>
+                        <option value ="女">女</option>
+                    </select>
+                    <span class="sex modify">确认</span>
                 </div>
                 <div class="range">
                     手机号：

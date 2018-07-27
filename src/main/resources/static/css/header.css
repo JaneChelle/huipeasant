@@ -84,23 +84,16 @@ body{
 	top: 8px;
 }
 .search form input{
-	width: 0; 
+	width: 250px; 
 	height: 42px;
-	padding: 0 42px 0 15px; 
-	border-bottom: 2px solid transparent; 
-	background: transparent; 
-	transition: .3s linear; 
-	position: absolute; 
-	top: 0; 
-	right: 0; 
-	z-index: 2;
+	border-radius: 42px;	
+	background: #F9F0DA; 	
+	transition: .3s linear; 	
+	float: right;
 	padding-left: 13px;
-	letter-spacing: 2px;
 }
 .search form input:focus { 
-	width: 300px; 
-	z-index: 1; 
-	border-bottom: 2px solid #ff6600; 
+	width: 300px;
 } 
 							
 .search button { 
@@ -114,9 +107,9 @@ body{
 	cursor: pointer;
 } 
 .search button:before { 
-	content: "搜索"; 
-	font-size: 16px; 
-	color: #fff; 
+	content: "\f002"; 
+	font-family: FontAwesome; 
+	color: #324b4e; 
 } 
 /*二维码*/
 .qr-code{

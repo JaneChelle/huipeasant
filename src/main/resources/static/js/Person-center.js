@@ -66,6 +66,27 @@ $(document).ready(function () {
         $(".new-window4").css("display","none");
 
     });
+    //1.获取地区请求
+
+    $(".address").click(function (){
+        var   address= $("textarea").val();
+        $.ajax({
+            url:"/UserManagementController/information",
+            type:'POST',
+            data:{
+                /*"userId":userId,*/
+                "address":address
+            },
+            dataType:"text",
+            success:function(){
+                $(".new-window2").css("display","none");
+
+            },
+            error:function () {
+                alert("请求失败");
+            }
+        });
+    });
 
     //2.修改昵称请求
   var   nicheng= $(".nicheng");
@@ -91,4 +112,33 @@ $(document).ready(function () {
             });
         // }
     });
+    // 3.性别请求
+    var options=$("#test option:selected"); //获取选中的项
+    var sex=options.val(); //拿到选中项的值
+    $(".sex").click(function (){
+        var options=$("#test option:selected"); //获取选中的项
+        var sex=options.val(); //拿到选中项的值
+        $.ajax({
+            url:"/UserManagementController/information",
+            type:'POST',
+            data:{
+                /*"userId":userId,*/
+                "sex":sex
+            },
+            dataType:"text",
+            success:function(){
+                $(".new-window2").css("display","none");
+
+            },
+            error:function () {
+                alert("请求失败");
+            }
+        });
+
+    });
+
+
+
+
+
 });
