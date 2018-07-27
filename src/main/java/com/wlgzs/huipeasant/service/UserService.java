@@ -50,4 +50,7 @@ public interface UserService {
     //判断用户预留信息是否正确
     boolean validationIfo(String phoneNumber,String reservedInf);
 
+    //修改性别
+    void ModifySex(User user,String sex,HttpSession session);
+
 }
