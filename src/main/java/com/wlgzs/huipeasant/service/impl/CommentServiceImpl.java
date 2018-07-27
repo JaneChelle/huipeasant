@@ -24,6 +24,7 @@ public class CommentServiceImpl implements CommentService {
         comment.setUserId(user.getUserId());
         comment.setCommentDate(date);
         comment.setUserName(user.getNickName());
+        comment.setUserIcon(user.getHeadPortrait());
         commentDao.save(comment);
         return true;
     }

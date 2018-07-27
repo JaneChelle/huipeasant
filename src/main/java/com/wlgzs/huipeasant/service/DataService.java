@@ -30,4 +30,5 @@ public interface DataService {
    Map<Data,List<Comment>> ipQuestion(int moduleLevel, int page, Model model);
    void delete(long dataId);
    void deletedatas(long[] dataIds); //批量删除数据
+   List<String> paragraphList(String text);      //给文章分段
 }

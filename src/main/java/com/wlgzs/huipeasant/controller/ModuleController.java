@@ -26,8 +26,10 @@ public class ModuleController extends BaseController {
 
     @GetMapping("moduleview/{moudelId}/{page}")//查看模块所有数据
     public ModelAndView moduleView(Model model, @PathVariable("moudelId") long moudelId, @PathVariable("page") int page){
-        model.addAttribute("information",dataService.information());
-        model.addAttribute("rank",dataService.indexRank());
+        model.addAttribute("information",dataService.information()); //资讯
+        model.addAttribute("rank",dataService.indexRank());   //排行
+        model.addAttribute("question",dataService.relevantIssues()); // 正在问的问题
+        model.addAttribute("relevant",dataService.recommend(moudelId)); // 相关推荐
         dataService.moudelDatas(model,moudelId,page);
         return new ModelAndView("material") ;
     }

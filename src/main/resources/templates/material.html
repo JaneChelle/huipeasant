@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>慧农在线-农技培训服务平台</title>
-		<link rel="shortcut icon" type="img/x-icon" href="img/favicon.ico"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/question.css" />
+		<link rel="shortcut icon" type="img/x-icon" href="/img/favicon.ico"/>
+		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="/css/header.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="/css/question.css" />
 	</head>
 	<body>
 		<div class="head" >
@@ -48,30 +48,21 @@
 				</div>
 				<div class="nav">
 					<div class="wrapper-l">
-						<div class="wrapper-p">
-							<h2><a href="article.html" target="_blank">农业部强调农药专项整治重点</a></h2>
+						<div class="wrapper-p" th:each="data : ${datas}" th:if="${data.pictureAddress!=null && !data.pictureAddress.equals('')}">
+							<h2><a th:href="'/user/textview/'+${data.dataId}" target="_blank"><span th:text="${data.contentsTitle}"></span></a></h2>
 							<div class="material-nav">
-								<a href="article.html" target="_blank"><img src="images/timg (12).jpg"/></a>
+								<a th:href="'/user/textview/'+${data.dataId}" target="_blank"><img th:src="'/Path/'+${data.pictureAddress}"/></a>
 								<div class="material-p">
-									近日，农业部发布了2016年农药专项整治行动方案。方案将推进高毒农药定点经营和建立农药电子信息追溯制度列为重点任务，特别强调要对农药使用风险评估和突发舆情特别关注。　　——加大禁限用农药整治力
+									<p th:text="${data.contents}" ></p>
 								</div>
 							</div>
 						</div>
-						<div class="wrapper-p">
-							<h2><a href="article.html" target="_blank">农业部强调农药专项整治重点</a></h2>
+						<div class="wrapper-p" th:each="data : ${datas}"  th:if="${data.pictureAddress==null || data.pictureAddress.equals('')}">
+							<h2><a th:href="'/user/textview/'+${data.dataId}" target="_blank"><span th:text="${data.contentsTitle}"></span></a></h2>
 							<div class="material-nav">
-								<a href="article.html" target="_blank"><img src="images/timg (12).jpg"/></a>
+								<!--<a href="article.html" target="_blank"><img src="images/timg (12).jpg"/></a>-->
 								<div class="material-p">
-									近日，农业部发布了2016年农药专项整治行动方案。方案将推进高毒农药定点经营和建立农药电子信息追溯制度列为重点任务，特别强调要对农药使用风险评估和突发舆情特别关注。　　——加大禁限用农药整治力
-								</div>
-							</div>
-						</div>
-						<div class="wrapper-p">
-							<h2><a href="article.html" target="_blank">农业部强调农药专项整治重点</a></h2>
-							<div class="material-nav">
-								<a href="article.html" target="_blank"><img src="images/timg (12).jpg"/></a>
-								<div class="material-p">
-									近日，农业部发布了2016年农药专项整治行动方案。方案将推进高毒农药定点经营和建立农药电子信息追溯制度列为重点任务，特别强调要对农药使用风险评估和突发舆情特别关注。　　——加大禁限用农药整治力
+									<span th:text="${data.contents}" ></span>
 								</div>
 							</div>
 						</div>
@@ -79,41 +70,13 @@
 							<h2>大家正在问</h2>
 							<div class="recommendation-ulist">
 								<ul>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="ask.html" target="_blank">
-											<i>金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
-											<b>昨天</b>
+									<li th:each="que : ${question}">
+										<span th:text="${que.uploadTime}"></span>
+										<a th:href="'/user/textview/'+${que.getDataId()}" target="_blank">
+											<i th:text="${que.contentsTitle}">金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
 										</a>
 									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="ask.html" target="_blank">
-											<i>金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
-											<b>12:30</b>
-										</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="ask.html" target="_blank">
-											<i>金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
-											<b>2015-2-6</b>
-										</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="ask.html" target="_blank">
-											<i>金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
-											<b>23:14</b>
-										</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="ask.html" target="_blank">
-											<i>金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
-											<b>21:41</b>
-										</a>
-									</li>
+
 								</ul>
 							</div>
 						</div>
@@ -156,15 +119,8 @@
 				            <h2>频道本月排行</h2>
 				            <span class="pin-more"><a href="" style="color: #999;">更多</a></span>
 				            <ul>
-				                <li>[<a href="">农药</a>]<a href="article.html" class="tex">防治小麦条锈病药剂推荐</a></li>
-				                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫剂</a></li>
-				                <li>[<a href="">农膜</a>]<a href="answer.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">农药</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">农膜</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">农药</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
-				                <li>[<a href="">农膜</a>]<a href="article.html" class="tex">农多斯---高效安全内吸性阔叶杂草除虫</a></li>
+								<li th:each="ss : ${rank}">[<a href=""><span th:text="${ss.moduleName}"></span></a>]<a href="article.html" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
+
 				            </ul>
 				        </div>
 				        <!--资讯推荐-->
@@ -172,60 +128,21 @@
 				            <h2>资讯推荐</h2>
 				            <span class="pin-more"><a href="" style="color: #FE6400;">更多</a></span>
 				            <ul>
-				                <li>
-				                    <span>♥</span>
-				                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-				                    <div class="imgfont">
-				                        <a href="article.html">
-				                            <img src="images/rb1.jpg" alt="" style="width: 120px;height: 68px;">
-				                        </a>
-				                        <div class="imgrt">
-				                            <p>
-				                                <i class="fa fa-file-text-o 1g"></i>
-				                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-				                            </p>
-				                        </div>
-				                    </div>
-				                </li>
-				                <li>
-				                    <span>♥</span>
-				                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-				                    <div class="imgfont">
-				                        <a href="article.html"><img src="images/rb2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-				                        <div class="imgrt">
-				                            <p>
-				                                <i class="fa fa-file-text-o 1g"></i>
-				                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-				                            </p>
-				                        </div>
-				                    </div>
-				                </li>
-				                <li>
-				                    <span>♥</span>
-				                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-				                    <div class="imgfont">
-				                        <a href="article.html"><img src="images/yin1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-				                        <div class="imgrt">
-				                            <p>
-				                                <i class="fa fa-file-text-o 1g"></i>
-				                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-				                            </p>
-				                        </div>
-				                    </div>
-				                </li>
-				                <li>
-				                    <span>♥</span>
-				                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-				                    <div class="imgfont">
-				                        <a href="article.html"><img src="images/印.jpg" alt="" style="width: 120px;height: 68px;"></a>
-				                        <div class="imgrt">
-				                            <p>
-				                                <i class="fa fa-file-text-o 1g"></i>
-				                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-				                            </p>
-				                        </div>
-				                    </div>
-				                </li>
+								<li th:each="infor : ${information}">
+									<span>♥</span>
+									<a href="article.html"><span th:text="${infor.contentsTitle}"></span></a>
+									<div class="imgfont">
+										<a href="article.html">
+											<img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
+										</a>
+										<div class="imgrt">
+											<p>
+												<i class="fa fa-file-text-o 1g"></i>
+												<span class="font2" th:text="${infor.contents}">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+											</p>
+										</div>
+									</div>
+								</li>
 				            </ul>
 				        </div>
 				        <!--农技视频-->

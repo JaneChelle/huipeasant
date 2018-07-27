@@ -6,6 +6,7 @@ import com.wlgzs.huipeasant.dao.MouduleDao;
 import com.wlgzs.huipeasant.entity.Comment;
 import com.wlgzs.huipeasant.entity.Data;
 import com.wlgzs.huipeasant.entity.Module;
+import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.service.DataService;
 import com.wlgzs.huipeasant.util.IoUtil;
 import org.hibernate.annotations.Source;
@@ -20,6 +21,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.criteria.*;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
@@ -33,13 +35,19 @@ public class DataServiceImpl implements DataService {
     CommentDao commentDao;
     @Source
     IoUtil ioUtil;
+    @Autowired
+    HttpSession session;
 
 @Override
-    public boolean addData(Data data, MultipartFile multipartFile ,int dataLevle) throws IOException {
+    public boolean
+addData(Data data, MultipartFile multipartFile ,int dataLevle) throws IOException {
         IoUtil ioUtil = new IoUtil();
         if (data.getContentsTitle() != null) {
             if (dataLevle==2){              //判断是否是提问问题
              data.setModuleId(1);
+                User user = (User)(session.getAttribute("user"));
+                data.setUserIcon(user.getHeadPortrait());
+                data.setUserName(user.getNickName());
             }
             if (dataLevle==3){
                 data.setModuleId(9);
@@ -150,7 +158,7 @@ public class DataServiceImpl implements DataService {
             @Override
             public Predicate toPredicate(Root<Data> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
                 List<Predicate> predicates = new ArrayList<Predicate>();
-                Path<Long> moudleId =root.get("moudleId");
+                Path<Long> moudleId =root.get("moduleId");
                 Predicate _moudleId =criteriaBuilder.equal(moudleId,data.getModuleId());
                 Path<Long> _dataId = root.get("dataId");
                 Predicate _Id = criteriaBuilder.notEqual(_dataId,data.getDataId());
@@ -193,6 +201,16 @@ public class DataServiceImpl implements DataService {
     public Data textView(long dataId) {  // 获取指定文章
     Data data = dataRepository.findById(dataId).get();
     return data;
+    }
+    @Override
+    public List<String> paragraphList(String text) {      //给文章分段
+        List<String> list = new ArrayList<String>();
+        Scanner scanner = new Scanner(text);
+        while (scanner.hasNext()) {
+            String world = scanner.next();
+            list.add(world);
+        }
+        return list;
     }
 
     @Override
@@ -246,7 +264,7 @@ public class DataServiceImpl implements DataService {
         model.addAttribute("pages",dataPage.getTotalPages());
         model.addAttribute("page",page);
     }
-    public Map<Data,List<Comment>> ipQuestion(int moduleLevel,int page,Model model){
+    public Map<Data,List<Comment>> ipQuestion(int moduleLevel,int page,Model model){  //在手机端主页展示的问题
             Map<Data,List<Comment>> commentListMap = new HashMap<>();
         List<Data> dataList = new ArrayList<>();
          Pageable pageable = new PageRequest(page-1,10);

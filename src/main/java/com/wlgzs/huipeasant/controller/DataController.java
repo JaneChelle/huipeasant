@@ -48,10 +48,10 @@ public class DataController extends BaseController {
            return new Result(ResultCode.FAIL,"上传失败，请检查信息是否填写完整");
        }
     }
-    @PostMapping("textview/{dataId}")
+    @GetMapping("textview/{dataId}")
     public ModelAndView textview(Model model,@PathVariable("dataId")long dataId){
+        model.addAttribute("paragraphs",dataService.paragraphList(dataService.textView(dataId).getContents()));
         model.addAttribute("data",dataService.dataView(dataId));
-        model.addAttribute("dada",dataService.textView(dataId));
         if (dataService.jundegeView(dataId)) {
             model.addAttribute("question",dataService.relevantIssues());
             model.addAttribute("recommed",dataService.recommend(dataId));

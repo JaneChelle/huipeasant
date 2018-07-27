@@ -67,6 +67,7 @@ public class UserController extends BaseController {
 
     //修改用户
     @RequestMapping("/adminEditUser")
+
     public String edit(Model model,User user) {
         String mag = userService.edit(user);
         model.addAttribute("mag",mag);

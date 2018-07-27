@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>慧农在线-农技培训服务平台</title>
-		<link rel="shortcut icon"  th:href="@{img/x-icon}" href="img/favicon.ico"/>
-		<link rel="stylesheet"  th:href="@{font-awesome-4.7.0/css/font-awesome.css}" />
-		<link rel="stylesheet"  th:href="@{css/header.css}" />
-		<link rel="stylesheet"   th:href="@{css/index.css}" />
-		<link rel="stylesheet" type="text/css"   th:href="@{css/question.css}" />
+		<link rel="shortcut icon"  th:href="@{/img/x-icon}" href="/img/favicon.ico"/>
+		<link rel="stylesheet"  th:href="@{/ont-awesome-4.7.0/css/font-awesome.css}" />
+		<link rel="stylesheet"  th:href="@{/css/header.css}" />
+		<link rel="stylesheet"   th:href="@{/css/index.css}" />
+		<link rel="stylesheet" type="text/css"   th:href="@{/css/question.css}" />
 	</head>
 	<body>
 		<div class="head" >
@@ -50,49 +50,24 @@
 				<!--</div>-->
 				<div class="nav">
 					<div class="wrapper-l">
-						<h1>科学使用农药技术</h1>
+						<h1 th:each="data : ${data}" th:text="${data.contentsTitle}">科学使用农药技术</h1>
 						<div class="wrapper-time">
 							<span>2018-4-30</span>
-							<span style="margin-left: 18px;">14:14:14</span>
+							<span style="margin-left: 18px;" th:each="data : ${data}" th:text="${data.uploadTime}"> 14:14:14</span>
 						</div>
-						<div class="wrapper-p">
-							<p> 目前正值茄果类蔬菜秧苗生长和瓜类蔬菜育苗的关键时期，由于温度低、蔬菜大棚内通风不良和光照不足，幼苗抵抗力较弱，在育苗过程中如果管理不当，易发生猝倒病、立枯病、灰霉病和地下害虫等病虫害，如管理松懈，轻则降低幼苗成株率；重则造成幼苗大量死亡，延误农时。因此，加强育苗期间的田间管理，及时开展蔬菜苗期病虫害的防治，是夺取蔬菜丰产丰收的关键和基础。</p> 
-      <p> 一、主要病虫害</p>
-      <p> 猝倒病、立枯病：幼苗生长的前期容易发生猝倒病，低温阴雨或寒流天气时，冷风侵入苗床，有利于该病的发生流行，根据1月9日田间调查茄子、辣椒、番茄等苗床猝倒病株发病率0～3%。立枯病幼苗假植后易受害，幼苗徒长易发病，特别是苗床播种过密、间苗不及时等，有利于该病的蔓延。下阶段如遇连续低温阴雨寡照天气，易引起种子发芽时间延长、发芽势弱等现象，后期的天气趋势有利于病害的发生。若管理措施不到位，在适宜发病的环境条件下，病情发展迅速，沤根等现象也容易出现。
-灰霉病：近期出现阴雨天气，在光照不足、高湿、低温的条件下，有利于灰霉病等低温高湿型病害发生，根据1月9日杭州市站监测点田间调查，茄子等茄果类蔬菜苗床上灰霉病株发病率0～4%。遇低温阴雨天气时，大棚内结雾、低温、高湿的环境，易造成灰霉病等病害发生蔓延，应及时做好防治工作。</p>
-地下害虫：冬季苗床生存环境稳定，隐蔽性强，蝼蛄、蛴螬等地下害虫为害，防治难度大，常造成伤根、死苗。
-      <p> 历年春节前后都是蔬菜育苗、保护地特早熟栽培的关键时期，特别是遇低温与春节长假，易导致节假期间棚室管理不到位、关棚时间过长而诱发病害。因此望各生产单位做好秧苗的防寒保暖工作，加强苗床及移栽大棚的管理，适时定期用药，预防病虫害发生流行。露地栽培蔬菜注意阴雨天气及时清理沟畦，排除积水，促进蔬菜恢复生长，注意绿叶蔬菜霜霉病、菌核病等低温高湿病害的防治。 </p>
-      <p>  二、防治意见 </p>
-     <p>   1、苗期病害 </p>
-        <p>（1）加强苗期管理：冬季蔬菜育苗，应加强保温、增温和温湿度管理。选择温暖晴天揭膜炼苗、通风换气，严格控制苗床温湿度。发现病苗要及时移除，对生长过旺的秧苗可通过控温勤炼苗、搬移假植来达到控制过旺生长，增强作物抗寒的适应性。
-       （2）药剂防治：出苗后若有零星发病应及时喷药防治。预防苗期病害的发生可选用广谱性杀菌剂，防治立枯病和猝倒病药剂可选用50%多菌灵WP、30%多菌灵·福美双WP（苗菌敌）等药剂床面洒施或进行喷雾防治。灰霉病防治可选用50%异菌脲悬浮剂（扑海因）800倍液、50%啶酰菌胺WDG（凯泽）2000倍液、25%啶菌噁唑SC2500倍液等在病害发生初期进行喷雾。 </p>
- <p>2、地下害虫 </p>
-     <p>  预防地下害虫应根据国家有关农药使用的规定，科学选用防治药剂，如选用0.4%氯虫苯甲酰胺颗粒剂、1%联苯·噻虫胺颗粒剂（家宝福）等新型高效低毒药剂进行防治，定植时撒施药剂注意不要直接与跟接触，防止出现药害，也可选用安全高效药剂181克/升zata-氯氰菊酯乳油（富锐）3000倍对地喷射。</p>
+
+						<div class="wrapper-p" th:each="data : ${data}">
+							<img th:if="${data.pictureAddress!=null && !data.pictureAddress.equals('')}" src="images/timg (11).jpg"/>
+						<p th:each="paragraph : ${paragraphs}" th:text="${paragraph}" > </p>
 						</div>
 
 						<div class="recommendation">
 							<h2>相关推荐阅读</h2>
 							<div class="recommendation-ulist">
 								<ul>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="article.html">近日杀虫剂毒死蜱市场行情解析</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="article.html">生物农药防治土传病害和线虫为害</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="article.html">种粮大户盼“药肥一体化”</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="article.html">几种见光易分解的农药</a>
-									</li>
-									<li>
-										<span>2018-4-5 12:35</span>
-										<a href="article.html">农业部通报16家生产企业的21个农药产品不合格</a>
+									<li th:each="data : ${recommed} ">
+										<span th:text="${data.uploadTime}">2018-4-5 12:35</span>
+										<a th:href="'/user/textview/'+${data.getDataId()}" th:text="${data.contentsTitle}" >近日杀虫剂毒死蜱市场行情解析</a>
 									</li>
 								</ul>
 							</div>
@@ -112,31 +87,12 @@
 							<h2>大家正在问</h2>
 							<div class="recommendation-ulist">
 								<ul>
-									<li>
-										<a href="ask.html" target="_blank">
-											 我请问这是什么原因造成的，长到这么大时就黄了枯了
+									<li th:each="que : ${question}">
+										<a th:href="'/user/textview/'+${que.getDataId()}" target="_blank">
+											<i th:text="${que.contentsTitle}">金桔树干上有一点一点的斑，有流胶，叶子掉了许多，剩叶看似不健康。</i>
 										</a>
 									</li>
-									<li>
-										<a href="ask.html" target="_blank">
-											马鞭草顶部枯萎发黑，有的整株枯萎，是什么病，怎么防治。
-										</a>
-									</li>
-									<li>
-										<a href="ask.html" target="_blank">
-											 叶片病斑沿着两侧叶脉间发生，病斑不上叶脉
-										</a>
-									</li>
-									<li>
-										<a href="ask.html" target="_blank">
-											 撒施肥料后还可以用水肥吗？
-										</a>
-									</li>
-									<li>
-										<a href="ask.html" target="_blank">
-											 黄花菜掉蕊是什么原因。
-										</a>
-									</li>
+
 								</ul>
 							</div>
 						</div>
