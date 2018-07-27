@@ -27,6 +27,10 @@ public class DataController extends BaseController {
          model.addAttribute("videoList",videoService.videoList());
         return new ModelAndView("index");
     }
+    @RequestMapping("toindex1")
+    public ModelAndView toindex1(){
+        return new ModelAndView("index1");
+    }
     @RequestMapping("toipindex/{level}/{page}")
     public ModelAndView toipindex(Model model,@PathVariable("level") int level,@PathVariable("page") int page) {
             dataService.ipgetDatas(level,page,model);

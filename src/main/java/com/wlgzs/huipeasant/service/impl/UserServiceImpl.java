@@ -204,4 +204,13 @@ public class UserServiceImpl implements UserService {
             return (user != null);
     }
 
+    @Override
+    public void ModifySex(User user, String sex,HttpSession session) {
+        user.setSex(sex);
+        userRepository.saveAndFlush(user);
+        //从新存入session
+        session.setMaxInactiveInterval(60 * 20);
+        session.setAttribute("user",user);
+    }
+
 }

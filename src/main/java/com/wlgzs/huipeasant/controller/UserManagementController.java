@@ -25,8 +25,8 @@ public class UserManagementController extends BaseController {
 
     //展示用户信息
     @RequestMapping("information")
-    public ModelAndView displayInformation(Model model, Long userId) {
-        User user = userService.findUserById(userId);
+    public ModelAndView displayInformation(Model model,HttpSession session) {
+        User user = (User)session.getAttribute("user");
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -38,12 +38,12 @@ public class UserManagementController extends BaseController {
         User user = (User) session.getAttribute("user");
         userService.ModifyName(request,user);
         model.addAttribute("user", user);
-        return new ModelAndView("information");
+        return new ModelAndView("redirect:/UserManagementController/information");
     }
 
     //跳转到修改手机号
     @RequestMapping("toChangePhone")
-    public ModelAndView toChangePhone(){ ;
+    public ModelAndView toChangePhone(){
         return new ModelAndView("changePhone");
     }
 
@@ -129,14 +129,12 @@ public class UserManagementController extends BaseController {
 
     //修改性别
     @RequestMapping("changeSex")
-    public ModelAndView changeSex(){
-        return null;
-
+    public ModelAndView changeSex(Model model,HttpSession session,String sex){
+        User user = (User)session.getAttribute("user");
+        userService.ModifySex(user,sex,session);
+        return new ModelAndView("redirect:/UserManagementController/information");
     }
 
     //修改用户地区
-
-    //设置预留信息
-
 
 }
