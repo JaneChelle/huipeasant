@@ -3,7 +3,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>会员管理中心</title>
+    <title>我要问-会员管理中心</title>
     <link rel="stylesheet" th:href="@{/css/toaddData.css}">
     <link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
@@ -62,9 +62,9 @@
            <div class="side">
                <div>我的庄稼医院</div>
                <ul>
-                   <li style="background-color: #599524;"><a href="question.html">我要问</a></li>
+                   <li style="background-color: #599524;"><a th:href="@{/user/addData}">我要问</a></li>
                    <li><a href="asked.html">我问的</a></li>
-                   <li><a href="mycollection.html">我的收藏</a></li>
+                   <li><a th:href="@{/CollectionController/Viewcollection}">我的收藏</a></li>
                </ul>
            </div>
             <!--内容区域-->

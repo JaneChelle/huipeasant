@@ -20,6 +20,7 @@ public class CollectionServiceImpl implements CollectionService {
 
     @Autowired
     VideoRepository videoRepository;
+    @Autowired
     CollectionRepository collectionRepository;
 
     //添加收藏
