@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0494e8b-8a0e-48d6-a59c-36dd14630134" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminUserList.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminEditUser.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/pcvideo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/morende.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/3分钟学会用菠萝种植菠萝-国语高清/3d000437-bf77-4f45-adb9-51d54b3bea04.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/3分钟学会用菠萝种植菠萝-国语高清/963b5c6d-d6e5-4fea-adc0-b63a7aa9a35b.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/世界领先的黄瓜种植技术/7801a439-b850-4e1e-ae3a-082687a5a351.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/世界领先的黄瓜种植技术/d901a45d-9c49-46d8-b2a4-11ad1ab3d39a.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/种植花生增值/19ca3a09-f070-477d-bc3a-6b3c94dea4ba.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/种植花生增值/665b78ba-6113-4bb3-8be7-49d5180a4e28.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/葡萄嫁接/2ff02a2c-00ef-42f4-83fb-7863b354c3f1.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/葡萄嫁接/7bd10c65-c829-4925-864b-f5a27f60956d.jpg" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/VideoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/VideoRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/VideoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/VideoService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminEditVideo.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminEditVideo.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminVideoList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminVideoList.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/train.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/train.html" />
-    </list>
+    <list default="true" id="f0494e8b-8a0e-48d6-a59c-36dd14630134" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -472,12 +445,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532589422950</updated>
-      <workItem from="1532589424918" duration="52144000" />
+      <workItem from="1532589424918" duration="52282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52144000" />
+    <option name="totallyTimeSpent" value="52282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -494,13 +467,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20927724" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75943905" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13052858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4940669" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -779,7 +752,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
