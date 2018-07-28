@@ -51,15 +51,14 @@ public class DataController extends BaseController {
 
     @RequestMapping("toaddData")
     public ModelAndView toaddData(Model model) {
-        List<Module> list = new ArrayList<Module>();
-        list = moduleService.getModules();
-        model.addAttribute("types", list);
-        return new ModelAndView("toaddData");
+        model.addAttribute("moudels",moduleService.getModules());
+        return new ModelAndView("question");
     }
 
 
     @PostMapping("addData")
     public Result addData(Data data, MultipartFile multipartFile, int dataLevle) throws IOException {
+        System.out.println("tgdfygdryr"+dataLevle);
 
         boolean isTrue = dataService.addData(data, multipartFile, dataLevle);
         if (isTrue) {
@@ -98,7 +97,7 @@ public class DataController extends BaseController {
     @RequestMapping("question")
     public ModelAndView question(Model model){
         model.addAttribute("moudels",moduleService.getModules());
-        return new ModelAndView("myqusetion");
+        return new ModelAndView("question");
     }
 
 }

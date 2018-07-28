@@ -17,7 +17,7 @@
                 <b>慧农在线</b>
             </a>
         </div>
-        <div class="header-right">
+        <div class="header-right" th:if="${session.user == null }">
             <a th:href="@{/LogUserController/toLogin}">
                 <i class="iconfont">&#xe61a;</i>
                 <span><a href="/LogUserController/toLogin">登录</a></span>
