@@ -59,6 +59,7 @@ public class LogUserServiceImpl implements LogUserService {
                     session.setAttribute("adminUser", user);
                     return "管理员登录成功！";
                 } else {
+
                     session.setAttribute("user", user);
                     return "登录成功！";
                 }

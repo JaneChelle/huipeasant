@@ -27,6 +27,7 @@ public class UserManagementController extends BaseController {
     @RequestMapping("information")
     public ModelAndView displayInformation(Model model,HttpSession session) {
         User user = (User)session.getAttribute("user");
+        System.out.println(user);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }

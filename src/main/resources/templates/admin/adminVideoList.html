@@ -55,7 +55,7 @@
                 <td th:text="${adminVideoList.modelName}"></td>
                 <td class="ttdd" >
                     <a th:href="@{/AdminVideoController/adminDeleteVideo(videoId=${adminVideoList.videoId})}" class="a-div adiv1">删除</a>
-                    <a class="a-div adiv2" th:href="@{/AdminVideoController/adminEditProduct}">修改</a>
+                    <a class="a-div adiv2" th:href="@{/AdminVideoController/toEditVideo(videoId=${adminVideoList.videoId})}">修改</a>
                 </td>
             </tr>
             </tbody>

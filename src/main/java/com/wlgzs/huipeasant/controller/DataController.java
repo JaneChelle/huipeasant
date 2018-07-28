@@ -3,7 +3,7 @@ package com.wlgzs.huipeasant.controller;
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.Data;
 import com.wlgzs.huipeasant.entity.Module;
-import com.wlgzs.huipeasant.entity.User;
+import com.wlgzs.huipeasant.entity.Video;
 import com.wlgzs.huipeasant.util.Result;
 import com.wlgzs.huipeasant.util.ResultCode;
 import org.springframework.ui.Model;
@@ -25,9 +25,10 @@ public class DataController extends BaseController {
         model.addAttribute("question", dataService.question());
         model.addAttribute("information", dataService.information());
         model.addAttribute("rank", dataService.indexRank());
-        model.addAttribute("videoList", videoService.videoList());
+        List<Video> videoList = videoService.videoList();
+        videoList = videoList.subList(videoList.size() - 8, videoList.size());
+        model.addAttribute("videoList", videoList);
         model.addAttribute("moudel",moduleService.getModules());
-
         return new ModelAndView("index");
     }
 
@@ -47,6 +48,7 @@ public class DataController extends BaseController {
         dataService.ipgetDatas(level, page, model);
         return new ModelAndView("ipindex ");
     }
+
     @RequestMapping("toaddData")
     public ModelAndView toaddData(Model model) {
         List<Module> list = new ArrayList<Module>();
@@ -55,10 +57,10 @@ public class DataController extends BaseController {
         return new ModelAndView("toaddData");
     }
 
-    @RequestMapping("addData")
+
+    @PostMapping("addData")
     public Result addData(Data data, MultipartFile multipartFile, int dataLevle) throws IOException {
-        User user = (User) session.getAttribute("user");
-        System.out.println("sdfhnjkldshjgdkfhgjduhjfjkgh" + user);
+
         boolean isTrue = dataService.addData(data, multipartFile, dataLevle);
         if (isTrue) {
             return new Result(ResultCode.SUCCESS, "上传成功");
@@ -66,11 +68,11 @@ public class DataController extends BaseController {
             return new Result(ResultCode.FAIL, "上传失败，请检查信息是否填写完整");
         }
     }
-
     @GetMapping("textview/{dataId}")
     public ModelAndView textview(Model model, @PathVariable("dataId") long dataId) {
         model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
         model.addAttribute("data", dataService.dataView(dataId));
+
         if (dataService.jundegeView(dataId)) {
             model.addAttribute("question", dataService.relevantIssues());
             model.addAttribute("recommed", dataService.recommend(dataId));

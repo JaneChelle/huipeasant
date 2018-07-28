@@ -166,9 +166,14 @@ public class VideoServiceImpl implements VideoService {
     //视频详情页
     @Override
     public Video detailsVideo(long videoId) {
+        Video video = videoRepository.findById(videoId);
         //增加视频点击量
-        videoRepository.addVideoHits(videoId);
-        return videoRepository.findById(videoId);
+        int hit = video.getVideoHits();
+        hit += 1;
+        video.setVideoHits(hit);
+        videoRepository.saveAndFlush(video);
+        System.out.println("点击量"+video.getVideoHits());
+        return video;
     }
 
     //视频排行
@@ -178,5 +183,10 @@ public class VideoServiceImpl implements VideoService {
         Sort sort = new Sort(Sort.Direction.DESC,"videoHits");
         List<Video> videos = videoRepository.findAll(sort);
         return videos;
+    }
+
+    @Override
+    public Video findById(long videoId) {
+        return videoRepository.findById(videoId);
     }
 }
