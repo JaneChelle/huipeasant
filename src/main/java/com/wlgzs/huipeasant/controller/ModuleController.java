@@ -19,18 +19,18 @@ import java.util.List;
 public class ModuleController extends BaseController {
 
     @RequestMapping("addaddModule")//添加模块
-    public Result addModule(Module module){
+    public Result addModule(Module module) {
         moduleService.addModule(module);
-        return new Result(ResultCode.SUCCESS,"添加成功");
+        return new Result(ResultCode.SUCCESS, "添加成功");
     }
 
     @GetMapping("moduleview/{moudelId}/{page}")//查看模块所有数据
-    public ModelAndView moduleView(Model model, @PathVariable("moudelId") long moudelId, @PathVariable("page") int page){
-        model.addAttribute("information",dataService.information()); //资讯
-        model.addAttribute("rank",dataService.indexRank());   //排行
-        model.addAttribute("question",dataService.relevantIssues()); // 正在问的问题
-        model.addAttribute("relevant",dataService.recommend(moudelId)); // 相关推荐
-        dataService.moudelDatas(model,moudelId,page);
-        return new ModelAndView("material") ;
+    public ModelAndView moduleView(Model model, @PathVariable("moudelId") long moudelId, @PathVariable("page") int page) {
+        model.addAttribute("information", dataService.information()); //资讯
+        model.addAttribute("rank", dataService.indexRank());   //排行
+        model.addAttribute("question", dataService.relevantIssues()); // 正在问的问题
+        model.addAttribute("relevant", dataService.recommend(moudelId)); // 相关推荐
+        dataService.moudelDatas(model, moudelId, page);
+        return new ModelAndView("material");
     }
 }

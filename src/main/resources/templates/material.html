@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title>慧农在线-农技培训服务平台</title>
-		<link rel="shortcut icon" type="img/x-icon" href="/img/favicon.ico"/>
-		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" href="/css/header.css" />
-		<link rel="stylesheet" href="/css/index.css" />
-		<link rel="stylesheet" type="text/css" href="/css/question.css" />
+		<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
+		<link rel="stylesheet" th:href="@{/css/index.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/question.css}" />
 	</head>
 	<body>
 		<div class="head" >
@@ -130,9 +129,9 @@
 				            <ul>
 								<li th:each="infor : ${information}">
 									<span>♥</span>
-									<a href="article.html"><span th:text="${infor.contentsTitle}"></span></a>
+									<a th:href="'/user/textview/'+${infor.dataId}"><span th:text="${infor.contentsTitle}"></span></a>
 									<div class="imgfont">
-										<a href="article.html">
+										<a th:href="'/user/textview/'+${infor.dataId}">
 											<img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
 										</a>
 										<div class="imgrt">

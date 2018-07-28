@@ -49,24 +49,10 @@
         </div>
         <div class="nv-top-ct-range2">
             <ul>
-                <li id="one" title="农药">
-                    <a href="material.html" target="_blank">农药</a>
+                <li id="one" th:each="mou : ${moudel}">
+                    <a th:href="'/user/moduleview/'+${mou.mouldeId}+'/1'" target="_blank"><span th:text="${mou.moduleName}"></span></a>
                 </li>
-                <li id="two" title="肥料">
-                    <a href="material.html" target="_blank">肥料</a>
-                </li>
-                <li id="three" title="农膜">
-                    <a href="material.html" target="_blank">农膜</a>
-                </li>
-                <li id="four" title="种子种苗">
-                    <a href="material.html" target="_blank">种子种苗</a>
-                </li>
-                <li id="five" title="种子种苗">
-                    <a href="material.html" target="_blank">植保技术</a>
-                </li>
-                <li id="six" title="解决方案">
-                    <a href="material.html" target="_blank">解决方案</a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -141,26 +127,26 @@
 
                     <li class="list-figure" th:each="data : ${key.current.value}" th:if="${data.identity==1 }">
                         <div>
-                            <a href="article.html">
+                            <a th:href="'/user/textview/'+${data.dataId}">
                                 <div class="imgkuang">
                                     <img th:src="'/Path/'+${data.pictureAddress}" alt=""
                                          style="width: 130px;height: 120px;">
                                 </div>
                             </a>
-                            <p><a href="article.html"><span th:text="${data.contentsTitle}" class="curefont"></span></a>
+                            <p><a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}" class="curefont"></span></a>
                             </p>
                         </div>
                     </li>
                     <li style="margin-top: -146px;margin-left: 5px;" th:each="data : ${key.current.value}"
                         th:if="${data.identity==4 }">
-                        <a href="article.html"><span th:text="${data.contentsTitle}"></span></a>
+                        <a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}"></span></a>
                     </li>
                     <li style="margin-left: 5px" th:each="data : ${key.current.value}" th:if="${data.identity==2 }">
-                        <a href="article.html"><span th:text="${data.contentsTitle}"></span></a>
+                        <a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}"></span></a>
                     </li>
                 </ul>
                 <ul style="margin-top: 23px;border-top: 1px solid #999;">
-                    <li class="list-item" th:each="data : ${key.current.value}" th:if="${data.identity==0}"><a><span
+                    <li class="list-item" th:each="data : ${key.current.value}" th:if="${data.identity==0}"><a th:href="'/user/textview/'+${data.dataId}"><span
                             th:text="${data.contentsTitle}"></span></a></li>
                 </ul>
             </div>
@@ -203,7 +189,7 @@
             <span class="pin-more"><a href="" style="color: #999;">更多</a></span>
             <ul>
                 <li th:each="ss : ${rank}">[<a href=""><span th:text="${ss.moduleName}"></span></a>]<a
-                        href="article.html" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
+                        th:href="'/user/textview/'+${ss.dataId}" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
             </ul>
         </div>
         <!--资讯推荐-->
@@ -213,9 +199,9 @@
             <ul>
                 <li th:each="infor : ${information}">
                     <span>♥</span>
-                    <a href="article.html"><span th:text="${infor.contentsTitle}"></span></a>
+                    <a th:href="'/user/textview/'+${infor.dataId}"><span th:text="${infor.contentsTitle}"></span></a>
                     <div class="imgfont">
-                        <a href="article.html">
+                        <a th:href="'/user/textview/'+${infor.dataId}">
                             <img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
                         </a>
                         <div class="imgrt">

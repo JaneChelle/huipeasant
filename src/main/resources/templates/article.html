@@ -57,7 +57,7 @@
 						</div>
 
 						<div class="wrapper-p" th:each="data : ${data}">
-							<img th:if="${data.pictureAddress!=null && !data.pictureAddress.equals('')}" src="images/timg (11).jpg"/>
+							<img th:if="${data.pictureAddress!=null && !data.pictureAddress.equals('')}"  th:src="'/Path'+${data.pictureAddress}"/>
 						<p th:each="paragraph : ${paragraphs}" th:text="${paragraph}" > </p>
 						</div>
 
@@ -116,15 +116,8 @@
 				            <h2>频道本月排行</h2>
 				            <span class="pin-more"><a href="" style="color: #999;">更多</a></span>
 				            <ul>
-				              <li>[<a href="">农药</a>]<a href="article.html" class="tex">害虫抗性上升如何应对？</a></li>
-                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">大棚蔬菜怎样施底肥才合理</a></li>
-                <li>[<a href="">农膜</a>]<a href="answer.html" class="tex">冬季地膜玉米栽培技术要领</a></li>
-                <li>[<a href="">植保技术</a>]<a href="article.html" class="tex">防治扁豆叶点霉斑点病的核心技术</a></li>
-                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">选肥不仅重肥效还要看盐效</a></li>
-                <li>[<a href="">农膜</a>]<a href="article.html" class="tex">农膜保存方法</a></li>
-                <li>[<a href="">农药</a>]<a href="article.html" class="tex">小麦追施拔节孕穗肥不可忽视</a></li>
-                <li>[<a href="">肥料</a>]<a href="article.html" class="tex">专家提醒：生长调节剂代替不了农药肥料</a></li>
-                <li>[<a href="">种子种苗</a>]<a href="article.html" class="tex">冬季将种子贮藏要八防</a></li>
+								<li th:each="ss : ${rank}">[<a href=""><span th:text="${ss.moduleName}"></span></a>]<a
+										th:href="'/user/textview/'+${ss.dataId}" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
 				            </ul>
 				        </div>
 				        <!--资讯推荐-->
@@ -132,59 +125,21 @@
             <h2>资讯推荐</h2>
             <span class="pin-more"><a href="" style="color: #FE6400;">更多</a></span>
             <ul>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">苹果如何销出去？品牌响起来！</a>
-                    <div class="imgfont">
-                        <a href="article.html">
-                            <img src="images/rb1.jpg" alt="" style="width: 120px;height: 68px;">
-                        </a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">近期，局部产地苹果出现同比库存偏高，销售困难，成为行业焦点，农业部在全国范围内组织开展苹果电商销售月行动。山西、云南等地多个苹果种植专业合作社的理事长向本刊反映，合作社生产的优质苹果还没销完，...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">蔬菜销售有技巧</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/rb2.png" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">作为菜农来说怎样才能把自己生产出的蔬菜，以较高的价格销售，获得相对较高的纯收益呢？笔者认为，要想使农产品特别是蔬菜等鲜果类产品畅销不费力，除了有良好的市场行情作前提外，还要讲求一定的销售技巧。...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">农产品营销：3种差异化方法</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/yin1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">北京的大白菜和济南的大白菜表面没什么区别，超市的猪肉和菜市场的猪肉看上去也没什么区别。在老百姓的眼里，同一品类的农产品看似都一个样，而从事农产品营销的行业人士...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">“大数据”智助“大扶贫”</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/yin2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">贵州省作为全国贫困人口最多、贫困面积最大的省份，是我国脱贫攻坚的主战场。近年来，贵州深入实施国家大数据战略，用大数据助力大扶贫，打通了精准扶贫的经络。谈起运用大数据精准扶贫，贵</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
+				<li th:each="infor : ${information}">
+					<span>♥</span>
+					<a  th:href="'/user/textview/'+${infor.dataId}"><span th:text="${infor.contentsTitle}"></span></a>
+					<div class="imgfont">
+						<a th:href="'/user/textview/'+${infor.dataId}">
+							<img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
+						</a>
+						<div class="imgrt">
+							<p>
+								<i class="fa fa-file-text-o 1g"></i>
+								<span class="font2" th:text="${infor.contents}">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+							</p>
+						</div>
+					</div>
+				</li>
             </ul>
         </div> <div class="mt10pb10">
             <H2>农技视频</H2>
