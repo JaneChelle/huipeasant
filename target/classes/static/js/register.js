@@ -69,22 +69,8 @@ btn.onmousedown = function(e){
             //3.成功解锁后的回调函数
             setTimeout(function(){
 //                      alert('解锁成功！');
-                step1.style.backgroundColor = "#5CB85C";
-                step1.style.cursor = "pointer";
-                console.log(step1.style.backgroundColor);
-//                     第一步
-                if(step1.style.backgroundColor == "rgb(92, 184, 92)"){
-                    $('.next-step').click(function(){
-                        if(getElem("tel").value == ''){
-                            $(".item-tel").fadeIn()
-                        }
-                        else if(tel()){
-                            $('#register-main').hide();
-                            $('#register-info').fadeIn();
-                            $(".ulist-2").addClass("active");
-                        }
-                    })
-                }
+                telp();
+                bindingTel();
             },100);
         }
     }
@@ -150,35 +136,72 @@ function validate ()   {
     }
 }
 //手机号
-function tel(){
+function telp(){
     var tel=$('#tel').val();
-    if( /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/g.test(tel) ){
-        $('.item-tel').html("<i class='fa fa-check'>");
+    if(tel.length <=0)
+    {
+        $('.item-tel').html("<i class='fa fa-times'></i> 请先输入手机号");
+        $(".item-tel").fadeIn();
+        return false;
+    }
+    else if( /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/g.test(tel) ){
+        $('.item-tel').html("<i class='fa fa-check'> 手机号格式正确");
         $(".item-tel").fadeIn();
         return true;
     }else {
-        $('.item-tel').html("<i class='fa fa-times'></i> 手机格式错误");
+        $('.item-tel').html("<i class='fa fa-times'></i> 手机号格式错误");
         $(".item-tel").fadeIn();
         return false;
     }
 }
-//昵称
+// 手机号绑定
+function bindingTel() {
+    $.ajax({
+        url:"/LogUserController/validationPhone",
+        type:"POST",
+        data:{
+            phoneNumber:$('#tel').val(),
+        },
+        datatype:"JSON",
+        success: function (data) {
+            if(data.code==0) {
+                if (telp()) {
+                    $('.item-tel').html("<i class='fa fa-check'> 手机号可用");
+                    $(".item-tel").fadeIn();
+                    step1.style.backgroundColor = "#5CB85C";
+                    step1.style.cursor = "pointer";
+                    console.log(step1.style.backgroundColor);
+                    return true;
+                }
+            }
+            else {
+                    $('.item-tel').html("<i class='fa fa-times'></i> 手机号已被注册");
+                    $(".item-tel").fadeIn();
+                    return false;
+                }
+            
+        }
+    })
+    //          第一步
+    if(step1.style.backgroundColor == "rgb(92, 184, 92)"){
+        $('#register-main').hide();
+        $('#register-info').fadeIn();
+        $(".ulist-2").addClass("active");
+    }
+}
+//预留信息
 function user(){
-    var user=$('#nickName').val();
+    var user=$('#user').val();
     if(user.length <=0)
     {
-        $('.item-user').html("<i class='fa fa-times'></i> 请先输入昵称");
+        $('.item-user').html("<i class='fa fa-times'></i> 请先输入预留信息");
         $(".item-user").fadeIn();
         return false;
     }
-    else if( /^[\u4e00-\u9fa5A-Za-z0-9-_]*$/g.test(user) ){
+    else{
         $('.item-user').html("<i class='fa fa-check'>");
         $(".item-user").fadeIn();
         return true;
-    }else {
-        $('.item-user').html("<i class='fa fa-times'></i> 昵称格式错误");
-        $(".item-user").fadeIn();
-        return false;
     }
 }
 //密码
@@ -201,7 +224,7 @@ function passWord(){
     }
 }
 //确认密码
-function sureWord(){
+function surePword(){
     var pword=$("#pword-1").val();
     var pword_2=$("#pword-2").val();
     if(pword_2.length <=0)
@@ -222,7 +245,7 @@ function sureWord(){
 }
 //第二个 下一步
 function allStep(){
-    if(validate () && user() && passWord() && sureWord()){
+    if(passWord() && surePword() &&user() && validate ()){
         step2.style.backgroundColor = "#5CB85C";
         step2.style.cursor = "pointer";
         console.log(step2.style.backgroundColor);
@@ -232,15 +255,15 @@ function allStep(){
         return false;
     }
 }
-function allSteps(){
-    if(step2.style.backgroundColor == "rgb(92, 184, 92)"){
-        if(allStep()){
-            $('#register-info').hide();
-            $('#register-done').fadeIn();
-            $(".ulist-3").addClass("active");
-        }
-    }
-}
+// function allSteps(){
+//     if(step2.style.backgroundColor == "rgb(92, 184, 92)"){
+//         if(allStep()){
+//             $('#register-info').hide();
+//             $('#register-done').fadeIn();
+//             $(".ulist-3").addClass("active");
+//         }
+//     }
+// }
 //验证码 背景
 //var colors = ["#f5d76e", "#3ec27f", "#22a7f0", "#d2527f", "#1e824c", "#bf55ec", "#f64747", "#e67e22", "#4b77be", "#be90d4"]; 
 //function codes(){
