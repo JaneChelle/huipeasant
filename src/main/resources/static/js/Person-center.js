@@ -21,36 +21,6 @@ $(document).ready(function () {
             });
         });
     };
-        //0.修改头像的请求
-     //var imgshow=$("#imgshow");
-    var formData=new FormData();
-    var img_file=document.getElementById("fileds");
-    var fileobj=img_file.files[0];
-    formData.append("classIcon",fileobj);
-
-    $(".querentavatar").click(function () {
-        //var headPortrait = document.getElementById("file").value;
-        $.ajax({
-            url: "/UserManagementController/ModifyAvatar",
-            type: 'POST',
-            async: false,
-            processData: false,
-            contentType: false,
-            data: formData,
-            dataType: "text",
-            success: function (data) {
-                // imgshow.innerHTML=headPortrait
-                alert("yes");
-            },
-            error: function () {
-                alert("no");
-            }
-        });
-    });
-
-
-
-
     //1.获取地区请求
     var  tex=$(".tex").val();
     $(".address").click(function (){

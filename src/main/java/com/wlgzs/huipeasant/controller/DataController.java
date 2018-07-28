@@ -2,7 +2,6 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.Data;
-import com.wlgzs.huipeasant.entity.Module;
 import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.entity.Video;
 import com.wlgzs.huipeasant.util.Result;
@@ -51,16 +50,17 @@ public class DataController extends BaseController {
     }
 
     @RequestMapping("toaddData")
-    public ModelAndView toAddData(Model model) {
-        List<Module> list = new ArrayList<Module>();
-        list = moduleService.getModules();
-        model.addAttribute("types", list);
-        return new ModelAndView("toaddData");
+
+    public ModelAndView toaddData(Model model) {
+        model.addAttribute("moudels",moduleService.getModules());
+        return new ModelAndView("question");
+
     }
 
 
     @PostMapping("addData")         //  添加数据
     public Result addData(Data data, MultipartFile multipartFile, int dataLevle) throws IOException {
+        System.out.println("tgdfygdryr"+dataLevle);
 
         boolean isTrue = dataService.addData(data, multipartFile, dataLevle);
         if (isTrue) {
@@ -99,7 +99,7 @@ public class DataController extends BaseController {
     @RequestMapping("question")  //进入提问问题界面
     public ModelAndView question(Model model){
         model.addAttribute("moudels",moduleService.getModules());
-        return new ModelAndView("myqusetion");
+        return new ModelAndView("question");
     }
     @PostMapping("viewquestion")
     public ModelAndView viewQuestion(Model model){
@@ -107,5 +107,4 @@ public class DataController extends BaseController {
         model.addAttribute("question",dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
-
 }
