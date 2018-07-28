@@ -1,77 +1,62 @@
 $(document).ready(function () {
-    // 设置高亮
-   // $(".addColor").on("click",function () {
-   //     $(".addColor").css("background","#fff");
-   //     $(this).css("background","#599524");
-   //
-   // });
-   // 滑动
-   // $(".list_one").click(function () {
-   //     $(this).siblings(".list_two").slideToggle("1s");
-   //     $(this).parent().siblings().children(".list_two").slideUp("1s");
-   // });
-   //  修改头像
-    $(".editavatar").click(function () {
-        $('.modal').css("transform","translateX(0)");
-        $('.modal').css("opacity","1");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window").css("display","block");
-    });
-    $(".md-close").click(function () {
-        $('.modal').css("transform","translateX(20)");
-        $('.modal').css("opacity","0");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window").css("display","none");
+    var modify = $('.modify');
+    var modals=$(".modals");
+    var new_window=$(".new-window");
+    var md_close=$(".md-close");
+    for (let i = 0; i < modify.length; i++) {
+        $(modify[i]).click(function () {
+            //console.log(i);
+            $(modals[i]).css("transform", "translateX(0)");
+            $(modals[i]).css("opacity", "1");
+            $(modals[i]).css("transition", "all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
+            $(new_window[i]).css("display", "block");
+            //console.log(modals[i]);
+            //console.log(new_window[i]);
 
-    });
-    // 修改昵称
-    $(".editnickname").click(function () {
-        $('.modal').css("transform","translateX(0)");
-        $('.modal').css("opacity","1");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window2").css("display","block");
-    });
-    $(".md-close").click(function () {
-        $('.modal').css("transform","translateX(20)");
-        $('.modal').css("opacity","0");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window2").css("display","none");
+            $(md_close[i]).click(function () {
+                $(modals[i]).css("transform", "translateX(20)");
+                $(modals[i]).css("opacity", "0");
+                $(modals[i]).css("transition", "all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
+                $(new_window[i]).css("display", "none");
+            });
+        });
+    };
+        //0.修改头像的请求
+     //var imgshow=$("#imgshow");
+    var formData=new FormData();
+    var img_file=document.getElementById("fileds");
+    var fileobj=img_file.files[0];
+    formData.append("classIcon",fileobj);
 
-    });
-    //修改手机号
-    $(".editphone").click(function () {
-        $('.modal').css("transform","translateX(0)");
-        $('.modal').css("opacity","1");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window3").css("display","block");
-    });
-    $(".md-close").click(function () {
-        $('.modal').css("transform","translateX(20)");
-        $('.modal').css("opacity","0");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window3").css("display","none");
-
-    });
-    //修改作物
-    $(".editcrops").click(function () {
-        $('.modal').css("transform","translateX(0)");
-        $('.modal').css("opacity","1");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window4").css("display","block");
-    });
-    $(".md-close").click(function () {
-        $('.modal').css("transform","translateX(20)");
-        $('.modal').css("opacity","0");
-        $(".modal").css("transition","all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
-        $(".new-window4").css("display","none");
-
-    });
-    //1.获取地区请求
-
-    $(".address").click(function (){
-        var   address= $("textarea").val();
+    $(".querentavatar").click(function () {
+        //var headPortrait = document.getElementById("file").value;
         $.ajax({
-            url:"/UserManagementController/information",
+            url: "/UserManagementController/ModifyAvatar",
+            type: 'POST',
+            async: false,
+            processData: false,
+            contentType: false,
+            data: formData,
+            dataType: "text",
+            success: function (data) {
+                // imgshow.innerHTML=headPortrait
+                alert("yes");
+            },
+            error: function () {
+                alert("no");
+            }
+        });
+    });
+
+
+
+
+    //1.获取地区请求
+    var  tex=$(".tex").val();
+    $(".address").click(function (){
+        var   address= $(".text").val();
+        $.ajax({
+            url:"/UserManagementController/changeAddress",
             type:'POST',
             data:{
                 /*"userId":userId,*/
@@ -79,7 +64,9 @@ $(document).ready(function () {
             },
             dataType:"text",
             success:function(){
-                $(".new-window2").css("display","none");
+                $(".new-window").css("display","none");
+                tex.innerHTML=address;
+                location.reload();
 
             },
             error:function () {
@@ -103,7 +90,8 @@ $(document).ready(function () {
                 dataType:"text",
                 success:function(){
                     nicheng.innerHTML=nickname;
-                    $(".new-window2").css("display","none");
+                    $(".new-window").css("display","none");
+                    location.reload();
 
                 },
                 error:function () {
@@ -113,24 +101,72 @@ $(document).ready(function () {
         // }
     });
     // 3.性别请求
-    var options=$("#test option:selected"); //获取选中的项
-    var sex=options.val(); //拿到选中项的值
-    $(".sex").click(function (){
-        var options=$("#test option:selected"); //获取选中的项
-        var sex=options.val(); //拿到选中项的值
+    var xingbie=$(".xingbie");
+    $(".sex").click(function () {
+        var options = $("#test option:selected"); //获取选中的项
+        var sex = options.val(); //拿到选中项的值
         $.ajax({
-            url:"/UserManagementController/information",
-            type:'POST',
-            data:{
+            url: "/UserManagementController/changeSex",
+            type: 'POST',
+            data: {
                 /*"userId":userId,*/
-                "sex":sex
+                "sex": sex
             },
-            dataType:"text",
-            success:function(){
-                $(".new-window2").css("display","none");
+            dataType: "text",
+            success: function () {
+                $(".new-window").css("display", "none");
+                xingbie.innerHTML = sex;
+                location.reload();
 
             },
-            error:function () {
+            error: function () {
+                alert("请求失败");
+            }
+        });
+    });
+        // 4.手机请求
+        var phonenumber = $(".phonenumber");
+        $(".phoneNumber").click(function () {
+            var number = $(".number").val();
+            $.ajax({
+                url: "/UserManagementController/changePhone",
+                type: 'POST',
+                data: {
+                    /*"userId":userId,*/
+                    "phoneNumber": number
+                },
+                dataType: "text",
+                success: function () {
+                    $(".new-window").css("display", "none");
+                    phonenumber.innerHTML = number;
+                    location.reload();
+
+                },
+                error: function () {
+                    alert("请求失败");
+                }
+            });
+
+        });
+    // 5.预留信息请求
+    var infotex = $(".infotex");
+    $(".reservedInf").click(function () {
+        var reservedInf = $(".reserve").val();
+        $.ajax({
+            url: "/UserManagementController/changePhone",
+            type: 'POST',
+            data: {
+                /*"userId":userId,*/
+                "reservedInf": reservedInf
+            },
+            dataType: "text",
+            success: function () {
+                $(".new-window").css("display", "none");
+                infotex.innerHTML = reservedInf;
+                location.reload();
+
+            },
+            error: function () {
                 alert("请求失败");
             }
         });
@@ -141,4 +177,22 @@ $(document).ready(function () {
 
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+

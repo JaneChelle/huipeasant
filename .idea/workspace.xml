@@ -2,170 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0494e8b-8a0e-48d6-a59c-36dd14630134" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminDataController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/10.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/12.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/120.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/13.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/14.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/20110804023516996.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/20150930111317480.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/20180622021808156.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/3分钟学会用菠萝种植菠萝-国语高清 (1).mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/3分钟学会用菠萝种植菠萝-国语高清.mp4" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/58.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/5b376c71a3629.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/63_avatar_middle.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/74_avatar_middle.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/9.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/rb2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/t8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/yin2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/article.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/ask.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/material.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/ss.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/1/11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/17/20150930111317480.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/18/20150930111317480.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/19/20150930111317480.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/2/11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/20/20150930111317480.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/upload/dataimg/3/11.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/train.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/merende.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/玉米种植技术/a4f4afab-9a38-4ed4-9322-459119d00534.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/玉米种植技术/ac32c781-89c0-42da-a917-bc9391d6eca8.mp4" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/种植水稻技术/429439e8-82cd-470b-8c57-dc934f1a4645.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/种植水稻技术/6f42ada5-46cd-4b4c-9687-6bf824aeca5d.mp4" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/苦瓜种植技术/22180f1e-f79b-42cd-80f0-d1529b36f412.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload/video/苦瓜种植技术/85c42339-712f-4d7a-9043-e6db12a34981.mp4" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/huipeasant.iml" afterPath="$PROJECT_DIR$/huipeasant.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CommentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CommentDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/DataDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/DataDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Comment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CommentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CommentService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/DataService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/DataService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/ModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/ModuleService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ask.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/ask.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/header.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/header.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/question.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/question.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/1.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/2.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/3.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/4.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/4.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/login.ico" afterPath="$PROJECT_DIR$/src/main/resources/static/images/login.ico" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/rb1.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/rb1.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/rb2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/yin1.jpg" afterPath="$PROJECT_DIR$/src/main/resources/static/images/yin1.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/印.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flower.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/online_member.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/peasant.png" afterPath="$PROJECT_DIR$/src/main/resources/static/img/peasant1.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/peasanter.png" afterPath="$PROJECT_DIR$/src/main/resources/static/img/peasanter.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/picture.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/information.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/information.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/CommentController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/CommentController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/ModuleController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/ModuleController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/CommentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/CommentDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/DataDao.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/dao/DataDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Comment.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Comment.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Data.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/entity/Data.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/CommentService.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/CommentService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/DataService.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/DataService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/ModuleService.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/ModuleService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/DataServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/DataServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/ModuleServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/IoUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/util/IoUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/ask.css" afterPath="$PROJECT_DIR$/target/classes/static/css/ask.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/header.css" afterPath="$PROJECT_DIR$/target/classes/static/css/header.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/question.css" afterPath="$PROJECT_DIR$/target/classes/static/css/question.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/2.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/3.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/4.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/4.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/login.ico" afterPath="$PROJECT_DIR$/target/classes/static/images/login.ico" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/rb1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/rb1.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/rb2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/yin1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/yin1.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/印.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/flower.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/online_member.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/peasant.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/peasanter.png" afterPath="$PROJECT_DIR$/target/classes/static/img/peasanter.png" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/picture.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/UserManagementController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/UserManagementController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/UserService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/service/impl/UserServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/Person-center.css" afterPath="$PROJECT_DIR$/target/classes/static/css/Person-center.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/Person-center.js" afterPath="$PROJECT_DIR$/target/classes/static/js/Person-center.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/index.js" afterPath="$PROJECT_DIR$/target/classes/static/js/index.js" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/information.html" afterPath="$PROJECT_DIR$/target/classes/templates/information.html" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/1/5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/13/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/14/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/15/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/16/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/17/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/18/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/19/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/2/20151009093817490.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/20/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/21/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/22/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/23/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/24/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/25/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/26/20141111041555662 (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/3/20151009093817490.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/3/5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/4/20151009093817490.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/5/20141222052717747.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/54/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/55/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/56/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/57/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/58/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/59/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/60/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/61/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/62/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/63/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/64/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/65/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/66/5b4d57f6c289c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/67/5b4dc6d394d53.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/68/5b4dc6d394d53.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/69/5b4dc6d394d53.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/70/5b4dc6d394d53.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/71/1528252740939759.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/72/1528252740939759.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/73/1528252740939759.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/74/1528252740939759.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/75/1528252740939759.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/76/1527821574714436.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/77/1527821574714436.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/78/1527821574714436.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/79/1527821574714436.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/upload/dataimg/80/1527821574714436.jpg" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -180,8 +45,18 @@
       <file leaf-file-name="UserManagementController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-402">
-              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="137">
+              <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminVideoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -190,47 +65,65 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="133">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogUserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="information.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="information.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/information.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="93" column="74" lean-forward="true" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
+            <state relative-caret-position="363">
+              <caret line="47" column="77" lean-forward="true" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person-center.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Person-center.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Person-center.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person-center.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-center.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+            <state relative-caret-position="955">
+              <caret line="153" column="46" lean-forward="true" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>modle</find>
+      <find>modal</find>
+      <find>querentavatar</find>
+      <find>sty2</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -246,15 +139,16 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/information.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Person-centers.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/information.html" />
       </list>
     </option>
   </component>
@@ -265,9 +159,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="192" />
+    <option name="y" value="-13" />
+    <option name="width" value="1471" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
@@ -351,6 +245,15 @@
               <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -369,6 +272,24 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
@@ -397,9 +318,6 @@
             <path>
               <item name="huipeasant" type="b2602c69:ProjectViewProjectNode" />
               <item name="huipeasant" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -425,6 +343,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\huipeasant\upload" />
       <recent name="E:\huipeasant\.idea" />
       <recent name="E:\huipeasant\src\main\resources\static\js" />
     </key>
@@ -543,12 +462,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532589422950</updated>
-      <workItem from="1532589424918" duration="20937000" />
+      <workItem from="1532589424918" duration="51355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20937000" />
+    <option name="totallyTimeSpent" value="51355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -571,19 +490,19 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42394823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13052858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18240343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -662,44 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Person-center.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="341" column="22" lean-forward="true" selection-start-line="341" selection-start-column="22" selection-end-line="341" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="99" column="83" lean-forward="false" selection-start-line="99" selection-start-column="83" selection-end-line="99" selection-end-column="83" />
           <folding />
         </state>
       </provider>
@@ -752,14 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="46" column="87" lean-forward="true" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -768,46 +645,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="212">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="429">
+          <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-centers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-402">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="137">
+          <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="142" column="33" lean-forward="false" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/IoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="74" column="85" lean-forward="false" selection-start-line="74" selection-start-column="85" selection-end-line="74" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-center.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="153" column="46" lean-forward="true" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Person-center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/information.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="93" column="74" lean-forward="true" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
+        <state relative-caret-position="363">
+          <caret line="47" column="77" lean-forward="true" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-center.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>

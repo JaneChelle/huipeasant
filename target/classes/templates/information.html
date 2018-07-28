@@ -46,8 +46,8 @@
         <h1>个人中心</h1>
         <h1 class="sty3"><a th:href="@{/user/toindex}">首页</a></h1>
         <h2 class="sty4"><a th:href="@{/LogUserController/login}">退出</a></h2>
-        <span><a href="" style="color: #fff;">地区排行</a></span>
-        <span><a href="" style="color: #fff;">个人排行</a></span>
+        <span><a href=""  class="aaa">地区排行</a></span>
+        <span><a href=""class="aaa">个人排行</a></span>
     </div>
 </div>
 <div class="kuang">
@@ -58,22 +58,27 @@
         <!--个人信息内容区-->
         <div class="content" style=" padding-bottom: 50px;">
             <div class="left">
+                <form enctype="multipart/form-data" th:action="@{/UserManagementController/ModifyAvatar}" method="post">
                 <div class="Avatar">
-                    <img th:src="${user.headPortrait}" alt="" style="width: 100px;height: 100px;border-radius: 100%">
+                    <div class="all-photo" onclick="photoup()">
+                        <div class="all-photo-right">
+                            <img th:src="'/Path/'+${user.headPortrait}" id="imgshow" style="width: 100px;height: 100px;border-radius: 100%;" />
+                        </div>
+                        <div class="editavatar">修改头像</div>
+
+                    </div>
+                    <input type="text" style="display: none" name="userId" th:value="${user.userId}">
+                    <input id="fileds" style="display: none;" name="file" type="file" accept="image/*" value="上传图片" />
+                    <input type="submit" th:value="上传" class="upload_img">
                 </div>
-                <div class="editavatar">修改头像</div>
+                </form>
             </div>
             <div class="right">
                 <h2>个人信息</h2>
                 <div class="range">
                     所在地区：
-                    <!--<div data-toggle="distpicker" style="display:inline-block;margin-left: 20px;">-->
-                        <!--<select data-province="&#45;&#45;&#45;&#45; 选择省 &#45;&#45;&#45;&#45;" class="pro"></select>-->
-                        <!--<select data-city="&#45;&#45;&#45;&#45; 选择市 &#45;&#45;&#45;&#45;" class="city"></select>-->
-                        <!--<select data-district="&#45;&#45;&#45;&#45; 选择区 &#45;&#45;&#45;&#45;" class="dis"></select>-->
-                    <!--</div>-->
-                    <textarea></textarea>
-                    <span class="address modify">确认</span>
+                    <textarea id="tex" th:text="${user.address}">新乡市</textarea>
+                    <span class="editaddress modify">修改</span>
                 </div>
                 <div class="range">
                     昵称：
@@ -82,49 +87,57 @@
                 </div>
                 <div class="range">
                     性别：
-                    <!--<span th:text="${user.sex}">女</span>-->
-                    <select id="test">
-                        <option value ="男">男</option>
-                        <option value ="女">女</option>
-                    </select>
-                    <span class="sex modify">确认</span>
+                    <span th:text="${user.sex}" class="xingbie">女</span>
+                    <span class="editsex modify">修改</span>
                 </div>
                 <div class="range">
                     手机号：
-                    <span th:text="${user.phoneNumber}">15536522365</span>
+                    <span th:text="${user.phoneNumber}" class="phonenumber">15536522365</span>
                     <span class="modify editphone">修改</span>
                 </div>
                 <div class="range">
                     预留信息：
-                    <!--<span th:text="${user.reservedInf}"></span>-->
-                    <textarea></textarea>
+                    <span th:text="${user.reservedInf}"></span>
                 </div>
             </div>
         </div>
         <!--//修改头像-->
+        <!--<div class="new-window">-->
+            <!--<div class="modals">-->
+                <!--<h3>修改头像</h3>-->
+                <!--<div>-->
+                    <!--<p class="p-sty">请点击头像修改:</p>-->
+                    <!--<div class="all-photo" onclick="photoup()">-->
+                        <!--<div class="all-photo-right">-->
+                            <!--<img th:src="'/Path/'+${user.headPortrait}" id="imgshow" style="width: 80px;height: 80px;border-radius: 100%;" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<input id="fileds" style="display: hidden;" name="imgfile" type="file" accept="image/*" value="上传图片" />-->
+                    <!--<div class="md-close">取消</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--1.修改地区-->
         <div class="new-window">
-            <div class="modal">
-                <h3>修改头像</h3>
+            <div class="modals">
+                <h3>修改地区</h3>
                 <div>
-                    <p class="p-sty">请上传头像:</p>
-                    <div class="imgkuang" style="margin-top: 10px">
-                        <img th:src="${user.headPortrait}" alt="" style="width: 100px;height: 100px;border-radius: 100%">
+                    <p class="p-sty">请修改地区：</p>
+                    <div class="imgkuang" style="padding: 10px 85px;margin-top: 22px;">
+                        <textarea class="text"></textarea>
                     </div>
                     <div class="operate">
-                        <div class="upload">
-                            <span class="sl-custom-file">
-                                <input type="button" value="上传" class="btn-file"/>
-                                <input type="file" class="ui-input-file" />
-                            </span>
+                        <div class="upload address">
+                            确定
                         </div>
                         <div class="md-close">取消</div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--修改昵称-->
-        <div class="new-window2">
-            <div class="modal">
+        <!--2.修改昵称-->
+        <div class="new-window">
+            <div class="modals">
                 <h3>修改昵称</h3>
                 <div>
                     <p class="p-sty">请修改昵称:</p>
@@ -140,17 +153,22 @@
                 </div>
             </div>
         </div>
-        <!--修改手机号-->
-        <div class="new-window3">
-            <div class="modal">
-                <h3>修改手机号</h3>
+        <!--3.修改性别-->
+        <div class="new-window">
+            <div class="modals">
+                <h3>修改性别</h3>
                 <div>
-                    <p class="p-sty">请修改手机号:</p>
-                    <div class="imgkuang" style="padding: 10px 110px">
-                        <input type="text" placeholder="请输入手机号" class="nickname">
+                    <p class="p-sty">请修改性别：</p>
+                    <div class="imgkuang" style="padding: 10px 85px;margin-top: 22px;">
+                        <div class="Div">
+                            <select id="test">
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="operate">
-                        <div class="upload">
+                        <div class="upload sex">
                             确定
                         </div>
                         <div class="md-close">取消</div>
@@ -158,34 +176,53 @@
                 </div>
             </div>
         </div>
-        <!--修改关注的作物-->
-        <!--<div class="new-window4">-->
-            <!--<div class="modal">-->
-                <!--<h3>修改关注的作物</h3>-->
-                <!--<div>-->
-                    <!--<p class="p-sty">请修改关注的作物:</p>-->
-                    <!--<div class="imgkuang" style="padding: 10px 110px">-->
-                        <!--<form action="" method="">-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />苹果 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />桃子 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />香蕉 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />梨 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />苹果 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />桃子 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />香蕉 </label>-->
-                            <!--<label><input name="Fruit" type="checkbox" value="" />梨 </label>-->
-                        <!--</form>-->
-                    <!--</div>-->
-                    <!--<div class="operate">-->
-                        <!--<div class="upload">-->
-                            <!--确定-->
-                        <!--</div>-->
-                        <!--<div class="md-close">取消</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <!--4.修改手机号-->
+        <div class="new-window">
+            <div class="modals">
+                <h3>修改手机号</h3>
+                <div>
+                    <p class="p-sty">请修改手机号:</p>
+                    <div class="imgkuang" style="padding: 10px 110px">
+                        <input type="text" placeholder="请输入手机号" class="number">
+                    </div>
+                    <div class="operate">
+                        <div class="upload phoneNumber">
+                            确定
+                        </div>
+                        <div class="md-close">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 </body>
+<script>
+    function photoup() {
+        //console.log('14212');
+        $('#fileds').click();
+        $('#fileds').change(function() {
+            //获取input file的files文件数组;
+            //$('#filed')获取的是jQuery对象，.get(0)转为原生对象;
+            //这边默认只能选一个，但是存放形式仍然是数组，所以取第一个元素使用[0];
+            var file = $('#fileds').get(0).files[0];
+            //创建用来读取此文件的对象
+            var reader = new FileReader();
+            //使用该对象读取file文件
+            reader.readAsDataURL(file);
+            //读取文件成功后执行的方法函数
+            reader.onload = function(e) {
+                //读取成功后返回的一个参数e，整个的一个进度事件
+                //选择所要显示图片的img，要赋值给img的src就是e中target下result里面
+                //的base64编码格式的地址
+                $('#imgshow').get(0).src = e.target.result;
+                $(".upload_img").css("display","block");
+            }
+        })
+    }
+
+</script>
 </html>

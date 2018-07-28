@@ -33,7 +33,7 @@ public interface UserService {
     void ModifyName(HttpServletRequest request,User user,String NickName);
 
     //修改手机号
-    User changePhone(HttpServletRequest request);
+    User changePhone(HttpServletRequest request,String phoneNumber);
 
     //修改用户头像
     User ModifyAvatar(HttpSession session, HttpServletRequest request, MultipartFile myFileName) throws IOException;
@@ -49,5 +49,11 @@ public interface UserService {
 
     //判断用户预留信息是否正确
     boolean validationIfo(String phoneNumber,String reservedInf);
+
+    //修改性别
+    void ModifySex(User user,String sex,HttpSession session);
+
+    //修改地区
+    void changeAddress(User user,String address,HttpSession session);
 
 }

@@ -25,8 +25,9 @@ public class UserManagementController extends BaseController {
 
     //展示用户信息
     @RequestMapping("information")
-    public ModelAndView displayInformation(Model model, Long userId) {
-        User user = userService.findUserById(userId);
+    public ModelAndView displayInformation(Model model,HttpSession session) {
+        User user = (User)session.getAttribute("user");
+        System.out.println(user);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -39,20 +40,21 @@ public class UserManagementController extends BaseController {
         System.out.println("sessionuser"+user);
         userService.ModifyName(request,user,NickName);
         model.addAttribute("user", user);
-        return new ModelAndView("information");
+        return new ModelAndView("redirect:/UserManagementController/information");
     }
 
     //跳转到修改手机号
     @RequestMapping("toChangePhone")
-    public ModelAndView toChangePhone(){ ;
+    public ModelAndView toChangePhone(){
         return new ModelAndView("changePhone");
     }
 
     //修改手机号//需要phoneNumber(新的)
     @RequestMapping("changePhone")
-    public ModelAndView changePhone(Model model, HttpServletRequest request) {
+    public ModelAndView changePhone(Model model, HttpServletRequest request,String phoneNumber) {
+        System.out.println(phoneNumber);
         //修改手机号
-        User user = userService.changePhone(request);
+        User user = userService.changePhone(request,phoneNumber);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -130,14 +132,19 @@ public class UserManagementController extends BaseController {
 
     //修改性别
     @RequestMapping("changeSex")
-    public ModelAndView changeSex(){
-        return null;
-
+    public ModelAndView changeSex(Model model,HttpSession session,String sex){
+        User user = (User)session.getAttribute("user");
+        userService.ModifySex(user,sex,session);
+        return new ModelAndView("redirect:/UserManagementController/information");
     }
 
     //修改用户地区
-
-    //设置预留信息
+    @RequestMapping("changeAddress")
+    public ModelAndView changeAddress(Model model,HttpSession session,String address){
+        User user = (User)session.getAttribute("user");
+        userService.changeAddress(user,address,session);
+        return new ModelAndView("redirect:/UserManagementController/information");
+    }
 
 
 }

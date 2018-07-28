@@ -4,6 +4,7 @@ import com.wlgzs.huipeasant.dao.LogUserRepository;
 import com.wlgzs.huipeasant.dao.UserRepository;
 import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.service.UserService;
+import com.wlgzs.huipeasant.util.IoUtil;
 import com.wlgzs.huipeasant.util.PageUtil;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -116,41 +117,41 @@ public class UserServiceImpl implements UserService {
 
     //修改手机
     @Override
-    public User changePhone(HttpServletRequest request) {
+    public User changePhone(HttpServletRequest request,String phoneNumber) {
         HttpSession session = request.getSession(true);
         User user = (User) session.getAttribute("user");
         long userId = user.getUserId();
-
-        String phoneNumber = request.getParameter("phoneNumber");
+        System.out.println("phoneNumber"+phoneNumber);
         Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
         Matcher m = p.matcher(phoneNumber);
-        if(m.matches() && phoneNumber.equals("")){
+        if(m.matches() && !phoneNumber.equals("")){
+            System.out.println("qwertyyui");
             userRepository.changePhone(phoneNumber,userId);
         }
-        return userRepository.findById(userId);
+        User user1 = userRepository.findById(userId);
+        session.setAttribute("user",user1);
+        return user1;
     }
 
     //修改用户头像
     @Override
     public User ModifyAvatar(HttpSession session, HttpServletRequest request, MultipartFile myFileName) throws IOException {
         String userId = request.getParameter("userId");
+        IoUtil ioUtil = new IoUtil();
         long id = Long.parseLong(userId);
         String realName = "";
         String headPortrait = "";
         if (!myFileName.getOriginalFilename().equals("")) {
             String fileName = myFileName.getOriginalFilename();
             String fileNameExtension = fileName.substring(fileName.indexOf("."), fileName.length());
-
             // 生成实际存储的真实文件名
             realName = UUID.randomUUID().toString() + fileNameExtension;
-
             // "/upload"是你自己定义的上传目录
-            String realPath = session.getServletContext().getRealPath("/headPortrait");
-            File uploadFile = new File(realPath, realName);
-            myFileName.transferTo(uploadFile);
-            headPortrait = request.getContextPath() + "/headPortrait/" + realName;
+            String realPath = "/upload/headPortrait/" + realName;
+            ioUtil.saveFile(myFileName,realPath);
+            headPortrait = realPath;
         } else {
-            headPortrait = request.getContextPath() + "/headPortrait/" + "morende.jpg";
+            headPortrait = "/upload/headPortrait/" + "morende.jpg";
         }
         System.out.println(headPortrait);
         Map<String, String[]> properties = request.getParameterMap();
@@ -195,6 +196,24 @@ public class UserServiceImpl implements UserService {
     public boolean validationIfo(String phoneNumber, String reservedInf) {
         User user = userRepository.validationIfo(phoneNumber,reservedInf);
             return (user != null);
+    }
+
+    @Override
+    public void ModifySex(User user, String sex,HttpSession session) {
+        user.setSex(sex);
+        userRepository.saveAndFlush(user);
+        //从新存入session
+        session.setMaxInactiveInterval(60 * 20);
+        session.setAttribute("user",user);
+    }
+
+    @Override
+    public void changeAddress(User user, String address, HttpSession session) {
+        user.setAddress(address);
+        userRepository.saveAndFlush(user);
+        //从新存入session
+        session.setMaxInactiveInterval(60 * 20);
+        session.setAttribute("user",user);
     }
 
 }
