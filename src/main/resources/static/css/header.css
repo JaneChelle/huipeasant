@@ -82,6 +82,7 @@ body{
 .search form {
 	position: relative;
 	top: 8px;
+	height: 45px;
 }
 .search form input{
 	width: 250px;
@@ -110,6 +111,39 @@ body{
 	content: "\f002";
 	font-family: FontAwesome;
 	color: #324b4e;
+	color: #fff;
+}
+/*下拉列表*/
+.spin{
+	display: none;
+	width: 300px;
+	position: absolute;
+	top: 60px;
+	padding: 0 12px;
+	background-color: #fff;
+}
+.spinners{
+	width: 292px;
+	border-radius: 5px;
+}
+.spinners a{
+	color: #000000!important;
+	display: inline-block;
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	line-height: 32px;
+	border-radius: 5px;
+	transition: all .5s;
+	border-bottom: 1px dotted #5CB85C;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.spinners a:hover{
+	background-color: #5CB85C;
+	color: #fff;
+	text-decoration: none;
 }
 /*二维码*/
 .qr-code{

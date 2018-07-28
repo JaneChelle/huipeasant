@@ -244,30 +244,29 @@ public class DataServiceImpl implements DataService {
         return dataList;
     }
 
-    public List<String> getKeyWord(String keyWord) {  //进行模糊搜索
+    public List<Data> getKeyWord(String keyWord) {  //进行模糊搜索
         List<Data> dataList = dataRepository.findByContentsTitleContaining(keyWord);
         if (dataList == null) {
             return null;
         }
-        List<String> keyWordList = new ArrayList<String>();
+        List<Data> keyWordList = new ArrayList<Data>();
         if (dataList.size() <= 10) {
             for (Data data : dataList
                     ) {
-                keyWordList.add(data.getContentsTitle());
+                keyWordList = dataList;
             }
         } else {
             Data data = new Data();
             for (int i = 0; i < 10; i++) {
-                data = dataList.get(i);
-                keyWordList.add(data.getContentsTitle());
+
+                keyWordList = dataList.subList(0,9);
             }
         }
         return keyWordList;
     }
 
     public List<Data> searchData(String dataName) {
-        List<Data> dataList = new ArrayList<Data>();
-        dataList = dataRepository.findByContentsTitle(dataName);
+        List<Data> dataList = dataRepository.findByContentsTitle(dataName);
         return dataList;
     }
 

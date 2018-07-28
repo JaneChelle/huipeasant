@@ -70,10 +70,11 @@ public class DataController extends BaseController {
     }
     @GetMapping("textview/{dataId}")
     public ModelAndView textview(Model model, @PathVariable("dataId") long dataId) {
-        model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
+
         model.addAttribute("data", dataService.dataView(dataId));
 
         if (dataService.jundegeView(dataId)) {
+            model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
             model.addAttribute("question", dataService.relevantIssues());
             model.addAttribute("recommed", dataService.recommend(dataId));
             model.addAttribute("information", dataService.information());
@@ -93,7 +94,7 @@ public class DataController extends BaseController {
     @PostMapping("searchData")
     public ModelAndView searchData(Model model, String dataName) {
         model.addAttribute("datas", dataService.searchData(dataName));
-        return new ModelAndView("/");
+        return new ModelAndView("material");
     }
     @RequestMapping("question")
     public ModelAndView question(Model model){
