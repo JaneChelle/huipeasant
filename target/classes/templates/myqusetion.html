@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>会员管理中心</title>
-    <link rel="stylesheet" href="css/Person-center.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="shortcut icon" href="images/login.ico" type="image/x-icon">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/Person-center.js"></script>
+    <link rel="stylesheet" th:href="@{/css/Person-center.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script  th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/Person-center.js}"></script>
+
 </head>
 <body>
 <div class="head" >
@@ -49,7 +51,9 @@
 </div>
 <div class="kuang">
     <div class="container">
+
         <div class="acount"><a href="information.html">账户设置</a></div>
+
         <div class="collection"><a href="myqusetion.html">我的庄稼医院</a></div>
         <div class="trangle" style="margin-left: 140px"></div>
         <div class="content">
@@ -72,17 +76,14 @@
                     </div>
                     <div class="qusetion">
                     	<div>
-                    		问题分类：
-                    		<form action="/example/html/form_action.asp" method="get">
- 								 <label for=""><input type="checkbox" name="小麦" value="小麦" />小麦</label>
-  								<label for="">
-  									<input type="checkbox" name="玉米" value="玉米" checked="checked" />玉米
-  								</label>
-  								<label for="">
-  									<input type="checkbox" name="玉米" value="玉米" checked="checked" />大豆
-  								</label>
-  								<!--<input type="submit" value="Submit" />-->
-							</form>
+
+                            <span >问题类型: </span><select id="city" >
+                                <option selected>请选择</option>
+                                <option th:each="moudel : ${moudels}" th:value="${moudel.mouldeId}"  th:text="${moudel.moduleName}">请选择</option>
+
+                            </select>
+
+
                     	</div>
                         <p style="margin-bottom: 10px">问题描述：</p>
                         <textarea name="" id="" cols="30" rows="10">
