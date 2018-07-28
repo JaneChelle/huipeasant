@@ -37,4 +37,7 @@ public interface VideoService {
     //按点击量查询视频
     List<Video> videoRanking();
 
+    //按id查询视频
+    Video findById(long videoId);
+
 }
