@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
-    <link href="css/adminVideoList.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="images/login.ico" type="image/x-icon">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/adminUserList.js"></script>
+    <link th:href="@{/css/adminVideoList.css}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/adminUserList.js}"></script>
 </head>
 <body>
 <div class="contentbox">
@@ -37,7 +37,7 @@
             </thead>
             <tbody>
             <!--遍历-->
-            <tr>
+            <tr th:each="user : ${users}">
                 <td class="checx" style="position: relative">
                     <label class="demo--label">
                         <input class="demo--radio" type="checkbox" name="demo-checkbox1">
@@ -46,16 +46,18 @@
                     </label>
                 </td>
                 <td style="display: none" class="activityid"></td>
-                <td ></td>
-                <td ></td>
-                <td ></td>
-                <td ></td>
-                <td ></td>
-                <td></td>
-                <td></td>
+                <td th:text="${user.userId}"></td>
+                <td th:text="${user.phoneNumber}"></td>
+                <td th:text="${user.password}"></td>
+                <td>
+                    <img th:src="'/Path/'+${user.headPortrait}" style="width: 45px;height: 45px;">
+                </td>
+                <td th:text="${user.nickName}"></td>
+                <td th:text="${user.reservedInf}"></td>
+                <td th:text="${user.roleId}"></td>
                 <td class="ttdd" >
-                    <a class="a-div adiv1">删除</a>
-                    <a class="a-div adiv2" href="adminEditUser.html">修改</a>
+                    <a class="a-div adiv1" th:href="@{/adminUserController/adminDeleteUser(userId=${user.userId})}">删除</a>
+                    <a class="a-div adiv2" th:href="@{/adminUserController/toAdminEditUser(userId=${user.userId})}">修改</a>
                 </td>
             </tr>
             </tbody>

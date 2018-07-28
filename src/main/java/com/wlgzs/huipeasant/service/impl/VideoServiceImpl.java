@@ -160,7 +160,7 @@ public class VideoServiceImpl implements VideoService {
     //遍历视频(前台)
     @Override
     public List<Video> videoList() {
-        return videoRepository.findAllVideo();
+        return videoRepository.findAll();
     }
 
     //视频详情页
@@ -174,6 +174,7 @@ public class VideoServiceImpl implements VideoService {
     //视频排行
     @Override
     public List<Video> videoRanking() {
+        //按点击量排序
         Sort sort = new Sort(Sort.Direction.DESC,"videoHits");
         List<Video> videos = videoRepository.findAll(sort);
         return videos;

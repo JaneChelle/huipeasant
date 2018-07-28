@@ -145,11 +145,11 @@ function telp(){
         return false;
     }
     else if( /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/g.test(tel) ){
-        $('.item-tel').html("<i class='fa fa-check'>");
+        $('.item-tel').html("<i class='fa fa-check'> 手机号格式正确");
         $(".item-tel").fadeIn();
         return true;
     }else {
-        $('.item-tel').html("<i class='fa fa-times'></i> 手机格式错误");
+        $('.item-tel').html("<i class='fa fa-times'></i> 手机号格式错误");
         $(".item-tel").fadeIn();
         return false;
     }
@@ -224,7 +224,7 @@ function passWord(){
     }
 }
 //确认密码
-function sureWord(){
+function surePword(){
     var pword=$("#pword-1").val();
     var pword_2=$("#pword-2").val();
     if(pword_2.length <=0)
@@ -245,7 +245,7 @@ function sureWord(){
 }
 //第二个 下一步
 function allStep(){
-    if(passWord() && sureWord() &&user() && validate ()){
+    if(passWord() && surePword() &&user() && validate ()){
         step2.style.backgroundColor = "#5CB85C";
         step2.style.cursor = "pointer";
         console.log(step2.style.backgroundColor);

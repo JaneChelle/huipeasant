@@ -22,4 +22,5 @@ public class Comment implements Serializable {
     private String userName;                        //用户名
     private String commentContent;                  //评论内容
     private Date   commentDate;                     //评论时间
+    private String userIcon;                        //用户头像地址
 }

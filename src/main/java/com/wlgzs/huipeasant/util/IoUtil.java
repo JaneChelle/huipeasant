@@ -1,5 +1,6 @@
 package com.wlgzs.huipeasant.util;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -28,5 +29,11 @@ public class IoUtil {
             return false;
         }
         return false;
+    }
+    public void deleteFile(String url) throws IOException {
+       File file = new File("."+url);
+       if (file.exists()){
+           FileUtils.deleteDirectory(file);
+       }
     }
 }

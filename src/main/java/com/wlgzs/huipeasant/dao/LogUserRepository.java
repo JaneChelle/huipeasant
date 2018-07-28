@@ -14,7 +14,6 @@ public interface LogUserRepository extends JpaRepository<User, Long>,JpaSpecific
     //查询手机号是否已经存在
     @Query("FROM User a WHERE a.phoneNumber = ?1")
     User checkPhoneNumber(String phoneNumber);
-
     //查询用户名是否已经存在
     @Query("FROM User a WHERE a.nickName = ?1")
     User checkNickName(String nickName);
