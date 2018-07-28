@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>农技培训-慧农在线</title>
-    <link  th:href="@{/css/index.css}" rel="stylesheet">
+    <link th:href="@{/css/index.css}" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
     <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}">
 </head>
 <body>
-<div class="head" >
+<div class="head">
     <div class="header">
         <div class="header-left" title="慧农在线">
-            <a href="index.html">
+            <a th:href="@{/user/toindex}">
                 <img th:src="@{/img/peasanter.png}"/>
                 <b>慧农在线</b>
             </a>
         </div>
         <div class="header-right">
-            <div>
-                <a href="login.html">
-                    <i class="iconfont">&#xe61a;</i>
-                    <span>登录</span>
-                </a>
-                <a href="register.html">注册</a>
-            </div>
+            <a th:href="@{/LogUserController/toLogin}">
+                <i class="iconfont">&#xe61a;</i>
+                <span>登录</span>
+            </a>
+            <a th:href="@{LogUserController/toRegistered}">注册</a>
             <a id="qr-code">
                 <span>手机端</span>
                 <i class="iconfont">&#xe622;</i>
@@ -45,30 +43,16 @@
 <div class="nv-top">
     <div class="nv-top-ct">
         <div class="nv-top-ct-range1">
-            <span style="font-size: 14px;">农技培训</span>
-            <em> <i class="fa fa-angle-right fa-lg"></i> </em>
-            <span id="echo"></span>
+            <span><a th:href="@{/user/toindex}" style="font-size: 14px;color: red;">农技培训</a></span>
+            <span><a th:href="@{/user/toindex1}" style="font-size: 14px;">电商培训</a></span>
+
         </div>
         <div class="nv-top-ct-range2">
             <ul>
-                <li id="one" title="农药">
-                	<a href="material.html" target="_blank">农药</a>
+                <li id="one" th:each="mou : ${moudel}">
+                    <a th:href="'/user/moduleview/'+${mou.mouldeId}+'/1'" target="_blank"><span th:text="${mou.moduleName}"></span></a>
                 </li>
-                <li id="two" title="肥料">
-                	<a href="material.html" target="_blank">肥料</a>
-                </li>
-                <li id="three" title="农膜">
-                	<a href="material.html" target="_blank">农膜</a>
-                </li>
-                <li id="four" title="种子种苗">
-                	<a href="material.html" target="_blank">种子种苗</a>
-                </li>
-                <li id="five" title="种子种苗">
-                	<a href="material.html" target="_blank">植保技术</a>
-                </li>
-                <li id="six" title="解决方案">
-                	<a href="material.html" target="_blank">解决方案</a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -78,10 +62,10 @@
     <!--主体开始-->
     <div class="wp65 mt30 fl">
         <!--板块开始-->
-        <div class="main-body" >
+        <div class="main-body">
             <div class="box-item">
-                <span class="font"><a href="question.html" target="_blank">培训视频</a></span>
-                <span style="float:right;"><a href="question.html" target="_blank">更多
+                <span class="font"><a th:href="@{/user/toindex}" target="_blank">培训视频</a></span>
+                <span style="float:right;"><a th:href="@{/}" target="_blank">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     </a>
@@ -89,78 +73,15 @@
             </div>
             <div class="box-content">
                 <ul>
-                    <li>
-                        <a href="train.html">
-                            <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
+                    <li th:each="video : ${videoList}">
+                        <a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}"><!--详情-->
+                            <img th:src="'/Path/'+${video.videoCover}" alt="" style="width: 130px;height: 120px;">
                         </a>
-                        <p><a href="train.html">新型庄稼医院展示</a></p>
+                        <p><a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}" th:text="${video.videoTitle}"></a></p>
                         <div style="margin-top: -106px;" class="bofang">
-                        	<i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
+                            <i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
                         </div>
                         <!--<div style="margin-top: -106px;" class="bofang"><i class="iconfont">&#xe607;</i></div>-->
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">新型庄稼医院展示简版</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">桃李主要病虫害发生与防治</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p>桃李主要病虫害发生与防治</p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">桃李主要病虫害发生与防治</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">桃李主要病虫害发生与防治</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">桃李主要病虫害发生与防治</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/1.jpg" alt="" style="width: 130px;height: 120px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">桃李主要病虫害发生与防治粗茶淡饭人</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
                     </li>
                 </ul>
             </div>
@@ -178,19 +99,22 @@
             <div class="box-content">
                 <table class="tab">
                     <tbody>
-                        <tr class="trs" th:each="question: ${question}">
-                            <td>
+                    <tr class="trs" th:each="question: ${question}">
+                        <td>
                                 <span>
-                               【 <a href="">问题</a>-<a href="">热门问题</a>】</span><a th:href="'/user/textview/'+${question.dataId}"><span th:text="${question.contentsTitle}"><!--</span></a><span class="sty">（0/18）</span>--></td>
-                        </tr>
+                               【 <a href="">问题</a>-<a href="">热门问题</a>】</span><a
+                                th:href="'/user/textview/'+${question.dataId}"><span
+                                th:text="${question.contentsTitle}"><!--</span></a><span class="sty">（0/18）</span>-->
+                        </td>
+                    </tr>
 
                     </tbody>
                 </table>
             </div>
         </div>
         <!--板块三-->
-        <div class="main-body" >
-            <div class="main-body-left"  th:each="blogId,key : ${moudels}">
+        <div class="main-body">
+            <div class="main-body-left" th:each="blogId,key : ${moudels}">
                 <div class="box-item">
                     <span class="font"><a href="material.html"><span th:text="${key.current.key.moduleName}"></span></a></span>
                     <span style="float:right;"><a th:href="'/user/moduleview/'+${key.current.key.mouldeId}+'/1'">更多
@@ -199,27 +123,31 @@
                     </a>
                 </span>
                 </div>
-                <ul class="list-sub" >
+                <ul class="list-sub">
 
                     <li class="list-figure" th:each="data : ${key.current.value}" th:if="${data.identity==1 }">
                         <div>
-                            <a href="article.html">
+                            <a th:href="'/user/textview/'+${data.dataId}">
                                 <div class="imgkuang">
-                                    <img th:src="'/Path/'+${data.pictureAddress}" alt="" style="width: 130px;height: 120px;">
+                                    <img th:src="'/Path/'+${data.pictureAddress}" alt=""
+                                         style="width: 130px;height: 120px;">
                                 </div>
                             </a>
-                            <p><a href="article.html"><span th:text="${data.contentsTitle}" class="curefont"></span></a></p>
+                            <p><a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}" class="curefont"></span></a>
+                            </p>
                         </div>
                     </li>
-                    <li style="margin-top: -146px;margin-left: 5px;" th:each="data : ${key.current.value}" th:if="${data.identity==4 }">
-                    	<a href="article.html" ><span th:text="${data.contentsTitle}"></span></a>
+                    <li style="margin-top: -146px;margin-left: 5px;" th:each="data : ${key.current.value}"
+                        th:if="${data.identity==4 }">
+                        <a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}"></span></a>
                     </li>
-                   <li style="margin-left: 5px"  th:each="data : ${key.current.value}" th:if="${data.identity==2 }">
-                    	<a href="article.html"><span th:text="${data.contentsTitle}"></span></a>
+                    <li style="margin-left: 5px" th:each="data : ${key.current.value}" th:if="${data.identity==2 }">
+                        <a th:href="'/user/textview/'+${data.dataId}"><span th:text="${data.contentsTitle}"></span></a>
                     </li>
                 </ul>
-                <ul style="margin-top: 23px;border-top: 1px solid #999;" >
-                    <li class="list-item" th:each="data : ${key.current.value}" th:if="${data.identity==0}"><a  ><span th:text="${data.contentsTitle}"></span></a></li>
+                <ul style="margin-top: 23px;border-top: 1px solid #999;">
+                    <li class="list-item" th:each="data : ${key.current.value}" th:if="${data.identity==0}"><a th:href="'/user/textview/'+${data.dataId}"><span
+                            th:text="${data.contentsTitle}"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -244,7 +172,7 @@
                 <a href="#" class="wrip-img">
                     <img src="images/3.jpg" alt="4">
                 </a>
-                <div  class="wrip-img">
+                <div class="wrip-img">
                     <img src="images/2.jpg" alt="5">
                 </div>
                 <a href="javascript:;" id="prev" class="arrow">
@@ -260,7 +188,8 @@
             <h2>频道本月排行</h2>
             <span class="pin-more"><a href="" style="color: #999;">更多</a></span>
             <ul>
-                <li th:each="ss : ${rank}">[<a href=""><span th:text="${ss.moduleName}"></span></a>]<a href="article.html" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
+                <li th:each="ss : ${rank}">[<a href=""><span th:text="${ss.moduleName}"></span></a>]<a
+                        th:href="'/user/textview/'+${ss.dataId}" class="tex"><span th:text="${ss.contentsTitle}"></span></a></li>
             </ul>
         </div>
         <!--资讯推荐-->
@@ -270,9 +199,9 @@
             <ul>
                 <li th:each="infor : ${information}">
                     <span>♥</span>
-                    <a href="article.html"><span th:text="${infor.contentsTitle}"></span></a>
+                    <a th:href="'/user/textview/'+${infor.dataId}"><span th:text="${infor.contentsTitle}"></span></a>
                     <div class="imgfont">
-                        <a href="article.html">
+                        <a th:href="'/user/textview/'+${infor.dataId}">
                             <img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
                         </a>
                         <div class="imgrt">
@@ -283,45 +212,45 @@
                         </div>
                     </div>
                 </li>
-               <!-- <li>
-                    <span>♥</span>
-                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/rb2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/yin1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <span>♥</span>
-                    <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                    <div class="imgfont">
-                        <a href="article.html"><img src="images/印.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>-->
+                <!-- <li>
+                     <span>♥</span>
+                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
+                     <div class="imgfont">
+                         <a href="article.html"><img src="images/rb2.jpg" alt="" style="width: 120px;height: 68px;"></a>
+                         <div class="imgrt">
+                             <p>
+                                 <i class="fa fa-file-text-o 1g"></i>
+                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+                             </p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <span>♥</span>
+                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
+                     <div class="imgfont">
+                         <a href="article.html"><img src="images/yin1.jpg" alt="" style="width: 120px;height: 68px;"></a>
+                         <div class="imgrt">
+                             <p>
+                                 <i class="fa fa-file-text-o 1g"></i>
+                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+                             </p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <span>♥</span>
+                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
+                     <div class="imgfont">
+                         <a href="article.html"><img src="images/印.jpg" alt="" style="width: 120px;height: 68px;"></a>
+                         <div class="imgrt">
+                             <p>
+                                 <i class="fa fa-file-text-o 1g"></i>
+                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+                             </p>
+                         </div>
+                     </div>
+                 </li>-->
             </ul>
         </div>
         <!--农技视频-->
@@ -342,7 +271,8 @@
                         </div>
                     </div>
                     <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont" style="margin-top: -10px;margin-left: 47px"></i>
+                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
+                           style="margin-top: -10px;margin-left: 47px"></i>
                     </div>
                 </li>
                 <li>
@@ -358,7 +288,8 @@
                         </div>
                     </div>
                     <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont" style="margin-top: -10px;margin-left: 47px"></i>
+                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
+                           style="margin-top: -10px;margin-left: 47px"></i>
                     </div>
                 </li>
                 <li>
@@ -374,7 +305,8 @@
                         </div>
                     </div>
                     <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont" style="margin-top: -10px;margin-left: 47px"></i>
+                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
+                           style="margin-top: -10px;margin-left: 47px"></i>
                     </div>
                 </li>
                 <li>
@@ -390,7 +322,8 @@
                         </div>
                     </div>
                     <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont" style="margin-top: -10px;margin-left: 47px"></i>
+                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
+                           style="margin-top: -10px;margin-left: 47px"></i>
                     </div>
                 </li>
             </ul>
@@ -403,7 +336,7 @@
 <footer>
     <div class="divFt">
         <dl>
-        	<dt>首页</dt>
+            <dt>首页</dt>
             <dt>关于我们</dt>
             <dt>加入我们</dt>
         </dl>
@@ -434,7 +367,7 @@
 </footer>
 </body>
 
-	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
-    <script th:src="@{/js/index.js} "></script>
-    <script type="text/javascript" th:src="@{/js/train.js}" ></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/js/index.js} "></script>
+<script type="text/javascript" th:src="@{/js/train.js}"></script>
 </html>

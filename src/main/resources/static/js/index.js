@@ -103,27 +103,27 @@ window.onload=function(){
     play();
 };
 //面包屑导航
-$(document).ready(function(){
-    $("#one").click(function () {
-        $("#echo").text("农药");
-    });
-    $("#two").click(function () {
-        $("#echo").text("肥料");
-    });
-    $("#three").click(function () {
-        $("#echo").text("农膜");
-    });
-    $("#four").click(function () {
-        $("#echo").text("种子种苗");
-    });
-    $("#five").click(function () {
-        $("#echo").text("植保技术");
-    });
-    $("#six").click(function () {
-        $("#echo").text("解决方案");
-    });
-
-
-
-
-});
+// $(document).ready(function(){
+//     $("#one").click(function () {
+//         $("#echo").text("农药");
+//     });
+//     $("#two").click(function () {
+//         $("#echo").text("肥料");
+//     });
+//     $("#three").click(function () {
+//         $("#echo").text("农膜");
+//     });
+//     $("#four").click(function () {
+//         $("#echo").text("种子种苗");
+//     });
+//     $("#five").click(function () {
+//         $("#echo").text("植保技术");
+//     });
+//     $("#six").click(function () {
+//         $("#echo").text("解决方案");
+//     });
+//
+//
+//
+//
+// });

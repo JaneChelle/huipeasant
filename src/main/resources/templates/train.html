@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>慧农-农技培训</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/train.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+</head>
+<body>
+<div class="head">
+    <div class="header">
+        <div class="header-left">
+            <a th:href="@{/user/toindex}">
+                <img th:src="@{/img/peasanter.png}"/>
+                <b>慧农在线</b>
+            </a>
+        </div>
+        <div class="header-right">
+            <a th:href="@{/UserManagementController/information}">
+                <i class="iconfont">&#xe61a;</i>
+                <span>个人中心</span>
+            </a>
+            <a id="qr-code">
+                <span>手机端</span>
+                <i class="iconfont">&#xe622;</i>
+            </a>
+        </div>
+        <div class="qr-code">
+            <img th:src="@{/img/code.png}"/>
+        </div>
+        <!--<div style="text-align:center;clear:both">-->
+        <div class="search">
+            <form action="">
+                <input type="text" name="" id="" value="" placeholder="请输入您要搜索的内容..."/>
+                <button type="submit"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="first-section">
+        <h3 th:text="${video.videoTitle}"></h3>
+        <hr/>
+        <img th:src="'/Path/'+${video.videoCover}"/>
+        <div class="course-info">
+            <ul>
+                <li>
+                    所属类别: 水果
+                    <span></span>
+                </li>
+                <li>
+                    课程类型: 种植
+                    <span></span>
+                </li>
+                <li>
+                    课程状态:完结
+                    <span></span>
+                </li>
+                <li>
+                    开始时间:2018-1-3
+                    <span></span>
+                </li>
+            </ul>
+            <div class="course-other">
+						<span>
+							<b>13</b>学员加入学习
+						</span>
+                <a th:href="@{/VideoController/toPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
+                <a>收藏</a>
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
+        <h3>讲师提示</h3>
+        <hr/>
+        <div class="mark-l" th:text="${video.authorSuggests}">
+            <i class="iconfont">&#xe60e;</i>
+        </div>
+        <div class="prompt">
+
+        </div>
+        <div class="mark-r">
+            <i class="iconfont" style="transform: rotateX(90deg);">&#xe60e;</i>
+        </div>
+    </div>
+    <div class="third-section">
+        <h3>课程简介</h3>
+        <hr/>
+        <div class="course" th:text="${video.videoIntroduction}">
+
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<footer>
+    <div class="divFt">
+        <dl>
+            <dt>首页</dt>
+            <dt>关于我们</dt>
+            <dt>加入我们</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>
+                <img th:src="@{/img/code.png}"/>
+            </dt>
+        </dl>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/train.js}"></script>
+</html>

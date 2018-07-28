@@ -1,0 +1,112 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+    color: inherit;
+    outline: 0;
+}
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
+ul{ padding-left: 10px;}
+li{	list-style-type: none;}
+input{ outline: none;}
+body{
+	background: url("../images/timg (13).jpg") center center  no-repeat fixed;
+	overflow: hidden;
+  	background-size:cover;
+	color: #fff;
+}
+.header{
+	padding: 24px 6px;
+	height: 32px;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+	letter-spacing: 4px;
+}
+.first_section{
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 18px;
+	height: 24px;
+	margin: 45px 0;
+}
+.first_section span{
+	margin-left: 5px;
+	font-size: 12px;
+}
+.second_section{
+	position: relative;
+	margin: 80px 0;
+}
+.login{
+	font-size: 24px;
+	margin: 48px 0;
+	text-align: center;
+}
+.login input{
+	font-size: 12px;
+	color: #000000!important;
+	height: 36px;
+	width: 280px;
+	margin-left: 12px;
+	padding-left: 6px;
+	border: none;
+	border-radius: 5px;
+}
+.ico{
+	position: absolute;
+	right: 32px;
+	top: 96px;
+	font-size: 16px;
+	color: #000!important;
+}
+p{
+	font-size: 13px;
+	margin: 28px;
+	text-align: right;
+}
+button{
+	position: relative;
+	border: none;
+	outline: none;
+	width: 330px;
+	margin: 60px 0 0 18px;
+}
+.login-in{
+	text-align: center;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #A5CD38;
+}
+#secion {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #DCDBDC;
+    background: rgba(0, 0, 0, 0.7);
+    filter: alpha(opacity=80); /* 只支持IE6、7、8、9 */
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 744835 */
+  src: url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.eot');
+  src: url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.woff') format('woff'),
+  url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

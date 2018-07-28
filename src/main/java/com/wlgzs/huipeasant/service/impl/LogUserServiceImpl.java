@@ -40,7 +40,7 @@ public class LogUserServiceImpl implements LogUserService {
             e.printStackTrace();
         }
         user.setHeadPortrait("/upload/moorende.jpg");
-        user.setNickName("用户"+randonNumberUtils.getNumber(6));
+        user.setNickName("用户" + randonNumberUtils.getNumber(6));
         user.setAddress("北京市 北京城区 东城区");
         user.setSex("男");
         user.setRoleId(2);
@@ -59,6 +59,7 @@ public class LogUserServiceImpl implements LogUserService {
                     session.setAttribute("adminUser", user);
                     return "管理员登录成功！";
                 } else {
+
                     session.setAttribute("user", user);
                     return "登录成功！";
                 }
