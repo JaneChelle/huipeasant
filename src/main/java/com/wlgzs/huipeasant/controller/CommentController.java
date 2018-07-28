@@ -16,6 +16,6 @@ public class CommentController extends BaseController {
     public Result tocomment(@RequestParam("content") String content,@RequestParam("dataId") long dataId){
         User user = (User)session.getAttribute("user");
         commentService.addcomment(user,content,dataId);
-        return new Result(ResultCode.SUCCESS,"添加成功");
+        return new Result(ResultCode.SUCCESS,"评论成功");
     }
 }

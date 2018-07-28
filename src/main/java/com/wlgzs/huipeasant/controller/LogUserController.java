@@ -49,7 +49,7 @@ public class LogUserController extends BaseController {
         if(mag.equals("管理员登录成功！")){
             return "admin/adminIndex";
         }else if(mag.equals("登录成功！")){
-            return "index";
+            return "redirect:/user/toindex";
         }else{
             return "login";
         }

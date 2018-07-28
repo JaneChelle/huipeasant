@@ -15,21 +15,24 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
     @Autowired
     CommentDao commentDao;
+
     @Override
-    public boolean addcomment(User user,String content,long dataId){
-        Date date =new Date();
+    public boolean addcomment(User user, String content, long dataId) {
+        Date date = new Date();
         Comment comment = new Comment();
         comment.setCommentContent(content);
         comment.setDataId(dataId);
         comment.setUserId(user.getUserId());
         comment.setCommentDate(date);
         comment.setUserName(user.getNickName());
+        comment.setUserIcon(user.getHeadPortrait());
         commentDao.save(comment);
         return true;
     }
+
     @Override
-    public List<Comment> getanswer(long userId){      //点击每个问题进入每个问题详情获得所有答案
+    public List<Comment> getanswer(long userId) {      //点击每个问题进入每个问题详情获得所有答案
         List<Comment> commentList = commentDao.findByDataId(userId);
         return commentList;
     }
-    }
+}
