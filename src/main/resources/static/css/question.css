@@ -208,19 +208,17 @@
 	width: 145px;
 	height: 100px;
 	float: left;
+	margin-right: 15px;
 }
-.material-p{
-	margin: 0 auto;
-	width: 556px;
+.material-p p{
 	text-indent: 2em;
 	line-height: 26px;
 	font-size: 14px;
 	text-overflow: ellipsis;
-    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
-    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
-    -webkit-line-clamp: 4; /** 显示的行数 **/
-    overflow: hidden;  /** 隐藏超出的内容 **/
-
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
 }
 .fr{
 	float: inherit;
