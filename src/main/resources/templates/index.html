@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>农技培训-慧农在线</title>
-    <link th:href="@{/css/index.css}" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/header.css}">
-    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
-    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}">
+<head th:include="/common/common :: header">
+
 </head>
 <body>
-<div class="head">
-    <div class="header">
-        <div class="header-left" title="慧农在线">
-            <a th:href="@{/user/toindex}">
-                <img th:src="@{/img/peasanter.png}"/>
-                <b>慧农在线</b>
-            </a>
-        </div>
-        <div class="header-right">
-            <a th:href="@{/LogUserController/toLogin}">
-                <i class="iconfont">&#xe61a;</i>
-                <span>登录</span>
-            </a>
-            <a th:href="@{LogUserController/toRegistered}">注册</a>
-            <a id="qr-code">
-                <span>手机端</span>
-                <i class="iconfont">&#xe622;</i>
-            </a>
-        </div>
-        <div class="qr-code">
-            <img src="img/code.png"/>
-        </div>
-        <div class="search">
-            <form action="/user/searchData" method="post">
-                <input type="text" name="contentsTitle" id="applyCertNum" value="" placeholder="请输入您要搜索的内容..." onkeyup="spin(),spainner()"/>
-                <button type="submit"></button>
-            </form>
-            <div class="spin">
-                <div class="spinners">
-                    <!--<a href="">dhfbdh</a>-->
-                    <!--<a href="">ddvkn</a>-->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div th:include="/common/common :: headere"></div>
 <!--头部-->
+<!--电商培训-->
 <div class="nv-top">
     <div class="nv-top-ct">
         <div class="nv-top-ct-range1">
-            <span><a th:href="@{/user/toindex}" style="font-size: 14px;color: red;">农技培训</a></span>
-            <span><a th:href="@{/user/toindex1}" style="font-size: 14px;">电商培训</a></span>
-
+            <span class="train-item1 active_active">农技培训</span>
+            <span class="train-item2">电商培训</span>
         </div>
-        <div class="nv-top-ct-range2">
+        <div class="nv-top-ct-range2 wrapper_list1">
             <ul>
                 <li id="one" th:each="mou : ${moudel}">
                     <a th:href="'/user/moduleview/'+${mou.mouldeId}+'/1'" target="_blank"><span th:text="${mou.moduleName}"></span></a>
                 </li>
-
+            </ul>
+        </div>
+        <div class="nv-top-ct-range2 wrapper_list2">
+            <ul>
+                <li id="one" title="农药">
+                    <a href="material.html" target="_blank">电商微商</a>
+                </li>
+                <li id="two" title="肥料">
+                    <a href="material.html" target="_blank">品牌货源</a>
+                </li>
+                <li id="three" title="农膜">
+                    <a href="material.html" target="_blank">培训中心</a>
+                </li>
+                <li id="four" title="种子种苗">
+                    <a href="material.html" target="_blank">成功案例</a>
+                </li>
+                <li id="five" title="种子种苗">
+                    <a href="material.html" target="_blank">动态咨询</a>
+                </li>
+                <li id="six" title="解决方案">
+                    <a href="material.html" target="_blank">解决方案</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -68,7 +49,7 @@
     <!--主体开始-->
     <div class="wp65 mt30 fl">
         <!--板块开始-->
-        <div class="main-body">
+        <div class="main-body item-1">
             <div class="box-item">
                 <span class="font"><a th:href="@{/user/toindex}" target="_blank">培训视频</a></span>
                 <span style="float:right;"><a th:href="@{/}" target="_blank">更多
@@ -88,6 +69,93 @@
                             <i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
                         </div>
                         <!--<div style="margin-top: -106px;" class="bofang"><i class="iconfont">&#xe607;</i></div>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-body item-2">
+            <div class="box-item">
+                <span class="font"><a href="question.html" target="_blank">培训视频</a></span>
+                <span style="float:right;"><a href="question.html" target="_blank">更多
+                    <em> <i class="fa fa-angle-right fa-lg"></i> </em>
+                    <em> <i class="fa fa-angle-right fa-lg"></i> </em>
+                    </a>
+                </span>
+            </div>
+            <div class="box-content">
+                <ul>
+                    <li>
+                        <a href="train.html">
+                            <img src="images/t1.jpg" alt="" style="width: 150px;height: 115px;">
+                        </a>
+                        <p><a href="train.html">电商基础知识培训</a></p>
+                        <div style="margin-top: -106px;" class="bofang">
+                            <i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
+                        </div>
+                        <!--<div style="margin-top: -106px;" class="bofang"><i class="iconfont">&#xe607;</i></div>-->
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t2.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="pcvideo.html">电子商务深度分析</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t3.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="">如何组建电商团队</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="pcvideo.html">
+                            <a href="train.html">
+                                <img src="images/t4.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="train.html">电商三大运营模式</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t5.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="train.html">农业电商培训的问题及总结</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t6.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="train.html">电商的重要基础培训</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t7.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="train.html">农业电商学堂</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
+                    </li>
+                    <li>
+                        <a href="train.html">
+                            <a href="train.html">
+                                <img src="images/t8.jpg" alt="" style="width: 150px;height: 115px;">
+                            </a>
+                        </a>
+                        <p><a href="train.html">如何打造一流电商平台</a></p>
+                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
                     </li>
                 </ul>
             </div>
@@ -157,231 +225,46 @@
                 </ul>
             </div>
         </div>
+        <!--主体结束-->
     </div>
-    <!--主体结束-->
     <!--列表右侧开始-->
-    <div class="wp28 fr">
-        <!--品牌招商区-->
-        <div class="mt10pb10">
-            <h2>品牌招商区</h2>
-            <a href="" class="divA"><img src="images/2.jpg" alt="" style="width: 270px;height: 110px;"></a>
-            <!--轮播图-->
-            <div class="con-lun">
-                <a href="#" class="wrip-img max">
-                    <img src="images/1.jpg" alt="1">
-                </a>
-                <a href="#" class="wrip-img">
-                    <img src="images/2.jpg" alt="2">
-
-                    <img src="images/4.jpg" alt="3">
-                </a>
-                <a href="#" class="wrip-img">
-                    <img src="images/3.jpg" alt="4">
-                </a>
-                <div class="wrip-img">
-                    <img src="images/2.jpg" alt="5">
-                </div>
-                <a href="javascript:;" id="prev" class="arrow">
-                    <i class="fa fa-chevron-left"></i>
-                </a>
-                <a href="javascript:;" id="next" class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-        </div>
-        <!--频道本月排行-->
-        <div class="mt10pb10">
-            <h2>频道本月排行</h2>
-            <span class="pin-more">
-                <a href="" style="color: #999;">更多</a>
-            </span>
-            <ul>
-                <li th:each="ss : ${rank}">
-                    [<a href="">
-                        <span th:text="${ss.moduleName}"></span>
-                    </a>]
-                    <a th:href="'/user/textview/'+${ss.dataId}" class="tex" target="_blank">
-                        <span th:text="${ss.contentsTitle}"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!--资讯推荐-->
-        <div class="mt10pb10">
-            <h2>资讯推荐</h2>
-            <span class="pin-more"><a href="" style="color: #FE6400;">更多</a></span>
-            <ul>
-                <li th:each="infor : ${information}">
-                    <span>♥</span>
-                    <a th:href="'/user/textview/'+${infor.dataId}"><span th:text="${infor.contentsTitle}"></span></a>
-                    <div class="imgfont">
-                        <a th:href="'/user/textview/'+${infor.dataId}">
-                            <img th:src="'/Path/'+${infor.pictureAddress}" alt="" style="width: 120px;height: 68px;">
-                        </a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2" th:text="${infor.contents}">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <!-- <li>
-                     <span>♥</span>
-                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                     <div class="imgfont">
-                         <a href="article.html"><img src="images/rb2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                         <div class="imgrt">
-                             <p>
-                                 <i class="fa fa-file-text-o 1g"></i>
-                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                             </p>
-                         </div>
-                     </div>
-                 </li>
-                 <li>
-                     <span>♥</span>
-                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                     <div class="imgfont">
-                         <a href="article.html"><img src="images/yin1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                         <div class="imgrt">
-                             <p>
-                                 <i class="fa fa-file-text-o 1g"></i>
-                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                             </p>
-                         </div>
-                     </div>
-                 </li>
-                 <li>
-                     <span>♥</span>
-                     <a href="article.html">2018年5~6份“植保之星”服务排行榜</a>
-                     <div class="imgfont">
-                         <a href="article.html"><img src="images/印.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                         <div class="imgrt">
-                             <p>
-                                 <i class="fa fa-file-text-o 1g"></i>
-                                 <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                             </p>
-                         </div>
-                     </div>
-                 </li>-->
-            </ul>
-        </div>
-        <!--农技视频-->
-        <div class="mt10pb10">
-            <H2>农技视频</H2>
-            <span class="pin-more"><a href="">更多</a></span>
-            <ul>
-                <li>
-                    <span>☆</span>
-                    <a href="train.html">茶树高效栽培技术一</a>
-                    <div class="imgfont">
-                        <a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-                           style="margin-top: -10px;margin-left: 47px"></i>
-                    </div>
-                </li>
-                <li>
-                    <span>☆</span>
-                    <a href="train.html">番茄栽培技术二</a>
-                    <div class="imgfont">
-                        <a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-                           style="margin-top: -10px;margin-left: 47px"></i>
-                    </div>
-                </li>
-                <li>
-                    <span>☆</span>
-                    <a href="train.html">茶树高效栽培技术一</a>
-                    <div class="imgfont">
-                        <a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-                           style="margin-top: -10px;margin-left: 47px"></i>
-                    </div>
-                </li>
-                <li>
-                    <span>☆</span>
-                    <a href="train.html">番茄栽培技术二</a>
-                    <div class="imgfont">
-                        <a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-                           style="margin-top: -10px;margin-left: 47px"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
+    <div th:include="/common/common :: sidebar"></div>
 </div>
-<!--尾部-->
-<footer>
-    <div class="divFt">
-        <dl>
-            <dt>首页</dt>
-            <dt>关于我们</dt>
-            <dt>加入我们</dt>
-        </dl>
-        <dl>
-            <dt>关注我们</dt>
-            <dt>新浪微博</dt>
-            <dt>服务支持</dt>
-            <dt>常见问题</dt>
-        </dl>
-        <dl>
-            <dt>关注我们</dt>
-            <dt>新浪微博</dt>
-            <dt>服务支持</dt>
-            <dt>常见问题</dt>
-        </dl>
-        <dl>
-            <dt>关注我们</dt>
-            <dt>新浪微博</dt>
-            <dt>服务支持</dt>
-            <dt>常见问题</dt>
-        </dl>
-        <dl>
-            <dt>
-                <img src="img/code.png" alt="">
-            </dt>
-        </dl>
-    </div>
-</footer>
-</body>
 
-<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
-<script th:src="@{/js/index.js} "></script>
-<script type="text/javascript" th:src="@{/js/train.js}"></script>
+    <!--尾部-->
+    <footer>
+        <div class="divFt">
+            <dl>
+                <dt>首页</dt>
+                <dt>关于我们</dt>
+                <dt>加入我们</dt>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dt>新浪微博</dt>
+                <dt>服务支持</dt>
+                <dt>常见问题</dt>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dt>新浪微博</dt>
+                <dt>服务支持</dt>
+                <dt>常见问题</dt>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dt>新浪微博</dt>
+                <dt>服务支持</dt>
+                <dt>常见问题</dt>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="img/code.png" alt="">
+                </dt>
+            </dl>
+        </div>
+    </footer>
+</div>
+</body>
+<div th:include="/common/common :: indexjs"></div>
 </html>

@@ -116,14 +116,14 @@ body{
 /*下拉列表*/
 .spin{
 	display: none;
-	width: 300px;
+	width: 247px;
 	position: absolute;
 	top: 60px;
 	padding: 0 12px;
 	background-color: #fff;
+	z-index: 9999;
 }
 .spinners{
-	width: 292px;
 	border-radius: 5px;
 }
 .spinners a{

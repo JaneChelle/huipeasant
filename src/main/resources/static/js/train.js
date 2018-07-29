@@ -1,11 +1,29 @@
-//二维码
+
 $(document).ready(function(){
+    //二维码
   $("#qr-code").mouseenter(function(){
     $(".qr-code").fadeIn();
   });
   $(".qr-code").mouseleave(function(){
     $(".qr-code").fadeOut();
   });
+    // 农机培训 电商培训
+    $(".train-item2").click(function(){
+        $(".train-item2").css("color","#ff4400");
+        $(".train-item1").css("color","#000");
+        $(".item-1").hide();
+        $(".item-2").fadeIn();
+        $(".wrapper_list1").hide();
+        $(".wrapper_list2").fadeIn();
+    })
+    $(".train-item1").click(function(){
+        $(".train-item1").css("color","#ff4400");
+        $(".train-item2").css("color","#000");
+        $(".item-2").hide();
+        $(".item-1").fadeIn();
+        $(".wrapper_list2").hide();
+        $(".wrapper_list1").fadeIn();
+    })
 });
 //搜索框
 function spin(){
@@ -16,6 +34,7 @@ function spin(){
         $('.spin').fadeOut();
     }
 }
+onkeyup(spin());
 function spainner(){
     $.ajax({
         type: "POST",//数据发送的方式（post 或者 get）
