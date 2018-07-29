@@ -13,32 +13,33 @@
 	<!--头部-->
 	<div th:include="index :: headere"></div>
 	<div class="big-boeder">
-		<div class="border">
-			<div>
-				<a href="javascript:;"><h3>我想问一下这是什么草 、已经用稻杰和氰氟草酯打过了、现在该怎么办</h3></a>
+		<!--提问问题、-->
+		<div class="border" th:each="ques:${question}">
+			<div >
+				<a href="javascript:;"><h3 th:text="${ques.contentsTitle}">我想问一下这是什么草 、已经用稻杰和氰氟草酯打过了、现在该怎么办</h3></a>
 				<div class="ask-time">
-					<img src="img/online_member.gif"/>
-					<span>2014-5-9 42:52</span>
+					<img th:src="@{/img/online_member.gif}"/>
+					<span th:text="${ques.uploadTime}">2014-5-9 42:52</span>
 				</div>
 			</div>
 			<div class="ask-left">
 				<div class="ask-import">
 					<div class="ask-title">
-						此处为问的问题   我想问一下这是什么草 、已经用稻杰和氰氟草酯打过了、现在该怎么办
+						<span th:text="${ques.contentsTitle}"></span>此处为问的问题   我想问一下这是什么草 、已经用稻杰和氰氟草酯打过了、现在该怎么办
 					</div>
-					<img src="img/picture.jpg"/>
+					<img th:src="${ques.pictureAddress}"/>
 				</div>
 			</div>
 			<div class="ask-right">
 				<div class="ask-img">
 					<a href="">
-						<img src="img/person.png" class="ask-img">
-						<div>此处为昵称</div>
+						<img th:src="${ques.userIcon}" class="ask-img">
+						<div th:text="${ques.userName}">此处为昵称</div>
 					</a>
 				</div>
 				<div class="ask-area">
 					<i class="iconfont">&#xe600;</i>
-					<span>所在区域</span><br />
+					<span> 所在区域</span><br />
 					<div class="area">山东省 泰安</div>
 				</div>
 				<div class="ask-area">
@@ -53,18 +54,18 @@
 				</div>
 			</div>	
 		</div>
-		
-		<div class="border">
+		<!--专家回答-->
+		<div class="border" th:each="an:${answer}">
 			<div>
-				<a href="javascript:;"><h3>我是回答的昵称</h3></a>
+				<a href="javascript:;" th:text="${an.userName}"><h3>我是回答的昵称</h3></a>
 				<div class="ask-time">
-					<img src="img/online_member.gif"/>
-					<span>2014-5-9 42:52</span>
+					<img th:src="${an.userIcon}"/>
+					<span th:text="${an.commentDate}">2014-5-9 42:52</span>
 				</div>
 			</div>
 			<div class="ask-left">
 				<div class="ask-import">
-					<div class="ask-title">
+					<div class="ask-title" th:text="${an.commentContent}">
 						此处为评论的数据
 						最有效，最科学的施肥方法是测土配方施肥，也可在当地化肥经销处购买适合当地的花生专用肥
 					</div>
@@ -73,19 +74,14 @@
 			<div class="ask-right">
 				<div class="ask-img">
 					<a href="">
-						<img src="img/person.png" class="ask-img">
-						<div>此处为昵称</div>
+						<img th:src="${an.userIcon}" class="ask-img">
+						<div th:text="${an.userName}">此处为昵称</div>
 					</a>
 				</div>
 				<div class="ask-area">
 					<i class="iconfont">&#xe600;</i>
 					<span>所在区域</span><br />
 					<div class="area">山东省 泰安</div>
-				</div>
-				<div class="ask-area">
-					<i class="iconfont">&#xe626;</i>
-					<span>性别</span>
-					<div class="area">男</div>
 				</div>
 				<div class="ask-area">
 					<i class="iconfont">&#xe60c;</i>
