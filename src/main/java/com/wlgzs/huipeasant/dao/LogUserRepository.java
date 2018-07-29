@@ -1,5 +1,6 @@
 package com.wlgzs.huipeasant.dao;
 
+import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

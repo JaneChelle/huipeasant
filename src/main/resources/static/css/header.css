@@ -96,9 +96,8 @@ body{
 .search form input:focus {
 	width: 300px;
 }
-
 .search button {
-	width: 42px;
+	width: 45px;
 	height: 42px;
 	border-radius: 5px;
 	position: absolute;
@@ -108,9 +107,8 @@ body{
 	cursor: pointer;
 }
 .search button:before {
-	content: "\f002";
+	content: "搜索";
 	font-family: FontAwesome;
-	color: #324b4e;
 	color: #fff;
 }
 /*下拉列表*/

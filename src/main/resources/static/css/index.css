@@ -111,6 +111,13 @@ a:hover{
     margin-left: 35px;
 }
 /*鼠标滑过图片放大*/
+.curefont{
+    display: block;
+    width: 125px;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
 .imgkuang{
     width: 130px;
     height: 120px;

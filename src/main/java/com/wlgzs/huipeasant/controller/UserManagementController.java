@@ -38,10 +38,11 @@ public class UserManagementController extends BaseController {
 
     //修改昵称
     @RequestMapping("changeInformation")
-    public ModelAndView ModifyName(Model model, HttpServletRequest request) {
+    public ModelAndView ModifyName(Model model, HttpServletRequest request,String NickName) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        userService.ModifyName(request,user);
+        System.out.println("sessionuser"+user);
+        userService.ModifyName(request,user,NickName);
         model.addAttribute("user", user);
         return new ModelAndView("redirect:/UserManagementController/information");
     }
@@ -54,9 +55,10 @@ public class UserManagementController extends BaseController {
 
     //修改手机号//需要phoneNumber(新的)
     @RequestMapping("changePhone")
-    public ModelAndView changePhone(Model model, HttpServletRequest request) {
+    public ModelAndView changePhone(Model model, HttpServletRequest request,String phoneNumber) {
+        System.out.println(phoneNumber);
         //修改手机号
-        User user = userService.changePhone(request);
+        User user = userService.changePhone(request,phoneNumber);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -140,5 +142,12 @@ public class UserManagementController extends BaseController {
     }
 
     //修改用户地区
+    @RequestMapping("changeAddress")
+    public ModelAndView changeAddress(Model model,HttpSession session,String address){
+        User user = (User)session.getAttribute("user");
+        userService.changeAddress(user,address,session);
+        return new ModelAndView("redirect:/UserManagementController/information");
+    }
+
 
 }
