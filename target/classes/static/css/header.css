@@ -165,7 +165,9 @@ body{
 footer{
 	width:100%;
 	min-width: 1200px;
-	background-color: #15AB9F;
+	background-color: #5CB87A;
+	margin-top: 50px;
+	opacity: 1;
 }
 .divFt{
 	width: 1200px;
@@ -175,7 +177,7 @@ footer{
 }
 dl{
 	display: inline-block;
-	width: 200px;
+	width: 222px;
 	text-align: center;
 	vertical-align: top;
 	margin-top: 20px;

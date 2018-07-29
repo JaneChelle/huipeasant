@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>我的收藏-会员管理中心</title>
-    <link rel="stylesheet" th:href="@{/css/Person-center.css}">
+    <title>我的问题-会员管理中心</title>
+    <link rel="stylesheet" th:href="@{/css/toaddData.css}">
     <link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
-    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script  th:src="@{/js/jquery-3.3.1.min.js}"></script>
     <script th:src="@{/js/Person-center.js}"></script>
+
 </head>
 <body>
 <div class="head" >
@@ -19,11 +20,11 @@
             </a>
         </div>
         <div class="header-right">
-            <a href="">
+            <a href="login.html">
                 <i class="iconfont">&#xe61a;</i>
-                <span>个人中心</span>
+                <span>登录</span>
             </a>
-            <!--<a href="register.html">注册</a>-->
+            <a href="register.html">注册</a>
             <a id="qr-code">
                 <span>手机端</span>
                 <i class="iconfont">&#xe622;</i>
@@ -52,28 +53,36 @@
 <div class="kuang">
     <div class="container">
         <div class="acount"><a th:href="@{/UserManagementController/information}">账户设置</a></div>
+
         <div class="collection"><a th:href="@{/user/toaddData}">我的庄稼医院</a></div>
         <div class="trangle" style="margin-left: 140px"></div>
         <div class="content">
             <div class="side">
                 <div>我的庄稼医院</div>
                 <ul>
-                    <li><a th:href="@{/user/question}">我要问</a></li>
+                    <li style="background-color: #599524;"><a th:href="@{/user/question}">我要问</a></li>
                     <li><a th:href="@{/user/viewquestion}">我问的</a></li>
-                    <li style="background-color: #599524;"><a th:href="@{/CollectionController/Viewcollection}">我的收藏</a></li>
+                    <li><a th:href="@{/CollectionController/Viewcollection}">我的收藏</a></li>
                 </ul>
             </div>
             <!--内容区域-->
             <div class="right-kuang">
                 <div class="right-content">
-                    <ul>
-                        <li th:each="collections:${collections}">
-                            <a href="train.html">
-                                <img th:src="${collections.videoCover}" alt="" style="width: 200px;height: 200px;padding: 15px;">
-                            </a>
-                            <span class="videocure"><a href="train.html" th:text="${collections.modelTitle}">新型庄稼医院展示</a></span>
-                        </li>
-                    </ul>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>问题</th>
+                            <th>时间</th>
+                            <th>点击量</th>
+                        </tr>
+                        <tr th:each="qu:${question}">
+                            <td th:text="${qu.contentsTitle}">辣椒有茶黄螨怎么治理？</td>
+                            <td th:text="${qu.uploadTime}">2018/7/18/17:18</td>
+                            <td th:text="${qu.hits}">0/0</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

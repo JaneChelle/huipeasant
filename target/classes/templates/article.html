@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css"   th:href="@{/css/question.css}" />
 	</head>
 	<body>
-		<div th:include="index :: headere"></div>
+	<div th:include="/common/common :: headere"></div>
 		<div class="wrapper">
 			<div class="contain">
 				<div class="nav">
@@ -97,7 +97,7 @@
 		        </dl>
 		        <dl>
 		            <dt>
-		                <img src="img/code.png"/>
+		                <img th:src="@{/img/code.png}"/>
 		            </dt>
 		        </dl>
 		    </div>

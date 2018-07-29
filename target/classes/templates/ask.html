@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!--头部-->
-	<div th:include="index :: headere"></div>
+	<div th:include="common/common :: headere"></div>
 	<div class="big-boeder">
 		<!--提问问题、-->
 		<div class="border" th:each="ques:${question}">
@@ -118,7 +118,7 @@
 			</dl>
 			<dl>
 				<dt>
-					<img src="img/code.png"/>
+					<img th:src="@{/img/code.png}"/>
 				</dt>
 			</dl>
 		</div>
