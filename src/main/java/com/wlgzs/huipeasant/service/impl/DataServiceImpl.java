@@ -50,6 +50,7 @@ public class DataServiceImpl implements DataService {
                 System.out.println("dhfgjkdghfdghfghdata" + data);
                 data.setUserIcon(user.getHeadPortrait());
                 data.setUserName(user.getNickName());
+                data.setUserId(user.getUserId());
 
             }
             if (dataLevle == 3) {
