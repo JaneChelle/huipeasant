@@ -52,7 +52,7 @@ public class DataController extends BaseController {
 
     public ModelAndView toaddData(Model model) {
         model.addAttribute("moudels",moduleService.getModules());
-        return new ModelAndView("question");
+        return new ModelAndView("qusetion");
 
     }
 
@@ -69,9 +69,10 @@ public class DataController extends BaseController {
         }
     }
 
+
     @GetMapping("textview/{dataId}")   //进入文章页面
     public ModelAndView textView(Model model, @PathVariable("dataId") long dataId) {
-        model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
+
         model.addAttribute("data", dataService.dataView(dataId));
 
         if (dataService.jundegeView(dataId)) {
@@ -100,12 +101,13 @@ public class DataController extends BaseController {
     @RequestMapping("question")  //进入提问问题界面
     public ModelAndView question(Model model){
         model.addAttribute("moudels",moduleService.getModules());
-        return new ModelAndView("question");
+        return new ModelAndView("qusetion");
     }
-    @PostMapping("viewquestion")
+    @RequestMapping ("viewquestion")
     public ModelAndView viewQuestion(Model model){
         User user = (User) session.getAttribute("user");
         model.addAttribute("question",dataService.userGetquestion(user.getUserId()));
+        System.out.println("dfcsfsfsf"+dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
 }

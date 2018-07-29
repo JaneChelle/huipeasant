@@ -232,6 +232,7 @@ a{
     border: 2px solid #F9F0DA;
     color: #fff;
     padding-left: 5px;
+    border-radius: 5px;
 }
 .nickname:focus {
     border-color: #311c24 ;
@@ -382,6 +383,14 @@ textarea{
     box-shadow: 0 0 5px #ccc;
     position: relative;
     top: -10px;
+    margin-left: 23px;
+}
+.number{
+    outline: none;
+    border: none;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
 }
 select{
     /*//清除select的边框样式*/
@@ -398,6 +407,7 @@ select{
     -moz-appearance: none;
     /*   //通过padding-left的值让文字居中*/
     padding-left: 42px;
+    border-radius: 5px;
 }
 /*//使用伪类给select添加自己想用的图标*/
 .Div:after{

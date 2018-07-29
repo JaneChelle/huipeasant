@@ -52,7 +52,7 @@ public class LogUserController extends BaseController {
         if(mag.equals("管理员登录成功！")){
             return new ModelAndView("adminIndex");
         }else if(mag.equals("登录成功！")){
-            return new ModelAndView("index");
+            return new ModelAndView("redirect:/user/toindex");
         }else{
             return new ModelAndView("login");
         }
