@@ -298,3 +298,20 @@ a:hover{
 .bofang:hover #iconfont{
     opacity: 1;
 }
+/*农机培训 电商培训*/
+.item-2,.wrapper_list2{
+    display: none;
+}
+.train-item1,.train-item2{
+    display: inline-block;
+    width: 75px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.train-item1:hover,.train-item2:hover{
+    color: #ff4400;
+}
+.active_active{
+    color: #ff4400;
+}

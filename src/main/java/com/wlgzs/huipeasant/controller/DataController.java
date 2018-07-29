@@ -68,7 +68,9 @@ public class DataController extends BaseController {
             return new Result(ResultCode.FAIL, "上传失败，请检查信息是否填写完整");
         }
     }
-    @GetMapping("textview/{dataId}")   //进入文章/问题页面
+
+
+    @GetMapping("textview/{dataId}")   //进入文章页面
     public ModelAndView textView(Model model, @PathVariable("dataId") long dataId) {
 
         model.addAttribute("data", dataService.dataView(dataId));
@@ -94,7 +96,7 @@ public class DataController extends BaseController {
     @PostMapping("searchData")   //搜索
     public ModelAndView searchData(Model model, String dataName) {
         model.addAttribute("datas", dataService.searchData(dataName));
-        return new ModelAndView("/");
+        return new ModelAndView("material");
     }
     @RequestMapping("question")  //进入提问问题界面
     public ModelAndView question(Model model){
