@@ -62,14 +62,14 @@ public class LogUserController extends BaseController {
     @RequestMapping("cancellation")
     public ModelAndView cancellation(HttpServletRequest request) {
         logUserService.cancellation(request);
-        return new ModelAndView("redirect:/toLogin");
+        return new ModelAndView("redirect:/LogUserController/toLogin");
     }
 
     //管理员退出
     @RequestMapping("adminCancellation")
     public ModelAndView adminCancellation(HttpServletRequest request){
         logUserService.adminCancellation(request);
-        return new ModelAndView("redirect:/toLogin");
+        return new ModelAndView("redirect:/LogUserController/toLogin");
     }
 
     //验证手机号是否存在
