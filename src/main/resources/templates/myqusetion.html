@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>会员管理中心</title>
+    <link rel="stylesheet" th:href="@{/css/Person-center.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script  th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/Person-center.js}"></script>
+</head>
+<body>
+<div th:include="index :: headere"></div>
+<div class="sty">
+    <div class="sty2">
+        <h1>个人中心</h1>
+        <h1 class="sty3"><a href="index.html">首页</a></h1>
+        <h2 class="sty4"><a href="login.html">退出</a></h2>
+    </div>
+</div>
+<div class="kuang">
+    <div class="container">
+        <div class="acount"><a href="Person-center.html">账户设置</a></div>
+        <div class="collection"><a href="myqusetion.html">我的庄稼医院</a></div>
+        <div class="trangle" style="margin-left: 140px"></div>
+        <div class="content">
+           <div class="side">
+               <div>我的庄稼医院</div>
+               <ul>
+                   <li style="background-color: #599524;"><a href="myqusetion.html">我要问</a></li>
+                   <li><a href="asked.html">我问的</a></li>
+                   <li><a href="mycollection.html">我的收藏</a></li>
+               </ul>
+           </div>
+            <!--内容区域-->
+            <div class="right-kuang">
+                <div class="right-content">
+                    <div class="font">
+                        <div style="width: 600px;"><i class="iconfont">&#xe667;</i>温馨提醒：</div>
+                        <div style="width: 600px">专家没有实地指导，仅是主观描述，专家可给的帮助建议仅供参考，具体以实际情况在当地部门指导下进行
+                            <i class="iconfont">&#xe67b;</i>
+                        </div>
+                    </div>
+                    <div class="qusetion">
+                    	<div>
+                            <span >问题类型: </span><select id="city" >
+                                <option selected>请选择</option>
+                                <option th:each="moudel : ${moudels}" th:value="${moudel.mouldeId}"  th:text="${moudel.moduleName}">请选择</option>
+
+                            </select>
+
+                    	</div>
+                        <p style="margin-bottom: 10px">问题描述：</p>
+                        <textarea name="" id="" cols="30" rows="10">
+                        </textarea>
+                        <p style="color:#999;font-size: 12px">注：详细说明问题的情况，描述得越仔细，获得准确回答的机会越大</p>
+                    </div>
+                    <div class="picture">
+                        <p style="margin-bottom: 10px">上传图片：</p>
+                        <div class="upload" style="border: none">
+                            <span class="sl-custom-file">
+                                <input type="button" value="上传" class="btn-file1"/>
+                                <input type="file" class="ui-input-file" />
+                            </span>
+                        </div>
+                        <!--<span>-->
+                        <input type="submit" value="完成" class="finish">
+                        <!--</span>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript"  th:src="@{/js/train.js}" ></script>
+<!--<script th:src="@{/js/index.js} "></script>-->
+</html>

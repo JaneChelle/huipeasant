@@ -37,7 +37,7 @@ public interface DataService {
 
     List<Data> userGetquestion(long userId); //获取每个问题答案的集合
 
-    List<String> getKeyWord(String keyWord);
+    List<Data> getKeyWord(String keyWord);
 
     List<Data> searchData(String dataName);
 

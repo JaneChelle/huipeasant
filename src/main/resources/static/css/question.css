@@ -90,6 +90,7 @@
 .wrapper-l{
 	float: left;
 	width: 720px;
+	padding: 16px 0
 }
 .wrapper-p{
 	width: 100%;
@@ -162,7 +163,7 @@
 	color: #324b4e; 
 }
 .recommendation textarea{
-	width: 100%;
+	width: 99%;
 	height: 160px;
 	margin: 12px 4px;
 	padding: 12px 6px;
@@ -175,7 +176,6 @@
 	color: #fff;
 	margin-top: 14px;
 	position: relative;
-	left: 70px;
 	height: 40px;
 	line-height: 40px;
 	border-radius: 5px;
