@@ -15,7 +15,8 @@ import java.util.List;
 public interface VideoRepository extends JpaRepository<Video, Long>,JpaSpecificationExecutor<Video> {
     Video findById(long videoId);
 
-    @Query(value = "SELECT * FROM Video",nativeQuery = true)
-    List<Video> findAllVideo();
+    //按类型查询视频
+    @Query("FROM Video v WHERE v.moduleId=?1")
+    List<Video> findOneVideo(long moduleId);
 
 }

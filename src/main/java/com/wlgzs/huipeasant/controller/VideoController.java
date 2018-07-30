@@ -19,15 +19,6 @@ import java.util.List;
 @RequestMapping("VideoController")
 public class VideoController extends BaseController {
 
-    //前台遍历视频(首页)
-    @RequestMapping("/videoList")
-    public ModelAndView videoList(Model model){
-        List<Video> videoList = videoService.videoList();
-        videoList = videoList.subList(videoList.size()-8,videoList.size());
-        model.addAttribute("videoList",videoList);
-        return new ModelAndView("");
-    }
-
     //按ID查询视频（视频详情）
     @RequestMapping("/videoDetails")
     public ModelAndView detailsVideo(long videoId,Model model){
@@ -39,9 +30,14 @@ public class VideoController extends BaseController {
     //全部视频
     @RequestMapping("allVideoList")
     public ModelAndView allVideoList(Model model){
-        List<Video> videoList = videoService.videoList();
-        model.addAttribute("videoList",videoList);
+
         return new ModelAndView("VideoList");
+    }
+    //全部视频 （手机）
+    @RequestMapping("allIpVideoList")
+    public ModelAndView allipVideoList(Model model){
+
+        return new ModelAndView("/phone/VideoList");
     }
 
     //按点击量查询视频
@@ -52,11 +48,28 @@ public class VideoController extends BaseController {
         return new ModelAndView("VideoList");
     }
 
+    //2.按点击量查询视频
+    @RequestMapping("videoIpRanking")
+    public ModelAndView videoIpRanking(Model model){
+        List<Video> videoList = videoService.videoRanking();
+        model.addAttribute("videoList",videoList);
+        return new ModelAndView("/phone/Video-rankings");
+    }
+
     //视频播放页
     @RequestMapping("toPcvideo")
     public ModelAndView toPcvideo(Model model,String videoAddress){
         model.addAttribute("videoAddress",videoAddress);
         return new ModelAndView("pcvideo");
     }
-
+    @RequestMapping("toIpPcvideo")
+    public ModelAndView toIpPcvideo(Model model,String videoAddress){
+        model.addAttribute("videoAddress",videoAddress);
+        return new ModelAndView("/phone/video");
+    }
+    //病虫图害
+    @RequestMapping("insect")
+    public ModelAndView insect(){
+        return new ModelAndView("/phone/insect");
+    }
 }

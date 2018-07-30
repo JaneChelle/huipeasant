@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>用户修改</title>
-    <link rel="stylesheet" th:href="@{/bootstrap/dist/css/bootstrap.css}">
-    <link rel="stylesheet" th:href="@{/css/Modify.css}" type="text/css">
-    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
-    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
-    <script th:src="@{/js/adminUserList.js}"></script>
+    <meta charset="utf-8" />
+    <title>慧农在线-农技培训服务平台</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet"  th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css"   th:href="@{/css/Modify.css}" />
 </head>
 <body>
 <div class="windoww">
     <div class="popup-windows">
         <h2 style="text-align: center">修改用户</h2>
-        <form th:href="@{/adminUserController/adminEditUser}">
+        <form  th:action="@{/adminUserController/adminEditUser}">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>用户ID</th>
-                    <td><input type="text" name="user_name" class="form-control"  value="" id="username" required="required"/></td>
+                    <td><input type="text" name="userId" th:value="${user.userId}" class="form-control"  value="" id="username" required="required"/></td>
                 </tr>
                 <tr>
                     <th>用户手机号</th>
                     <td>
-                        <input type="text" name="user_phone" class="form-control"  value="" id="userphone" required="required"/>
+                        <input type="text" name="phoneNumber" th:value="${user.phoneNumber}" class="form-control"  value="" id="userphone" required="required"/>
                     </td>
                 </tr>
                 <tr>
                     <th>密码</th>
-                    <td><input type="text" name="user_password" class="form-control" value="" id="pwd" required="required"/></td>
-                </tr>
-                <tr>
-                    <th>头像地址</th>
-                    <td><input type="text" name="" class="form-control"  value="" id="" required="required"/></td>
+                    <td><input type="text" name="password" th:value="${user.password}" class="form-control" value="" id="pwd" required="required"/></td>
                 </tr>
                 <tr>
                     <th>昵称</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="nickName" th:value="${user.nickName}" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <th>预留信息</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="reservedInf" th:value="${user.reservedInf}" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <th>角色id</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="roleId" th:value="${user.roleId}" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="2" style="text-align: center;">
                         <input type="reset" value="重置" class="btn btn-primary" id="reset"/>
-                        <input type="submit" value="添加"  class="btn btn-success" id="add"  onclick="dd()"/>
-                        <a th:href="@{/adminUserController/adminUserList}"><input type="button" value="取消"  class="btn btn-info"  style="background-color: orangered"/></a>
+                        <input type="submit" value="修改"  class="btn btn-success" id="add"/>
+                        <a th:href="@{/adminUserController/adminUserList}">
+                            <input type="button" value="取消"  class="btn btn-info"  style="background-color: orangered"/>
+                        </a>
                     </td>
                 </tr>
             </table>
@@ -57,5 +54,7 @@
     </div>
 </div>
 </body>
+<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript"  th:src="@{/js/adminEdit.js}" ></script>
 </html>
 

@@ -33,7 +33,7 @@ public class AdminVideoController extends BaseController {
     //遍历视频
     @RequestMapping("/adminVideoList")
     public ModelAndView adminVideoList(Model model, @RequestParam(value = "page", defaultValue = "0") int page,
-                                       @RequestParam(value = "limit", defaultValue = "8") int limit){
+                                       @RequestParam(value = "limit", defaultValue = "6") int limit){
         String videoKeyWord = "";
         if (page != 0) page--;
         Page pages = videoService.getVideoListPage(videoKeyWord,page,limit);
@@ -47,15 +47,16 @@ public class AdminVideoController extends BaseController {
     //搜索视频
     @RequestMapping("/adminFindProduct")
     public ModelAndView findProduct(Model model, String videoKeyWord, @RequestParam(value = "page", defaultValue = "0") int page,
-                                    @RequestParam(value = "limit", defaultValue = "8") int limit) {
+                                    @RequestParam(value = "limit", defaultValue = "6") int limit) {
         if (page != 0) page--;
+        System.out.println(videoKeyWord);
         Page pages = videoService.getVideoListPage(videoKeyWord,page,limit);
         model.addAttribute("TotalPages", pages.getTotalPages());//查询的页数
         model.addAttribute("Number", pages.getNumber() + 1);//查询的当前第几页
-        List<Video> adminVideoList = pages.getContent();
-        model.addAttribute("adminVideoList", adminVideoList);//查询的当前页的集合
+        List<Video> adminVideoLists = pages.getContent();
+        model.addAttribute("adminVideoLists", adminVideoLists);//查询的当前页的集合
         model.addAttribute("videoKeyWord", videoKeyWord);
-        return new ModelAndView("admin/AdminVideoController/adminVideoList");
+        return new ModelAndView("admin/adminVideoList");
     }
 
 //    //跳转到添加视频

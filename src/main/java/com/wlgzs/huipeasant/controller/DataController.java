@@ -24,9 +24,21 @@ public class DataController extends BaseController {
         model.addAttribute("question", dataService.question());
         model.addAttribute("information", dataService.information());
         model.addAttribute("rank", dataService.indexRank());
-        List<Video> videoList = videoService.videoList();
-        videoList = videoList.subList(videoList.size() - 8, videoList.size());
-        model.addAttribute("videoList", videoList);
+
+        //农技视频
+        List<Video> videoOneList = videoService.videoList(1);
+        model.addAttribute("videoList", videoOneList);
+
+        //电商视频
+        List<Video> videoTowList = videoService.videoList(2);
+        model.addAttribute("videoTowList", videoTowList);
+
+        //视频排行
+        List<Video> videoRanking = videoService.videoRanking();
+        if(videoRanking.size() > 4){
+            videoRanking = videoRanking.subList(videoRanking.size() - 4, videoRanking.size());
+        }
+        model.addAttribute("videoRanking",videoRanking);
         model.addAttribute("moudel",moduleService.getModules());
         return new ModelAndView("index");
     }
@@ -58,6 +70,13 @@ public class DataController extends BaseController {
     public ModelAndView toaddData(Model model) {
         model.addAttribute("moudels",moduleService.getModules());
         return new ModelAndView("qusetion");
+
+    }
+    @RequestMapping("toaddIpData")
+
+    public ModelAndView toaddIpData(Model model) {
+        model.addAttribute("moudels",moduleService.getModules());
+        return new ModelAndView("Ask-qusetions");
 
     }
 
@@ -107,6 +126,11 @@ public class DataController extends BaseController {
     public ModelAndView question(Model model){
         model.addAttribute("moudels",moduleService.getModules());
         return new ModelAndView("qusetion");
+    }
+    @RequestMapping("ipquestion")  //进入手机端提问问题界面
+    public ModelAndView ipquestion(Model model){
+        model.addAttribute("moudels",moduleService.getModules());
+        return new ModelAndView("/phone/Ask-questions");
     }
     @RequestMapping ("viewquestion")
     public ModelAndView viewQuestion(Model model){

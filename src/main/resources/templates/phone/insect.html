@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>病虫害-农技培训平台-慧农移动在线</title>
-		<link rel="stylesheet" href="CSS/insect.css" />
-		<link rel="shortcut icon" type="img/x-icon" href="images/login.ico"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" th:href="@{/ipcss/insect.css}" />
+		<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
+		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<script type="text/javascript" src="JS/jquery.min.js" ></script>
+		<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}" ></script>
 	</head>
 	<body>
 		<div class="header">

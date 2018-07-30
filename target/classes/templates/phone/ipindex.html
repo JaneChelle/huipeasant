@@ -18,9 +18,11 @@
 		<li id="li-one">
 			<div class="header">
 				<span>农技培训平台</span>
-				<span style="position: absolute;right: 4%;"><a href="iplogin.html" style="color: #fff">
+				<span style="position: absolute;right: 4%;"><a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
 					登录
-					<!--<i class="iconfont">&#xe60f;</i>-->
+				</a></span>
+				<span style="position: absolute;right: 8%;"><a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
+					注册
 				</a></span>
 				<span><a href="search.html"><i class="iconfont">&#xe616;</i></a></span>
 			</div>
@@ -51,14 +53,13 @@
 			<!--主要板块-->
 			<div class="section">
 				<div class="plate">
-					<a th:href="ipvideo.html" style="background-color: #82A6F5;">
+					<a th:href="@{/VideoController/allIpVideoList}" style="background-color: #82A6F5;">
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe628;</i>
 					</a>
 					<b>看视频</b>
 				</div>
 				<div class="plate">
 					<a href="Find-the-answer.html" style="background-color: #EAF048;">
-						
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe623;</i>
 					</a>
 					<b>找答案</b>
@@ -71,14 +72,14 @@
 					<b>文章推送</b>
 				</div>
 				<div class="plate">
-					<a href="insect.html" style="background-color: #DE8100;">
+					<a th:href="@{/VideoController/insect}" style="background-color: #DE8100;">
 						<!--<b>视频<br />专区</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe608;</i>
 					</a>
 					<b>病虫害图库</b>
 				</div>
 				<div class="plate">
-					<a href="Video-rankings.html" style="background-color: #8F1D78;">
+					<a th:href="@{/VideoController/videoIpRanking}" style="background-color: #8F1D78;">
 						<!--<b>咨询<br />答案</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe613;</i>
 					</a>
@@ -99,7 +100,7 @@
 					<b>文章排行</b>
 				</div>
 				<div class="plate">
-					<a href="Ask-questions.html" style="background-color:#00B38C;">
+					<a th:href="@{/user/ipquestion}" style="background-color:#00B38C;">
 						<!--<b>文章<br />推送</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe76f;</i>
 					</a>
@@ -122,78 +123,7 @@
 							</div>
 							<p class="limit" th:text="${infor.contentsTitle}">小麦价格稳中下跌</p>
 						</li>
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="info-recmd.html">-->
-									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li>-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius:;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
-						<!--<li class="lis">-->
-							<!--<div>-->
-								<!--<a href="">-->
-									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
-								<!--</a>-->
-							<!--</div>-->
-							<!--<p class="limit">小麦价格稳中下跌</p>-->
-						<!--</li>-->
+
 					</ul>
 				</div>
 			</div>

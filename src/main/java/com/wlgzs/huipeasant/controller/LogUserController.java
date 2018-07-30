@@ -28,11 +28,21 @@ public class LogUserController extends BaseController {
     public ModelAndView toRegister() {
         return new ModelAndView("register") ;
     }
+    //2.去注册
+    @RequestMapping("/toipRegistered")
+    public ModelAndView toipRegister() {
+        return new ModelAndView("ipregister") ;
+    }
 
     //去登陆
     @RequestMapping("/toLogin")
     public ModelAndView toLogin() {
         return new ModelAndView("login");
+    }
+    //手机端
+    @RequestMapping("/toipLogin")
+    public ModelAndView toipLogin() {
+        return new ModelAndView("iplogin");
     }
 
     //用户注册
@@ -47,10 +57,11 @@ public class LogUserController extends BaseController {
     @RequestMapping("login")
     public ModelAndView login(HttpServletRequest request, Model model, String phoneNumber, String password){
         String mag = logUserService.login(request,phoneNumber,password);
+        System.out.println(phoneNumber+""+password);
         System.out.println(mag);
         model.addAttribute("mag",mag);
         if(mag.equals("管理员登录成功！")){
-            return new ModelAndView("adminIndex");
+            return new ModelAndView("admin/adminIndex");
         }else if(mag.equals("登录成功！")){
             return new ModelAndView("redirect:/user/toindex");
         }else{

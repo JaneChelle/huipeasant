@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>问问题-农技培训平台-慧农移动在线</title>
-		<link rel="stylesheet" href="CSS/Ask-qusetions.css">
-		<link rel="shortcut icon" type="img/x-icon" href="images/login.ico"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" th:href="@{/ipcss/Ask-qusetions.css}">
+		<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
+		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<script type="text/javascript" src="JS/jquery.min.js" ></script>
-		<script src="JS/ipindex.js"></script>
+		<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}" ></script>
+		<script th:src="@{/ipjs/ipindex.js}"></script>
 	</head>
 	<body>
 		<form action="">
 			<div class="header">
-					<span style="padding-left: 4%;"><a href="ipindex.html" id="back-ipindex"><i class="iconfont">&#xe6b4;</i></a></span>
+					<span style="padding-left: 4%;"><a th:href="@{/user/toipindex}" id="back-ipindex"><i class="iconfont">&#xe6b4;</i></a></span>
 					<span style="margin-left: 35%;">问问题</span>
 					<span style="margin-right: 4%;float: right;"><input type="submit" value="保存" class="btn-keep"/></span>
 			</div>
@@ -27,21 +27,17 @@
                             <i class="iconfont">&#xe67b;</i>
                         </div>
                     </div>
+					<form th:action="@{/user/toaddIpData}" enctype="multipart/form-data" method="post">
                     <div class="qusetion">
                     	<div style="margin-bottom: 10px;">
                     		问题分类：
-                    		<form action="/example/html/form_action.asp" method="get">
- 								 <label for=""><input type="radio" name="小麦" value="小麦" />小麦</label>
-  								<label for="">
-  									<input type="radio" name="玉米" value="玉米"/>玉米
-  								</label>
-  								<label for="">
-  									<input type="radio" name="玉米" value="玉米" checked="checked" />大豆
-  								</label>
-  								<!--<input type="submit" value="Submit" />-->
-							</form>
+							<select id="city" >
+								<option selected>请选择</option>
+								<option th:each="moudel : ${moudels}" th:value="${moudel.mouldeId}"  th:text="${moudel.moduleName}">请选择</option>
+							</select>
                     	</div>
                         <p style="margin-bottom: 10px">问题描述：</p>
+						<input type="hidden" value="2" name="dataLevle">
                         <textarea name="" id="" cols="30" rows="10">
                         </textarea>
                         <p style="color:#999;font-size: 12px">注：详细说明问题的情况，描述得越仔细，获得准确回答的机会越大</p>
@@ -49,16 +45,18 @@
                     <div class="picture">
                         <p style="margin-bottom: 10px">上传图片：</p>
                         <div class="upload" style="border: none">
-                            <span class="sl-custom-file">
-                                <input type="button" value="上传" class="btn-file1" style="width: 64px;background: green;border: 1px solid green;border-radius: 4px;"/>
-                                <input type="file" class="ui-input-file" />
-                            </span>
+							<div class="all-photo" onclick="photoup()">
+								<div class="all-photo-right">
+									<img th:src="@{/img/null.png}" id="imgshow" style="width: 100px;height: 100px;"/>
+								</div>
+							</div>
+							<!--<input type="text" style="display: none" name="userId" th:value="${user.userId}">-->
+							<input id="fileds" style="display: none;" name="multipartFile" type="file" accept="image/*" value="上传图片" />
+							<input type="button" th:value="上传" class="upload_img">
                         </div>
-                        <!--<span>-->
-                       <!-- <input type="submit" value="完成" class="finish">-->
-                        <!--</span>-->
+						<input type="submit" value="完成" class="finish">
                     </div>
-
+					</form>
                 </div>
             </div>
 			</div>
