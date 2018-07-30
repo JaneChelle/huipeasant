@@ -138,7 +138,10 @@ public class DataController extends BaseController {
         model.addAttribute("question", dataService.getAllipQuestion());
         return new ModelAndView("");
     }
-    
-
+    @GetMapping("viewIpArtical/{dataId}")
+    public ModelAndView viewIpArtical(Model model,@PathVariable("dataId") long dataId){
+        model.addAttribute("data",dataService.dataView(dataId));
+        return new ModelAndView("");
+    }
 
 }
