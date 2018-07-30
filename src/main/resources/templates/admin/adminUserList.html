@@ -54,7 +54,7 @@
                 <td th:text="${user.reservedInf}"></td>
                 <td th:text="${user.roleId}"></td>
                 <td class="ttdd" >
-                    <a class="a-div adiv1" th:action="@{/adminUserController/adminDeleteUser(userId=${user.userId})}">删除</a>
+                    <a class="a-div adiv1" th:href="@{/adminUserController/adminDeleteUser(userId=${user.userId})}">删除</a>
                     <a class="a-div adiv2" th:href="@{/adminUserController/toAdminEditUser(userId=${user.userId})}">修改</a>
                 </td>
             </tr>
@@ -99,39 +99,33 @@
     <div class="windoww">
         <div class="popup-windows">
         <h2 style="text-align: center">添加用户</h2>
-        <form >
+            <form th:action="@{/adminUserController/adminAddUser}" enctype="multipart/form-data" th:method="post">
             <table class="table table-hover table-bordered">
-                <tr>
-                    <th>用户ID</th>
-                    <td>
-                        <input type="text" name="user_name" class="form-control"  value="" id="username" required="required"/>
-                    </td>
-                </tr>
                 <tr>
                     <th>用户手机号</th>
                     <td>
-                        <input type="text" name="user_phone" class="form-control"  value="" id="userphone" required="required"/>
+                        <input type="text" name="phoneNumber" class="form-control"  value="" id="userphone" required="required"/>
                     </td>
                 </tr>
                 <tr>
                     <th>密码</th>
-                    <td><input type="text" name="user_password" class="form-control" value="" id="pwd" required="required"/></td>
+                    <td><input type="text" name="password" class="form-control" value="" id="pwd" required="required"/></td>
                 </tr>
                 <tr>
-                    <th>头像地址</th>
-                    <td><input type="text" name="" class="form-control"  value="" id="" required="required"/></td>
+                    <th>头像</th>
+                    <td><input type="file" name="file" class="form-control"  value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <th>昵称</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="nickName" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <th>预留信息</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="reservedInf" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <th>角色id</th>
-                    <td><input type="text" name="" class="form-control" value="" id="" required="required"/></td>
+                    <td><input type="text" name="roleId" class="form-control" value="" id="" required="required"/></td>
                 </tr>
                 <tr>
                     <td colspan="2">

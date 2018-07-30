@@ -55,7 +55,7 @@ public class UserController extends BaseController {
     @RequestMapping("/adminAddUser")
     public ModelAndView add(User user) {
         userService.save(user);
-        return new ModelAndView("redirect:/AdminUserController/adminUserList");
+        return new ModelAndView("redirect:/adminUserController/adminUserList");
     }
 
     //跳转到修改用户

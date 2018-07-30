@@ -84,8 +84,8 @@ public class UserServiceImpl implements UserService {
             String img = user.getHeadPortrait();
             String path = request.getSession().getServletContext().getRealPath("/");
             if(img!=null){
-                File file = new File(path+""+img.substring(1,img.length()));
-                System.out.println(path+""+img.substring(1,img.length()));
+                File file = new File(path+""+img);
+                System.out.println(path+""+img);
                 if (!img.equals("") && file.exists() && file.isFile()) {
                     file.delete();
                 }
