@@ -3,10 +3,14 @@ package com.wlgzs.huipeasant.controller;
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.util.CheckImage;
+import com.wlgzs.huipeasant.util.Result;
+import com.wlgzs.huipeasant.util.ResultCode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -19,7 +23,7 @@ import java.io.IOException;
  * @createTime 2018-07-12 8:03
  * @description:
  **/
-@Controller
+@RestController
 @RequestMapping("UserManagementController")
 public class UserManagementController extends BaseController {
 
@@ -34,10 +38,11 @@ public class UserManagementController extends BaseController {
 
     //修改昵称
     @RequestMapping("changeInformation")
-    public ModelAndView ModifyName(Model model, HttpServletRequest request) {
+    public ModelAndView ModifyName(Model model, HttpServletRequest request,String NickName) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        userService.ModifyName(request,user);
+        System.out.println("sessionuser"+user);
+        userService.ModifyName(request,user,NickName);
         model.addAttribute("user", user);
         return new ModelAndView("redirect:/UserManagementController/information");
     }
@@ -50,9 +55,10 @@ public class UserManagementController extends BaseController {
 
     //修改手机号//需要phoneNumber(新的)
     @RequestMapping("changePhone")
-    public ModelAndView changePhone(Model model, HttpServletRequest request) {
+    public ModelAndView changePhone(Model model, HttpServletRequest request,String phoneNumber) {
+        System.out.println(phoneNumber);
         //修改手机号
-        User user = userService.changePhone(request);
+        User user = userService.changePhone(request,phoneNumber);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -75,53 +81,52 @@ public class UserManagementController extends BaseController {
     }
 
     //跳转到修改密码
-    @RequestMapping("toChangePassword")
+    @RequestMapping("/toChangePassword")
     public ModelAndView toChangePassword(){
         return new ModelAndView("changePassword");
     }
 
     //修改密码
-    @RequestMapping("checkPassword")
-    public ModelAndView checkPassword(Model model, HttpServletRequest request) {
-        String password = request.getParameter("password");
-        String rePassword = request.getParameter("rePassword");
+    @PostMapping(value = "/checkPassword")
+    public Result checkPassword(Model model, HttpServletRequest request,String password,String rePassword) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         long userId = user.getUserId();
         if (userService.checkPassWord(password, userId)) {//正确ze修改密码
             System.out.println("正确");
-            model.addAttribute("mag", "修改成功");
             userService.changePassword(rePassword, userId);
-            return new ModelAndView("redirect:/toLogin");
+            return new Result(ResultCode.SUCCESS,"修改成功！");
         } else {//原密码错误
             model.addAttribute("userId",userId);
-            model.addAttribute("mag", "原密码错误");
-            return new ModelAndView("redirect:/toChangePassword");
+            return new Result(ResultCode.FAIL,"原密码错误！");
         }
     }
 
     //跳转到找回密码页面
-    @RequestMapping("toRetrievePassword")
+    @RequestMapping("/toRetrievePassword")
     public ModelAndView toSendRetrievePassword() {
         return new ModelAndView("RetrievePassword");
     }
 
     //找回密码（输入手机号和预留信息）
-    @RequestMapping("validationIfo")
+    @RequestMapping("/validationIfo")
     public ModelAndView validationIfo(Model model,String phoneNumber,String reservedInf){
         boolean flag = userService.validationIfo(phoneNumber,reservedInf);//查询预留信息是否正确
         if(flag){
             model.addAttribute("mag","信息验证成功！");
-            return new ModelAndView("retrievePassword");
+            model.addAttribute("phoneNumber",phoneNumber);
+            return new ModelAndView("Password");
         }else{
             model.addAttribute("mag","预留信息不正确！");
-            return new ModelAndView("redirect:/toRetrievePassword");
+//              return new ModelAndView("redirect:/toRetrievePassword");
+            return new ModelAndView("RetrievePassword");
         }
     }
 
     //重置密码
-    @RequestMapping("retrievePassword")
+    @RequestMapping("/retrievePassword")
     public ModelAndView retrievePassword(Model model, HttpServletRequest request,String phoneNumber) {
+
         String password = request.getParameter("password");
         userService.changePassword(password,phoneNumber);
         model.addAttribute("mgs", "修改成功");
@@ -137,5 +142,12 @@ public class UserManagementController extends BaseController {
     }
 
     //修改用户地区
+    @RequestMapping("changeAddress")
+    public ModelAndView changeAddress(Model model,HttpSession session,String address){
+        User user = (User)session.getAttribute("user");
+        userService.changeAddress(user,address,session);
+        return new ModelAndView("redirect:/UserManagementController/information");
+    }
+
 
 }

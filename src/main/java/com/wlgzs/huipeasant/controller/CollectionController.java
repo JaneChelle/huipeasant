@@ -2,7 +2,9 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.Collection;
+import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.service.CollectionService;
+import org.apache.catalina.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,10 +36,12 @@ public class CollectionController extends BaseController {
     }
 
     //查看收藏
-    @RequestMapping("")
-    public ModelAndView toCollection(long userId, Model model){
+    @RequestMapping("/Viewcollection")
+    public ModelAndView toCollection( Model model){
+        User user = (User)session.getAttribute("user");
+        long userId = user.getUserId();
         List<Collection> collections = collectionService.toCollection(userId);
         model.addAttribute("collections",collections);
-        return new ModelAndView("");
+        return new ModelAndView("mycollection");
     }
 }

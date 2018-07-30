@@ -30,10 +30,10 @@ public interface UserService {
     String delete(long userId, HttpServletRequest request);
 
     //修改用户名
-    void ModifyName(HttpServletRequest request,User user);
+    void ModifyName(HttpServletRequest request,User user,String NickName);
 
     //修改手机号
-    User changePhone(HttpServletRequest request);
+    User changePhone(HttpServletRequest request,String phoneNumber);
 
     //修改用户头像
     User ModifyAvatar(HttpSession session, HttpServletRequest request, MultipartFile myFileName) throws IOException;
@@ -52,5 +52,8 @@ public interface UserService {
 
     //修改性别
     void ModifySex(User user,String sex,HttpSession session);
+
+    //修改地区
+    void changeAddress(User user,String address,HttpSession session);
 
 }

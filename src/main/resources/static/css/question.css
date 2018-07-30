@@ -90,6 +90,7 @@
 .wrapper-l{
 	float: left;
 	width: 720px;
+	padding: 16px 0
 }
 .wrapper-p{
 	width: 100%;
@@ -102,10 +103,9 @@
 }
 .wrapper-p p{
 	text-indent: 2em;
-	line-height: 28px;
-	font-size: 14px;
+	line-height: 32px;
+	font-size: 19px;
 	padding-bottom: 12px;
-	min-height: 500px;
 }
 .recommendation{
 	margin: 0 8px;
@@ -132,9 +132,11 @@
 }
 .recommendation-ulist ul li span{
 	float: right;
-	width: 20%;
+	width: 118px;
 	height: 40px;
 	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .recommendation-ulist ul li a{
 	display: inline-block;
@@ -161,7 +163,7 @@
 	color: #324b4e; 
 }
 .recommendation textarea{
-	width: 100%;
+	width: 99%;
 	height: 160px;
 	margin: 12px 4px;
 	padding: 12px 6px;
@@ -174,7 +176,6 @@
 	color: #fff;
 	margin-top: 14px;
 	position: relative;
-	left: 70px;
 	height: 40px;
 	line-height: 40px;
 	border-radius: 5px;
@@ -207,19 +208,17 @@
 	width: 145px;
 	height: 100px;
 	float: left;
+	margin-right: 15px;
 }
-.material-p{
-	margin: 0 auto;
-	width: 556px;
+.material-p p{
 	text-indent: 2em;
 	line-height: 26px;
 	font-size: 14px;
 	text-overflow: ellipsis;
-    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
-    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
-    -webkit-line-clamp: 4; /** 显示的行数 **/
-    overflow: hidden;  /** 隐藏超出的内容 **/
-
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
 }
 .fr{
 	float: inherit;
