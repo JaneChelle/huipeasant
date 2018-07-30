@@ -39,7 +39,6 @@ public class DataController extends BaseController {
             videoRanking = videoRanking.subList(videoRanking.size() - 4, videoRanking.size());
         }
         model.addAttribute("videoRanking",videoRanking);
-
         model.addAttribute("moudel",moduleService.getModules());
         return new ModelAndView("index");
     }
@@ -48,7 +47,6 @@ public class DataController extends BaseController {
     public ModelAndView toIndex1() {
         return new ModelAndView("index1");
     }
-
     @RequestMapping("toipindex")              //进入手机端主页
     public ModelAndView toIpindex(Model model){
         model.addAttribute("infor",dataService.information());
