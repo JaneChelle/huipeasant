@@ -44,7 +44,7 @@ public class VideoServiceImpl implements VideoService {
     public Page getVideoListPage(String videoKeyWord, int page, int limit) {
         Sort sort = new Sort(Sort.Direction.DESC, "videoId");
         Pageable pageable = new PageRequest(page, limit, sort);
-        Specification<Video> specification = new PageUtil<Video>(videoKeyWord).getPage("modelTitle", "videoIntroduction");
+        Specification<Video> specification = new PageUtil<Video>(videoKeyWord).getPage("videoTitle", "videoIntroduction");
         Page<Video> pages = videoRepository.findAll(specification, pageable);
         return pages;
     }

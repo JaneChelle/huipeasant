@@ -27,7 +27,6 @@ public class UserController extends BaseController {
     @RequestMapping("/adminUserList")
     public ModelAndView list(Model model, @RequestParam(value = "page",defaultValue = "0") int page,
                        @RequestParam(value = "limit",defaultValue = "10") int limit) {
-        System.out.println("123456789");
         String nickName="";
         if(page != 0) page--;
         Page pages = userService.findUserPage(nickName,page,limit);
@@ -64,17 +63,15 @@ public class UserController extends BaseController {
     public ModelAndView toAdminEditUser(long userId,Model model){
         User user = userService.findUserById(userId);
         model.addAttribute("user",user);
-        return new ModelAndView("adminEditUser");
+        return new ModelAndView("admin/adminEditUser");
     }
 
     //修改用户
     @RequestMapping("/adminEditUser")
-
     public ModelAndView edit(Model model,User user) {
-
         String mag = userService.edit(user);
         model.addAttribute("mag",mag);
-        return new ModelAndView("redirect:/AdminUserController/adminUserList");
+        return new ModelAndView("redirect:/adminUserController/adminUserList");
     }
 
     //删除用户
@@ -82,6 +79,6 @@ public class UserController extends BaseController {
     public ModelAndView delete(Model model,Long userId, HttpServletRequest request) {
         String mag = userService.delete(userId, request);
         model.addAttribute("mag",mag);
-        return new ModelAndView("redirect:/AdminUserController/adminUserList");
+        return new ModelAndView("redirect:/adminUserController/adminUserList");
     }
 }
