@@ -76,12 +76,6 @@ public class VideoServiceImpl implements VideoService {
                 System.out.println("12312====="+realPath);
                 String videoUrl = "/upload/video/" + video.getVideoTitle() + "/" + realName;
                 ioUtil.saveFile(myFileNames[i],videoUrl);
-//                File uploadFile = new File(realPath, realName);
-//                try {
-//                    myFileNames[i].transferTo(uploadFile);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 if(checkImage.verifyImage(fileName)){
                     video.setVideoCover(request.getContextPath() + "" + videoUrl);
                 }else if(checkImage.isVedioFile(fileName)){
@@ -90,6 +84,12 @@ public class VideoServiceImpl implements VideoService {
             }else{
                 System.out.println("没有文件");
             }
+        }
+        //模块Id
+        if(video.getModelName().equals("植保技术")){
+            video.setModuleId(1);
+        }else{
+            video.setModuleId(2);
         }
         //上传时间
         DateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd HH:mm");

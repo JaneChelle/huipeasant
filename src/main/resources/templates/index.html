@@ -75,8 +75,8 @@
         </div>
         <div class="main-body item-2">
             <div class="box-item">
-                <span class="font"><a href="question.html" target="_blank">培训视频</a></span>
-                <span style="float:right;"><a href="question.html" target="_blank">更多
+                <span class="font"><a th:href="@{/user/toindex}" target="_blank">培训视频</a></span>
+                <span style="float:right;"><a th:href="@{/}" target="_blank">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     </a>
@@ -84,78 +84,15 @@
             </div>
             <div class="box-content">
                 <ul>
-                    <li>
-                        <a href="train.html">
-                            <img src="images/t1.jpg" alt="" style="width: 150px;height: 115px;">
+                    <li th:each="video : ${videoTowList}">
+                        <a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}"><!--详情-->
+                            <img th:src="'/Path/'+${video.videoCover}" alt="" style="width: 130px;height: 120px;">
                         </a>
-                        <p><a href="train.html">电商基础知识培训</a></p>
+                        <p><a th:href="@{/VideoController/videoDetails(videoId=${video.videoId})}" th:text="${video.videoTitle}"></a></p>
                         <div style="margin-top: -106px;" class="bofang">
                             <i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i>
                         </div>
                         <!--<div style="margin-top: -106px;" class="bofang"><i class="iconfont">&#xe607;</i></div>-->
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t2.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="pcvideo.html">电子商务深度分析</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t3.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="">如何组建电商团队</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="pcvideo.html">
-                            <a href="train.html">
-                                <img src="images/t4.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">电商三大运营模式</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t5.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">农业电商培训的问题及总结</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t6.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">电商的重要基础培训</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t7.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">农业电商学堂</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
-                    </li>
-                    <li>
-                        <a href="train.html">
-                            <a href="train.html">
-                                <img src="images/t8.jpg" alt="" style="width: 150px;height: 115px;">
-                            </a>
-                        </a>
-                        <p><a href="train.html">如何打造一流电商平台</a></p>
-                        <div style="margin-top: -106px;" class="bofang"><i class="fa fa-play-circle-o  fa-3x" id="iconfont"></i></div>
                     </li>
                 </ul>
             </div>

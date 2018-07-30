@@ -29,10 +29,10 @@
                 <th>视频标题</th>
                 <th>作者提示</th>
                 <th>视频简介</th>
-                <th>视频封面地址</th>
+                <th>视频封面</th>
                 <th>视频地址</th>
                 <th>模块名字</th>
-                <th>视频标题</th>
+                <th>上传时间</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -51,10 +51,12 @@
                 <td th:text="${adminVideoList.videoTitle}"></td>
                 <td th:text="${adminVideoList.authorSuggests}"></td>
                 <td th:text="${adminVideoList.videoIntroduction}"></td>
-                <td th:text="${adminVideoList.videoHits}"></td>
-                <td th:text="${adminVideoList.uploadTime}"></td>
-                <td th:text="${adminVideoList.videoCover}"></td>
+                <td>
+                    <img th:src="'/Path/'+${adminVideoList.videoCover}" alt="" style="width: 120px;height: 68px;">
+                </td>
                 <td th:text="${adminVideoList.videoAddress}"></td>
+                <td th:text="${adminVideoList.modelName}"></td>
+                <td th:text="${adminVideoList.uploadTime}"></td>
                 <td class="ttdd" >
                     <a th:href="@{/AdminVideoController/adminDeleteVideo(videoId=${adminVideoList.videoId})}" class="a-div adiv1">删除</a>
                     <a class="a-div adiv2" th:href="@{/AdminVideoController/toEditVideo(videoId=${adminVideoList.videoId})}">修改</a>                </td>
