@@ -20,11 +20,29 @@ $(document).ready(function() {
         $(".shrinkage").css("opacity", "1");
     });
     //菜单切换
+//  用户
     $(".user").click(function () {
         $(".ifm").attr("src","/adminUserController/adminUserList");
     });
+//视频
     $(".video").click(function () {
         $(".ifm").attr("src","/AdminVideoController/adminVideoList");
+    });
+//文章
+    $(".article").click(function () {
+        $(".ifm").attr("src","/AdminDataController/toViewdata/1/1");
+    });
+//问题
+	$(".question").click(function () {
+        $(".ifm").attr("src","/AdminDataController/toViewdata/2/1");
+    });
+//资讯
+	$(".inform").click(function () {
+        $(".ifm").attr("src","/AdminDataController/toViewdata/3/1");
+    });
+//模块
+	$(".model").click(function () {
+        $(".ifm").attr("src","/AdminDataController/modulesView");
     });
 //设置高亮
     $(".addColor").on('click',function () {

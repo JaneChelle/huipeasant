@@ -23,10 +23,24 @@ public class DataController extends BaseController {
         model.addAttribute("question", dataService.question());
         model.addAttribute("information", dataService.information());
         model.addAttribute("rank", dataService.indexRank());
-        List<Video> videoList = videoService.videoList();
-        videoList = videoList.subList(videoList.size() - 8, videoList.size());
-        model.addAttribute("videoList", videoList);
-        model.addAttribute("moudel", moduleService.getModules());
+
+
+        //农技视频
+        List<Video> videoOneList = videoService.videoList(1);
+        model.addAttribute("videoList", videoOneList);
+
+        //电商视频
+        List<Video> videoTowList = videoService.videoList(2);
+        model.addAttribute("videoTowList", videoTowList);
+
+        //视频排行
+        List<Video> videoRanking = videoService.videoRanking();
+        if(videoRanking.size() > 4){
+            videoRanking = videoRanking.subList(videoRanking.size() - 4, videoRanking.size());
+        }
+        model.addAttribute("videoRanking",videoRanking);
+        model.addAttribute("moudel",moduleService.getModules());
+
         return new ModelAndView("index");
     }
 
