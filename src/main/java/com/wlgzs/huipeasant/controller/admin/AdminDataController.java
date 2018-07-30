@@ -26,7 +26,7 @@ import java.util.List;
 public class AdminDataController extends BaseController {
     @RequestMapping("toViewdata")
     public ModelAndView toViewData(Model model, int page, int level){
-        dataService.ipgetDatas(level,page,model);
+        dataService.ipgetDatas(0,level,page,model);
         model.addAttribute("level",level);
         return new ModelAndView("");
     }
@@ -66,5 +66,10 @@ public class AdminDataController extends BaseController {
     @PostMapping("savemodules") //保存模块
     public void savemodules (Module  module){
         moduleService.saveMoudel(module);
+    }
+    @PostMapping("adminSearchData")
+    public ModelAndView adminSearchData(Model model){
+
+       return new ModelAndView();
     }
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/user")
 @RestController
+
+
 public class CommentController extends BaseController {
     @PostMapping("tocomment")
     public Result tocomment(@RequestParam("content") String content,@RequestParam("dataId") long dataId){
