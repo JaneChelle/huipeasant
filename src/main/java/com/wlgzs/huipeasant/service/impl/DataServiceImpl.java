@@ -276,7 +276,7 @@ public class DataServiceImpl implements DataService {
         if (statue == 1) {
             sort = new Sort(Sort.Direction.DESC, "uploadTime");
         }
-        Pageable pageable = new PageRequest(page - 1, 10, sort);
+        Pageable pageable = new PageRequest(page - 1, 30, sort);
         Specification<Data> specification = new Specification<Data>() {
             @Override
             public Predicate toPredicate(Root<Data> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
