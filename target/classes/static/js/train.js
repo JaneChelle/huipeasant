@@ -24,6 +24,55 @@ $(document).ready(function(){
         $(".wrapper_list2").hide();
         $(".wrapper_list1").fadeIn();
     })
+
+  //弹窗
+    var Reply = $('.Reply');
+    var modals=$(".modals");
+    var new_window=$(".new-window");
+    var md_close=$(".md-close");
+  $(Reply).click(function () {
+      $(modals).css("transform", "translateX(0)");
+      $(modals).css("opacity", "1");
+      $(modals).css("transition", "all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
+      $(new_window).css("display", "block");
+
+      $(md_close).click(function () {
+          $(modals).css("transform", "translateX(20)");
+          $(modals).css("opacity", "0");
+          $(modals).css("transition", "all 1s cubic-bezier(0.17, 0.67, 0, 1.09)");
+          $(new_window).css("display", "none");
+      });
+  });
+
+
+    $(".comment").click(function (){
+        var   content= $(".text").val();
+        var   dataId=$(".tex").val();
+        $.ajax({
+            url:"/user/tocomment",
+            type:'POST',
+            data:{
+                "dataId":dataId,
+                "content":content
+            },
+            dataType:"text",
+            success:function(){
+                $(".new-window").css("display","none");
+                location.reload();
+
+            },
+            error:function () {
+                alert("请求失败");
+            }
+        });
+    });
+
+
+
+
+
+
+
 });
 //搜索框
 function spin(){

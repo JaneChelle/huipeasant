@@ -208,19 +208,17 @@
 	width: 145px;
 	height: 100px;
 	float: left;
+	margin-right: 15px;
 }
-.material-p{
-	margin: 0 auto;
-	width: 556px;
+.material-p p{
 	text-indent: 2em;
 	line-height: 26px;
 	font-size: 14px;
 	text-overflow: ellipsis;
-    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
-    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
-    -webkit-line-clamp: 4; /** 显示的行数 **/
-    overflow: hidden;  /** 隐藏超出的内容 **/
-
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
 }
 .fr{
 	float: inherit;
@@ -271,4 +269,33 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
+}
+.prompt{
+	display: none;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.7;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 70px;
+	border-radius: 10px;
+}
+.aaa{
+	width: 70px;
+	padding: 10px;
+	background: green;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+
+}
+.aaa>a{
+	opacity: 0.7;
+}
+a,a:hover{
+	text-decoration: none;
+	opacity: 1;
 }

@@ -7,7 +7,8 @@
 	<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
 	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<script  th:src="@{/ipcssipindex.js}"></script>
+	<script th:src="@{/ipjs/jquery.min.js}"></script>
+	<script  th:src="@{/ipjs/ipindex.js}"></script>
 </head>
 <body>
 <div class="tab">
@@ -17,25 +18,28 @@
 		<li id="li-one">
 			<div class="header">
 				<span>农技培训平台</span>
-				<span style="position: absolute;right: 4%;"><a href="iplogin.html"><i class="iconfont">&#xe60f;</i></a></span>
+				<span style="position: absolute;right: 4%;"><a href="iplogin.html" style="color: #fff">
+					登录
+					<!--<i class="iconfont">&#xe60f;</i>-->
+				</a></span>
 				<span><a href="search.html"><i class="iconfont">&#xe616;</i></a></span>
 			</div>
 			<!--轮播图-->
 			<div class="con-lun">
 				<a href="#" class="wrip-img max">
-					<img src="img/timg (2).jpg" alt="1">
+					<img th:src="@{/img/timg (2).jpg}" alt="1">
 				</a>
 				<a href="#" class="wrip-img">
-					<img src="img/timg (1).jpg" alt="2">
+					<img th:src="@{/img/timg (1).jpg}" alt="2">
 				</a>
 				<a href="#" class="wrip-img">
-					<img src="img/timg (4).jpg" alt="3">
+					<img th:src="@{/img/timg (4).jpg}" alt="3">
 				</a>
 				<a href="#" class="wrip-img">
-					<img src="img/4.jpg" alt="4">
+					<img th:src="@{/img/4.jpg}" alt="4">
 				</a>
 				<div  class="wrip-img">
-					<img src="img/5.jpg" alt="5">
+					<img th:src="@{/img/5.jpg}" alt="5">
 				</div>
 				<a href="javascript:;" id="prev" class="arrow">
 					<i class="fa fa-chevron-left"></i>
@@ -47,7 +51,7 @@
 			<!--主要板块-->
 			<div class="section">
 				<div class="plate">
-					<a href="ipvideo.html" style="background-color: #82A6F5;">
+					<a th:href="ipvideo.html" style="background-color: #82A6F5;">
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe628;</i>
 					</a>
 					<b>看视频</b>
@@ -60,7 +64,7 @@
 					<b>找答案</b>
 				</div>
 				<div class="plate">
-					<a href="Article-push.html" style="background-color: #9FF048;">
+					<a  th:href="@{/user/toipindex/1/1}" style="background-color: #9FF048;">
 						<!--<b>文章<br />推送</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe625;</i>
 					</a>
@@ -81,7 +85,7 @@
 					<b>视频排行</b>
 				</div>
 				<div class="plate">
-					<a href="info-recmd.html" style="background-color: #FF534D;">
+					<a th:href="@{/user/toipindex/2/1}" style="background-color: #FF534D;">
 						<!--<b>文章<br />推送</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe618;</i>
 					</a>
@@ -110,86 +114,86 @@
 				</div>
 				<div class="show">
 					<ul>
-						<li class="lis">
+						<li class="lis" th:each="infor:${infor}">
 							<div>
 								<a href="info-recmd.html">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
+									<img th:src="${infor.pictureAddress}" alt="" style="height:70px;border-radius: ;">
 								</a>
 							</div>
-							<p class="limit">小麦价格稳中下跌</p>
+							<p class="limit" th:text="${infor.contentsTitle}">小麦价格稳中下跌</p>
 						</li>
-						<li class="lis">
-							<div>
-								<a href="info-recmd.html">
-									<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li>
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius:;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
-						<li class="lis">
-							<div>
-								<a href="">
-									<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">
-								</a>
-							</div>
-							<p class="limit">小麦价格稳中下跌</p>
-						</li>
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="info-recmd.html">-->
+									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb1.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius:;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
+						<!--<li class="lis">-->
+							<!--<div>-->
+								<!--<a href="">-->
+									<!--<img src="images/rb2.jpg" alt="" style="height:70px;border-radius: ;">-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<p class="limit">小麦价格稳中下跌</p>-->
+						<!--</li>-->
 					</ul>
 				</div>
 			</div>
@@ -199,34 +203,32 @@
 					<p class="font-p">热门提问</p>
 					<span style="float: right;margin-right: 6%;"><a href="Find-the-answer.html">更多</a></span>
 				</div>
-				<div class="user">
-					<ul style="margin-bottom: 5px;">
+
+				<div class="user" th:each="blogId,key : ${question}">
+					<ul style="margin-bottom: 5px;" >
 						<li class="li-advater" style="width: 20%;text-align: center;"><i class="iconfont" id="advater">&#xe606;</i></li>
 						<li class="li-info" style="width: 80%;">
-							<div style="text-align: left;"><span>155****5959 &nbsp;&nbsp;<b style="font-size: 10px;color: #999;">农场新手</b></span></div>
-							<div><span style="float: left;color: #999;">201803/21</span><span class="areasty" style="color:#999">河南省新乡市</span></div>
+							<div style="text-align: left;"><span th:text="${key.current.key.userName}">155****5959 &nbsp;&nbsp;<b style="font-size: 10px;color: #999;">农场新手</b></span></div>
+							<div><span style="float: left;color: #999;" th:text="${key.current.key.uploadTime}">201803/21</span><span class="areasty" style="color:#999" th:text="${key.current.key.hits}">河南省新乡市</span></div>
 						</li>
 					</ul>
-					<ul class="solution">
-						<li style="color: #333;">请问治病病毒的药剂能与治细菌的药剂同时使用不？</li>
+					<ul class="solution" >
+						<li style="color: #333;" th:text="${key.current.key.contentsTitle}">请问治病病毒的药剂能与治细菌的药剂同时使用不？</li>
 						<li>
 							<span style="color: cornflowerblue;"><i class="iconfont">&#xe624;</i>其他</span>
 							<span style="float: right;margin-right: 4%;color: #999;"><i class="iconfont">&#xe67d;</i><em>587</em>&nbsp;&nbsp;<i class="iconfont">&#xe635;</i><em>3</em></span>
 						</li>
 						<li>
 							<div class="qusetion-bgc">
-								<div>
-									<span>俞华根：</span>
-									<span class="qusetionsty">这个问题比较复杂，大多数的</span>
-								</div>
-								<div>
-									<span>王汉荣：</span>
-									<span class="qusetionsty">如果其中有饲料，不能混。</span>
+								<div th:each="commment : ${key.current.value}">
+									<span th:text="${commment.userName}">俞华根：</span>
+									<span th:text="${commment.commentContent}" class="qusetionsty">这个问题比较复杂，大多数的</span>
 								</div>
 							</div>
 						</li>
 					</ul>
 				</div>
+
 			</div>
 		</li>
 <!--2.我的收藏-->
@@ -236,13 +238,13 @@
 				<span style="position: absolute;right: 4%;"><a href="iplogin.html"><i class="iconfont">&#xe60f;</i></a></span>
 			</div>
 			<div class="videoarea">
-				<div class="video">
-					<div class="font-left">
+				<div class="video" th:each="collections:${collections}">
+					<div class="font-left" th:text="${collections.modelTitle}">
 						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
 						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
 					</div>
 					<div class="video-right"> 
-						<img src="images/rb1.jpg" style="height: 60px;width: 92.35px;border-radius: 5px;"/>
+						<img th:src="${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
 					</div>
 				</div>
 				<div class="video">

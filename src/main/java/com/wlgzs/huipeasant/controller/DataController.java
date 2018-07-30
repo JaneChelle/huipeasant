@@ -38,14 +38,19 @@ public class DataController extends BaseController {
     @RequestMapping("toipindex")              //进入手机端主页
     public ModelAndView toIpindex(Model model){
         model.addAttribute("infor",dataService.information());
-        model.addAttribute("question",dataService.ipQuestion(1,1,model));
+        model.addAttribute("question",dataService.ipQuestion(2,1,model));
         return new ModelAndView("/phone/ipindex");
     }
 
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章的接口
     public ModelAndView toIpindex(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
         dataService.ipgetDatas(level, page, model);
-        return new ModelAndView("ipindex ");
+        if (level==1){
+            return new ModelAndView("/phone/Article-push");
+        }
+        else {
+            return new ModelAndView("/phone/info-recmd");
+        }
     }
 
     @RequestMapping("toaddData")
