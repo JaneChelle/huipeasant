@@ -47,10 +47,11 @@ public class LogUserController extends BaseController {
     @RequestMapping("login")
     public ModelAndView login(HttpServletRequest request, Model model, String phoneNumber, String password){
         String mag = logUserService.login(request,phoneNumber,password);
+        System.out.println(phoneNumber+""+password);
         System.out.println(mag);
         model.addAttribute("mag",mag);
         if(mag.equals("管理员登录成功！")){
-            return new ModelAndView("adminIndex");
+            return new ModelAndView("admin/adminIndex");
         }else if(mag.equals("登录成功！")){
             return new ModelAndView("redirect:/user/toindex");
         }else{

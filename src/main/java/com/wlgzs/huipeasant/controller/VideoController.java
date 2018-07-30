@@ -19,15 +19,6 @@ import java.util.List;
 @RequestMapping("VideoController")
 public class VideoController extends BaseController {
 
-    //前台遍历视频(首页)
-    @RequestMapping("/videoList")
-    public ModelAndView videoList(Model model){
-        List<Video> videoList = videoService.videoList();
-        videoList = videoList.subList(videoList.size()-8,videoList.size());
-        model.addAttribute("videoList",videoList);
-        return new ModelAndView("");
-    }
-
     //按ID查询视频（视频详情）
     @RequestMapping("/videoDetails")
     public ModelAndView detailsVideo(long videoId,Model model){
@@ -39,8 +30,7 @@ public class VideoController extends BaseController {
     //全部视频
     @RequestMapping("allVideoList")
     public ModelAndView allVideoList(Model model){
-        List<Video> videoList = videoService.videoList();
-        model.addAttribute("videoList",videoList);
+
         return new ModelAndView("VideoList");
     }
 

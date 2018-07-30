@@ -26,7 +26,7 @@ public class Data implements Serializable {
     private String moduleName;                      //模块名字
     private String contentsTitle;                   //文章、问题标题
     private int identity;                           //数据标识
-    private int moduleLevel;                        //数据分类
+    private int moduleLevel;                        //数据n[分类
     private long hits;                               //点击量
     private String userName;                         //用户名称
     private String userIcon;                        //用户头像地址

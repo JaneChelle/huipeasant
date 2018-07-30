@@ -157,10 +157,14 @@ public class VideoServiceImpl implements VideoService {
         }
     }
 
-    //遍历视频(前台)
+    //遍历视频(前台农技视频)
     @Override
-    public List<Video> videoList() {
-        return videoRepository.findAll();
+    public List<Video> videoList(long moduleId) {
+        List<Video> videoList = videoRepository.findOneVideo(moduleId);
+        if(videoList.size() > 8){
+            videoList = videoList.subList(videoList.size() - 8, videoList.size());
+        }
+        return videoList;
     }
 
     //视频详情页
@@ -185,8 +189,15 @@ public class VideoServiceImpl implements VideoService {
         return videos;
     }
 
+    //按ID查询视频
     @Override
     public Video findById(long videoId) {
         return videoRepository.findById(videoId);
+    }
+
+    //所有视频
+    @Override
+    public List<Video> findAllVideo() {
+        return videoRepository.findAll();
     }
 }

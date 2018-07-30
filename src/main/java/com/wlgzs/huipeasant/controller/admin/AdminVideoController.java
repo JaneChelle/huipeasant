@@ -33,7 +33,7 @@ public class AdminVideoController extends BaseController {
     //遍历视频
     @RequestMapping("/adminVideoList")
     public ModelAndView adminVideoList(Model model, @RequestParam(value = "page", defaultValue = "0") int page,
-                                       @RequestParam(value = "limit", defaultValue = "8") int limit){
+                                       @RequestParam(value = "limit", defaultValue = "6") int limit){
         String videoKeyWord = "";
         if (page != 0) page--;
         Page pages = videoService.getVideoListPage(videoKeyWord,page,limit);
@@ -47,7 +47,7 @@ public class AdminVideoController extends BaseController {
     //搜索视频
     @RequestMapping("/adminFindProduct")
     public ModelAndView findProduct(Model model, String videoKeyWord, @RequestParam(value = "page", defaultValue = "0") int page,
-                                    @RequestParam(value = "limit", defaultValue = "8") int limit) {
+                                    @RequestParam(value = "limit", defaultValue = "6") int limit) {
         if (page != 0) page--;
         System.out.println(videoKeyWord);
         Page pages = videoService.getVideoListPage(videoKeyWord,page,limit);

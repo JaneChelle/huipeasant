@@ -28,8 +28,8 @@ public interface VideoService {
     //修改视频
     void edit(long videoId, MultipartFile myFileName, HttpSession session,HttpServletRequest request);
 
-    //遍历视频(前台)
-    List<Video> videoList();
+    //按类型查询视频
+    List<Video> videoList(long moduleId);
 
     //视频详情页
     Video detailsVideo(long videoId);
@@ -40,4 +40,6 @@ public interface VideoService {
     //按id查询视频
     Video findById(long videoId);
 
+    //所有视频
+    List<Video> findAllVideo();
 }
