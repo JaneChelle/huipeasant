@@ -65,10 +65,19 @@ public class DataController extends BaseController {
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章排行/资讯的接口
     public ModelAndView toIpindex(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
         int status = 1;
-        dataService.ipgetDatas(status, 1, 1, model);
+        dataService.ipgetDatas(status, level, 1, model);
         return new ModelAndView("ipindex ");
     }
-
+    @RequestMapping("indexmore/{level}/{page}")//pc主页 排行 资讯更多
+    public ModelAndView indexMore(Model model, @PathVariable("level") int level, @PathVariable("page") int page){
+        int status = 1;
+        dataService.ipgetDatas(status, level, 1, model);
+        if (level==1){
+            return new ModelAndView("ipindex");
+        }else {
+            return new ModelAndView("");
+        }
+    }
     @RequestMapping("updateaticel/{page}")  //文章更新排行
     public ModelAndView articleUpdate(Model model, @PathVariable("page") int page) {
         int status = 1;
