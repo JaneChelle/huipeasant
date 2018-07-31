@@ -30,5 +30,5 @@ public class Video implements Serializable {
     private long moduleId;                    //模块id
     private String modelName;                    //模块名字
     private String videoTitle;                     //视频标题
-
+    private long Code;
 }

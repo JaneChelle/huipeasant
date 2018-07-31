@@ -72,9 +72,8 @@ public class VideoServiceImpl implements VideoService {
                 // 生成实际存储的真实文件名
                 realName = UUID.randomUUID().toString() + fileNameExtension;
                 // "/upload"是你自己定义的上传目录
-                String realPath = session.getServletContext().getRealPath("/upload");
-                System.out.println("12312====="+realPath);
                 String videoUrl = "/upload/video/" + video.getVideoTitle() + "/" + realName;
+                System.out.println("12312====="+videoUrl);
                 ioUtil.saveFile(myFileNames[i],videoUrl);
                 if(checkImage.verifyImage(fileName)){
                     video.setVideoCover(request.getContextPath() + "" + videoUrl);

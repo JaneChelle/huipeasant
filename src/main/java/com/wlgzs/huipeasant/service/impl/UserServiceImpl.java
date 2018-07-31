@@ -164,6 +164,7 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         user.setHeadPortrait(headPortrait);
+        session.setAttribute("user",user);
         userRepository.ModifyAvatar(headPortrait,id);
         return user;
     }
