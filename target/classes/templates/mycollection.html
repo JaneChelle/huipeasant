@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏-会员管理中心</title>
+    <link rel="stylesheet" th:href="@{/css/Person-center.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/Person-center.js}"></script>
+</head>
+<body>
+<div class="head" >
+    <div class="header">
+        <div class="header-left" title="慧农在线">
+            <a href="index.html">
+                <img src="img/peasanter.png"/>
+                <b>慧农在线</b>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="">
+                <i class="iconfont">&#xe61a;</i>
+                <span>个人中心</span>
+            </a>
+            <!--<a href="register.html">注册</a>-->
+            <a id="qr-code">
+                <span>手机端</span>
+                <i class="iconfont">&#xe622;</i>
+            </a>
+        </div>
+        <div class="qr-code">
+            <img src="img/code.png"/>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" name="" id="" value="" placeholder="请输入您要搜索的内容..."/>
+                <button type="submit"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="sty">
+    <div class="sty2">
+        <h1>个人中心</h1>
+        <h1 class="sty3"><a th:href="@{/user/toindex}">首页</a></h1>
+        <h2 class="sty4"><a th:href="@{/LogUserController/login}">退出</a></h2>
+        <span><a th:href="@{area.html}"  class="aaa">地区排行</a></span>
+        <span><a th:href="@{personal.html}"class="aaa">个人排行</a></span>
+    </div>
+</div>
+<div class="kuang">
+    <div class="container">
+        <div class="acount"><a th:href="@{/UserManagementController/information}">账户设置</a></div>
+        <div class="collection"><a th:href="@{/user/toaddData}">我的庄稼医院</a></div>
+        <div class="trangle" style="margin-left: 140px"></div>
+        <div class="content">
+            <div class="side">
+                <div>我的庄稼医院</div>
+                <ul>
+                    <li><a th:href="@{/user/question}">我要问</a></li>
+                    <li><a th:href="@{/user/viewquestion}">我问的</a></li>
+                    <li style="background-color: #599524;"><a th:href="@{/CollectionController/Viewcollection}">我的收藏</a></li>
+                </ul>
+            </div>
+            <!--内容区域-->
+            <div class="right-kuang">
+                <div class="right-content">
+                    <ul>
+                        <li th:each="collections:${collections}">
+                            <a href="train.html">
+                                <img th:src="${collections.videoCover}" alt="" style="width: 200px;height: 200px;padding: 15px;">
+                            </a>
+                            <span class="videocure"><a href="train.html" th:text="${collections.modelTitle}">新型庄稼医院展示</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

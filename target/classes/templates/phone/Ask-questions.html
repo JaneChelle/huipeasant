@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>问问题-农技培训平台-慧农移动在线</title>
+		<link rel="stylesheet" href="CSS/Ask-qusetions.css">
+		<link rel="shortcut icon" type="img/x-icon" href="images/login.ico"/>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<script type="text/javascript" src="JS/jquery.min.js" ></script>
+		<script src="JS/ipindex.js"></script>
+	</head>
+	<body>
+		<form action="">
+			<div class="header">
+					<span style="padding-left: 4%;"><a href="ipindex.html" id="back-ipindex"><i class="iconfont">&#xe6b4;</i></a></span>
+					<span style="margin-left: 35%;">问问题</span>
+					<span style="margin-right: 4%;float: right;"><input type="submit" value="保存" class="btn-keep"/></span>
+			</div>
+			<div class="qusetion-show">
+				          <!--内容区域-->
+            <div class="kuang">
+                <div class="content">
+                    <div class="font">
+                        <div style=""><i class="iconfont">&#xe667;</i>温馨提醒：</div>
+                        <div style="">专家没有实地指导，仅是主观描述，专家可给的帮助建议仅供参考，具体以实际情况在当地部门指导下进行
+                            <i class="iconfont">&#xe67b;</i>
+                        </div>
+                    </div>
+                    <div class="qusetion">
+                    	<div style="margin-bottom: 10px;">
+                    		问题分类：
+                    		<form action="/example/html/form_action.asp" method="get">
+ 								 <label for=""><input type="radio" name="小麦" value="小麦" />小麦</label>
+  								<label for="">
+  									<input type="radio" name="玉米" value="玉米"/>玉米
+  								</label>
+  								<label for="">
+  									<input type="radio" name="玉米" value="玉米" checked="checked" />大豆
+  								</label>
+  								<!--<input type="submit" value="Submit" />-->
+							</form>
+                    	</div>
+                        <p style="margin-bottom: 10px">问题描述：</p>
+                        <textarea name="" id="" cols="30" rows="10">
+                        </textarea>
+                        <p style="color:#999;font-size: 12px">注：详细说明问题的情况，描述得越仔细，获得准确回答的机会越大</p>
+                    </div>
+                    <div class="picture">
+                        <p style="margin-bottom: 10px">上传图片：</p>
+                        <div class="upload" style="border: none">
+                            <span class="sl-custom-file">
+                                <input type="button" value="上传" class="btn-file1" style="width: 64px;background: green;border: 1px solid green;border-radius: 4px;"/>
+                                <input type="file" class="ui-input-file" />
+                            </span>
+                        </div>
+                        <!--<span>-->
+                       <!-- <input type="submit" value="完成" class="finish">-->
+                        <!--</span>-->
+                    </div>
+
+                </div>
+            </div>
+			</div>
+		</form>
+	</body>
+</html>

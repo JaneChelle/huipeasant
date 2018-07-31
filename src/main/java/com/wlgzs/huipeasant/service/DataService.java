@@ -41,7 +41,7 @@ public interface DataService {
 
     List<Data> searchData(String dataName);
 
-    void ipgetDatas(int moduleLevel, int page, Model model);
+    void ipgetDatas(int statue,int moduleLevel, int page, Model model);
 
     Map<Data, List<Comment>> ipQuestion(int moduleLevel, int page, Model model);
 
@@ -50,4 +50,6 @@ public interface DataService {
     void deletedatas(long[] dataIds); //批量删除数据
 
     List<String> paragraphList(String text);      //给文章分段
+
+    Map<Data, List<Comment>> getAllipQuestion();
 }

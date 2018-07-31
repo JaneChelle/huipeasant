@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>慧农在线-农技培训服务平台</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet"  th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css"   th:href="@{/css/adminIndex.css}" />
+</head>
+<body>
+<div class="roof">
+    <!--收缩按钮-->
+    <div class="shrinkage">
+        <i class="iconfont" style="font-size: 40px">&#xe606;</i>
+    </div>
+    <!--展开按钮-->
+    <div class="unfold">
+        <i class="iconfont" style="font-size: 40px">&#xe607;</i>
+    </div>
+    <!--搜索框-->
+    <div class="search bar7">
+        <form>
+            <input type="text" placeholder="请输入您要搜索的内容...">
+            <button type="submit">
+            	<i class="iconfont" style="font-size: 24px;">&#xe651;</i>
+            </button>
+        </form>
+    </div>
+    <!--用户信息和退出-->
+    <div class="right">
+        <div class="user">欢迎王静晓</div>
+        <div class="back"><a href="">退出</a></div>
+    </div>
+
+</div>
+<!--左侧侧边栏-->
+<div class="side-left">
+    <h1>Master</h1>
+    <ul>
+        <li title="用户管理" class="user addColor">
+            <i class="iconfont" id="mr">&#xe613;</i>
+            <span class="master">用户管理</span>
+        </li>
+        <li title="视频管理" class="video addColor">
+            <i class="iconfont" id="mr">&#xe646;</i>
+            <span class="master">视频管理</span>
+        </li>
+        <li title="文章管理" class="article addColor">
+            <i class="iconfont" id="mr">&#xe610;</i>
+            <span class="master">文章管理</span>
+        </li>
+        <li title="问题管理" class="question addColor">
+            <i class="iconfont" id="mr">&#xe605;</i>
+            <span class="master">问题管理</span>
+        </li>
+        <li title="资讯管理" class="inform addColor">
+            <i class="iconfont" id="mr">&#xe609;</i>
+            <span class="master">资讯管理</span>
+        </li>
+        <li title="模块管理" class="model addColor">
+            <i class="iconfont" id="mr">&#xe604;</i>
+            <span class="master">模块管理</span>
+        </li>
+    </ul>
+</div>
+<!--右侧内容-->
+<div class="frame-div">
+    <iframe th:src="@{/AdminDataController/modulesView}" frameborder="0" class="ifm"  scrolling="no"></iframe>
+</div>
+</body>
+<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript"  th:src="@{/js/adminIndex.js}" ></script>
+</html>

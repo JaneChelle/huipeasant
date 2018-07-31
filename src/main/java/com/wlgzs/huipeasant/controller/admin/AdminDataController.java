@@ -22,9 +22,12 @@ import java.util.List;
 @RequestMapping("AdminDataController")
 
 public class AdminDataController extends BaseController {
+
+    @RequestMapping("toViewdata")
+
     @GetMapping("toViewdata/{level}/{page}")  //查看文章
     public ModelAndView toViewData(Model model,@PathVariable("level")  int level ,@PathVariable("page") int page) {
-        dataService.ipgetDatas(level, page, model);
+        dataService.ipgetDatas(0,level, page, model);
         model.addAttribute("level", level);
         if(level==1){
             return new ModelAndView("admin/adminArticle");
@@ -34,6 +37,7 @@ public class AdminDataController extends BaseController {
         else {
             return new ModelAndView("admin/adminInfom");
         }
+
     }
 
     @PostMapping("savedata")
@@ -78,5 +82,10 @@ public class AdminDataController extends BaseController {
     @PostMapping("savemodules") //保存模块
     public void savemodules(Module module) {
         moduleService.saveMoudel(module);
+    }
+    @PostMapping("adminSearchData")
+    public ModelAndView adminSearchData(Model model){
+
+       return new ModelAndView();
     }
 }
