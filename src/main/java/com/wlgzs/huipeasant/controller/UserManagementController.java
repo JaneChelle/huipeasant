@@ -149,6 +149,17 @@ public class UserManagementController extends BaseController {
         userService.changeAddress(user,address,session);
         return new ModelAndView("redirect:/UserManagementController/information");
     }
+    //地区
+    @RequestMapping("area")
+    public ModelAndView area(){
+        return new ModelAndView("area");
+    }
+    //个人
+    @RequestMapping("personal")
+    public ModelAndView personal(){
+        return new ModelAndView("personal");
+    }
+
 
 
 }

@@ -1,7 +1,11 @@
 package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
+
 import com.wlgzs.huipeasant.dao.UserRepository;
+
+import com.wlgzs.huipeasant.entity.Collection;
+
 import com.wlgzs.huipeasant.entity.Data;
 import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.entity.Video;
@@ -53,6 +57,12 @@ public class DataController extends BaseController {
     }
     @RequestMapping("toipindex")              //进入手机端主页
     public ModelAndView toIpindex(Model model){
+        User user = (User)session.getAttribute("user");
+        if (user!=null) {
+            long userId = user.getUserId();
+            List<Collection> collections = collectionService.toCollection(userId);
+            model.addAttribute("collections", collections);
+        }
         model.addAttribute("infor",dataService.information());
         model.addAttribute("question",dataService.ipQuestion(2,1,model));
         return new ModelAndView("/phone/ipindex");
