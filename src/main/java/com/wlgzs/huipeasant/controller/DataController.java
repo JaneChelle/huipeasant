@@ -130,7 +130,12 @@ public class DataController extends BaseController {
             return new ModelAndView("ask");
         }
     }
-
+        @GetMapping("ipviewartical/{dataId}")  //手机端观看文章
+        public ModelAndView ipViewArtical(Model model,@PathVariable("dataId") long dataId){
+            model.addAttribute("data", dataService.dataView(dataId));
+            model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
+            return new ModelAndView("");
+        }
     @PostMapping("/keyword")//下拉框提示接口
     public Result keyword(Model model, @RequestParam("keyword") String keyWord) {
         return new Result(ResultCode.SUCCESS, dataService.getKeyWord(keyWord));
@@ -139,6 +144,9 @@ public class DataController extends BaseController {
     @PostMapping("searchData")   //搜索
     public ModelAndView searchData(Model model, String dataName) {
         model.addAttribute("datas", dataService.searchData(dataName));
+        if ( dataService.searchData(dataName)==null){
+            model.addAttribute("message","对不起，没有查询到相应的数据");
+        }
         return new ModelAndView("material");
     }
 

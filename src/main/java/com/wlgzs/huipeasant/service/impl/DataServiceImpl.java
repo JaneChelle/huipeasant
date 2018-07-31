@@ -267,7 +267,7 @@ public class DataServiceImpl implements DataService {
     }
 
     public List<Data> searchData(String dataName) {
-        List<Data> dataList = dataRepository.findByContentsTitle(dataName);
+        List<Data> dataList = dataRepository.findByContentsTitleContaining(dataName);
         return dataList;
     }
 
