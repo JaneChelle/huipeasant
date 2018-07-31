@@ -33,6 +33,19 @@ public class VideoController extends BaseController {
         model.addAttribute("video",video);
         return new ModelAndView("train");
     }
+    //按ID查询视频（视频详情）
+    @RequestMapping("/videoIpDetails")
+    public ModelAndView detailsIpVideo(long videoId, Model model, HttpSession session){
+        Video video = videoService.detailsVideo(videoId);
+        //判断视频是否被收藏
+        if(collectionService.isCollection(videoId,session)){//被收藏 1
+            video.setCode(1);
+        }else{
+            video.setCode(0);
+        }
+        model.addAttribute("video",video);
+        return new ModelAndView("phone/ipDvideo");
+    }
 
     //全部视频
     @RequestMapping("allVideoList")
@@ -49,7 +62,7 @@ public class VideoController extends BaseController {
         return new ModelAndView("/phone/VideoList");
     }
 
-    //更多
+    //更多 pc
     @RequestMapping("videoMore")
     public ModelAndView videoMore(long moduleId,Model model){
         List<Video> videoList = videoService.videoList(moduleId);
@@ -69,6 +82,9 @@ public class VideoController extends BaseController {
     @RequestMapping("videoIpRanking")
     public ModelAndView videoIpRanking(Model model){
         List<Video> videoList = videoService.videoRanking();
+        for(int i = 0;i < videoList.size();i++){
+            videoList.get(i).setCode(i+1);
+        }
         model.addAttribute("videoList",videoList);
         return new ModelAndView("/phone/Video-rankings");
     }

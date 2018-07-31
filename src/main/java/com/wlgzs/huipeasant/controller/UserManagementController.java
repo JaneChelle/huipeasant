@@ -28,6 +28,14 @@ import java.io.IOException;
 public class UserManagementController extends BaseController {
 
     //展示用户信息
+    @RequestMapping("ipinfo")
+    public ModelAndView displayIpinfo(Model model,HttpSession session) {
+        User user = (User)session.getAttribute("user");
+        System.out.println(user);
+        model.addAttribute("user", user);
+        return new ModelAndView("phone/ipinfo");
+    }
+    //展示用户信息
     @RequestMapping("information")
     public ModelAndView displayInformation(Model model,HttpSession session) {
         User user = (User)session.getAttribute("user");
