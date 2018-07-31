@@ -48,7 +48,7 @@ public class LogUserController extends BaseController {
     //手机端
     @RequestMapping("/toipLogin")
     public ModelAndView toipLogin() {
-        return new ModelAndView("/phone/iplogin");
+        return new ModelAndView("phone/iplogin");
     }
 
     //ip去登陆

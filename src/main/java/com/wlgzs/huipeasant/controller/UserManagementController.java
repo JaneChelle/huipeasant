@@ -112,6 +112,7 @@ public class UserManagementController extends BaseController {
             user = (User) session.getAttribute("user");
             model.addAttribute("mag","文件格式不正确");
         }
+        session.setAttribute("user",user);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
@@ -210,6 +211,17 @@ public class UserManagementController extends BaseController {
         userService.changeAddress(user,address,session);
         return new ModelAndView("redirect:/UserManagementController/information");
     }
+    //地区
+    @RequestMapping("area")
+    public ModelAndView area(){
+        return new ModelAndView("area");
+    }
+    //个人
+    @RequestMapping("personal")
+    public ModelAndView personal(){
+        return new ModelAndView("personal");
+    }
+
 
     //手机端修改用户地区
     @RequestMapping("changeIpAddress")

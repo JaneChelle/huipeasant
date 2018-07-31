@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -21,8 +22,14 @@ public class VideoController extends BaseController {
 
     //按ID查询视频（视频详情）
     @RequestMapping("/videoDetails")
-    public ModelAndView detailsVideo(long videoId,Model model){
+    public ModelAndView detailsVideo(long videoId, Model model, HttpSession session){
         Video video = videoService.detailsVideo(videoId);
+        //判断视频是否被收藏
+        if(collectionService.isCollection(videoId,session)){//被收藏 1
+            video.setCode(1);
+        }else{
+            video.setCode(0);
+        }
         model.addAttribute("video",video);
         return new ModelAndView("train");
     }

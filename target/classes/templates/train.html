@@ -35,12 +35,15 @@
                     <span></span>
                 </li>
             </ul>
+            <input type="hidden" name="videoId" th:value="videoId">
             <div class="course-other">
 						<span>
 							<b>13</b>学员加入学习
 						</span>
                 <a th:href="@{/VideoController/toPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
-                <a>收藏</a>
+                <a th:href="@{/CollectionController/deleteCollection(videoId=${video.videoId})}" th:if="${video.code} == 1" class="a-collection">取消收藏</a>
+                <a th:href="@{/CollectionController/addCollectionVideo(videoId=${video.videoId})}" th:if="${video.code} == 0" class="a-collection">收藏</a>
+
             </div>
         </div>
     </div>
