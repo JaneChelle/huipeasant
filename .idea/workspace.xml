@@ -2,26 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0494e8b-8a0e-48d6-a59c-36dd14630134" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/videomore.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/iplogin.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/ipregister.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/search.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/ipregister.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/search-a.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/videomore.html" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipvideo.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipvideo.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pcvideo.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/pcvideo.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Find-the-answer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Find-the-answer.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/adminVideoList.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/adminVideoList.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/iplogin.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/iplogin.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/Article.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/Article.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipindex.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipindex.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/iplogin.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/iplogin.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/search.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/search.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminUserList.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminUserList.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Video-rankings.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Video-rankings.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/info-recmd.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/info-recmd.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/video.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/video.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/Find-the-answer.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/Find-the-answer.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/List-of-articles.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/List-of-articles.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/Video-rankings.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/Video-rankings.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/info-recmd.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/info-recmd.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/ipindex.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipindex.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/iplogin.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/iplogin.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/search.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/search.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +48,18 @@
       <file leaf-file-name="List-of-articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="130">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article-push.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -47,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
-              <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -56,22 +78,9 @@
       <file leaf-file-name="VideoList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pcvideo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pcvideo.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="546">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#video#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="21" column="85" lean-forward="false" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +88,8 @@
       <file leaf-file-name="DataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="322">
+              <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="30" />
               <folding>
                 <element signature="e#1723#1724#0" expanded="true" />
                 <element signature="e#1772#1773#0" expanded="true" />
@@ -89,27 +98,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="290" column="67" lean-forward="false" selection-start-line="290" selection-start-column="67" selection-end-line="290" selection-end-column="67" />
+            <state relative-caret-position="436">
+              <caret line="294" column="41" lean-forward="false" selection-start-line="294" selection-start-column="41" selection-end-line="294" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ipindex.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ipindex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="178" column="131" lean-forward="true" selection-start-line="178" selection-start-column="131" selection-end-line="178" selection-end-column="131" />
+            <state relative-caret-position="304">
+              <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
               <folding>
-                <element signature="n#style#0;n#span#2;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1533005683740" expanded="false" signature="6970:7017" ph="..." />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="62">
-              <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -129,16 +145,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
               <caret line="8" column="100" lean-forward="false" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Collection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -196,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/myqusetion.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/article.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/train.js" />
@@ -216,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/insect.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/ipcss/Ask-qusetions.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Ask-questions.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pcvideo.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/info-recmd.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Video-rankings.html" />
@@ -225,11 +229,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/ipcss/ipvideo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/video.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" />
       </list>
     </option>
   </component>
@@ -606,12 +612,12 @@
       <updated>1532589422950</updated>
       <workItem from="1532589424918" duration="55029000" />
       <workItem from="1532741451848" duration="2099000" />
-      <workItem from="1532743611685" duration="89754000" />
+      <workItem from="1532743611685" duration="91835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146882000" />
+    <option name="totallyTimeSpent" value="148963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -751,14 +757,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,16 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Ask-questions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1000,7 +988,7 @@
         <state relative-caret-position="286">
           <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
           <folding>
-            <element signature="n#style#0;n#video#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#video#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1024,10 +1012,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pcvideo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#video#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#video#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1051,7 +1039,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1064,31 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="178" column="131" lean-forward="true" selection-start-line="178" selection-start-column="131" selection-end-line="178" selection-end-column="131" />
-          <folding>
-            <element signature="n#style#0;n#span#2;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1533005683740" expanded="false" signature="6970:7017" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
-          <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1096,23 +1063,55 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
-          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="294" column="41" lean-forward="false" selection-start-line="294" selection-start-column="41" selection-end-line="294" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="85" lean-forward="false" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="130">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state relative-caret-position="322">
+          <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="30" />
           <folding>
             <element signature="e#1723#1724#0" expanded="true" />
             <element signature="e#1772#1773#0" expanded="true" />
@@ -1120,11 +1119,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="290" column="67" lean-forward="false" selection-start-line="290" selection-start-column="67" selection-end-line="290" selection-end-column="67" />
-          <folding />
+        <state relative-caret-position="304">
+          <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

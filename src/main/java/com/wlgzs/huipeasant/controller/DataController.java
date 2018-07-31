@@ -56,6 +56,7 @@ public class DataController extends BaseController {
 
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章的接口
     public ModelAndView toIpindex(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
+
         dataService.ipgetDatas(1,level, page, model);
         if (level==1){
             return new ModelAndView("/phone/Article-push");
@@ -150,11 +151,24 @@ public class DataController extends BaseController {
         return new ModelAndView("/phone/Ask-questions");
 
     }
+
+    //进入搜索页面
+    @RequestMapping("/toSearch")
+    public ModelAndView toSearch() {
+        return new ModelAndView("phone/search") ;
+    }
+
+    @PostMapping("searchDataIP")   //搜索
+    public ModelAndView searchDataIP(Model model, String dataName) {
+        model.addAttribute("datas", dataService.searchData(dataName));
+        return new ModelAndView("phone/search-a");
+    }
     @RequestMapping("morequestion")  //手机端更多问题
     public ModelAndView moreQuestion(Model model) {
         model.addAttribute("question", dataService.getAllipQuestion());
         return new ModelAndView("phone/Find-the-answer");
     }
+
     @RequestMapping ("viewquestion")
     public ModelAndView viewQuestion(Model model){
         User user = (User) session.getAttribute("user");
@@ -162,4 +176,16 @@ public class DataController extends BaseController {
         System.out.println("dfcsfsfsf"+dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
+
+
+    @GetMapping("ipviewartical/{dataId}")  //手机端观看文章
+    public ModelAndView ipViewArtical(Model model,@PathVariable("dataId") long dataId){
+        model.addAttribute("data", dataService.dataView(dataId));
+        System.out.println(dataService.dataView(dataId));
+        model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
+        return new ModelAndView("phone/Article");
+    }
+
+
 }
+

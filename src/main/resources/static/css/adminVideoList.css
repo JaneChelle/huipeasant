@@ -162,3 +162,15 @@ li>a{
 .shanchu{
     display: none;
 }
+/*分页*/
+.fenye{
+    float: right;
+    margin-right: 32px;
+}
+.fenye .pagination li a{
+    width: 100px!important;
+    height: 50px!important;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}

@@ -43,11 +43,11 @@ public class VideoController extends BaseController {
     }
 
     //更多
-    @RequestMapping("moreVideo")
-    public ModelAndView moreVideo(long moduleId,Model model){
+    @RequestMapping("videoMore")
+    public ModelAndView videoMore(long moduleId,Model model){
         List<Video> videoList = videoService.videoList(moduleId);
         model.addAttribute("videoList",videoList);
-        return new ModelAndView("moreVideo");
+        return new ModelAndView("videomore");
     }
 
     //按点击量查询视频
