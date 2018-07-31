@@ -179,7 +179,6 @@ function bindingTel() {
                     $(".item-tel").fadeIn();
                     return false;
                 }
-            
         }
     })
     //          第一步

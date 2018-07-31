@@ -29,10 +29,22 @@ public class LogUserController extends BaseController {
         return new ModelAndView("register") ;
     }
 
+    //ip去注册
+    @RequestMapping("/toIpRegistered")
+    public ModelAndView toIpRegistered() {
+        return new ModelAndView("phone/ipregister") ;
+    }
+
     //去登陆
     @RequestMapping("/toLogin")
     public ModelAndView toLogin() {
         return new ModelAndView("login");
+    }
+
+    //ip去登陆
+    @RequestMapping("/toIpLogin")
+    public ModelAndView toIpLogin() {
+        return new ModelAndView("phone/iplogin");
     }
 
     //用户注册
@@ -41,6 +53,13 @@ public class LogUserController extends BaseController {
         String mag = logUserService.register(request);
         model.addAttribute("mag",mag);
         return new ModelAndView("register-1");
+    }
+    //用户ip注册
+    @RequestMapping("ipRegistered")
+    public ModelAndView ipRegistered(Model model, HttpServletRequest request){
+        String mag = logUserService.register(request);
+        model.addAttribute("mag",mag);
+        return new ModelAndView("phone/iplogin");
     }
 
     //用户登录
@@ -56,6 +75,20 @@ public class LogUserController extends BaseController {
             return new ModelAndView("redirect:/user/toindex");
         }else{
             return new ModelAndView("login");
+        }
+    }
+
+    //用户登录
+    @RequestMapping("Iplogin")
+    public ModelAndView Iplogin(HttpServletRequest request, Model model, String phoneNumber, String password){
+        String mag = logUserService.login(request,phoneNumber,password);
+        System.out.println(phoneNumber+""+password);
+        System.out.println(mag);
+        model.addAttribute("mag",mag);
+        if(mag.equals("登录成功！")){
+            return new ModelAndView("redirect:/user/toipindex");
+        }else{
+            return new ModelAndView("phone/iplogin");
         }
     }
 
@@ -82,5 +115,4 @@ public class LogUserController extends BaseController {
             return new Result(ResultCode.FAIL,"手机号已被注册!");
         }
     }
-
 }

@@ -92,10 +92,14 @@ public class LogUserServiceImpl implements LogUserService {
     //验证手机号是否存在
     @Override
     public boolean validationPhone(String phoneNumber) {
-        if (logUserRepository.checkPhoneNumber(phoneNumber) != null) {
+        if(!phoneNumber.equals("")){
+            if (logUserRepository.checkPhoneNumber(phoneNumber) != null) {
+                return false;
+            }
+            return true;
+        }else{
             return false;
         }
-        return true;
     }
 
 

@@ -54,18 +54,17 @@ a{
 	padding: 2%;
 	margin-top: 10px;	
 	position: absolute;
-    right: 23px;
+    right: 85px;
     outline: none;							
 } 
-.bar7 input:focus { width: 200px; } 							
+.bar7 input:focus { width: 200px; }
 .bar7 button { 
 	background: none;
     top: 18px;
-    right: 0;
     border: none;
     outline: none;
     position: absolute;
-    right: 38px;
+    right: 99px;
 } 							
 .bar7 button:before{ 
 	content: "\f002"; 

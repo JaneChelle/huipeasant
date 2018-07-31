@@ -129,76 +129,99 @@
 			</ul>
 		</div>
 		<!--农技视频-->
+		<!--<div class="mt10pb10">-->
+			<!--<H2>农技视频</H2>-->
+			<!--<span class="pin-more"><a href="">更多</a></span>-->
+			<!--<ul>-->
+				<!--<li>-->
+					<!--<span>☆</span>-->
+					<!--<a href="train.html">茶树高效栽培技术一</a>-->
+					<!--<div class="imgfont">-->
+						<!--<a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>-->
+						<!--<div class="imgrt">-->
+							<!--<p>-->
+								<!--<i class="fa fa-file-text-o 1g"></i>-->
+								<!--<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div style="margin-top: -60px;" class="bofang">-->
+						<!--<i class="fa fa-play-circle-o  fa-3x" id="iconfont"-->
+						   <!--style="margin-top: -10px;margin-left: 47px"></i>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<span>☆</span>-->
+					<!--<a href="train.html">番茄栽培技术二</a>-->
+					<!--<div class="imgfont">-->
+						<!--<a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>-->
+						<!--<div class="imgrt">-->
+							<!--<p>-->
+								<!--<i class="fa fa-file-text-o 1g"></i>-->
+								<!--<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div style="margin-top: -60px;" class="bofang">-->
+						<!--<i class="fa fa-play-circle-o  fa-3x" id="iconfont"-->
+						   <!--style="margin-top: -10px;margin-left: 47px"></i>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<span>☆</span>-->
+					<!--<a href="train.html">茶树高效栽培技术一</a>-->
+					<!--<div class="imgfont">-->
+						<!--<a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>-->
+						<!--<div class="imgrt">-->
+							<!--<p>-->
+								<!--<i class="fa fa-file-text-o 1g"></i>-->
+								<!--<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div style="margin-top: -60px;" class="bofang">-->
+						<!--<i class="fa fa-play-circle-o  fa-3x" id="iconfont"-->
+						   <!--style="margin-top: -10px;margin-left: 47px"></i>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<span>☆</span>-->
+					<!--<a href="train.html">番茄栽培技术二</a>-->
+					<!--<div class="imgfont">-->
+						<!--<a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>-->
+						<!--<div class="imgrt">-->
+							<!--<p>-->
+								<!--<i class="fa fa-file-text-o 1g"></i>-->
+								<!--<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div style="margin-top: -60px;" class="bofang">-->
+						<!--<i class="fa fa-play-circle-o  fa-3x" id="iconfont"-->
+						   <!--style="margin-top: -10px;margin-left: 47px"></i>-->
+					<!--</div>-->
+				<!--</li>-->
+			<!--</ul>-->
+		<!--</div>-->
 		<div class="mt10pb10">
 			<H2>农技视频</H2>
 			<span class="pin-more"><a href="">更多</a></span>
 			<ul>
-				<li>
+				<li th:each="videoRank : ${videoRanking}" style="height: 112px;">
 					<span>☆</span>
-					<a href="train.html">茶树高效栽培技术一</a>
+					<a th:href="@{/VideoController/videoDetails(videoId=${videoRank.videoId})}" th:text="${videoRank.videoTitle}"></a>
 					<div class="imgfont">
-						<a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>
+						<a th:href="@{/VideoController/videoDetails(videoId=${videoRank.videoId})}"><img th:src="'/Path/'+${videoRank.videoCover}" alt="" style="width: 120px;height: 68px;"></a>
 						<div class="imgrt">
-							<p>
-								<i class="fa fa-file-text-o 1g"></i>
-								<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
+							<p style="text-indent: 2em; text-align: center">
+								<!--<i class="fa fa-file-text-o 1g"></i>-->
+								<span class="font2" th:text="${videoRank.videoIntroduction}"></span>
 							</p>
 						</div>
 					</div>
 					<div style="margin-top: -60px;" class="bofang">
 						<i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-						   style="margin-top: -10px;margin-left: 47px"></i>
-					</div>
-				</li>
-				<li>
-					<span>☆</span>
-					<a href="train.html">番茄栽培技术二</a>
-					<div class="imgfont">
-						<a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-						<div class="imgrt">
-							<p>
-								<i class="fa fa-file-text-o 1g"></i>
-								<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-							</p>
-						</div>
-					</div>
-					<div style="margin-top: -60px;" class="bofang">
-						<i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-						   style="margin-top: -10px;margin-left: 47px"></i>
-					</div>
-				</li>
-				<li>
-					<span>☆</span>
-					<a href="train.html">茶树高效栽培技术一</a>
-					<div class="imgfont">
-						<a href="train.html"><img src="images/1.jpg" alt="" style="width: 120px;height: 68px;"></a>
-						<div class="imgrt">
-							<p>
-								<i class="fa fa-file-text-o 1g"></i>
-								<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-							</p>
-						</div>
-					</div>
-					<div style="margin-top: -60px;" class="bofang">
-						<i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-						   style="margin-top: -10px;margin-left: 47px"></i>
-					</div>
-				</li>
-				<li>
-					<span>☆</span>
-					<a href="train.html">番茄栽培技术二</a>
-					<div class="imgfont">
-						<a href="train.html"><img src="images/2.jpg" alt="" style="width: 120px;height: 68px;"></a>
-						<div class="imgrt">
-							<p>
-								<i class="fa fa-file-text-o 1g"></i>
-								<span class="font2">转眼入伏，由于北方气温较高、光照充足、雨水增多，农作物生长旺盛，杂草、害虫迅速滋...</span>
-							</p>
-						</div>
-					</div>
-					<div style="margin-top: -60px;" class="bofang">
-						<i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-						   style="margin-top: -10px;margin-left: 47px"></i>
+						   style="margin: -45px 0 0 47px;"></i>
 					</div>
 				</li>
 			</ul>

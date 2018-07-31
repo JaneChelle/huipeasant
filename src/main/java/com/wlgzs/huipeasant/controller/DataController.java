@@ -122,4 +122,9 @@ public class DataController extends BaseController {
         System.out.println("dfcsfsfsf"+dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
+    //进入搜索页面
+    @RequestMapping("/toSearch")
+    public ModelAndView toSearch() {
+        return new ModelAndView("phone/search") ;
+    }
 }
