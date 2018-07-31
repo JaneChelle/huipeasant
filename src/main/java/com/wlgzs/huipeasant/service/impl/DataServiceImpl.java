@@ -274,7 +274,7 @@ public class DataServiceImpl implements DataService {
     public void ipgetDatas(int statue, int moduleLevel, int page, Model model) {    //根据模块的等级来获取相应数据
         Sort sort = new Sort(Sort.Direction.DESC, "hits");
         if (statue == 1) {
-            sort = new Sort(Sort.Direction.DESC, "uploadTime");
+            sort = new Sort(Sort.Direction.ASC, "uploadTime");
         }
         Pageable pageable = new PageRequest(page - 1, 30, sort);
         Specification<Data> specification = new Specification<Data>() {
@@ -288,7 +288,7 @@ public class DataServiceImpl implements DataService {
         Page<Data> dataPage = dataRepository.findAll(specification, pageable);
         List<Data> dataList = dataPage.getContent();
         for (int i = 0; i < dataList.size(); i++) {
-            dataList.get(i).setIdentity(i * ((page - 1) * 10) + 1);
+            dataList.get(i).setIdentity(i * ((page - 1) * 10) + i+1);
         }
         model.addAttribute("datas", dataList);
         model.addAttribute("pages", dataPage.getTotalPages());

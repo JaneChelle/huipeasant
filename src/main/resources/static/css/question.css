@@ -270,3 +270,32 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
+.prompt{
+	display: none;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.7;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 70px;
+	border-radius: 10px;
+}
+.aaa{
+	width: 70px;
+	padding: 10px;
+	background: green;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+
+}
+.aaa>a{
+	opacity: 0.7;
+}
+a,a:hover{
+	text-decoration: none;
+	opacity: 1;
+}

@@ -8,6 +8,6 @@ import java.util.Map;
 
 public interface CommentService {
     boolean addcomment(User user, String content, long dataId);
-    Map<User,Comment> getanswer(long userId);
+    Map<Comment,User> getanswer(long userId);
 
 }

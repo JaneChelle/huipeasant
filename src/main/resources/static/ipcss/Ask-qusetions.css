@@ -98,3 +98,21 @@ a{
     -ms-filter: "alpha(opacity=0)";
     cursor: pointer;
 }
+.finish{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #4cae4c;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 60px;
+}
+.finish:hover{
+    background-color: #2b542c;
+}
+select{
+    background-color: #fff;
+    outline: none;
+    padding: 2px;
+}
