@@ -36,13 +36,13 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public  Map<User,Comment> getanswer(long userId) {      //点击每个问题进入每个问题详情获得所有答案
-        Map<User,Comment> map = new HashMap<>();
+    public  Map<Comment,User> getanswer(long userId) {      //点击每个问题进入每个问题详情获得所有答案
+        Map<Comment,User> map = new HashMap<>();
         List<Comment> commentList = commentDao.findByDataId(userId);
         for (Comment comment : commentList
                 ) {
             User user = userDao.findById(comment.getUserId());
-            map.put(user,comment);
+            map.put(comment,user);
         }
         return map;
     }

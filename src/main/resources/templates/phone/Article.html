@@ -22,9 +22,11 @@
 		</div>
 		<div class="article">
 			<div class="content">
+
 				<h1 th:each="dat : ${data}" th:text="${dat.contentsTitle}"></h1>
 				<div style="margin-top: 50px;" th:each="data : ${data}">
 					<img src="img/4.jpg" style="width: 100%;height: 100px;" th:if="${data.pictureAddress!=null && !data.pictureAddress.equals('')}"  th:src="'/Path'+${data.pictureAddress}"/>
+
 				</div>
 				<div>
 					<p th:each="paragraph : ${paragraphs}" th:text="${paragraph}">
@@ -42,7 +44,49 @@
 
 					</p>
 				</div>
+				<div class="recommendation">
+					<h2>我来说两句</h2>
+					<div class="recommend">
+						我要评论
+					</div>
+					<div >
+
+						<textarea name="commentContent" id="txt"></textarea>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="prompt">评论成功</div>
 	</body>
+	<script>
+		//草稿
+        $(document).ready(function () {
+            $(".recommend").click(function () {
+                var txt=$("#txt").val();
+                var dataId=$("#ipt") .val();
+                $.ajax({
+                    url:"/user/tocomment",
+                    type:'POST',
+                    data:{
+                        "dataId":dataId,
+                        "content":txt
+                    },
+                    dataType:"text",
+                    success:function(){
+                        document.getElementsByClassName("prompt")[0].style.display = "block";
+                        setTimeout(function () {
+                            $(".prompt").style.display = "none";
+                        }, 100);
+                        //alert("111");
+                        //location.reload();
+
+                    },
+                    error:function () {
+                        alert("请求失败");
+                    }
+                });
+
+            });
+        });
+	</script>
 </html>

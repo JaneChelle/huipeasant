@@ -28,6 +28,11 @@ public class LogUserController extends BaseController {
     public ModelAndView toRegister() {
         return new ModelAndView("register") ;
     }
+    //2.去注册
+    @RequestMapping("/toipRegistered")
+    public ModelAndView toipRegister() {
+        return new ModelAndView("ipregister") ;
+    }
 
     //ip去注册
     @RequestMapping("/toIpRegistered")
@@ -39,6 +44,11 @@ public class LogUserController extends BaseController {
     @RequestMapping("/toLogin")
     public ModelAndView toLogin() {
         return new ModelAndView("login");
+    }
+    //手机端
+    @RequestMapping("/toipLogin")
+    public ModelAndView toipLogin() {
+        return new ModelAndView("iplogin");
     }
 
     //ip去登陆
@@ -96,14 +106,14 @@ public class LogUserController extends BaseController {
     @RequestMapping("cancellation")
     public ModelAndView cancellation(HttpServletRequest request) {
         logUserService.cancellation(request);
-        return new ModelAndView("redirect:/toLogin");
+        return new ModelAndView("redirect:/LogUserController/toLogin");
     }
 
     //管理员退出
     @RequestMapping("adminCancellation")
     public ModelAndView adminCancellation(HttpServletRequest request){
         logUserService.adminCancellation(request);
-        return new ModelAndView("redirect:/toLogin");
+        return new ModelAndView("redirect:/LogUserController/toLogin");
     }
 
     //验证手机号是否存在
