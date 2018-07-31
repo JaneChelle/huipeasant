@@ -13,6 +13,22 @@
 	<script  th:src="@{/ipjs/ipindex.js}"></script>
 </head>
 <body>
+
+<!--底部按钮-->
+<ul class="tab-list">
+	<li class="liss red">
+		<span><i class="iconfont">&#xe7b8;</i></span>
+		<p>首页</p>
+	</li>
+	<li class="liss">
+		<span><i class="iconfont">&#xe67c;</i></span>
+		<p>我的收藏</p>
+	</li>
+	<li class="liss">
+		<span><i class="iconfont">&#xe644;</i></span>
+		<p>我的</p>
+	</li>
+</ul>
 <div class="tab">
 	<ul class="tab-content">
 		
@@ -21,13 +37,27 @@
 			<div class="header">
 				<span>农技培训平台</span>
 
-				<span style="position: absolute;right: 4%;"><a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
+				<span th:if="${session.user}==null">
+					<span style="position: absolute;right: 4%;">
+					<a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
 					登录
-				</a></span>
-				<span style="position: absolute;right: 17%;"><a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
-					注册
-				</a></span>
-				<span><a href="search.html"><i class="iconfont">&#xe616;</i></a></span>
+					</a>
+					</span>
+					<span style="position: absolute;right: 17%;">
+						<a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
+						注册
+						</a>
+					</span>
+				</span>
+				<span th:if="${session.user}!=null">
+					<!--<a th:href="@{/UserManagementController/information}">个人中心</a>-->
+				</span>
+
+				<span>
+					<a th:href="@{/user/toSearch}">
+						<i class="iconfont">&#xe616;</i>
+					</a>
+				</span>
 
 			</div>
 			<!--轮播图-->
@@ -115,13 +145,15 @@
 			<div class="videoRecommend">
 				<div class="font">
 					<p class="font-p">资讯推荐</p>
-					<span style="float: right;margin-right: 6%;"><a href="info-recmd.html">更多</a></span>
+					<span style="float: right;margin-right: 6%;">
+						<a th:href="@{/user/toipindex/3/1}">更多</a>
+					</span>
 				</div>
 				<div class="show">
 					<ul>
 						<li class="lis" th:each="infor:${infor}" style="margin-right: 5px">
 							<div>
-								<a th:href="'/user/ipviewartical/'+${infor.dataId}">
+								<a th:href="@{'/user/ipviewartical/'+${infor.dataId}}">
 									<img th:src="'/Path'+${infor.pictureAddress}" alt="" style="height:70px;border-radius: 5px;width: 84px;">
 								</a>
 							</div>
@@ -135,7 +167,9 @@
 			<div class="hotask">
 				<div class="font">
 					<p class="font-p">热门提问</p>
-					<span style="float: right;margin-right: 6%;"><a href="Find-the-answer.html">更多</a></span>
+					<span style="float: right;margin-right: 6%;">
+						<a href="/user/morequestion">更多</a>
+					</span>
 				</div>
 
 				<div class="user" th:each="blogId,key : ${question}">
@@ -169,45 +203,45 @@
 		<li style="display: none;" id="li-two">
 			<div class="header">
 				<span>我的收藏</span>
-				<span style="position: absolute;right: 4%;"><a href="iplogin.html"><i class="iconfont">&#xe60f;</i></a></span>
+				<span style="position: absolute;right: 4%;"><a th:href="@{/user/toipindex}">
+					<i class="iconfont">&#xe60f;</i></a>
+				</span>
 			</div>
 			<div class="videoarea">
 				<div class="video" th:each="collections:${collections}">
 					<div class="font-left" th:text="${collections.modelTitle}">
-						<a th:each="datas ：${datas}" th:href="@{/user/textview/${datas.dataId}">
+						<a th:each="datas : ${datas}" th:href="@{'/user/textview/' + ${datas.dataId}">
 						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
 						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
-						</a>
+						<!--</a>-->
 					</div>
 					<div class="video-right"> 
 						<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
 					</div>
 				</div>
-				<!--<div class="video">-->
-					<!--<div class="font-left">-->
-						<!--一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，-->
-						<!--一场暴雨淋湿了未打伞的你，用荷叶做成的雨-->
-					<!--</div>-->
-					<!--<div class="video-right"> -->
-						<!--<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;"/>-->
-					<!--</div>-->
-				<!--</div>-->
 			</div>
 		</li>
 <!--3.我的-->
 		<li style="display: none;" id="li-three">
+
 			<div class="header">
 				<span>个人中心</span>
-				<span style="position: absolute;right: 4%;"><a href="iplogin.html"><i class="iconfont">&#xe60f;</i></a></span>
+				<span style="position: absolute;right: 4%;">
+					<a th:href="@{/LogUserController/Ipcancellation}">
+						<i class="iconfont">&#xe60f;</i>
+					</a>
+				</span>
 			</div>
 			<div class="user-at">
 				<div>
-					<h2>在水一方</h2><br>
-					<span><a href="ipinfo.html" class="user-at-font">查看或编辑个人信息</a></span>
+					<h2 th:text="${session.user.nickName}">在水一方</h2><br>
+					<span>
+						<a th:href="@{/UserManagementController/ipinfor}" class="user-at-font">查看或编辑个人信息</a>
+					</span>
 				</div>
 				<div style="margin-left: 30%;">
 					<!--<a href="">-->
-						<img src="images/rb1.jpg" style="width: 80px;height: 80px;border-radius: 100%;"/>
+						<img th:src="'/Path/'+${session.user.headPortrait}" style="width: 80px;height: 80px;border-radius: 100%;"/>
 					<!--</a>-->
 				</div>
 			</div>
@@ -216,7 +250,7 @@
 					<li>
 						<span><i class="iconfont" style="color:red;">&#xe60a;</i></span>&nbsp;&nbsp;
 						<span>
-							<a href="ipinfo.html">个人信息</a>
+							<a th:href="@{/UserManagementController/ipinfor}">个人信息</a>
 						</span>
 					</li>
 					<!--<li>-->
@@ -226,7 +260,9 @@
 						<!--</span>-->
 					<!--</li>-->
 					<li>
-						<span><i class="iconfont" style="color: orangered;">&#xe67c;</i></span>&nbsp;&nbsp;
+						<span>
+							<i class="iconfont" style="color: orangered;">&#xe67c;</i>
+						</span>&nbsp;&nbsp;
 						<span>
 							<a href="ipcollection.html">我的收藏</a>
 						</span>
@@ -234,34 +270,17 @@
 					<li>
 						<span><i class="iconfont" style="color: mediumpurple;">&#xe636;</i></span>&nbsp;&nbsp;
 						<span>
-							<a href="">退出</a>
+							<a th:href="@{/LogUserController/Ipcancellation}">退出</a>
 						</span>
 					</li>
 				</ul>
 			</div>
 		</li>
 	</ul>
-<!--底部按钮-->
-<ul class="tab-list">
-	<li class="liss red">
-		<span><i class="iconfont">&#xe7b8;</i></span>
-		<p>首页</p>
-	</li>
-	<li class="liss">
-		<span><i class="iconfont">&#xe67c;</i></span>
-		<p>我的收藏</p>
-	</li>
-	<li class="liss">
-		<span><i class="iconfont">&#xe644;</i></span>
-		<p>我的</p>
-	</li>
-</ul>
 </div>
 
 </body>
-<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}"></script>
-<script type="text/javascript" th:src="@{/ipjs/ipindex.js}" ></script>
-<script>
+<script th:inline="javascript">
 	$('.liss').on('click',function(){
 		var liss=$('.liss');
 		for(var a=0;a<liss.length;a++){

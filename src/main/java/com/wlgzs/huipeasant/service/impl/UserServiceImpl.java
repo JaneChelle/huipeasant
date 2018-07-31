@@ -204,7 +204,6 @@ public class UserServiceImpl implements UserService {
         user.setSex(sex);
         userRepository.saveAndFlush(user);
         //从新存入session
-        session.setMaxInactiveInterval(60 * 20);
         session.setAttribute("user",user);
     }
 

@@ -55,7 +55,8 @@ a{
 	margin-top: 10px;	
 	position: absolute;
     right: 85px;
-    outline: none;							
+    outline: none;
+    top: 0;
 } 
 .bar7 input:focus { width: 200px; }
 .bar7 button { 
@@ -81,6 +82,7 @@ a{
     z-index: 9999;
     left: 77px;
     border-radius: 9px;
+    background-color: #fff;
 }
 .spinners{
     border-radius: 5px;

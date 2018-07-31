@@ -2,6 +2,7 @@ package com.wlgzs.huipeasant.service;
 
 import com.wlgzs.huipeasant.entity.Collection;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -15,9 +16,12 @@ public interface CollectionService {
     void collectionVideo(long userId,long videoId);
 
     //删除收藏
-    void deleteCollection(long collectionId);
+    void deleteCollection(long videoId,HttpSession session);
 
     //查看收藏
     List<Collection> toCollection(long userId);
+
+    //查找视频是否被收藏
+    boolean isCollection(long videoId, HttpSession session);
 
 }

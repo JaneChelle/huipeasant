@@ -42,10 +42,10 @@
 				<img src="img/code.png"/>
 			</div>
 			<div class="search">
-				<form action="/user/searchData" method="post">
+				<!--<form action="/user/searchData" method="post">-->
 					<input type="text" name="contentsTitle" id="applyCertNum" value="" placeholder="请输入您要搜索的内容..." onkeyup="spin(),spainner()"/>
-					<button type="submit"></button>
-				</form>
+					<!--<button type="submit"></button>-->
+				<!--</form>-->
 				<div class="spin">
 					<div class="spinners">
 						<!--<a href="">dhfbdh</a>-->
@@ -64,7 +64,7 @@
 		<!--品牌招商区-->
 		<div class="mt10pb10">
 			<h2>品牌招商区</h2>
-			<a href="" class="divA"><img src="images/2.jpg" alt="" style="width: 270px;height: 110px;"></a>
+			<a href="" class="divA"><img th:href="@{images/2.jpg}" alt="" style="width: 270px;height: 110px;"></a>
 			<!--轮播图-->
 			<div class="con-lun">
 				<a href="#" class="wrip-img max">
