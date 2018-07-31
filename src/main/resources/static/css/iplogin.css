@@ -16,7 +16,7 @@ ul{ padding-left: 10px;}
 li{	list-style-type: none;}
 input{ outline: none;}
 body{
-	background: url("../images/timg (13).jpg") center center  no-repeat fixed;
+	background: url("../images/timg (10).jpg") center center  no-repeat fixed;
 	overflow: hidden;
   	background-size:cover;
 	color: #fff;
@@ -24,65 +24,85 @@ body{
 .header{
 	padding: 24px 6px;
 	height: 32px;
-	font-size: 32px;
 	line-height: 32px;
 	text-align: center;
 	letter-spacing: 4px;
+	font-family: "宋体";
+}
+.header i{
+	float: left;
+	font-size: 24px;
+	line-height: 32px;
+}
+.header b{
+	float: right;
+	font-size: 16px;
 }
 .first_section{
 	text-align: center;
 	letter-spacing: 3px;
 	font-size: 18px;
 	height: 24px;
-	margin: 45px 0;
+	height: 178px;
 }
-.first_section span{
-	margin-left: 5px;
-	font-size: 12px;
+.first_section img{
+	display: inline-block;
+	margin: 0 auto;
+	width: 154px;
+	height: 178px;
 }
 .second_section{
 	position: relative;
-	margin: 80px 0;
 }
 .login{
 	font-size: 24px;
-	margin: 48px 0;
+	margin: 28px 0;
 	text-align: center;
 }
 .login input{
-	font-size: 12px;
-	color: #000000!important;
 	height: 36px;
 	width: 280px;
 	margin-left: 12px;
 	padding-left: 6px;
 	border: none;
 	border-radius: 5px;
+	border-bottom: 2px solid #FFF;
+    background-color: transparent;
+}
+.login span{
+	display: inline-block;
+	font-size: 12px;
+	width: 37px;
 }
 .ico{
 	position: absolute;
 	right: 32px;
-	top: 96px;
+	top: 108px;
 	font-size: 16px;
-	color: #000!important;
 }
 p{
-	font-size: 13px;
-	margin: 28px;
 	text-align: right;
+	margin-left: 68px;
+	color: orangered;
+	height: 20px;
+	font-size: 12px;
+	margin: 12px 24px 0 0;
 }
 button{
 	position: relative;
 	border: none;
 	outline: none;
 	width: 330px;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 5px;
 	margin: 60px 0 0 18px;
 }
 .login-in{
 	text-align: center;
 	height: 36px;
 	border-radius: 5px;
-	background-color: #A5CD38;
+	background-color: #5CB85C;
 }
 #secion {
     position: fixed;
@@ -92,9 +112,21 @@ button{
     width: 100%;
     height: 100%;
     background: #DCDBDC;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
     filter: alpha(opacity=80); /* 只支持IE6、7、8、9 */
 }
+ input::-webkit-input-placeholder{
+            color:#fff;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:#fff;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:#fff;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color:#fff;
+        }
 @font-face {
   font-family: 'iconfont';  /* project id 744835 */
   src: url('//at.alicdn.com/t/font_744835_2a8uqu7lggf.eot');

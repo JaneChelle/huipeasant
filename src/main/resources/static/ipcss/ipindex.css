@@ -22,6 +22,9 @@ body{
     z-index: 999;
     background: #fff;
 }
+.tab-list>li:hover{
+    cursor: pointer;
+}
 .tab-list>li {
     float: left;
     border-right: none;
@@ -340,6 +343,8 @@ a{
 .lists>ul>li>span>a{
 	color: #000000;
 	font-size: 15px;
+    width: 90%;
+    display: inline-block;
 }
 .lists>ul>li>span>i{
 	font-size: 14px;

@@ -2,45 +2,45 @@ $(document).ready(function () {
 //  用户
     // 添加的弹窗
     $(".tianjia").click(function () {
-        $(".windoww").css("display","block");
+        $(".windoww").fadeIn();
     });
     //关闭弹窗
     $(".cancel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
  //视频
     $(".videotj").click(function () {
-       $(".windoww").css("display","block");
+       $(".windoww").fadeIn();
     });
     $(".videocancel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
 //文章
 	$(".articlejs").click(function () {
-       $(".windoww").css("display","block");
+       $(".windoww").fadeIn();
     });
     $(".articlecanvel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
 //问题
 	$(".qusetionjs").click(function () {
-       $(".windoww").css("display","block");
+       $(".windoww").fadeIn();
     });
     $(".qusetioncancel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
 //资讯
 	$(".infomjs").click(function () {
-       $(".windoww").css("display","block");
+       $(".windoww").fadeIn();
     });
     $(".infomcancel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
 //模块
 	$(".modeljs").click(function () {
-       $(".windoww").css("display","block");
+       $(".windoww").fadeIn();
     });
     $(".modelcancel").click(function () {
-        $(".windoww").css("display","none");
+        $(".windoww").fadeOut();
     });
 });

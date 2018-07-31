@@ -66,7 +66,7 @@ public class DataController extends BaseController {
     public ModelAndView toIpindex(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
         int status = 1;
         dataService.ipgetDatas(status, level, 1, model);
-        return new ModelAndView("ipindex ");
+        return new ModelAndView("ipindex");
     }
     @RequestMapping("indexmore/{level}/{page}")//pc主页 排行 资讯更多
     public ModelAndView indexMore(Model model, @PathVariable("level") int level, @PathVariable("page") int page){
@@ -163,16 +163,30 @@ public class DataController extends BaseController {
         System.out.println("dfcsfsfsf" + dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
+    //进入搜索页面
+    @RequestMapping("/toSearch")
+    public ModelAndView toSearch() {
+        return new ModelAndView("phone/search") ;
+    }
+
+    @PostMapping("searchDataIP")   //搜索
+    public ModelAndView searchDataIP(Model model, String dataName) {
+        model.addAttribute("datas", dataService.searchData(dataName));
+        return new ModelAndView("phone/search-a");
+    }
 
     @RequestMapping("morequestion")  //手机端更多问题
     public ModelAndView moreQuestion(Model model) {
         model.addAttribute("question", dataService.getAllipQuestion());
         return new ModelAndView("");
     }
-    @GetMapping("viewIpArtical/{dataId}")
-    public ModelAndView viewIpArtical(Model model,@PathVariable("dataId") long dataId){
-        model.addAttribute("data",dataService.dataView(dataId));
-        return new ModelAndView("");
+    @GetMapping("ipviewartical/{dataId}")  //手机端观看文章
+    public ModelAndView ipViewArtical(Model model,@PathVariable("dataId") long dataId){
+        model.addAttribute("data", dataService.dataView(dataId));
+        System.out.println(dataService.dataView(dataId));
+        model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
+        return new ModelAndView("phone/Article");
     }
+
 
 }

@@ -51,8 +51,8 @@
         <!--板块开始-->
         <div class="main-body item-1">
             <div class="box-item">
-                <span class="font"><a th:href="@{/user/toindex}" target="_blank">培训视频</a></span>
-                <span style="float:right;"><a th:href="@{/}" target="_blank">更多
+                <span class="font"><a th:href="@{/user/toindex}" target="_blank">农技培训</a></span>
+                <span style="float:right;"><a th:href="@{/VideoController/videoMore(moduleId=1)}" target="_blank">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     </a>
@@ -75,8 +75,8 @@
         </div>
         <div class="main-body item-2">
             <div class="box-item">
-                <span class="font"><a th:href="@{/user/toindex}" target="_blank">培训视频</a></span>
-                <span style="float:right;"><a th:href="@{/}" target="_blank">更多
+                <span class="font"><a th:href="@{/user/toindex}" target="_blank">电商培训</a></span>
+                <span style="float:right;"><a th:href="@{/VideoController/videoMore(moduleId=2)}" target="_blank">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     </a>
@@ -202,30 +202,6 @@
             </dl>
         </div>
         <!--农技视频-->
-        <div class="mt10pb10">
-            <H2>农技视频</H2>
-            <span class="pin-more"><a href="">更多</a></span>
-            <ul>
-                <li th:each="videoRank : ${videoRanking}">
-                    <span>☆</span>
-                    <a th:href="@{/VideoController/videoDetails(videoId=${videoRank.videoId})}" th:text="${videoRank.videoTitle}"></a>
-                    <div class="imgfont">
-                        <a th:href="@{/VideoController/videoDetails(videoId=${videoRank.videoId})}"><img th:src="'/Path/'+${videoRank.videoCover}" alt="" style="width: 120px;height: 68px;"></a>
-                        <div class="imgrt">
-                            <p>
-                                <i class="fa fa-file-text-o 1g"></i>
-                                <span class="font2" th:text="${videoRank.videoIntroduction}"></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="margin-top: -60px;" class="bofang">
-                        <i class="fa fa-play-circle-o  fa-3x" id="iconfont"
-                           style="margin-top: -10px;margin-left: 47px"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
     </footer>
 </div>
     <div th:include="/common/common :: indexjs"></div>

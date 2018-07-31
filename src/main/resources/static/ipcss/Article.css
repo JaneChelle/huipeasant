@@ -40,8 +40,14 @@ a{
 .header>span>a{
 	color: #fff;
 }
-.article{
-	
+.article h1{
+    position: relative;
+    top: 45px;
+    text-align: center;
+    font-size: 16px!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .content{
 	padding: 4%;
