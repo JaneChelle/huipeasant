@@ -44,8 +44,11 @@ public class LogUserServiceImpl implements LogUserService {
         user.setAddress("北京市 北京城区 东城区");
         user.setSex("男");
         user.setRoleId(2);
-        logUserRepository.save(user);
-        return "注册成功！";
+        if(logUserRepository.checkPhoneNumber(user.getPhoneNumber()) == null){
+            logUserRepository.save(user);
+            return "注册成功！";
+        }
+        return "注册失败！";
     }
 
     //登录

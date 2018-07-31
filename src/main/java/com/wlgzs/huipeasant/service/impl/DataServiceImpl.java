@@ -213,11 +213,11 @@ public class DataServiceImpl implements DataService {
             @Override
             public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
                 Path level = root.get("moduleLevel");
-                Predicate predicate = criteriaBuilder.equal(level,modellevel);
+                Predicate predicate = criteriaBuilder.equal(level, modellevel);
                 return criteriaBuilder.and(predicate);
             }
         };
-        Page<Data> dataPage = dataRepository.findAll(specification,pageable);
+        Page<Data> dataPage = dataRepository.findAll(specification, pageable);
         return dataPage.getContent();
     }
 
@@ -260,7 +260,7 @@ public class DataServiceImpl implements DataService {
             Data data = new Data();
             for (int i = 0; i < 10; i++) {
 
-                keyWordList = dataList.subList(0,9);
+                keyWordList = dataList.subList(0, 9);
             }
         }
         return keyWordList;
@@ -271,9 +271,12 @@ public class DataServiceImpl implements DataService {
         return dataList;
     }
 
-    public void  ipgetDatas(int moduleLevel, int page, Model model) {    //根据模块的等级来获取相应数据
+    public void ipgetDatas(int statue, int moduleLevel, int page, Model model) {    //根据模块的等级来获取相应数据
         Sort sort = new Sort(Sort.Direction.DESC, "hits");
-        Pageable pageable = new PageRequest(page - 1, 10, sort);
+        if (statue == 1) {
+            sort = new Sort(Sort.Direction.DESC, "uploadTime");
+        }
+        Pageable pageable = new PageRequest(page - 1, 30, sort);
         Specification<Data> specification = new Specification<Data>() {
             @Override
             public Predicate toPredicate(Root<Data> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
@@ -290,6 +293,7 @@ public class DataServiceImpl implements DataService {
         model.addAttribute("datas", dataList);
         model.addAttribute("pages", dataPage.getTotalPages());
         model.addAttribute("page", page);
+
     }
 
     public Map<Data, List<Comment>>
@@ -323,4 +327,16 @@ public class DataServiceImpl implements DataService {
             dataRepository.deleteById(dataIds[i]);
         }
     }
+
+    public Map<Data, List<Comment>> getAllipQuestion() {
+        Map<Data, List<Comment>> commentListMap = new HashMap<>();
+        List<Data> dataList = new ArrayList<>();
+        dataList = dataRepository.findByModuleLevelOrderByHitsDesc(2);
+        for (int i = 0; i < dataList.size(); i++) {
+            Data data = dataList.get(i);
+            commentListMap.put(data, commentDao.findByDataId(data.getDataId()));
+        }
+        return commentListMap;
+    }
+
 }

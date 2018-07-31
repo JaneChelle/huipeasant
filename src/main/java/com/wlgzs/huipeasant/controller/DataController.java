@@ -76,7 +76,7 @@ public class DataController extends BaseController {
 
     public ModelAndView toaddIpData(Model model) {
         model.addAttribute("moudels",moduleService.getModules());
-        return new ModelAndView("Ask-qusetions");
+        return new ModelAndView("Ask-qusetion");
 
     }
 

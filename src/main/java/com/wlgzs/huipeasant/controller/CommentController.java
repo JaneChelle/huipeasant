@@ -12,6 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RequestMapping("user")
 @RestController
+
+
 public class CommentController extends BaseController {
     @Autowired
     CommentDao commentDao;

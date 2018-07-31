@@ -30,7 +30,8 @@ public class VideoController extends BaseController {
     //全部视频
     @RequestMapping("allVideoList")
     public ModelAndView allVideoList(Model model){
-
+        List<Video> videoList = videoService.findAllVideo();
+        model.addAttribute("videoList",videoList);
         return new ModelAndView("VideoList");
     }
     //全部视频 （手机）
@@ -38,6 +39,14 @@ public class VideoController extends BaseController {
     public ModelAndView allipVideoList(Model model){
 
         return new ModelAndView("/phone/VideoList");
+    }
+
+    //更多
+    @RequestMapping("moreVideo")
+    public ModelAndView moreVideo(long moduleId,Model model){
+        List<Video> videoList = videoService.videoList(moduleId);
+        model.addAttribute("videoList",videoList);
+        return new ModelAndView("moreVideo");
     }
 
     //按点击量查询视频
