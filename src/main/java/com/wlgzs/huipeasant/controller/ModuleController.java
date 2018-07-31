@@ -2,6 +2,7 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 import com.wlgzs.huipeasant.entity.Module;
+import com.wlgzs.huipeasant.entity.Video;
 import com.wlgzs.huipeasant.util.Result;
 import com.wlgzs.huipeasant.util.ResultCode;
 import org.springframework.ui.Model;
@@ -30,6 +31,12 @@ public class ModuleController extends BaseController {
         model.addAttribute("rank", dataService.indexRank());   //排行
         model.addAttribute("question", dataService.relevantIssues()); // 正在问的问题
         model.addAttribute("relevant", dataService.recommend(moudelId)); // 相关推荐
+        //视频排行
+        List<Video> videoRanking = videoService.videoRanking();
+        if(videoRanking.size() > 4){
+            videoRanking = videoRanking.subList(videoRanking.size() - 4, videoRanking.size());
+        }
+        model.addAttribute("videoRanking",videoRanking);
         dataService.moudelDatas(model, moudelId, page);
         return new ModelAndView("material");
     }

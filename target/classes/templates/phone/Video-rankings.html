@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>视频排行-农技培训平台-慧农移动在线</title>
+		<link rel="stylesheet" th:href="@{/ipcss/List-of-articles.css}" />
+		<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
+		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}" ></script>
+	</head>
+	<body>
+		<div class="header">
+			<span style="padding-left: 4%;"><a th:href="@{/user/toipindex}" id="back-ipindex"><i class="iconfont" style="color: #fff;">&#xe6b4;</i></a></span>
+			<span style="margin-left: 35%;">视频排行</span>
+			<!--<span style="margin-right: 4%;float: right;"><input type="submit" value="保存" class="btn-keep"/></span>-->		
+		</div>
+		<span class="blank" style="height:50px;"></span>
+		<!--视频排行-->
+		<ul>
+			<li>
+				<span class="number"><i class="iconfont" style="color: red;">&#xe61e;</i></span>
+				<span >黄瓜怎么种的又大又好吃</span>
+				<span class="hot"><i class="iconfont">&#xe615;</i></span>
+			</li>
+			<li th:each="videoList:${videoList}">
+				<span class="number" th:text="${videoList.code}">1</span>
+				<span th:text="${videoList.videoTitle}">小麦种植</span>
+				<span><em th:text="${videoList.videoHits}">66555</em></span>
+				<span class="hot">
+					<i class="iconfont">&#xe615;</i>
+				</span>
+			</li>
+		</ul>
+	</body>
+</html>

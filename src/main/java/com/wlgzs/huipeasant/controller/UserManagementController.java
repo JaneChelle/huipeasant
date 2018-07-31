@@ -84,6 +84,7 @@ public class UserManagementController extends BaseController {
             user = (User) session.getAttribute("user");
             model.addAttribute("mag","文件格式不正确");
         }
+        session.setAttribute("user",user);
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }

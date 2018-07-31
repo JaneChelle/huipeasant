@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/ipcss/iplogin.css}" />
+	<style>
+		.login{
+			margin: 14px 0;
+		}
+	</style>
+</head>
+<body>
+    <!--<div id="secion">-->
+    	<div class="header">
+	    	<a th:href="@{/user/toipindex}">
+	    		<i class="fa fa-chevron-left"></i>
+	    	</a>
+	    	<b><a th:href="@{/LogUserController/toIpLogin}">登录</a></b>
+	    </div>
+	    <div class="first_section">
+			<img th:src="@{/img/peasanter.png}"/>
+	    </div>
+	    <div class="second_section">
+			<form th:action="@{/LogUserController/ipRegistered}" method="post" onsubmit="return bindingTel()">
+				<div class="login">
+					<span>手机号</span>
+					<input type="tel" name="phoneNumber" id="tel" value="" required="required" placeholder="请输入手机号" onchange="telps(),bindingTel()"/>
+					<p class="user-wain"></p>
+				</div>
+				<div class="login">
+					<span>密码</span>
+					<input type="password" name="password" id="password" required="required" value="" placeholder="请输入密码" onchange="passWord();" />
+					<p class="pword-wain"></p>
+				</div>
+				<div class="login">
+					<span>预留信息</span>
+					<input type="text" name="reservedInf" id="reservedInf" required="required" value="" placeholder="请输入预留信息" onchange="rese();" />
+					<p class="code-wain"></p>
+				</div>
+				<div class="login">
+					<input type="text" class="login-in" th:value="注册" id="register" style="background-color: #5CB85C;" readonly="readonly">
+				</div>
+			</form>
+			<div class="login-b">
+				<b>温馨提示:</b><br />
+				<b>密码 以字母开头，长度在6~18之间</b><br />
+				<b>且密码只能包含字母、数字和下划线</b><br />
+				<b>预留信息：是为了您忘记密码时找回密码，请牢记</b>
+			</div>
+	    </div>
+    <!--</div>-->
+</body>
+	<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/ipjs/ipregister.js}" ></script>
+</html>
