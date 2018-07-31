@@ -75,7 +75,7 @@ public class VideoController extends BaseController {
     @RequestMapping("toIpPcvideo")
     public ModelAndView toIpPcvideo(Model model,String videoAddress){
         model.addAttribute("videoAddress",videoAddress);
-        return new ModelAndView("/phone/video");
+        return new ModelAndView("phone/video");
     }
     //病虫图害
     @RequestMapping("insect")

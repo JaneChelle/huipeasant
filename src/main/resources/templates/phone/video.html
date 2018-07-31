@@ -11,6 +11,7 @@
 		<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
 		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
 		<link rel="stylesheet" type="text/css" th:href="@{/ipcss/video.css}" />
+		<script th:src="@{/JS/jquery.min.js}"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -24,7 +25,20 @@
 	    			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
 	    		</video>
     		</div>
-	
+
+		<div class="video_count">
+			<a th:href="@{/VideoController/toPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
+			<a href="javascript">收藏</a>
+		</div>
+		<div class="teacher">
+			<b>讲师提示</b>
+			<p th:text="${video.authorSuggests}">主要害虫：亚洲玉米螟、蚜虫、地下害虫等，其他害虫还有甜菜夜蛾、斜纹夜蛾、棉铃虫、桃蛀螟和大螟等也是影响甜糯玉米生产的重要害虫，一般与玉米螟混合发生，不需单独防治。</p>
+		</div>
+		<div class="teacher">
+			<b>课程简介</b>
+			<p th:text="${video.videoIntroduction}">主要害虫：亚洲玉米螟、蚜虫、地下害虫等，其他害虫还有甜菜夜蛾、斜纹夜蛾、棉铃虫、桃蛀螟和大螟等也是影响甜糯玉米生产的重要害虫，一般与玉米螟混合发生，不需单独防治。</p>
+		</div>
+
 	</body>
 	<script th:inline="javascript">
         var clientw = document.body.clientWidth;

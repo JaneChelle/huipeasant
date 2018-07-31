@@ -51,7 +51,7 @@ public class DataController extends BaseController {
     public ModelAndView toIpindex(Model model){
         model.addAttribute("infor",dataService.information());
         model.addAttribute("question",dataService.ipQuestion(2,1,model));
-        return new ModelAndView("/phone/ipindex");
+        return new ModelAndView("phone/ipindex");
     }
 
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章的接口
@@ -152,7 +152,7 @@ public class DataController extends BaseController {
 
     }
 
-    //进入搜索页面
+    //进入sjid搜索页面
     @RequestMapping("/toSearch")
     public ModelAndView toSearch() {
         return new ModelAndView("phone/search") ;

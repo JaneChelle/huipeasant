@@ -2,12 +2,9 @@
 	width: 1200px;
 	margin: 60px auto;
 }
-<<<<<<< HEAD
-=======
 body{
 	position: relative;
 }
->>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
 .border
 {
 	position: relative;
@@ -48,21 +45,12 @@ h3{
 }
 .ask-title{
 	text-indent: 2em;
-<<<<<<< HEAD
-	min-height: 175px;
-}
-.ask-import img{
-	height: 450px;
-	width: 375px;
-	margin: 20px 0;
-=======
 }
 .ask-import img{
 	height: 330px;
 	width: 330px;
 	margin: 20px 0;
 	margin-left: 29px;
->>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
 }
 .ask-right{
 	float: right;

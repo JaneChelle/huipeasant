@@ -1,41 +1,34 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>我的收藏-农技培训平台-慧农移动在线</title>
-		<link rel="stylesheet" href="CSS/Article-push.css">
-		<link rel="shortcut icon" type="img/x-icon" href="images/login.ico"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<script type="text/javascript" src="JS/jquery.min.js" ></script>
-	</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/ipcss/Article-push.css}" />
+	<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}"></script>
+</head>
 	<body>
-		<div class="header">
-				<span style="padding-left: 4%;"><a href="ipindex.html"><i class="iconfont">&#xe6b4;</i></a></span>
-				<span style="margin-left: 34%;">我的收藏</span>
+	<div class="header">
+		<span>我的收藏</span>
+		<span style="position: absolute;right: 4%;"><a href="iplogin.html"><i class="iconfont">&#xe60f;</i></a></span>
+	</div>
+	<div class="videoarea">
+		<div class="video" th:each="collections:${collections}">
+			<div class="font-left" th:text="${collections.modelTitle}">
+				<a th:each="datas : ${datas}" th:href="@{'/user/textview/' + ${datas.dataId}">
+					一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
+					一场暴雨淋湿了未打伞的你，用荷叶做成的雨
+				</a>
+			</div>
+			<div class="video-right">
+				<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
+			</div>
 		</div>
-		<div class="videoarea">
-				<div class="video">
-					<div class="font-left">
-					
-						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
-						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
-						
-					</div>
-					<div class="video-right"> 
-						<img src="images/rb1.jpg" style="height: 60px;width: 92.35px;border-radius: 5px;"/>
-					</div>
-				</div>
-				<div class="video">
-					<div class="font-left">
-						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
-						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
-					</div>
-					<div class="video-right"> 
-						<img src="../pc/images/d6.jpg" style="height: 60px;width: 92.35px;border-radius: 5px;"/>
-					</div>
-				</div>
-		</div>
+	</div>
 		
 	</body>
 </html>

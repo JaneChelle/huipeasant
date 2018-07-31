@@ -36,6 +36,42 @@ public class UserManagementController extends BaseController {
         return new ModelAndView("information");
     }
 
+    //手机端展示用户信息
+    @RequestMapping("ipinfor")
+    public ModelAndView displayIpInfor(Model model,HttpSession session) {
+        User user = (User)session.getAttribute("user");
+        System.out.println(user);
+        model.addAttribute("user", user);
+        return new ModelAndView("phone/ipinfo");
+    }
+    //跳转到修改昵称
+    @RequestMapping("toChangeNickname")
+    public ModelAndView toChangeNickname(){
+        return new ModelAndView("phone/Nickname");
+    }
+    //跳转到修改地址
+    @RequestMapping("toChangeAdress")
+    public ModelAndView toChangeAdress(){
+        return new ModelAndView("phone/address");
+    }
+
+    //跳转到修改性别
+    @RequestMapping("toChangeSex")
+    public ModelAndView toChangeSex(){
+        return new ModelAndView("phone/ipEditSex");
+    }
+
+    //手机端修改昵称
+    @RequestMapping("changeIPInformation")
+    public ModelAndView changeIPInformation(Model model, HttpServletRequest request,String NickName) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        System.out.println("sessionuser"+user);
+        userService.ModifyName(request,user,NickName);
+        model.addAttribute("user", user);
+        return new ModelAndView("redirect:/UserManagementController/ipinfor");
+    }
+
     //修改昵称
     @RequestMapping("changeInformation")
     public ModelAndView ModifyName(Model model, HttpServletRequest request,String NickName) {
@@ -79,6 +115,24 @@ public class UserManagementController extends BaseController {
         model.addAttribute("user", user);
         return new ModelAndView("information");
     }
+
+    //修改头像(shouj)
+    @RequestMapping("/ModifyIpAvatar")
+    public ModelAndView ModifyIpAvatar(@RequestParam("file") MultipartFile myFileName, HttpSession session,
+                            Model model, HttpServletRequest request) throws IOException {
+        String fileName = myFileName.getOriginalFilename();
+        CheckImage checkImage = new CheckImage();
+        User user = null;
+        if(checkImage.verifyImage(fileName)){
+            user = userService.ModifyAvatar(session,request,myFileName);
+        }else{
+            user = (User) session.getAttribute("user");
+            model.addAttribute("mag","文件格式不正确");
+        }
+        model.addAttribute("user", user);
+        return new ModelAndView("redirect:/UserManagementController/ipinfor");
+    }
+
 
     //跳转到修改密码
     @RequestMapping("/toChangePassword")
@@ -141,12 +195,28 @@ public class UserManagementController extends BaseController {
         return new ModelAndView("redirect:/UserManagementController/information");
     }
 
+    //手机端修改性别
+    @RequestMapping("changeIpSex")
+    public ModelAndView changeIpSex(Model model,HttpSession session,String sex){
+        User user = (User)session.getAttribute("user");
+        userService.ModifySex(user,sex,session);
+        return new ModelAndView("redirect:/UserManagementController/ipinfor");
+    }
+
     //修改用户地区
     @RequestMapping("changeAddress")
     public ModelAndView changeAddress(Model model,HttpSession session,String address){
         User user = (User)session.getAttribute("user");
         userService.changeAddress(user,address,session);
         return new ModelAndView("redirect:/UserManagementController/information");
+    }
+
+    //手机端修改用户地区
+    @RequestMapping("changeIpAddress")
+    public ModelAndView changeIpAddress(Model model,HttpSession session,String address){
+        User user = (User)session.getAttribute("user");
+        userService.changeAddress(user,address,session);
+        return new ModelAndView("redirect:/UserManagementController/ipinfor");
     }
 
 

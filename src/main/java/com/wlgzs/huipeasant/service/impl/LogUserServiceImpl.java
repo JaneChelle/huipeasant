@@ -55,6 +55,7 @@ public class LogUserServiceImpl implements LogUserService {
     @Override
     public String login(HttpServletRequest request, String phoneNumber, String password) {
         User user = logUserRepository.checkPhoneNumber(phoneNumber);
+        System.out.println("user====="+user);
         if (user != null) {
             if (user.getPassword().equals(password)) {//正确
                 HttpSession session = request.getSession(true);
@@ -62,7 +63,6 @@ public class LogUserServiceImpl implements LogUserService {
                     session.setAttribute("adminUser", user);
                     return "管理员登录成功！";
                 } else {
-
                     session.setAttribute("user", user);
                     return "登录成功！";
                 }
