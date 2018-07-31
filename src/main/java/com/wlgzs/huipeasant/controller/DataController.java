@@ -130,12 +130,6 @@ public class DataController extends BaseController {
             return new ModelAndView("ask");
         }
     }
-        @GetMapping("ipviewartical/{dataId}")  //手机端观看文章
-        public ModelAndView ipViewArtical(Model model,@PathVariable("dataId") long dataId){
-            model.addAttribute("data", dataService.dataView(dataId));
-            model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
-            return new ModelAndView("");
-        }
     @PostMapping("/keyword")//下拉框提示接口
     public Result keyword(Model model, @RequestParam("keyword") String keyWord) {
         return new Result(ResultCode.SUCCESS, dataService.getKeyWord(keyWord));
