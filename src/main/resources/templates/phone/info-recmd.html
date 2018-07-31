@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>资讯推荐农技培训平台-慧农移动在线</title>
+		<title>资讯推荐-农技培训平台-慧农移动在线</title>
 		<link rel="stylesheet" th:href="@{/ipcss/info-recmd.css}">
 		<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
 		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
@@ -24,7 +24,7 @@
                     <a th:href="article.html" th:text="${datas.contentsTitle}">2018年5~6份“植保之星”服务排行榜</a>
                     <div class="imgfont">
                         <a href="article.html">
-                            <img th:src="${datas.pictureAddress}" alt="" style="width: 120px;height: 68px;">
+                            <img th:src="'/Path'+${datas.pictureAddress}" alt="" style="width: 120px;height: 68px;">
                         </a>
                         <div class="imgrt">
                             <p>

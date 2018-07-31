@@ -21,7 +21,7 @@
 				<span style="position: absolute;right: 4%;"><a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
 					登录
 				</a></span>
-				<span style="position: absolute;right: 8%;"><a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
+				<span style="position: absolute;right: 17%;"><a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
 					注册
 				</a></span>
 				<span><a href="search.html"><i class="iconfont">&#xe616;</i></a></span>
@@ -56,13 +56,13 @@
 					<a th:href="@{/VideoController/allIpVideoList}" style="background-color: #82A6F5;">
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe628;</i>
 					</a>
-					<b>看视频</b>
+					<b>视频培训</b>
 				</div>
 				<div class="plate">
-					<a href="Find-the-answer.html" style="background-color: #EAF048;">
+					<a href="/user/morequestion" style="background-color: #EAF048;">
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe623;</i>
 					</a>
-					<b>找答案</b>
+					<b>问题解答</b>
 				</div>
 				<div class="plate">
 					<a  th:href="@{/user/toipindex/1/1}" style="background-color: #9FF048;">
@@ -76,7 +76,7 @@
 						<!--<b>视频<br />专区</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe608;</i>
 					</a>
-					<b>病虫害图库</b>
+					<b>病虫害图</b>
 				</div>
 				<div class="plate">
 					<a th:href="@{/VideoController/videoIpRanking}" style="background-color: #8F1D78;">
@@ -86,25 +86,25 @@
 					<b>视频排行</b>
 				</div>
 				<div class="plate">
-					<a th:href="@{/user/toipindex/2/1}" style="background-color: #FF534D;">
+					<a th:href="@{/user/toipindex/3/1}" style="background-color: #FF534D;">
 						<!--<b>文章<br />推送</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe618;</i>
 					</a>
 					<b>资讯推荐</b>
 				</div>
 				<div class="plate">
-					<a href="List-of-articles.html" style="background-color: #57D2F7;">
+					<a href="/user/updateaticel/1" style="background-color: #57D2F7;">
 						<!--<b>咨询<br />答案</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe6b9;</i>
 					</a>
 					<b>文章排行</b>
 				</div>
 				<div class="plate">
-					<a th:href="@{/user/ipquestion}" style="background-color:#00B38C;">
+					<a href="/user/ipquestion" style="background-color:#00B38C;">
 						<!--<b>文章<br />推送</b>-->
 						<i class="iconfont" style="font-size: 25px;color: #fff;">&#xe76f;</i>
 					</a>
-					<b>问问题</b>
+					<b>问题提问</b>
 				</div>
 			</div>
 			<!--资讯推荐-->
@@ -115,10 +115,10 @@
 				</div>
 				<div class="show">
 					<ul>
-						<li class="lis" th:each="infor:${infor}">
+						<li class="lis" th:each="infor:${infor}" style="margin-right: 5px">
 							<div>
 								<a href="info-recmd.html">
-									<img th:src="${infor.pictureAddress}" alt="" style="height:70px;border-radius: ;">
+									<img th:src="'/Path'+${infor.pictureAddress}" alt="" style="height:70px;border-radius: 5px;width: 84px;">
 								</a>
 							</div>
 							<p class="limit" th:text="${infor.contentsTitle}">小麦价格稳中下跌</p>
@@ -170,22 +170,24 @@
 			<div class="videoarea">
 				<div class="video" th:each="collections:${collections}">
 					<div class="font-left" th:text="${collections.modelTitle}">
+						<a th:each="datas ：${datas}" th:href="@{/user/textview/${datas.dataId}">
 						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
 						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
+						</a>
 					</div>
 					<div class="video-right"> 
-						<img th:src="${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
+						<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
 					</div>
 				</div>
-				<div class="video">
-					<div class="font-left">
-						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
-						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
-					</div>
-					<div class="video-right"> 
-						<img src="../pc/images/d6.jpg" style="height: 60px;width: 92.35px;border-radius: 5px;"/>
-					</div>
-				</div>
+				<!--<div class="video">-->
+					<!--<div class="font-left">-->
+						<!--一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，-->
+						<!--一场暴雨淋湿了未打伞的你，用荷叶做成的雨-->
+					<!--</div>-->
+					<!--<div class="video-right"> -->
+						<!--<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;"/>-->
+					<!--</div>-->
+				<!--</div>-->
 			</div>
 		</li>
 <!--3.我的-->

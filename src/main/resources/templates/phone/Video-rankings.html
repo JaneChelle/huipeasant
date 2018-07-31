@@ -20,28 +20,16 @@
 		<ul>
 			<li>
 				<span class="number"><i class="iconfont" style="color: red;">&#xe61e;</i></span>
-				<span >陆军征兵宣传片</span>
+				<span >黄瓜怎么种的又大又好吃</span>
 				<span class="hot"><i class="iconfont">&#xe615;</i></span>
 			</li>
 			<li th:each="videoList:${videoList}">
-				<span class="number">1</span>
-				<span th:text="${videoList.videoIntroduction}">小麦种植</span>
-				<span th:text="${videoList.videoHits}"><em>66555</em></span>
+				<span class="number" th:text="${videoList.videoId}">1</span>
+				<span th:text="${videoList.videoTitle}">小麦种植</span>
+				<span><em th:text="${videoList.videoHits}">66555</em></span>
 				<span class="hot">
 					<i class="iconfont">&#xe615;</i>
 				</span>
-			</li>
-			<li>
-				<span class="number">2</span>
-				<span>玉米变黄</span>
-				<span><em>66123</em></span>
-				<span class="hot"><i class="iconfont">&#xe615;</i></span>
-			</li>
-			<li>
-				<span class="number">3</span>
-				<span>防治蝗虫</span>
-				<span><em>55555</em></span>
-				<span class="hot"><i class="iconfont">&#xe615;</i></span>
 			</li>
 		</ul>
 	</body>

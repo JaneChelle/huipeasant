@@ -37,7 +37,8 @@ public class VideoController extends BaseController {
     //全部视频 （手机）
     @RequestMapping("allIpVideoList")
     public ModelAndView allipVideoList(Model model){
-
+        List<Video> videoList = videoService.findAllVideo();
+        model.addAttribute("videoList",videoList);
         return new ModelAndView("/phone/VideoList");
     }
 
