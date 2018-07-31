@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -23,7 +24,9 @@ public class CollectionController extends BaseController {
 
     //添加收藏
     @RequestMapping("/addCollectionVideo")
-    public ModelAndView addCollectionVideo(long userId,long videoId){
+    public ModelAndView addCollectionVideo(HttpSession session,long videoId){
+        User user = (User)session.getAttribute("user");
+        long userId = user.getUserId();
         collectionService.collectionVideo(userId,videoId);
         return new ModelAndView("redirect:/VideoController/detailsVideo?videoId="+videoId);
     }
@@ -44,4 +47,24 @@ public class CollectionController extends BaseController {
         model.addAttribute("collections",collections);
         return new ModelAndView("mycollection");
     }
+
+    //查看收藏(手机)
+    @RequestMapping("/ViewIpcollection")
+    public ModelAndView ViewIpcollection( Model model){
+        User user = (User)session.getAttribute("user");
+        long userId = user.getUserId();
+        List<Collection> collections = collectionService.toCollection(userId);
+        model.addAttribute("collections",collections);
+        return new ModelAndView("phone/ipcollection");
+    }
+
+    //添加收藏
+    @RequestMapping("/addIpCollectionVideo")
+    public ModelAndView addIpCollectionVideo(long videoId,HttpSession session){
+        User user = (User)session.getAttribute("user");
+        long userId = user.getUserId();
+        collectionService.collectionVideo(userId,videoId);
+        return new ModelAndView("");
+    }
+
 }

@@ -9,9 +9,15 @@ spring:
             content-type: text/html
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+<<<<<<< HEAD
     url: jdbc:mysql://119.23.34.120/huipeasant?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
     username: user
     password: 123456
+=======
+    url: jdbc:mysql://120.79.249.80/huipeasant?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    username: root
+    password: wqj123
+>>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
   jpa:
     hibernate:
       ddl-auto: update

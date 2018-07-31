@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>慧农注册-农技培训</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+</head>
+<body style="background-color: #FFF;">
+<div id="header">
+    <div class="header">
+        <a th:href="@{/toindex}" title="返回首页" target="_blank">
+            <img th:src="@{/img/peasanter.png}"/>
+        </a>
+        <span>
+					<i>Hui-peasant</i>
+					<b>在线服务平台</b>
+				</span>
+    </div>
+</div>
+<div class="register">
+    <div class="steps">
+        <ul>
+            <li class="active ulist-1"><b>1.</b>填写账户信息</li>
+            <li class="active ulist-2"><b>2.</b>设置用户名</li>
+            <li class="active ulist-3"><b>3.</b>注册成功</li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="register-list register-main-list" id="register-done">
+        <div class="register-group">
+            <div class="register-item">
+                <div class="item-ico"><i class="iconfont">&#xe627;</i></div>
+            </div>
+            <div class="register-item" style="text-align: center;">
+                <div class="item-done">
+                    注册成功！欢迎您<a th:href="@{/LogUserController/toLogin}" target="_blank">登录</a>慧农
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" th:src="@{/js/register.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</html>

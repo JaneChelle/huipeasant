@@ -8,6 +8,10 @@
 		<link rel="stylesheet"  th:href="@{/css/header.css}" />
 		<link rel="stylesheet"   th:href="@{/css/index.css}" />
 		<link rel="stylesheet" type="text/css"   th:href="@{/css/question.css}" />
+		<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+		<script type="text/javascript"  th:src="@{/js/train.js}" ></script>
+		<script th:src="@{/js/index.js} "></script>
+		<script th:src="@{/js/article.js}"></script>
 	</head>
 	<body>
 	<div th:include="/common/common :: headere"></div>
@@ -15,8 +19,10 @@
 			<div class="contain">
 				<div class="nav">
 					<div class="wrapper-l">
+
 						<h1 th:each="data : ${data}" th:text="${data.contentsTitle}">科学使用农药技术</h1>
 						<div class="wrapper-time">
+							<input type="hidden" th:value="${data.dataId}" id="ipt">
 							<span>2018-4-30</span>
 							<span style="margin-left: 18px;" th:each="data : ${data}" th:text="${data.uploadTime}"> 14:14:14</span>
 						</div>
@@ -43,8 +49,12 @@
 							<div class="recommend">
 								我要评论
 							</div>
-							<div>
-								<textarea></textarea>
+							<div >
+
+								<textarea name="commentContent" id="txt"></textarea>
+							</div>
+							<div class="aaa">
+								<a th:each="data : ${data}" th:href="'/user/morecomment/'+${data.dataId}" style="color: #fff;">更多</a>
 							</div>
 						</div>
 
@@ -69,6 +79,7 @@
 				</div>
 			</div>
 		</div>
+	<div class="prompt">评论成功</div>
 <!--尾部-->
 		<footer>
 		    <div class="divFt">
@@ -97,13 +108,40 @@
 		        </dl>
 		        <dl>
 		            <dt>
-		                <img src="img/code.png"/>
+		                <img th:src="@{/img/code.png}"/>
 		            </dt>
 		        </dl>
 		    </div>
 		</footer>
 	</body>
-	<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
-	<script type="text/javascript"  th:src="@{/js/train.js}" ></script>
-	<script th:src="@{/js/index.js} "></script>
+	<script>
+        $(document).ready(function () {
+            $(".recommend").click(function () {
+                var txt=$("#txt").val();
+                var dataId=$("#ipt") .val();
+                $.ajax({
+                    url:"/user/tocomment",
+                    type:'POST',
+                    data:{
+                        "dataId":dataId,
+                        "content":txt
+                    },
+                    dataType:"text",
+                    success:function(){
+                        document.getElementsByClassName("prompt")[0].style.display = "block";
+                        setTimeout(function () {
+                            document.getElementsByClassName("prompt")[0].style.display = "none";
+                        }, 1000);
+                        //alert("111");
+                        //location.reload();
+
+                    },
+                    error:function () {
+                        alert("请求失败");
+                    }
+                });
+
+            });
+        });
+	</script>
 </html>

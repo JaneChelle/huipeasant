@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>慧农在线-农技培训服务平台</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet"  th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css"   th:href="@{/css/Modify.css}" />
+</head>
+<body>
+<div class="windoww">
+    <div class="popup-windows">
+        <h2 style="text-align: center">修改视频</h2>
+        <form enctype="multipart/form-data" method="post" th:action="@{/AdminVideoController/adminEditProduct}">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>视频ID</th>
+                    <td><input type="text" name="videoId" th:value="${video.videoId}" class="form-control"  value="" id="username" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>视频标题</th>
+                    <td><input type="text" name="videoTitle" th:value="${video.videoTitle}" class="form-control"  value="" id="username" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>作者提示</th>
+                    <td>
+                        <input type="text" name="authorSuggests" th:value="${video.authorSuggests}" class="form-control"  value="" id="userphone" required="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>视频封面</th>
+                    <td><input type="file" name="file" class="form-control" value="" id="pwd" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>模块名字</th>
+                    <td><input type="text" name="modelName" th:value="${video.modelName}" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>视频简介</th>
+                    <td><input type="text" name="videoIntroduction" th:value="${video.videoIntroduction}" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <th>视频标题</th>
+                    <td><input type="text" name="videoTitle" th:value="${video.videoTitle}" class="form-control" value="" id="" required="required"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="reset" value="重置" class="btn btn-primary" id="reset"/>
+                        <input type="submit" value="修改"  class="btn btn-success" id="add"  onclick="dd()"/>
+                        <a th:href="@{/AdminVideoController/adminVideoList}">
+                        	<input type="button" value="取消"  class="btn btn-info"  style="background-color: orangered"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript"  th:src="@{/js/adminEdit.js}" ></script>
+</html>

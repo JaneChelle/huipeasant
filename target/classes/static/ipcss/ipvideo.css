@@ -56,7 +56,11 @@ a{
 .video-import a{
 	display: inline-block;
 	width: 45%;
+<<<<<<< HEAD
     min-height: 100px;
+=======
+    height: 100px;
+>>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
     margin: 2%;
 }
 .video-import a img{
@@ -92,4 +96,8 @@ a{
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
     color: #fff;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
