@@ -65,7 +65,7 @@ public class DataController extends BaseController {
         }
         model.addAttribute("infor",dataService.information());
         model.addAttribute("question",dataService.ipQuestion(2,1,model));
-        return new ModelAndView("/phone/ipindex");
+        return new ModelAndView("phone/ipindex");
     }
 
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章的接口
@@ -169,17 +169,17 @@ public class DataController extends BaseController {
 
     }
 
-    //进入搜索页面
+    //进入sjid搜索页面
     @RequestMapping("/toSearch")
     public ModelAndView toSearch() {
         return new ModelAndView("phone/search") ;
     }
 
-    @PostMapping("searchDataIP")   //搜索
-    public ModelAndView searchDataIP(Model model, String dataName) {
-        model.addAttribute("datas", dataService.searchData(dataName));
-        return new ModelAndView("phone/search-a");
-    }
+//    @PostMapping("searchDataIP")   //搜索
+//    public ModelAndView searchDataIP(Model model, String dataName) {
+//        model.addAttribute("datas", dataService.searchData(dataName));
+//        return new ModelAndView("phone/search-a");
+//    }
     @RequestMapping("morequestion")  //手机端更多问题
     public ModelAndView moreQuestion(Model model) {
         model.addAttribute("question", dataService.getAllipQuestion());

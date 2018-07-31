@@ -34,13 +34,27 @@
 			<div class="header">
 				<span>农技培训平台</span>
 
-				<span style="position: absolute;right: 4%;"><a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
+				<span th:if="${session.user}==null">
+					<span style="position: absolute;right: 4%;">
+					<a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
 					登录
-				</a></span>
-				<span style="position: absolute;right: 17%;"><a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
-					注册
-				</a></span>
-				<span><a href="search.html"><i class="iconfont">&#xe616;</i></a></span>
+					</a>
+					</span>
+					<span style="position: absolute;right: 17%;">
+						<a th:href="@{/LogUserController/toipRegistered}" style="color: #fff">
+						注册
+						</a>
+					</span>
+				</span>
+				<span th:if="${session.user}!=null">
+					<!--<a th:href="@{/UserManagementController/information}">个人中心</a>-->
+				</span>
+
+				<span>
+					<a th:href="@{/user/toSearch}">
+						<i class="iconfont">&#xe616;</i>
+					</a>
+				</span>
 
 			</div>
 			<!--轮播图-->
@@ -128,13 +142,15 @@
 			<div class="videoRecommend">
 				<div class="font">
 					<p class="font-p">资讯推荐</p>
-					<span style="float: right;margin-right: 6%;"><a href="info-recmd.html">更多</a></span>
+					<span style="float: right;margin-right: 6%;">
+						<a th:href="@{/user/toipindex/3/1}">更多</a>
+					</span>
 				</div>
 				<div class="show">
 					<ul>
 						<li class="lis" th:each="infor:${infor}" style="margin-right: 5px">
 							<div>
-								<a th:href="'/user/ipviewartical/'+${infor.dataId}">
+								<a th:href="@{'/user/ipviewartical/'+${infor.dataId}}">
 									<img th:src="'/Path'+${infor.pictureAddress}" alt="" style="height:70px;border-radius: 5px;width: 84px;">
 								</a>
 							</div>
@@ -148,7 +164,9 @@
 			<div class="hotask">
 				<div class="font">
 					<p class="font-p">热门提问</p>
-					<span style="float: right;margin-right: 6%;"><a href="Find-the-answer.html">更多</a></span>
+					<span style="float: right;margin-right: 6%;">
+						<a href="/user/morequestion">更多</a>
+					</span>
 				</div>
 
 				<div class="user" th:each="blogId,key : ${question}">
@@ -182,7 +200,9 @@
 		<li style="display: none;" id="li-two">
 			<div class="header">
 				<span>我的收藏</span>
-				<span style="position: absolute;right: 4%;"><a th:href="@{/user/toipindex}"><i class="iconfont">&#xe60f;</i></a></span>
+				<span style="position: absolute;right: 4%;"><a th:href="@{/user/toipindex}">
+					<i class="iconfont">&#xe60f;</i></a>
+				</span>
 			</div>
 			<div class="videoarea">
 				<div class="video" th:each="collection:${collections}">
@@ -203,19 +223,24 @@
 		</li>
 <!--3.我的-->
 		<li style="display: none;" id="li-three">
+
 			<div class="header">
 				<span>个人中心</span>
-				<span style="position: absolute;right: 4%;"><a th:href="@{/user/toipindex}"><i class="iconfont">&#xe60f;</i></a></span>
+				<span style="position: absolute;right: 4%;">
+					<a th:href="@{/LogUserController/Ipcancellation}">
+						<i class="iconfont">&#xe60f;</i>
+					</a>
+				</span>
 			</div>
 			<div class="user-at">
 				<div>
-					<h2>在水一方</h2><br>
-					<span><a href="ipinfo.html" class="user-at-font">查看或编辑个人信息</a></span>
+					<h2 th:text="${session.user.nickName}">在水一方</h2><br>
+					<span>
+						<a th:href="@{/UserManagementController/ipinfor}" class="user-at-font">查看或编辑个人信息</a>
+					</span>
 				</div>
 				<div style="margin-left: 30%;">
-					<!--<a href="">-->
-						<img th:src="@{/images/rb1.jpg}" style="width: 80px;height: 80px;border-radius: 100%;"/>
-					<!--</a>-->
+					<img th:src="'/Path/'+${session.user.headPortrait}" style="width: 80px;height: 80px;border-radius: 100%;"/>
 				</div>
 			</div>
 			<div class="lists">
@@ -223,7 +248,7 @@
 					<li>
 						<span><i class="iconfont" style="color:red;">&#xe60a;</i></span>&nbsp;&nbsp;
 						<span>
-							<a href="ipinfo.html">个人信息</a>
+							<a th:href="@{/UserManagementController/ipinfor}">个人信息</a>
 						</span>
 					</li>
 					<!--<li>-->
@@ -233,22 +258,23 @@
 						<!--</span>-->
 					<!--</li>-->
 					<li>
-						<span><i class="iconfont" style="color: orangered;">&#xe67c;</i></span>&nbsp;&nbsp;
 						<span>
-							<a href="ipcollection.html">我的收藏</a>
+							<i class="iconfont" style="color: orangered;">&#xe67c;</i>
+						</span>&nbsp;&nbsp;
+						<span>
+							<a th:href="@{/CollectionController/ViewIpcollection}">我的收藏</a>
 						</span>
 					</li>
 					<li>
 						<span><i class="iconfont" style="color: mediumpurple;">&#xe636;</i></span>&nbsp;&nbsp;
 						<span>
-							<a href="">退出</a>
+							<a th:href="@{/LogUserController/Ipcancellation}">退出</a>
 						</span>
 					</li>
 				</ul>
 			</div>
 		</li>
 	</ul>
-
 </div>
 
 </body>

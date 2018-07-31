@@ -31,7 +31,7 @@ public class LogUserController extends BaseController {
     //2.去注册
     @RequestMapping("/toipRegistered")
     public ModelAndView toipRegister() {
-        return new ModelAndView("ipregister") ;
+        return new ModelAndView("/phone/ipregister") ;
     }
 
     //ip去注册
@@ -107,6 +107,12 @@ public class LogUserController extends BaseController {
     public ModelAndView cancellation(HttpServletRequest request) {
         logUserService.cancellation(request);
         return new ModelAndView("redirect:/LogUserController/toLogin");
+    }
+    //用户手机端退出
+    @RequestMapping("Ipcancellation")
+    public ModelAndView Ipcancellation(HttpServletRequest request) {
+        logUserService.cancellation(request);
+        return new ModelAndView("redirect:/LogUserController/Iplogin");
     }
 
     //管理员退出

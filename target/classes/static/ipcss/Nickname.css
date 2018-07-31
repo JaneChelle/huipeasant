@@ -36,6 +36,11 @@ body{
 a{
 	text-decoration: none;
 }
+.header .save{
+    display: inline-block;
+    width: 42px;
+    text-align: center;
+}
 .header>span>a{
 	color: #fff;
 }

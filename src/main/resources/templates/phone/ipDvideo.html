@@ -22,8 +22,9 @@
 <div class="video-import">
     <h3 th:text="${video.videoTitle}"></h3>
     <div class="l">
-
+        <a th:href="@{/VideoController/toIpPcvideo(videoAddress=${video.videoAddress})}">
             <img th:src="'/Path/'+${video.videoCover}"/>
+        </a>
     </div>
     <div class="lists">
         <ul>

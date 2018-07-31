@@ -105,6 +105,8 @@ h3{
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
+=======
 .anser>div{
 	padding: 10px;
 	margin: 20px;
@@ -181,3 +183,4 @@ textarea{
 	width: 400px;
 	height: 140px;
 }
+>>>>>>> 9bb3e47f8048f652501472256e1f8027a4021424
