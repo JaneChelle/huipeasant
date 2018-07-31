@@ -2,38 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0494e8b-8a0e-48d6-a59c-36dd14630134" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/videomore.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/iplogin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/ipregister.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/ipjs/search.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/ipregister.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/search-a.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/videomore.html" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/LogUserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/adminVideoList.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/adminVideoList.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/iplogin.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/iplogin.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/Article.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/Article.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipindex.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/ipindex.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/iplogin.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/iplogin.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ipcss/search.css" afterPath="$PROJECT_DIR$/src/main/resources/static/ipcss/search.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminUserList.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/adminUserList.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/train.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/train.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/area.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/area.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/information.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/information.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mycollection.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/mycollection.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/myqusetion.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/myqusetion.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personal.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/personal.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/iplogin.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/iplogin.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/phone/search.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/search.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/train.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/train.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/DataController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/LogUserController.class" afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/controller/LogUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/information.html" afterPath="$PROJECT_DIR$/target/classes/templates/information.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mycollection.html" afterPath="$PROJECT_DIR$/target/classes/templates/mycollection.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/myqusetion.html" afterPath="$PROJECT_DIR$/target/classes/templates/myqusetion.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/phone/ipindex.html" afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipindex.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/qusetion.html" afterPath="$PROJECT_DIR$/target/classes/templates/qusetion.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/train.html" afterPath="$PROJECT_DIR$/target/classes/templates/train.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,106 +42,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="List-of-articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html">
+      <file leaf-file-name="qusetion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qusetion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="455">
+              <caret line="21" column="91" lean-forward="false" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article-push.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html">
+      <file leaf-file-name="myqusetion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myqusetion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="85" lean-forward="false" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="30" />
+            <state relative-caret-position="260">
+              <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
               <folding>
-                <element signature="e#1723#1724#0" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="294" column="41" lean-forward="false" selection-start-line="294" selection-start-column="41" selection-end-line="294" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ipindex.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Article.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ipcollection.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipcollection.html">
+      <file leaf-file-name="mycollection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mycollection.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
-              <caret line="8" column="100" lean-forward="false" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
+              <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserManagementController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="151" column="27" lean-forward="true" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="information.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/information.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="area.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/area.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/personal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogUserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1930">
+              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -185,39 +179,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/Person-centers.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/toaddData.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/question.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/asked.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/toaddData.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/header.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/material.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/common/common.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mycollection.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/myqusetion.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/article.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/Person-center.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/train.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/ask.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ask.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/information.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/article.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/question.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/comment.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/insect.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/ipcss/Ask-qusetions.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Ask-questions.html" />
@@ -225,17 +204,32 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/info-recmd.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Video-rankings.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Find-the-answer.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/ipcss/ipvideo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/VideoList.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/video.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/Article-push.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/train.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/train.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/myqusetion.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mycollection.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/information.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/area.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/personal.html" />
       </list>
     </option>
   </component>
@@ -612,12 +606,12 @@
       <updated>1532589422950</updated>
       <workItem from="1532589424918" duration="55029000" />
       <workItem from="1532741451848" duration="2099000" />
-      <workItem from="1532743611685" duration="91835000" />
+      <workItem from="1532743611685" duration="102195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148963000" />
+    <option name="totallyTimeSpent" value="159323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -639,7 +633,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36461705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2837109" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5404531" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -696,110 +690,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/admin/AdminVideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding>
-            <marker date="1532945602836" expanded="false" signature="3576:3585" ph=" { " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminVideoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2646">
-          <caret line="23" column="66" lean-forward="true" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminUserList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2704">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-center.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/train.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring5/3.0.9.RELEASE/thymeleaf-spring5-3.0.9.RELEASE.jar!/org/thymeleaf/spring5/expression/SPELVariableExpressionEvaluator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="38" column="52" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/ask.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="153" column="31" lean-forward="true" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/Person-center.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -848,45 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myqusetion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2589">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding>
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1092#1093#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/VideoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -896,16 +757,6 @@
         <state relative-caret-position="442">
           <caret line="80" column="96" lean-forward="false" selection-start-line="80" selection-start-column="96" selection-end-line="80" selection-end-column="96" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qusetion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2589">
-          <caret line="145" column="9" lean-forward="false" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,22 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/information.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="211" column="7" lean-forward="true" selection-start-line="211" selection-start-column="7" selection-end-line="211" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Find-the-answer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1001,14 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pcvideo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -1028,22 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipcollection.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1052,35 +863,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="294" column="41" lean-forward="false" selection-start-line="294" selection-start-column="41" selection-end-line="294" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/Article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        <state relative-caret-position="312">
+          <caret line="15" column="66" lean-forward="true" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/iplogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="75" lean-forward="true" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="254" column="53" lean-forward="true" selection-start-line="254" selection-start-column="53" selection-end-line="254" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,10 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="491">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1108,24 +913,210 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/List-of-articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="294" column="41" lean-forward="false" selection-start-line="294" selection-start-column="41" selection-end-line="294" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Person-center.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/train.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/LogUserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/dao/CollectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/CollectionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/CollectionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/train.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CollectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="180" column="30" lean-forward="true" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="30" />
+        <state relative-caret-position="-3238">
+          <caret line="54" column="43" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding>
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#6178#6179#0" expanded="true" />
+            <element signature="e#6234#6235#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/phone/ipindex.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/ModuleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
+        <state relative-caret-position="64">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/LogUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1930">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/UserManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="151" column="27" lean-forward="true" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mycollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myqusetion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qusetion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="21" column="91" lean-forward="false" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/personal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,46 +1,17 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 	<head>
 		<meta charset="utf-8">
 		<title>地区分析-慧农在线</title>
   	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-  	<link rel="stylesheet" href="css/area.css">
-  	<link rel="stylesheet" href="css/header.css">
-   	<link rel="shortcut icon" href="images/login.ico" type="image/x-icon">
-   	<script src="js/area.js"></script>
+  	<link rel="stylesheet" th:href="@{/css/area.css}">
+  	<link rel="stylesheet" th:href="@{/css/header.css}">
+   	<link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+   	<script th:src="@{/js/area.js}"></script>
 	</head>
 
 	<body>
-		<div class="head" >
-  <div class="header">
-    <div class="header-left" title="慧农在线">
-      <a href="index.html">
-        <img src="img/peasanter.png"/>
-        <b>慧农在线</b>
-      </a>
-    </div>
-    <div class="header-right">
-      <a href="login.html">
-        <i class="iconfont">&#xe61a;</i>
-        <span>登录</span>
-      </a>
-      <a href="register.html">注册</a>
-      <a id="qr-code">
-        <span>手机端</span>
-        <i class="iconfont">&#xe622;</i>
-      </a>
-    </div>
-    <div class="qr-code">
-      <img src="img/code.png"/>
-    </div>
-    <div class="search">
-      <form action="">
-        <input type="text" name="" id="" value="" placeholder="请输入您要搜索的内容..."/>
-        <button type="submit"></button>
-      </form>
-    </div>
-  </div>
-</div>
+    <div th:include="/common/common :: headere"></div>
 	<div class="titlecure">
 				<h1>台前县地区视频点击量统计图</h1>
 			</div>

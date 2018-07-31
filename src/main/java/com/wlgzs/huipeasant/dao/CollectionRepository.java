@@ -18,4 +18,8 @@ public interface CollectionRepository extends JpaRepository<Collection, Long>,Jp
     @Query(value = "SELECT c FROM Collection c WHERE c.userId=?1")
     List<Collection> findCollectionByUserId(long userId);
 
+    //查找视频是否被收藏
+    @Query(value = "SELECT c FROM Collection c WHERE c.userId=?1 and c.videoId=?2")
+    Collection isCollection(long userId,long videoId);
+
 }

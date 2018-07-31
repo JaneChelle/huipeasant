@@ -27,15 +27,17 @@ public class CollectionController extends BaseController {
     public ModelAndView addCollectionVideo(HttpSession session,long videoId){
         User user = (User)session.getAttribute("user");
         long userId = user.getUserId();
-        collectionService.collectionVideo(userId,videoId);
-        return new ModelAndView("redirect:/VideoController/detailsVideo?videoId="+videoId);
+        if(!collectionService.isCollection(videoId,session)){
+            collectionService.collectionVideo(userId,videoId);
+        }
+        return new ModelAndView("redirect:/VideoController/videoDetails?videoId="+videoId);
     }
 
     //删除收藏
     @RequestMapping("/deleteCollection")
-    public ModelAndView deleteCollection(long collectionId,long userId){
-        collectionService.deleteCollection(collectionId);
-        return new ModelAndView("index");
+    public ModelAndView deleteCollection(long videoId,HttpSession session){
+        collectionService.deleteCollection(videoId,session);
+        return new ModelAndView("redirect:/VideoController/videoDetails?videoId="+videoId);
     }
 
     //查看收藏
