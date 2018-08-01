@@ -36,7 +36,7 @@
 
 				<span th:if="${session.user}==null">
 					<span style="position: absolute;right: 4%;">
-					<a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
+					<a th:href="@{/LogUserController/toIpLogin}" style="color: #fff">
 					登录
 					</a>
 					</span>
@@ -59,21 +59,9 @@
 			</div>
 			<!--轮播图-->
 			<div class="con-lun">
-				<a href="#" class="wrip-img max">
-					<img th:src="@{/img/timg (2).jpg}" alt="1">
+				<a th:each="picture : ${picture}"  th:href="@{'/user/ipviewartical/'+${picture.dataId}}"   class="wrip-img max">
+					<img th:src="'/Path'+${picture.pictureAddress}"  th:alt="${picture.identity}">
 				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/timg (1).jpg}" alt="2">
-				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/timg (4).jpg}" alt="3">
-				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/4.jpg}" alt="4">
-				</a>
-				<div  class="wrip-img">
-					<img th:src="@{/img/5.jpg}" alt="5">
-				</div>
 				<a href="javascript:;" id="prev" class="arrow">
 					<i class="fa fa-chevron-left"></i>
 				</a>

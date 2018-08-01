@@ -18,7 +18,7 @@
 				<!--<span style="margin-right: 4%;float: right;"><input type="submit" value="保存" class="btn-keep"/></span>-->
 		</div>
 		<div class="video-import" >
-			<a th:href="@{/VideoController/toIpPcvideo(videoAddress=${video.videoAddress})}" th:each="video:${videoList}">
+			<a th:href="@{/VideoController/videoIpDetails(videoId=${video.videoId})}" th:each="video:${videoList}">
 				<!--<div class="video-ico" ><i class="iconfont">&#xe768;</i></div>-->
 				<img th:src="'/Path/'+${video.videoCover}"  alt="" />
 				<p th:text="${video.videoIntroduction}">ddf</p>

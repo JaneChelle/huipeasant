@@ -5,7 +5,6 @@ import com.wlgzs.huipeasant.entity.User;
 import com.wlgzs.huipeasant.util.CheckImage;
 import com.wlgzs.huipeasant.util.Result;
 import com.wlgzs.huipeasant.util.ResultCode;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

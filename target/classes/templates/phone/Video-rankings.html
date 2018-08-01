@@ -20,7 +20,7 @@
 		<ul>
 			<li th:each="videoList:${videoList}" th:if="${videoList.code}<=3">
 				<span class="number" th:text="${videoList.code}">1</span>
-				<span ><a th:href="@{/VideoController/toIpPcvideo(videoAddress=${videoList.videoAddress})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
+				<span ><a th:href="@{/VideoController/videoIpDetails(videoId=${videoList.videoId})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
 				<span><em th:text="${videoList.videoHits}">66555</em></span>
 				<span class="hot">
 					<i class="iconfont">&#xe615;</i>
@@ -28,7 +28,7 @@
 			</li>
 			<li th:each="videoList:${videoList}" th:if="${videoList.code}>3">
 				<span class="number" th:text="${videoList.code}">1</span>
-				<span ><a th:href="@{/VideoController/toIpPcvideo(videoAddress=${videoList.videoAddress})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
+				<span ><a th:href="@{/VideoController/videoIpDetails(videoId=${videoList.videoId})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
 				<span><em th:text="${videoList.videoHits}">66555</em></span>
 			</li>
 		</ul>

@@ -23,7 +23,6 @@ import java.util.List;
 
 public class AdminDataController extends BaseController {
 
-    @RequestMapping("toViewdata")
 
     @GetMapping("toViewdata/{level}/{page}")  //查看文章
     public ModelAndView toViewData(Model model,@PathVariable("level")  int level ,@PathVariable("page") int page) {

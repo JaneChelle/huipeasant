@@ -75,12 +75,12 @@ a{
 /*下拉列表*/
 .spin{
     display: none;
-    width: 83%;
+    /*width: 83%;*/
     position: absolute;
     top: 50px;
     padding: 12px 12px;
     z-index: 9999;
-    left: 77px;
+    /*left: 12px;*/
     border-radius: 9px;
     background-color: #fff;
 }
@@ -102,7 +102,7 @@ a{
     white-space: nowrap;
 }
 .spinners a:hover{
-    background-color: #5CB85C;
+    background-color: #F0F8FF;
     color: #fff;
     text-decoration: none;
 }

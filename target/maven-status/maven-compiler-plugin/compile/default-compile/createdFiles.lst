@@ -21,6 +21,7 @@ com\wlgzs\huipeasant\controller\DataController.class
 com\wlgzs\huipeasant\entity\Module.class
 com\wlgzs\huipeasant\util\Result.class
 com\wlgzs\huipeasant\service\ModuleService.class
+com\wlgzs\huipeasant\controller\VideoController.class
 com\wlgzs\huipeasant\entity\Data.class
 com\wlgzs\huipeasant\service\DataService.class
 com\wlgzs\huipeasant\service\impl\DataServiceImpl$4.class
