@@ -97,6 +97,7 @@ public class VideoController extends BaseController {
     }
     @RequestMapping("toIpPcvideo")
     public ModelAndView toIpPcvideo(Model model,String videoAddress){
+        System.out.println(videoAddress);
         model.addAttribute("videoAddress",videoAddress);
         return new ModelAndView("/phone/video");
     }

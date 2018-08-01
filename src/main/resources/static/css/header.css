@@ -79,12 +79,12 @@ body{
 	position: relative;
 	right: 52px;
 }
-.search form {
+.search{
 	position: relative;
 	top: 8px;
 	height: 45px;
 }
-.search form input{
+.search input{
 	width: 250px;
 	height: 42px;
 	border-radius: 42px;
@@ -93,24 +93,24 @@ body{
 	float: right;
 	padding-left: 13px;
 }
-.search form input:focus {
+.search input:focus {
 	width: 300px;
 }
-.search button {
-	width: 45px;
-	height: 42px;
-	border-radius: 5px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: #ff6600;
-	cursor: pointer;
-}
-.search button:before {
-	content: "搜索";
-	font-family: FontAwesome;
-	color: #fff;
-}
+/*.search button {*/
+	/*width: 45px;*/
+	/*height: 42px;*/
+	/*border-radius: 5px;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*right: 0;*/
+	/*background-color: #ff6600;*/
+	/*cursor: pointer;*/
+/*}*/
+/*.search button:before {*/
+	/*content: "搜索";*/
+	/*font-family: FontAwesome;*/
+	/*color: #fff;*/
+/*}*/
 /*下拉列表*/
 .spin{
 	display: none;

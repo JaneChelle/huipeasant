@@ -38,7 +38,7 @@
 					<li>
 						<div class="qusetion-bgc">
 							<div th:each="commment : ${key.current.value}">
-								<span th:text="${commment.userName}">俞华根：</span>
+								<span th:text="${commment.userName}+':'">俞华根：</span>
 								<span th:text="${commment.commentContent}" class="qusetionsty">这个问题比较复杂，大多数的</span>
 							</div>
 						</div>
