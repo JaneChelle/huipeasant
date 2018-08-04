@@ -145,6 +145,7 @@ public class DataController extends BaseController {
             return new ModelAndView("ask");
         }
     }
+
     @PostMapping("/keyword")//下拉框提示接口
     public Result keyword(Model model, @RequestParam("keyword") String keyWord) {
         return new Result(ResultCode.SUCCESS, dataService.getKeyWord(keyWord));
