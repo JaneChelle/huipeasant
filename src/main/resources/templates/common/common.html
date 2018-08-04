@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="qr-code">
-				<img src="img/code.png"/>
+				<img th:src="@{/img/code.png}"/>
 			</div>
 			<div class="search">
 				<!--<form action="/user/searchData" method="post">-->
@@ -64,22 +64,22 @@
 		<!--品牌招商区-->
 		<div class="mt10pb10">
 			<h2>品牌招商区</h2>
-			<a href="" class="divA"><img th:href="@{images/2.jpg}" alt="" style="width: 270px;height: 110px;"></a>
+			<!--<a href="" class="divA"><img th:src="@{/images/9.jpg}" alt="" style="width: 270px;height: 110px;"></a>-->
 			<!--轮播图-->
 			<div class="con-lun">
 				<a href="#" class="wrip-img max">
-					<img src="images/1.jpg" alt="1">
+					<img th:src="@{/images/9.jpg}" alt="1">
 				</a>
 				<a href="#" class="wrip-img">
-					<img src="images/2.jpg" alt="2">
+					<img th:src="@{/images/10.gif}" alt="2">
 
-					<img src="images/4.jpg" alt="3">
+					<img th:src="@{/images/9.jpg}" alt="3">
 				</a>
 				<a href="#" class="wrip-img">
-					<img src="images/3.jpg" alt="4">
+					<img th:src="@{/images/10.gif}" alt="4">
 				</a>
 				<div class="wrip-img">
-					<img src="images/2.jpg" alt="5">
+					<img th:src="@{/images/9.jpg}" alt="5">
 				</div>
 				<a href="javascript:;" id="prev" class="arrow">
 					<i class="fa fa-chevron-left"></i>
@@ -92,9 +92,9 @@
 		<!--频道本月排行-->
 		<div class="mt10pb10">
 			<h2>频道本月排行</h2>
-			<span class="pin-more">
-					<a href="" style="color: #999;">更多</a>
-				</span>
+			<!--<span class="pin-more">-->
+					<!--<a href="" style="color: #999;">更多</a>-->
+				<!--</span>-->
 			<ul>
 				<li th:each="ss : ${rank}">
 					[<a href="">
@@ -109,7 +109,7 @@
 		<!--资讯推荐-->
 		<div class="mt10pb10">
 			<h2>资讯推荐</h2>
-			<span class="pin-more"><a href="" style="color: #FE6400;">更多</a></span>
+			<!--<span class="pin-more"><a href="" style="color: #FE6400;">更多</a></span>-->
 			<ul>
 				<li th:each="infor : ${information}">
 					<span>♥</span>
@@ -205,7 +205,7 @@
 		<!--</div>-->
 		<div class="mt10pb10">
 			<H2>农技视频</H2>
-			<span class="pin-more"><a href="">更多</a></span>
+			<!--<span class="pin-more"><a href="">更多</a></span>-->
 			<ul>
 				<li th:each="videoRank : ${videoRanking}" style="height: 112px;">
 					<span>☆</span>
@@ -213,7 +213,7 @@
 					<div class="imgfont">
 						<a th:href="@{/VideoController/videoDetails(videoId=${videoRank.videoId})}"><img th:src="'/Path/'+${videoRank.videoCover}" alt="" style="width: 120px;height: 68px;"></a>
 						<div class="imgrt">
-							<p style="text-indent: 2em; text-align: center">
+							<p style="">
 								<!--<i class="fa fa-file-text-o 1g"></i>-->
 								<span class="font2" th:text="${videoRank.videoIntroduction}"></span>
 							</p>

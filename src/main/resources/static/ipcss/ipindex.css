@@ -186,6 +186,10 @@ body{
 }
 a{
     text-decoration: none;
+    
+}
+li>a{
+    color: #fff;
 }
 .font>span>a{
     color: lightblue;

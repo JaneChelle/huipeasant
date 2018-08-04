@@ -18,18 +18,18 @@
 		<span class="blank" style="height:50px;"></span>
 		<!--视频排行-->
 		<ul>
-			<li>
-				<span class="number"><i class="iconfont" style="color: red;">&#xe61e;</i></span>
-				<span >黄瓜怎么种的又大又好吃</span>
-				<span class="hot"><i class="iconfont">&#xe615;</i></span>
-			</li>
-			<li th:each="videoList:${videoList}">
-				<span class="number" th:text="${videoList.videoId}">1</span>
-				<span th:text="${videoList.videoTitle}">小麦种植</span>
+			<li th:each="videoList:${videoList}" th:if="${videoList.code}<=3">
+				<span class="number" th:text="${videoList.code}">1</span>
+				<span ><a th:href="@{/VideoController/videoIpDetails(videoId=${videoList.videoId})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
 				<span><em th:text="${videoList.videoHits}">66555</em></span>
 				<span class="hot">
 					<i class="iconfont">&#xe615;</i>
 				</span>
+			</li>
+			<li th:each="videoList:${videoList}" th:if="${videoList.code}>3">
+				<span class="number" th:text="${videoList.code}">1</span>
+				<span ><a th:href="@{/VideoController/videoIpDetails(videoId=${videoList.videoId})}" th:text="${videoList.videoTitle}" style="color: #000;"></a></span>
+				<span><em th:text="${videoList.videoHits}">66555</em></span>
 			</li>
 		</ul>
 	</body>

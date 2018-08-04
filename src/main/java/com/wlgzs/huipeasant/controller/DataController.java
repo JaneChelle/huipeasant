@@ -2,6 +2,7 @@ package com.wlgzs.huipeasant.controller;
 
 import com.wlgzs.huipeasant.base.BaseController;
 
+import com.wlgzs.huipeasant.dao.DataDao;
 import com.wlgzs.huipeasant.dao.UserRepository;
 
 import com.wlgzs.huipeasant.entity.Collection;
@@ -25,7 +26,12 @@ import java.util.List;
 public class DataController extends BaseController {
      @Autowired
     UserRepository userDao;
-
+     @Autowired
+    DataDao dataDao;
+     @RequestMapping("index")
+     public ModelAndView index(){
+         return new ModelAndView("toindex");
+     }
     @RequestMapping("toindex")       //   进入pc端主页
     public ModelAndView toindex(Model model) {
         model.addAttribute("moudels", dataService.index());
@@ -63,7 +69,14 @@ public class DataController extends BaseController {
             List<Collection> collections = collectionService.toCollection(userId);
             model.addAttribute("collections", collections);
         }
-        model.addAttribute("infor",dataService.information());
+        List<Data> infors = dataDao.findByModuleLevelOrderByUploadTimeDesc(3);
+        List<Data> infors1=infors.subList(9,14);
+        model.addAttribute("infor", infors);
+        for (int i=0;i<infors1.size();i++){
+            infors1.get(i).setIdentity(i+1);
+        }
+        model.addAttribute("picture", infors1);
+        model.addAttribute("infor",infors);
         model.addAttribute("question",dataService.ipQuestion(2,1,model));
         return new ModelAndView("phone/ipindex");
     }
@@ -124,7 +137,6 @@ public class DataController extends BaseController {
             return new ModelAndView("");
         }
     }
-
 
     @GetMapping("textview/{dataId}")   //进入文章页面
     public ModelAndView textView(Model model, @PathVariable("dataId") long dataId) {

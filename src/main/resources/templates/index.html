@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:include="/common/common :: header">
+<head th:include="common/common :: header">
 
 </head>
 <body>
-<div th:include="/common/common :: headere"></div>
+<div th:include="common/common :: headere"></div>
 <!--头部-->
 <!--电商培训-->
 <div class="nv-top">
@@ -23,22 +23,22 @@
         <div class="nv-top-ct-range2 wrapper_list2">
             <ul>
                 <li id="one" title="农药">
-                    <a href="material.html" target="_blank">电商微商</a>
+                    <a href="javascript:;" target="_blank">电商微商</a>
                 </li>
                 <li id="two" title="肥料">
-                    <a href="material.html" target="_blank">品牌货源</a>
+                    <a href="javascript:;" target="_blank">品牌货源</a>
                 </li>
                 <li id="three" title="农膜">
-                    <a href="material.html" target="_blank">培训中心</a>
+                    <a href="javascript:;" target="_blank">培训中心</a>
                 </li>
                 <li id="four" title="种子种苗">
-                    <a href="material.html" target="_blank">成功案例</a>
+                    <a href="javascript:;" target="_blank">成功案例</a>
                 </li>
                 <li id="five" title="种子种苗">
-                    <a href="material.html" target="_blank">动态咨询</a>
+                    <a href="javascript:;" target="_blank">动态咨询</a>
                 </li>
                 <li id="six" title="解决方案">
-                    <a href="material.html" target="_blank">解决方案</a>
+                    <a href="javascript:;" target="_blank">解决方案</a>
                 </li>
             </ul>
         </div>
@@ -101,11 +101,11 @@
         <div class="main-body">
             <div class="box-item">
                 <span class="font"><a href="">大家正在问</a></span>
-                <span style="float:right;"><a href="">更多
-                    <em> <i class="fa fa-angle-right fa-lg"></i> </em>
-                    <em> <i class="fa fa-angle-right fa-lg"></i> </em>
-                    </a>
-                </span>
+                <!--<span style="float:right;"><a href="">更多-->
+                    <!--<em> <i class="fa fa-angle-right fa-lg"></i> </em>-->
+                    <!--<em> <i class="fa fa-angle-right fa-lg"></i> </em>-->
+                    <!--</a>-->
+                <!--</span>-->
             </div>
             <div class="box-content">
                 <table class="tab">
@@ -128,7 +128,7 @@
         <div class="main-body">
             <div class="main-body-left" th:each="blogId,key : ${moudels}">
                 <div class="box-item">
-                    <span class="font"><a href="material.html"><span th:text="${key.current.key.moduleName}"></span></a></span>
+                    <span class="font"><a><span th:text="${key.current.key.moduleName}"></span></a></span>
                     <span style="float:right;"><a th:href="'/user/moduleview/'+${key.current.key.mouldeId}+'/1'">更多
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
                     <em> <i class="fa fa-angle-right fa-lg"></i> </em>
@@ -166,7 +166,7 @@
         <!--主体结束-->
     </div>
     <!--列表右侧开始-->
-    <div th:include="/common/common :: sidebar"></div>
+    <div th:include="common/common :: sidebar"></div>
 </div>
 
     <!--尾部-->
@@ -204,6 +204,6 @@
         <!--农技视频-->
     </footer>
 </div>
-    <div th:include="/common/common :: indexjs"></div>
+    <div th:include="common/common :: indexjs"></div>
 </body>
 </html>

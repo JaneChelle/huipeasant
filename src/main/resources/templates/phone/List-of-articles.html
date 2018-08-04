@@ -18,19 +18,21 @@
 		<span class="blank" style="height:50px;"></span>
 		<!--文章排行-->
 		<ul>
-			<li>
-				<span class="number"><i class="iconfont" style="color: red;">&#xe61e;</i></span>
-				<span>夏季消暑食物</span>
-				<span class="hot"><i class="iconfont">&#xe615;</i></span>
-			</li>
-			<li th:each="datas : ${datas}">
-				<a th:href="'/user/ipviewartical/'+${datas.dataId}">
+			<li th:each="datas : ${datas}" th:if="${datas.identity}<=3">
+				<a th:href="'/user/ipviewartical/'+${datas.dataId}" style="color: #000;">
 					<span class="number" th:text="${datas.identity}">1</span>
 					<span th:text="${datas.contentsTitle}">王思聪</span>
 					<span><em th:text="${datas.hits}">66555</em></span>
 					<span class="hot">
 						<i class="iconfont">&#xe615;</i>
 					</span>
+				</a>
+			</li>
+			<li th:each="datas : ${datas}" th:if="${datas.identity}>3">
+				<a th:href="'/user/ipviewartical/'+${datas.dataId}" style="color: #000">
+					<span class="number" th:text="${datas.identity}">1</span>
+					<span th:text="${datas.contentsTitle}">王思聪</span>
+					<span><em th:text="${datas.hits}">66555</em></span>
 				</a>
 			</li>
 		</ul>

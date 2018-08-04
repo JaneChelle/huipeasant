@@ -134,12 +134,10 @@ a{
 	 
 }
 .qusetionsty{
-	width: 70%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	text-indent: 2em;
     display: inline-block;
     vertical-align: bottom;
+	margin-top: 8px;
 }
 .qusetion-bgc{
 	width: 80%;

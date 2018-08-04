@@ -13,7 +13,7 @@
 <body>
 <div class="header">
 			<span style="padding-left: 4%;">
-				<a href="" id="back-ipindex">
+				<a th:href="@{/user/toipindex}" id="back-ipindex">
 					<i class="iconfont">&#xe6b4;</i>
 				</a>
 			</span>
@@ -22,7 +22,7 @@
 <div class="video-import">
     <h3 th:text="${video.videoTitle}"></h3>
     <div class="l">
-        <a href="video.html">
+        <a th:href="@{/VideoController/toIpPcvideo(videoAddress=${video.videoAddress})}">
             <img th:src="'/Path/'+${video.videoCover}"/>
         </a>
     </div>
@@ -47,8 +47,9 @@
         </ul>
     </div>
     <div class="video_count">
-        <a th:href="@{/VideoController/toPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
-        <a href="javascript">收藏</a>
+        <a th:href="@{/VideoController/toIpPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
+        <a th:href="@{/CollectionController/deleteIpCollection(videoId=${video.videoId})}" th:if="${video.code} == 1" class="a-collection">取消收藏</a>
+        <a th:href="@{/CollectionController/addIpCollectionVideo(videoId=${video.videoId})}" th:if="${video.code} == 0" class="a-collection">收藏</a>
     </div>
     <div class="teacher">
         <b>讲师提示</b>

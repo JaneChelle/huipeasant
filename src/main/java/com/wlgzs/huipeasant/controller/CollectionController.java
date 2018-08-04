@@ -66,7 +66,14 @@ public class CollectionController extends BaseController {
         User user = (User)session.getAttribute("user");
         long userId = user.getUserId();
         collectionService.collectionVideo(userId,videoId);
-        return new ModelAndView("");
+        return new ModelAndView("redirect:/VideoController/videoIpDetails?videoId="+videoId);
+    }
+
+    //删除收藏
+    @RequestMapping("/deleteIpCollection")
+    public ModelAndView deleteIpCollection(long videoId,HttpSession session){
+        collectionService.deleteCollection(videoId,session);
+        return new ModelAndView("redirect:/VideoController/videoIpDetails?videoId="+videoId);
     }
 
 }

@@ -7,13 +7,10 @@
 	<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
 	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
 	<script th:src="@{/ipjs/jquery.min.js}"></script>
-
 	<script  th:src="@{/ipjs/ipindex.js}"></script>
 </head>
 <body>
-
 <!--底部按钮-->
 <ul class="tab-list">
 	<li class="liss red">
@@ -39,7 +36,7 @@
 
 				<span th:if="${session.user}==null">
 					<span style="position: absolute;right: 4%;">
-					<a th:href="@{/LogUserController/toipLogin}" style="color: #fff">
+					<a th:href="@{/LogUserController/toIpLogin}" style="color: #fff">
 					登录
 					</a>
 					</span>
@@ -62,21 +59,9 @@
 			</div>
 			<!--轮播图-->
 			<div class="con-lun">
-				<a href="#" class="wrip-img max">
-					<img th:src="@{/img/timg (2).jpg}" alt="1">
+				<a th:each="picture : ${picture}"  th:href="@{'/user/ipviewartical/'+${picture.dataId}}"   class="wrip-img max">
+					<img th:src="'/Path'+${picture.pictureAddress}"  th:alt="${picture.identity}">
 				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/timg (1).jpg}" alt="2">
-				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/timg (4).jpg}" alt="3">
-				</a>
-				<a href="#" class="wrip-img">
-					<img th:src="@{/img/4.jpg}" alt="4">
-				</a>
-				<div  class="wrip-img">
-					<img th:src="@{/img/5.jpg}" alt="5">
-				</div>
 				<a href="javascript:;" id="prev" class="arrow">
 					<i class="fa fa-chevron-left"></i>
 				</a>
@@ -177,14 +162,14 @@
 						<li class="li-advater" style="width: 20%;text-align: center;"><i class="iconfont" id="advater">&#xe606;</i></li>
 						<li class="li-info" style="width: 80%;">
 							<div style="text-align: left;"><span th:text="${key.current.key.userName}">155****5959 &nbsp;&nbsp;<b style="font-size: 10px;color: #999;">农场新手</b></span></div>
-							<div><span style="float: left;color: #999;" th:text="${key.current.key.uploadTime}">201803/21</span><span class="areasty" style="color:#999" th:text="${key.current.key.hits}">河南省新乡市</span></div>
+							<div><span style="float: left;color: #999;" th:text="${key.current.key.uploadTime}">201803/21</span><span class="areasty" style="color:#999" ><i class="iconfont">&#xe67d;</i><em th:text="${key.current.key.hits}">587</em></span></div>
 						</li>
 					</ul>
 					<ul class="solution" >
 						<li style="color: #333;" th:text="${key.current.key.contentsTitle}">请问治病病毒的药剂能与治细菌的药剂同时使用不？</li>
 						<li>
 							<span style="color: cornflowerblue;"><i class="iconfont">&#xe624;</i>其他</span>
-							<span style="float: right;margin-right: 4%;color: #999;"><i class="iconfont">&#xe67d;</i><em>587</em>&nbsp;&nbsp;<i class="iconfont">&#xe635;</i><em>3</em></span>
+							<!--<span style="float: right;margin-right: 4%;color: #999;">&nbsp;&nbsp;<i class="iconfont">&#xe635;</i><em>3</em></span>-->
 						</li>
 						<li>
 							<div class="qusetion-bgc">
@@ -208,15 +193,18 @@
 				</span>
 			</div>
 			<div class="videoarea">
-				<div class="video" th:each="collections:${collections}">
-					<div class="font-left" th:text="${collections.modelTitle}">
-						<a th:each="datas : ${datas}" th:href="@{'/user/textview/' + ${datas.dataId}">
+				<div class="video" th:each="collection:${collections}">
+					<div class="font-left" th:text="${collection.modelTitle}">
+
+						<a th:href="@{/VideoController/videoIpDetails(videoId=${collection.videoId})}" th:text="${collections.modelTitle}">
 						一场初夏的雨后，天空渐渐放晴，池塘里的荷叶上盛满了雨滴，让我想起了很多年前那个追风的少年，
 						一场暴雨淋湿了未打伞的你，用荷叶做成的雨
-						<!--</a>-->
+						</a>
 					</div>
-					<div class="video-right"> 
-						<img th:src="'/Path/'+${collections.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
+					<div class="video-right">
+						<a th:href="@{/VideoController/videoIpDetails(videoId=${collection.videoId})}">
+							<img th:src="'/Path/'+${collection.videoCover}" style="height: 60px;width: 92.35px;border-radius: 5px;" />
+						</a>
 					</div>
 				</div>
 			</div>
@@ -240,9 +228,7 @@
 					</span>
 				</div>
 				<div style="margin-left: 30%;">
-					<!--<a href="">-->
-						<img th:src="'/Path/'+${session.user.headPortrait}" style="width: 80px;height: 80px;border-radius: 100%;"/>
-					<!--</a>-->
+					<img th:src="'/Path/'+${session.user.headPortrait}" style="width: 80px;height: 80px;border-radius: 100%;"/>
 				</div>
 			</div>
 			<div class="lists">
@@ -264,7 +250,7 @@
 							<i class="iconfont" style="color: orangered;">&#xe67c;</i>
 						</span>&nbsp;&nbsp;
 						<span>
-							<a href="ipcollection.html">我的收藏</a>
+							<a th:href="@{/CollectionController/ViewIpcollection}">我的收藏</a>
 						</span>
 					</li>
 					<li>

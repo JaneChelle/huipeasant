@@ -20,10 +20,10 @@ $(document).ready(function() {
         $(".shrinkage").css("opacity", "1");
     });
     //菜单切换
-//  用户
-    $(".user").click(function () {
-        $(".ifm").attr("src","/adminUserController/adminUserList");
-    });
+// //  用户
+//     $(".user").click(function () {
+//         $(".ifm").attr("src","/adminUserController/adminUserList");
+//     });
 //视频
     $(".video").click(function () {
         $(".ifm").attr("src","/AdminVideoController/adminVideoList");
@@ -43,6 +43,10 @@ $(document).ready(function() {
 //模块
 	$(".model").click(function () {
         $(".ifm").attr("src","/AdminDataController/modulesView");
+    });
+	//台前
+    $(".taiqian").click(function () {
+        $(".ifm").attr("src","/AdminVideoController/ds");
     });
 //设置高亮
     $(".addColor").on('click',function () {

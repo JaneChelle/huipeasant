@@ -20,4 +20,4 @@ spring:
       hibernate:
         enable_lazy_load_no_trans: true
 server:
-  port: 8080
+  port: 10323

@@ -21,9 +21,9 @@
 			<ul>
 				<li th:each="datas:${datas}">
 					<span>♥</span>
-                    <a th:href="article.html" th:text="${datas.contentsTitle}">2018年5~6份“植保之星”服务排行榜</a>
+                    <a th:href="'/user/ipviewartical/'+${datas.dataId}" th:text="${datas.contentsTitle}">2018年5~6份“植保之星”服务排行榜</a>
                     <div class="imgfont">
-                        <a href="article.html">
+                        <a th:href="'/user/ipviewartical/'+${datas.dataId}" >
                             <img th:src="'/Path'+${datas.pictureAddress}" alt="" style="width: 120px;height: 68px;">
                         </a>
                         <div class="imgrt">

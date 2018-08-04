@@ -38,7 +38,11 @@
 <div class="side-left">
     <h1>Master</h1>
     <ul>
-        <li title="用户管理" class="user addColor">
+        <!--<li title="用户管理" class="user addColor">-->
+            <!--<i class="iconfont" id="mr">&#xe613;</i>-->
+            <!--<span class="master">用户管理</span>-->
+        <!--</li>-->
+        <li title="台前调查" class="taiqian addColor">
             <i class="iconfont" id="mr">&#xe613;</i>
             <span class="master">用户管理</span>
         </li>
@@ -62,11 +66,12 @@
             <i class="iconfont" id="mr">&#xe604;</i>
             <span class="master">模块管理</span>
         </li>
+
     </ul>
 </div>
 <!--右侧内容-->
 <div class="frame-div">
-    <iframe th:src="@{/AdminDataController/modulesView}" frameborder="0" class="ifm"  scrolling="no"></iframe>
+    <iframe th:src="@{/AdminDataController/modulesView}" frameborder="0" class="ifm" ></iframe>
 </div>
 </body>
 <script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>

@@ -1,40 +1,362 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-	<head>
-		<meta charset="utf-8">
-		<title>地区分析-慧农在线</title>
-  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-  	<link rel="stylesheet" th:href="@{/css/area.css}">
-  	<link rel="stylesheet" th:href="@{/css/header.css}">
-   	<link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
-   	<script th:src="@{/js/area.js}"></script>
-	</head>
+<head>
+<meta charset="UTF-8">
+<title>台前县项目落地效果</title>
 
-	<body>
-    <div th:include="/common/common :: headere"></div>
-	<div class="titlecure">
-				<h1>台前县地区视频点击量统计图</h1>
-			</div>
-		<div id="my_container">
-			<canvas id="pie_canvas"></canvas>
-		</div>
-		<!--尾部-->
-<div class="foo">
-   <div class="bottom-line">
-   	<a href="">关于我们</a>
-   	<a href="">会员服务</a>
-   	<a href="">招商代理</a>
-   	<a href="">帮助中心</a>
-   	<a href="">广告服务</a>
-   	<a href="">汇款方式</a>
-   	<a href="">意见和建议</a>
-   	<a href="">联系方式</a>
-   	<a href="">友情链接</a>
-   	<a href="">站长统计</a>
-   </div>
-   <p style="text-align: center;">Copyright慧农在线&nbsp;&nbsp;版权所有</p>
-   <p style="text-align: center;"><a style="color: #999;">浙ICP备14042858号-1</a> 增值电信业务经营许可证：浙B2-20150086</p>
+	<link rel="stylesheet" th:href="@{/css/toaddData.css}">
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+	<link rel="shortcut icon" th:href="@{/images/login.ico}" type="image/x-icon">
+	<script  th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/Person-center.js}"></script>
+<style>
+/*body,
+html {
+	width: 99%;
+	height: 99%;
+	font-family: "arial, helvetica, sans-serif";
+	font-size: x-large;
+	font-kerning: inherit;
+	font-stretch: expanded;
+	text-align: center;
+}*/
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+li{ list-style-type: none;}
+a{
+	text-decoration: none;
+	color: #000;
+}
+input,button{
+	outline: none;
+	border: none;
+}
+body{
+	background-color: aliceblue;
+}
+/*顶部导航栏*/
+.head{
+	background-color: #fff;
+	min-width: 1200px;
+}
+.header{
+	height: 60px;
+	line-height: 60px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.header-left{
+	height: 60px;
+	width: 200px;
+	float: left;
+	margin-right: 12px;
+}
+.header-left a{
+	position: absolute;
+	height: 60px;
+	font-weight: 600;
+	font-size: 18px;
+}
+.header-left a:hover,.header-right a:hover{
+	text-decoration: none;
+}
+.header-left a img{
+	width: 70px;
+	height: 60px;
+}
+.header-left b{
+	font-size: 28px;
+	color: #5CB85C;
+	font-family: "宋体";
+	vertical-align: 20px;
+}
+.header-right{
+	float: right;
+}
+.header-right a{
+	display: inline-block;
+	margin: 0 18px;
+	transition: all 0.5s;
+	letter-spacing: 3px;
+	border-bottom: transparent 1px solid;
+}
+.header-right a i{
+	font-size: 16px;
+	margin-right: 8px;
+}
+.header-right a:hover{
+	color: #73A204;
+	border-bottom: #73A204 1px solid;
+}
+#qr-code{
+	margin-right: 32px;
+	cursor: pointer;
+}
+.search{
+	float: right;
+	position: relative;
+	right: 52px;
+}
+.search{
+	position: relative;
+	top: 8px;
+	height: 45px;
+}
+.search input{
+	width: 250px;
+	height: 42px;
+	border-radius: 42px;
+	background: #F9F0DA;
+	transition: .3s linear;
+	float: right;
+	padding-left: 13px;
+}
+.search input:focus {
+	width: 300px;
+}
+/*.search button {*/
+	/*width: 45px;*/
+	/*height: 42px;*/
+	/*border-radius: 5px;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*right: 0;*/
+	/*background-color: #ff6600;*/
+	/*cursor: pointer;*/
+/*}*/
+/*.search button:before {*/
+	/*content: "搜索";*/
+	/*font-family: FontAwesome;*/
+	/*color: #fff;*/
+/*}*/
+/*下拉列表*/
+.spin{
+	display: none;
+	width: 247px;
+	position: absolute;
+	top: 60px;
+	padding: 0 12px;
+	background-color: #fff;
+	z-index: 9999;
+}
+.spinners{
+	border-radius: 5px;
+}
+.spinners a{
+	color: #000000!important;
+	display: inline-block;
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	line-height: 32px;
+	border-radius: 5px;
+	transition: all .5s;
+	border-bottom: 1px dotted #5CB85C;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.spinners a:hover{
+	background-color: #5CB85C;
+	color: #fff;
+	text-decoration: none;
+}
+/*二维码*/
+.qr-code{
+	width: 130px;
+	height: 135px;
+	padding: 12px;
+	position: absolute;
+	right: 12px;
+	top: 48px;
+	z-index: 99;
+	background-color: white;
+	display: none;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px grey;
+}
+.qr-code img{
+	width: 100%;
+	height: 130px;
+}
+/*尾部*/
+footer{
+	width:100%;
+	min-width: 1200px;
+	background-color: #5CB87A;
+	margin-top: 50px;
+	opacity: 1;
+}
+.divFt{
+	width: 1200px;
+	margin: 0 auto;
+	/*padding: 0 10px ;*/
+
+}
+dl{
+	display: inline-block;
+	width: 222px;
+	text-align: center;
+	vertical-align: top;
+	margin-top: 20px;
+	color: #fff;
+}
+dt{
+	padding: 6px 0;
+}
+.divFt dt img{
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+}
+@font-face {
+	font-family: 'iconfont';  /* project id 742031 */
+	src: url('//at.alicdn.com/t/font_742031_btwi7f4za8c.eot');
+	src: url('//at.alicdn.com/t/font_742031_btwi7f4za8c.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_742031_btwi7f4za8c.woff') format('woff'),
+	url('//at.alicdn.com/t/font_742031_btwi7f4za8c.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_742031_btwi7f4za8c.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+#main{
+	margin: 20px auto;
+
+}
+.tab{
+	width: 1427px;
+	margin:0 auto;
+	display: block;
+	margin-bottom: 62px;
+}
+.font{
+	margin-bottom: 20px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+li{
+	display: inline-block;
+    width: 50px;
+    padding: 10px;
+    list-style-type: none;
+    border-bottom: 1px solid gainsboro;
+}
+</style>
+
+</head>
+
+<body>
+<div th:include="common/common :: headere"></div>
+<div id="main" style="width: 700px;height:340px;">
+	<div id="first" style="width: 700px;height:300px;"></div>
+	<!-- <div id="second" style="width: 900px;height:250px;"></div>
+	<div id="three" style="width: 900px;height:250px;"></div>
+	<div id="four" style="width: 900px;height:250px;"></div>
+	<div id="five" style="width: 900px;height:250px;"></div>
+	<div id="six" style="width: 900px;height:250px;"></div>
+	<div id="seven" style="width: 900px;height:250px;"></div> -->
 </div>
-	</body>
+<div class="tab">
+	<div class="font">  贫困户人员名单 </div>
+			<li>赵建英</li>
+			<li>李芙</li>
+			<li>杨邦强</li>
+			<li>主存杰</li>
+			<li>王香灵</li>
+			<li>张纪立</li>
+			<li>兰英华</li>
+			<li>创丽</li>
+			<li>案翠</li>
+			<li>李文博</li>
+			<li>胡克华</li>
+			<li>杨志豪</li>
+			<li>郑世豪</li>
+			<li>李娜</li>
+			<li>李维哲</li>
+			<li>李雨函</li>
+			<li>彭建林</li>
+			<li>彭冰洁</li>
+			<li>彭子豪</li>
+			<li>萧桂华</li>
+			<li>萧自豪</li>
+			<li>李建档</li>
+			<li>王建国</li>
+			<li>王国政</li>
+			<li>赵富贵</li>
+			<li>赵柱</li>
+			<li>李家福</li>
+			<li>周力</li>
+			<li>李松峰</li>
+			<li>周伟思</li>
+			<li>刘晓辉</li>
+			<li>刘小慧</li>
+			<li>李有力</li>
+			<li>赵品</li>
+			<li>胡可</li>
+			<li>木轩</li>
+			<li>程子涵</li>
+			<li>王一水</li>
+			<li>李莉</li>
+			<li>赵晗</li>
+			<li>方三东</li>
+			<li>白倍企</li>
+			<li>白乂凡</li>
+			<li>方芳</li>
+			<li>江猛</li>
+			<li>江一丁</li>
+			<li>江一然</li>
+			<li>张欣竹</li>
+			<li>张海一</li>
+			<li>张海林</li>
+			<li>徐厚娟</li>
+			<li>徐会茹</li>
+			<li>孙子七</li>
+			<li>徐宁</li>
+			<li>白与宁</li>
+			<li>朱国威</li>
+			<li>周伟松</li>
+			<li>宋自立</li>
+			<li>胡俊</li>
+			<li>樊成果</li>
+			<li>王俊忠</li>
+			<li>朱雨欣</li>
+			<li>曹力</li>
+			<li>李帅</li>
+			<li>高晓攀</li>
+		    <li>黄子扬</li>
+		    <li>鲍蕾</li>
+		    <li>张真</li>
+		    <li>杨立新</li>
+		    <li>周璇</li>
+		    <li>周汤豪</li>
+		    <li>张登瑛</li>
+			<li>黄双伊</li>
+			<li>江悦</li>
+			<li>李秋雷</li>
+			<li>马博文</li>
+			<li>王亚军</li>
+			<li>段红宇</li>
+			<li>李书萍</li>
+		    <li>李昭欣</li>
+			<li>彭涵恩</li>
+			<li>王二水</li>
+			<li>张兴飞</li>
+			<li>马蕊</li>
+			<li>马嘉宝</li>
+</div>
+<script type="text/javascript" th:src="@{/lib/req/require.js}" data-main="area"></script>
 
-</html>
+</body>
+</html>	

@@ -95,5 +95,10 @@ public class AdminVideoController extends BaseController {
         videoService.edit(videoId,myFileName,session,request);
         return new ModelAndView("redirect:/adminVideoList");
     }
-
+//台前
+@RequestMapping("/ds")
+public ModelAndView ds(){
+    return new ModelAndView("admin/ds");
 }
+}
+
