@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>视频-农技培训平台-慧农在线</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/ipcss/address.css}" />
+	<script th:src="@{/JS/jquery.min.js}"></script>
+	<script th:src="@{/ipjs/distpicker.js}"></script>
+	<style>
+
+	</style>
+	</head>
+	<body>
+		<div class="header">
+				<span style="padding-left: 4%;">
+					<a th:href="@{/UserManagementController/ipinfor}">
+						<i class="iconfont">&#xe6b4;</i>
+					</a>
+				</span>
+				<span style="margin-left: 34%;">修改所在地</span>
+				<span style="margin-right: 4%;float: right;">
+						<input type="submit" th:value="保存">
+				</span>
+		</div>
+		<div class="area-sty">
+			<div data-toggle="distpicker" style="display:inline-block;">
+				<form th:action="@{/UserManagementController/changeIpAddress}" method="post">
+					<select data-province="---- 选择省 ----"></select>
+					<select data-city="---- 选择市 ----"></select>
+					<select data-district="---- 选择区 ----"></select>
+
+				</form>
+		    </div>
+		</div>				
+	                   
+	</body>
+</html>

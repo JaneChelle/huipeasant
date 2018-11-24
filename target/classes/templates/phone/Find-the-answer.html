@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>答案-农技培训平台-慧农移动在线</title>
+		<link rel="stylesheet" th:href="@{/ipcss/Find-the-answer.css}" />
+		<link rel="shortcut icon" type="img/x-icon" th:href="@{/images/login.ico}"/>
+		<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}" ></script>
+	</head>
+	<body>
+		<div class="header">
+			<span style="padding-left: 4%;"><a th:href="@{/user/toipindex}" id="back-ipindex"><i class="iconfont">&#xe6b4;</i></a></span>
+			<span style="margin-left: 35%;">问题解答</span>
+			<!--<span style="margin-right: 4%;float: right;"><input type="submit" value="保存" class="btn-keep"/></span>-->		
+		</div>
+		<span class="blank"></span>
+			<div class="font">
+					<p class="font-p">热门提问</p>
+					<!--<span style="float: right;margin-right: 6%;"><a href="">更多</a></span>-->
+				</div>
+		<div class="hotask">
+			<div class="user" th:each="blogId,key : ${question}">
+				<ul style="margin-bottom: 5px;" >
+					<li class="li-advater" style="width: 20%;text-align: center;"><i class="iconfont" id="advater">&#xe606;</i></li>
+					<li class="li-info" style="width: 80%;">
+						<div style="text-align: left;"><span th:text="${key.current.key.userName}">155****5959 &nbsp;&nbsp;<b style="font-size: 10px;color: #999;">农场新手</b></span></div>
+						<div><span style="float: left;color: #999;" th:text="${key.current.key.uploadTime}">201803/21</span><span class="areasty" style="color:#999" ><i class="iconfont">&#xe67d;</i><em th:text="${key.current.key.hits}"></em></span></div>
+					</li>
+				</ul>
+				<ul class="solution" >
+					<li style="color: #333;" th:text="${key.current.key.contentsTitle}">请问治病病毒的药剂能与治细菌的药剂同时使用不？</li>
+					<li>
+						<span style="color: cornflowerblue;"><i class="iconfont">&#xe624;</i>其他</span>
+						<!--<span style="float: right;margin-right: 4%;color: #999;"><em>587</em>&nbsp;&nbsp;<i class="iconfont">&#xe635;</i><em>3</em></span>-->
+					</li>
+					<li>
+						<div class="qusetion-bgc">
+							<div th:each="commment : ${key.current.value}">
+								<span th:text="${commment.userName}+':'">俞华根：</span>
+								<span th:text="${commment.commentContent}" class="qusetionsty">这个问题比较复杂，大多数的</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>

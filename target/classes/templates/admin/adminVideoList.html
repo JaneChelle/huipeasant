@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>慧农在线-农技培训服务平台</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet"  th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css"   th:href="@{/css/adminVideoList.css}" />
+</head>
+<body>
+<div class="contentbox">
+    <div class="header">
+        <form action="/AdminVideoController/adminFindProduct">
+            <input type="text" name="videoKeyWord" placeholder="视频" value="" class="ipt">
+            <input type="submit" value="搜索视频" class="btn">
+            <div class="a-div adiv1 opcate">批量操作</div>
+            <div class="a-div adiv1 del">删除</div>
+            <input type="text" class="ids" style="display: none">
+            <div type="button" class="a-div adiv1 videotj">添加</div>
+        </form>
+    </div>
+    <div class="mytable">
+        <table class="table table-bordered able-box" id="mytable">
+            <thead style="background-color: #F2F2F2;">
+            <tr>
+                <th class="shanchu">删除</th>
+                <th>视频ID</th>
+                <th>视频标题</th>
+                <th>作者提示</th>
+                <th>视频简介</th>
+                <th>视频封面</th>
+                <th>视频地址</th>
+                <th>模块名字</th>
+                <th>上传时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--遍历-->
+            <tr th:each="adminVideoList : ${adminVideoLists}">
+                <td class="checx" style="position: relative">
+                    <label class="demo--label">
+                        <input class="demo--radio" type="checkbox" name="demo-checkbox1">
+                        <input class="demo--radio" type="checkbox" name="demo-checkbox1">
+                        <span class="demo--checkbox demo--radioInput"></span>
+                    </label>
+                </td>
+                <td style="display: none" class="activityid"></td>
+                <td th:text="${adminVideoList.videoId}"></td>
+                <td th:text="${adminVideoList.videoTitle}"></td>
+                <td th:text="${adminVideoList.authorSuggests}"></td>
+                <td th:text="${adminVideoList.videoIntroduction}"></td>
+                <td>
+                    <img th:src="'/Path/'+${adminVideoList.videoCover}" alt="" style="width: 120px;height: 68px;">
+                </td>
+                <td th:text="${adminVideoList.videoAddress}"></td>
+                <td th:text="${adminVideoList.modelName}"></td>
+                <td th:text="${adminVideoList.uploadTime}"></td>
+                <td class="ttdd" >
+                    <a th:href="@{/AdminVideoController/adminDeleteVideo(videoId=${adminVideoList.videoId})}" class="a-div adiv1">删除</a>
+                    <a class="a-div adiv2" th:href="@{/AdminVideoController/toEditVideo(videoId=${adminVideoList.videoId})}">修改</a>                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="fenye" th:if="${TotalPages > 0}">
+        <ul class="pagination" th:if="${Number == 1} and ${TotalPages > 1}">
+            <!--//如果当前页等于1，总页数大于1（不显示上一页）   Number&ndash;&gt;当前页-->
+            <li><a th:href="@{/AdminVideoController/adminVideoList(page=1)}">首页</a></li>
+            <li class="active" th:each="i:${#numbers.sequence(1,TotalPages)}">
+                <!--//从1到总页数遍历，并赋值给i    TotalPages&ndash;&gt;总页数-->
+                <a th:if="${i > Number-3} and ${i < Number+3} and ${i == Number}" href="javascript:void(0);" th:text="${i}">#</a>
+                <!--//限制显示页数的条数  4到6个页数   而且等于当前页，不能点击-->
+                <a th:if="${i > Number-3} and ${i < Number+3} and ${i != Number}"
+                   th:href="@{/AdminVideoController/adminVideoList(page=${i})}" th:text="${i}"
+                   style="color: #337ab7;background-color: #fff;border-color: #fff;">#</a><!--//限制显示页数的条数  4到6个页数-->
+            </li>
+            <li><a th:href="@{/AdminVideoController/adminVideoList(page=${Number+1})}">下一页</a></li><!--//请求页数+1-->
+        </ul>
+
+        <ul class="pagination" th:if="${Number > 1} and ${TotalPages > 1}"><!--//显示上一页-->
+            <li><a th:href="@{/AdminVideoController/adminVideoList(page=1)}">首页</a></li><!--//跳转至第一页-->
+            <li><a th:href="@{/AdminVideoController/adminVideoList(page=${Number-1},user_name=${user_name})}">上一页</a></li><!--//请求页数-1-->
+            <li class="active" th:each="i:${#numbers.sequence(1,TotalPages)}">
+                <!--//从1到总页数遍历，并赋值给i    TotalPages&ndash;&gt;总页数-->
+                <a th:if="${i > Number-3} and ${i < Number+3} and ${i == Number}" href="javascript:void(0);" th:text="${i}">#</a>
+                <!--//限制显示页数的条数  4到6个页数   而且等于当前页，不能点击-->
+                <a th:if="${i > Number-3} and ${i < Number+3} and ${i != Number}"
+                   th:href="@{/AdminVideoController/adminVideoList(page=${i})}" th:text="${i}"
+                   style="color: #337ab7;background-color: #fff;border-color: #fff;">#</a><!--//限制显示页数的条数  4到6个页数-->
+            </li>
+            <li th:if="${Number != TotalPages}"><a
+                    th:href="@{/AdminVideoController/adminVideoList(page=${Number+1})}">下一页</a></li><!--//请求页数+1-->
+            <li><a th:href="@{/AdminVideoController/adminVideoList(page=${TotalPages})}">尾页</a></li><!--//跳转至第Number页-->
+        </ul>
+
+    </div>
+
+
+    <!--遮屏弹窗  修改内容-->
+    <div class="windoww">
+        <div class="popup-windows">
+            <h2 style="text-align: center">添加视频</h2>
+            <form th:action="@{/AdminVideoController/addVideo}" enctype="multipart/form-data" th:method="post">
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>作者提示</th>
+                        <td>
+                            <input type="text" name="authorSuggests" class="form-control"  value="" id="userphone" required="required"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>视频封面</th>
+                        <td><input type="file" name="file" class="form-control" value="" id="pwd" required="required"/></td>
+                    </tr>
+                    <tr>
+                        <th>视频</th>
+                        <td><input type="file" name="file" class="form-control"  value="" id="" required="required"/></td>
+                    </tr>
+                    <tr>
+                        <th>模块名字</th>
+                        <td><input type="text" name="modelName" class="form-control" value="" id="" required="required"/></td>
+                    </tr>
+                    <tr>
+                        <th>视频信息</th>
+                        <td><input type="text" name="videoIntroduction" class="form-control" value="" id="" required="required"/></td>
+                    </tr>
+                    <tr>
+                        <th>视频标题</th>
+                        <td><input type="text" name="videoTitle" class="form-control" value="" id="" required="required"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="重置" class="btn btn-primary" id="reset"/>
+                            <input type="submit" value="添加"  class="btn btn-success" id="add"  onclick="dd()"/>
+                            <a th:href="@{/AdminVideoController/adminVideoList}"><input type="button" value="取消"  class="btn btn-info"  style="background-color: orangered"/></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript"  th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript"  th:src="@{/js/adminUserList.js}" ></script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab切换</title>
+    <link rel="stylesheet" href="CSS/demo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="JS/jquery.min.js" ></script>
+    <script src="JS/ipindex.js"></script>
+</head>
+<body style="">
+<div class="tab">
+    <ul class="tab-content">
+        <!--首页-->
+        <li>
+            <div class="header">
+                Hui-peasant
+            </div>
+            <!--轮播图-->
+            <div class="con-lun">
+                <a href="#" class="wrip-img max">
+                    <img src="img/timg (2).jpg" alt="1">
+                </a>
+                <a href="#" class="wrip-img">
+                    <img src="img/timg (1).jpg" alt="2">
+                </a>
+                <a href="#" class="wrip-img">
+                    <img src="img/timg (4).jpg" alt="3">
+                </a>
+                <a href="#" class="wrip-img">
+                    <img src="img/timg (4).jpg" alt="4">
+                </a>
+                <div  class="wrip-img">
+                    <img src="img/timg (2).jpg" alt="5">
+                </div>
+                <a href="javascript:;" id="prev" class="arrow">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <a href="javascript:;" id="next" class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+            <!--主要板块-->
+            <div class="section">
+                <a href="VideoList.html" style="background-color: #E0FFFF;">
+                    <b>视频<br />专区</b>
+                </a>
+                <a href="javascript:;" style="background-color: lavender;">
+                    <b>咨询<br />答案</b>
+                </a>
+                <a href="article.html" style="background-color: honeydew;">
+                    <b>文章<br />推送</b>
+                </a>
+            </div>
+        </li>
+
+        <li style="display: none;">我是two</li>
+        <li style="display: none;">我是three</li>
+    </ul>
+
+</div>
+<ul class="tab-list">
+    <li>
+        <span><i class="iconfont">&#xe612;</i></span>
+        <p>首页</p>
+    </li>
+    <li>
+        <span><i class="iconfont">&#xe600;</i></span>
+        <p>我的收藏</p>
+    </li>
+    <li>
+        <span><i class="iconfont">&#xe601;</i></span>
+        <p>我的</p>
+    </li>
+</ul>
+</body>
+<script>
+    var eItemList = document.querySelectorAll(".tab-list li");
+    var eContentList = document.querySelectorAll(".tab-content li");
+    //给元素编号
+    for (var i=0;i<eItemList.length;i++) {
+        eItemList[i].index=i;  //index是自定义属性，用来保存编号
+        eItemList[i].onclick=function() {
+            for (var i=0;i<eContentList.length;i++) {
+                eContentList[i].style.display="none";        //先将内容全部隐藏
+            }
+            eContentList[this.index].style.display="block";  //当鼠标触发时再显示对应的内容
+            // for (var i=0;i<eItemList.length;i++) {
+            //     eItemList[i].style.background="none";        //将背景色设置为无
+            // }
+            // eItemList[this.index].style.background="indianred";
+        };
+    }
+</script>
+</html>
