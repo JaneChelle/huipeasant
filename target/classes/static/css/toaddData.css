@@ -113,12 +113,10 @@ a{
     line-height: 50px;
     padding-left: 5px;
     border-bottom: solid 2px gainsboro;
-    font-weight: bold;
     font-size: 16px;
-    font-family: "黑体";
 }
 .range>span{
-    font-family: "黑体";
+    /*font-family: "黑体";*/
     font-size: 16px;
     padding-left: 10px;
 }
@@ -256,7 +254,7 @@ a{
 }
 .right-content{
     border: 1px solid #e5e5e5;
-    border: 1px solid;
+    /*border: 1px solid;*/
     /*border-radius: 20px;*/
     padding: 15px;
 
@@ -280,7 +278,7 @@ a{
 .font{
     height: 90px;
     line-height: 30px;
-    background-color: lightgreen;
+    /*background-color: lightgreen;*/
     padding: 10px;
 
     border: 1px solid;
@@ -314,10 +312,10 @@ textarea{
     border: none;
     border-radius: 10px;
     float: right;
-    margin-right:50px ;
+    margin-right:180px ;
     width: 150px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 82px;
 }
 table{
     width: 730px;
@@ -408,5 +406,5 @@ select{
     max-width: 500px;
     max-height: 150px;
     height: 200px;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
 }

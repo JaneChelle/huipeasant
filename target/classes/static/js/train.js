@@ -94,7 +94,7 @@ function spin(){
         $('.spin').fadeOut();
     }
 }
-onkeyup(spin());
+
 function spainner(){
     $.ajax({
         type: "POST",//数据发送的方式（post 或者 get）

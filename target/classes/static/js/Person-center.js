@@ -140,7 +140,6 @@ $(document).ready(function () {
                 alert("请求失败");
             }
         });
-
     });
 
 

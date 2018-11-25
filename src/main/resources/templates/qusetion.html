@@ -47,22 +47,20 @@
                             <i class="iconfont">&#xe67b;</i>
                         </div>
                     </div>
-                    <form th:action="@{/user/addData}" enctype="multipart/form-data" method="post">
+                    <form th:action="@{/user/addData}" enctype="multipart/form-data" method="post" name="form1" onsubmit="return checksubmit()">
                     <div class="qusetion">
-                    	<div>
+                    	<!--<div>-->
 
-                            <span >问题类型: </span>
-                            <select id="city" >
-                                <option selected>请选择</option>
-                                <option th:each="moudel : ${moudels}" th:value="${moudel.mouldeId}"  th:text="${moudel.moduleName}">请选择</option>
-                            </select>
+                            <!--<span >问题类型: </span>-->
+                            <!--<select id="city" >-->
+                                <!--<option selected>请选择</option>-->
+                                <!--<option th:each="moudel : ${moudels}" th:value="${moudel.mouldeId}"  th:text="${moudel.moduleName}">请选择</option>-->
+                            <!--</select>-->
 
-                    	</div>
+                    	<!--</div>-->
                         <p style="margin-bottom: 10px">问题描述：</p>
-                        <textarea name="contentsTitle" id="text2">
-                        </textarea>
+                        <textarea name="contentsTitle" id="text2"></textarea>
                         <input type="hidden" value="2" name="dataLevle">
-                        <p style="color:#999;font-size: 12px">注：详细说明问题的情况，描述得越仔细，获得准确回答的机会越大</p>
                     </div>
                     <div class="picture">
                         <p style="margin-bottom: 10px">上传图片：</p>
@@ -72,7 +70,7 @@
                                 <!--<input type="file" class="ui-input-file"  name="multipartFile"/>-->
                                 <div class="all-photo" onclick="photoup()">
                                     <div class="all-photo-right">
-                                        <img th:src="@{/img/null.png}" id="imgshow" style="width: 100px;height: 100px;"/>
+                                        <img th:src="@{/img/null.png}" id="imgshow" name="imgshow" style="width: 100px;height: 100px;"/>
                                     </div>
                                 </div>
                                 <!--<input type="text" style="display: none" name="userId" th:value="${user.userId}">-->
@@ -81,7 +79,7 @@
                             </span>
                         </div>
                         <!--<span>-->
-                        <input type="submit" value="完成" class="finish">
+                        <input type="submit" name="submit" value="完成" class="finish">
                         <!--</span>-->
                     </div>
                     </form>
@@ -112,6 +110,20 @@
                 $('#imgshow').get(0).src = e.target.result;
             }
         })
+    }
+    //验证表单提交是否为空
+
+    console.log(imgshow.src);
+    function checksubmit(){
+        var texts=document.getElementById("text2").value;
+        var imgshows=document.getElementById("imgshow").src;
+        if(texts ==""){
+            alert("请填写完整信息");
+            return false;
+        }else{
+            alert("成功");
+            return true;
+        }
     }
 
 </script>
