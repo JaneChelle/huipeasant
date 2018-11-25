@@ -31,4 +31,22 @@ public class Data implements Serializable {
     private String userName;                         //用户名称
     private String userIcon;                        //用户头像地址
 
+    @Override
+    public String toString() {
+        return "Data{" +
+                "dataId=" + dataId +
+                ", userId=" + userId +
+                ", contents='" + contents + '\'' +
+                ", uploadTime=" + uploadTime +
+                ", pictureAddress='" + pictureAddress + '\'' +
+                ", moduleId=" + moduleId +
+                ", moduleName='" + moduleName + '\'' +
+                ", contentsTitle='" + contentsTitle + '\'' +
+                ", identity=" + identity +
+                ", moduleLevel=" + moduleLevel +
+                ", hits=" + hits +
+                ", userName='" + userName + '\'' +
+                ", userIcon='" + userIcon + '\'' +
+                '}';
+    }
 }

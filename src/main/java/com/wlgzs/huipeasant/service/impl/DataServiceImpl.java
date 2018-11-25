@@ -11,6 +11,7 @@ import com.wlgzs.huipeasant.service.DataService;
 import com.wlgzs.huipeasant.util.IoUtil;
 import org.hibernate.annotations.Source;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -100,6 +101,7 @@ public class DataServiceImpl implements DataService {
         return null;
     }
 
+    @Cacheable(value = "index", key = "1")
     @Override
     public Map<Module, List<Data>> index() {
         Map<Module, List<Data>> dataListMap = new HashMap<>();
@@ -116,7 +118,7 @@ public class DataServiceImpl implements DataService {
         }
         return dataListMap;
     }
-
+    @Cacheable(value = "question", key = "1")
     @Override
     public List<Data> question() {
         List<Data> dataList = new ArrayList<Data>();
@@ -126,16 +128,17 @@ public class DataServiceImpl implements DataService {
         }
         return null;
     }
-
+    @Cacheable(value = "information", key = "1")
     @Override
     public List<Data> information() {
+        System.out.println("只执行一次");
         List<Data> dataList = dataRepository.findByModuleLevelOrderByUploadTimeDesc(3);
         if (dataList.size() >= 8) {
             return dataList.subList(0, 7);
         }
         return null;
     }
-
+    @Cacheable(value = "indexRank", key = "1")
     @Override
     public List<Data> indexRank() {
         List<Data> dataList = dataRepository.findByModuleLevelOrderByHitsDesc(1);
@@ -146,11 +149,19 @@ public class DataServiceImpl implements DataService {
     @Override
     public boolean jundegeView(long dataId) {
         Data data = dataRepository.findById(dataId).get();
+        if (data!=null){
+            long clicks = data.getHits();
+            clicks+=1;
+            data.setHits(clicks);
+            dataRepository.save(data);
+        }
         if (data.getModuleLevel() == 2) {
             return false;
         } else {
+
             return true;
         }
+
     }
 
     @Override
