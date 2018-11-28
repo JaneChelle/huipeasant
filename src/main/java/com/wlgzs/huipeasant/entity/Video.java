@@ -14,7 +14,6 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Video implements Serializable {
 
     @Id

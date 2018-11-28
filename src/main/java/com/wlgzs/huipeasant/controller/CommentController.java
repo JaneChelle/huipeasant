@@ -12,20 +12,20 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RequestMapping("user")
 @RestController
-
-
 public class CommentController extends BaseController {
     @Autowired
     CommentDao commentDao;
+
     @PostMapping("tocomment")
-    public Result tocomment(@RequestParam("content") String content,@RequestParam("dataId") long dataId){
-        User user = (User)session.getAttribute("user");
-        commentService.addcomment(user,content,dataId);
-        return new Result(ResultCode.SUCCESS,"评论成功");
+    public Result tocomment(@RequestParam("content") String content, @RequestParam("dataId") long dataId) {
+        User user = (User) session.getAttribute("user");
+        commentService.addcomment(user, content, dataId);
+        return new Result(ResultCode.SUCCESS, "评论成功");
     }
- @GetMapping("morecomment/{dataId}")
- public ModelAndView moreComment(Model model,@PathVariable("dataId") long dataId){
-        model.addAttribute("lists",commentDao.findByDataId(dataId));
+
+    @GetMapping("morecomment/{dataId}")
+    public ModelAndView moreComment(Model model, @PathVariable("dataId") long dataId) {
+        model.addAttribute("lists", commentDao.findByDataId(dataId));
         return new ModelAndView("comment");
- }
+    }
 }

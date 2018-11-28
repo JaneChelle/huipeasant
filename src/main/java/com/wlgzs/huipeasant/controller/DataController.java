@@ -24,14 +24,17 @@ import java.util.List;
 @RequestMapping("/user")
 @RestController
 public class DataController extends BaseController {
-     @Autowired
+    @Autowired
     UserRepository userDao;
-     @Autowired
+
+    @Autowired
     DataDao dataDao;
-     @RequestMapping("index")
-     public ModelAndView index(){
-         return new ModelAndView("toindex");
-     }
+
+    @RequestMapping("index")
+    public ModelAndView index() {
+        return new ModelAndView("toindex");
+    }
+
     @RequestMapping("toindex")       //   进入pc端主页
     public ModelAndView toindex(Model model) {
         model.addAttribute("moudels", dataService.index());
@@ -49,59 +52,61 @@ public class DataController extends BaseController {
 
         //视频排行
         List<Video> videoRanking = videoService.videoRanking();
-        if(videoRanking.size() > 4){
+        if (videoRanking.size() > 4) {
             videoRanking = videoRanking.subList(videoRanking.size() - 4, videoRanking.size());
         }
-        model.addAttribute("videoRanking",videoRanking);
-        model.addAttribute("moudel",moduleService.getModules());
+        model.addAttribute("videoRanking", videoRanking);
+        model.addAttribute("moudel", moduleService.getModules());
         return new ModelAndView("index");
     }
 
-    @GetMapping ("toindex1")
+    @GetMapping("toindex1")
     public ModelAndView toIndex1() {
         return new ModelAndView("index1");
     }
+
     @RequestMapping("toipindex")              //进入手机端主页
-    public ModelAndView toIpindex(Model model){
-        User user = (User)session.getAttribute("user");
-        if (user!=null) {
+    public ModelAndView toIpindex(Model model) {
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
             long userId = user.getUserId();
             List<Collection> collections = collectionService.toCollection(userId);
             model.addAttribute("collections", collections);
         }
         List<Data> infors = dataDao.findByModuleLevelOrderByUploadTimeDesc(3);
-        List<Data> infors1=infors.subList(9,14);
+        List<Data> infors1 = infors.subList(9, 14);
         model.addAttribute("infor", infors);
-        for (int i=0;i<infors1.size();i++){
-            infors1.get(i).setIdentity(i+1);
+        for (int i = 0; i < infors1.size(); i++) {
+            infors1.get(i).setIdentity(i + 1);
         }
         model.addAttribute("picture", infors1);
-        model.addAttribute("infor",infors);
-        model.addAttribute("question",dataService.ipQuestion(2,1,model));
+        model.addAttribute("infor", infors);
+        model.addAttribute("question", dataService.ipQuestion(2, 1, model));
         return new ModelAndView("phone/ipindex");
     }
 
     @RequestMapping("toipindex/{level}/{page}")  //手机端主页 关于文章的接口
     public ModelAndView toIpindex(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
 
-        dataService.ipgetDatas(1,level, page, model);
-        if (level==1){
+        dataService.ipgetDatas(1, level, page, model);
+        if (level == 1) {
             return new ModelAndView("/phone/Article-push");
-        }
-        else {
+        } else {
             return new ModelAndView("/phone/info-recmd");
         }
     }
+
     @RequestMapping("indexmore/{level}/{page}")//pc主页 排行 资讯更多
-    public ModelAndView indexMore(Model model, @PathVariable("level") int level, @PathVariable("page") int page){
+    public ModelAndView indexMore(Model model, @PathVariable("level") int level, @PathVariable("page") int page) {
         int status = 1;
         dataService.ipgetDatas(status, level, 1, model);
-        if (level==1){
+        if (level == 1) {
             return new ModelAndView("ipindex");
-        }else {
+        } else {
             return new ModelAndView("");
         }
     }
+
     @RequestMapping("updateaticel/{page}")  //文章更新排行
     public ModelAndView articleUpdate(Model model, @PathVariable("page") int page) {
         int status = 0;
@@ -113,14 +118,15 @@ public class DataController extends BaseController {
     @RequestMapping("toaddData")
 
     public ModelAndView toaddData(Model model) {
-        model.addAttribute("moudels",moduleService.getModules());
+        model.addAttribute("moudels", moduleService.getModules());
         return new ModelAndView("qusetion");
 
     }
+
     @RequestMapping("toaddIpData")
 
     public ModelAndView toaddIpData(Model model) {
-        model.addAttribute("moudels",moduleService.getModules());
+        model.addAttribute("moudels", moduleService.getModules());
         return new ModelAndView("Ask-qusetion");
 
     }
@@ -128,10 +134,10 @@ public class DataController extends BaseController {
 
     @PostMapping("addData")         //  添加数据
     public ModelAndView addData(Data data, MultipartFile multipartFile, int dataLevle) throws IOException {
-        System.out.println("tgdfygdryr"+dataLevle);
+        System.out.println("tgdfygdryr" + dataLevle);
 
         boolean isTrue = dataService.addData(data, multipartFile, dataLevle);
-        if (dataLevle==2) {
+        if (dataLevle == 2) {
             return new ModelAndView("redirect:/user/toaddData");
         } else {
             return new ModelAndView("");
@@ -140,9 +146,9 @@ public class DataController extends BaseController {
 
     @GetMapping("textview/{dataId}")   //进入文章页面
     public ModelAndView textView(Model model, @PathVariable("dataId") long dataId) {
-        Data data =  dataService.dataView(dataId);
-        model.addAttribute("data",data);
-        model.addAttribute("user",userDao.findById(data.getUserId()));
+        Data data = dataService.dataView(dataId);
+        model.addAttribute("data", data);
+        model.addAttribute("user", userDao.findById(data.getUserId()));
 
         if (dataService.jundegeView(dataId)) {
             model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
@@ -166,19 +172,21 @@ public class DataController extends BaseController {
     @PostMapping("searchData")   //搜索
     public ModelAndView searchData(Model model, String dataName) {
         model.addAttribute("datas", dataService.searchData(dataName));
-        if ( dataService.searchData(dataName)==null){
-            model.addAttribute("message","对不起，没有查询到相应的数据");
+        if (dataService.searchData(dataName) == null) {
+            model.addAttribute("message", "对不起，没有查询到相应的数据");
         }
         return new ModelAndView("material");
     }
+
     @RequestMapping("question")  //进入提问问题界面
-    public ModelAndView question(Model model){
-        model.addAttribute("moudels",moduleService.getModules());
+    public ModelAndView question(Model model) {
+        model.addAttribute("moudels", moduleService.getModules());
         return new ModelAndView("qusetion");
     }
+
     @RequestMapping("ipquestion")  //进入手机端提问问题界面
-    public ModelAndView ipquestion(Model model){
-        model.addAttribute("moudels",moduleService.getModules());
+    public ModelAndView ipquestion(Model model) {
+        model.addAttribute("moudels", moduleService.getModules());
         return new ModelAndView("/phone/Ask-questions");
 
     }
@@ -186,10 +194,10 @@ public class DataController extends BaseController {
     //进入sjid搜索页面
     @RequestMapping("/toSearch")
     public ModelAndView toSearch() {
-        return new ModelAndView("phone/search") ;
+        return new ModelAndView("phone/search");
     }
 
-//    @PostMapping("searchDataIP")   //搜索
+    //    @PostMapping("searchDataIP")   //搜索
 //    public ModelAndView searchDataIP(Model model, String dataName) {
 //        model.addAttribute("datas", dataService.searchData(dataName));
 //        return new ModelAndView("phone/search-a");
@@ -200,17 +208,17 @@ public class DataController extends BaseController {
         return new ModelAndView("phone/Find-the-answer");
     }
 
-    @RequestMapping ("viewquestion")
-    public ModelAndView viewQuestion(Model model){
+    @RequestMapping("viewquestion")
+    public ModelAndView viewQuestion(Model model) {
         User user = (User) session.getAttribute("user");
-        model.addAttribute("question",dataService.userGetquestion(user.getUserId()));
-        System.out.println("dfcsfsfsf"+dataService.userGetquestion(user.getUserId()));
+        model.addAttribute("question", dataService.userGetquestion(user.getUserId()));
+        System.out.println("dfcsfsfsf" + dataService.userGetquestion(user.getUserId()));
         return new ModelAndView("myqusetion");
     }
 
 
     @GetMapping("ipviewartical/{dataId}")  //手机端观看文章
-    public ModelAndView ipViewArtical(Model model,@PathVariable("dataId") long dataId){
+    public ModelAndView ipViewArtical(Model model, @PathVariable("dataId") long dataId) {
         model.addAttribute("data", dataService.dataView(dataId));
         System.out.println(dataService.dataView(dataId));
         model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));

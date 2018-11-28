@@ -26,7 +26,7 @@ public class LogUserController extends BaseController {
     //去注册
     @RequestMapping("/toRegistered")
     public ModelAndView toRegister() {
-        return new ModelAndView("register") ;
+        return new ModelAndView("register");
     }
     //2.去注册
     @RequestMapping("/toipRegistered")
