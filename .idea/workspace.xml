@@ -6,308 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d64f5142-49b7-438b-9c28-0f76bac6b0f6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/util/TimeTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/phone/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/wlgzs/huipeasant/base/BaseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/Modify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/Person-center.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/adminIndex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/adminVideoList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/area.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/ask.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/comment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/ds.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/foget.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/ipindex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/iplogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/ipvideo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/question.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/toaddData.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/train.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/videomore.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/120.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/20110804023516996.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/20150930111317480.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/20180622021808156.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/3分钟学会用菠萝种植菠萝-国语高清 (1).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/3分钟学会用菠萝种植菠萝-国语高清.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/58.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/5b376c71a3629.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/63_avatar_middle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/74_avatar_middle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/a90b21218f5276a8!500x500.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/a90b21218f5276a8!500x500.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/login.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/peasant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/rb1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/rb2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg (3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg (5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg (7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg (8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg (9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/yin1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/images/印.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/login.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/peasant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/rb1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/rb2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/t8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (10).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (11).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (12).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (13).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg (9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/yin1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/images/yin2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/g.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/h.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/null.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/peasant.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/peasant1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/peasanter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/timg (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/timg (2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/timg (3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/timg (4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/xm1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/xm2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/xm3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/z.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/Article-push.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/Article.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/Ask-qusetions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/Find-the-answer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/List-of-articles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/Nickname.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/address.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/edit-image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/editkey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/info-recmd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/insect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/ipDvideo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/ipcollection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/ipindex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/ipinfo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/iplogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/ipvideo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipcss/video.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/distpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/ipindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/iplogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/ipperson.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/ipregister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/ipjs/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/Person-center.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/adminEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/adminIndex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/adminUserList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/area.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/distpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/foget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/ipindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/modify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/move.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/personal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/train.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/echarts/echarts.common.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/jq/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/lib/req/require.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/Password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/RetrievePassword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/addVideo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminArticle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditArticle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditInfom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditModel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditQusetion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminEditVideo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminInfom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminModel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminQuestion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminUserList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminVideoList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/ds.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/area.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/ask.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/changePassword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/common/common.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/information.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/material.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/mycollection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/myqusetion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/pcvideo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/personal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Article-push.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Ask-questions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Find-the-answer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/List-of-articles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Nickname.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/Video-rankings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/VideoList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/address.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/info-recmd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/insect.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipDvideo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipEditSex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipcollection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipeditkey.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipinfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/iplogin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/ipregister.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/search-a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/phone/video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/qusetion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/register-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/toindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/train.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/videomore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/wlgzs/huipeasant/HuipeasantApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/dataimg/101/wine.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/dataimg/103/apple.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/dataimg/96/4e80603be17a902e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/dataimg/97/533fde44d682c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/dataimg/98/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/headPortrait/736fd5d5-ac75-4490-a46e-4701f78e56db.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/headPortrait/ee56017b-ea03-4bf0-ae05-9ad3d6fb7455.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/headPortrait/f33dcccc-abf2-4598-8edc-33713a66e542.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/HuipeasantApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/HuipeasantApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/entity/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wlgzs/huipeasant/service/impl/DataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/toaddData.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/toaddData.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/10.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Person-center.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/train.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/train.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/qusetion.html" afterDir="false" />
-    </list>
+    <list default="true" id="d64f5142-49b7-438b-9c28-0f76bac6b0f6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -357,8 +56,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="29">
+              <caret line="63" column="54" lean-forward="true" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -749,7 +448,7 @@
       <workItem from="1543017690259" duration="9534000" />
       <workItem from="1543236581893" duration="3457000" />
       <workItem from="1543291913202" duration="8526000" />
-      <workItem from="1543372076428" duration="43000" />
+      <workItem from="1543372076428" duration="716000" />
     </task>
     <servers />
   </component>
@@ -759,7 +458,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341076000" />
+    <option name="totallyTimeSpent" value="341749000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -774,7 +473,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50160944" side_tool="true" visible="true" weight="0.12837838" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5005365" side_tool="true" weight="0.5045045" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
@@ -785,14 +484,15 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49946353" weight="0.41666666" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839056" weight="0.12837838" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839056" weight="0.49324325" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32995495" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22371244" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -802,7 +502,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Problems" order="14" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.5056306" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
@@ -1174,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="29">
+          <caret line="63" column="54" lean-forward="true" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1201,7 +900,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1256,7 +954,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
