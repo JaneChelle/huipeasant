@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>慧农-农技培训</title>
+    <link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/train.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+</head>
+<body>
+<div th:include="common/common :: headere"></div>
+<div class="container">
+    <div class="first-section">
+        <h3 th:text="${video.videoTitle}"></h3>
+        <hr/>
+        <img th:src="'/Path/'+${video.videoCover}"/>
+        <div class="course-info">
+            <ul>
+                <li>
+                    所属类别: 水果
+                    <span></span>
+                </li>
+                <li>
+                    课程类型: 种植
+                    <span></span>
+                </li>
+                <li>
+                    课程状态:完结
+                    <span></span>
+                </li>
+                <li>
+                    开始时间:2018-1-3
+                    <span></span>
+                </li>
+            </ul>
+            <input type="hidden" name="videoId" th:value="videoId">
+            <div class="course-other">
+						<span>
+							<b>13</b>学员加入学习
+						</span>
+                <a th:href="@{/VideoController/toPcvideo(videoAddress=${video.videoAddress})}">立即学习</a>
+                <a th:href="@{/CollectionController/deleteCollection(videoId=${video.videoId})}" th:if="${video.code} == 1" class="a-collection">取消收藏</a>
+                <a th:href="@{/CollectionController/addCollectionVideo(videoId=${video.videoId})}" th:if="${video.code} == 0" class="a-collection">收藏</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
+        <h3>讲师提示</h3>
+        <hr/>
+        <div class="mark-l" th:text="${video.authorSuggests}">
+            <i class="iconfont">&#xe60e;</i>
+        </div>
+        <div class="prompt">
+
+        </div>
+        <div class="mark-r">
+            <i class="iconfont" style="transform: rotateX(90deg);">&#xe60e;</i>
+        </div>
+    </div>
+    <div class="third-section">
+        <h3>课程简介</h3>
+        <hr/>
+        <div class="course" th:text="${video.videoIntroduction}">
+
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<footer>
+    <div class="divFt">
+        <dl>
+            <dt>首页</dt>
+            <dt>关于我们</dt>
+            <dt>加入我们</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dt>新浪微博</dt>
+            <dt>服务支持</dt>
+            <dt>常见问题</dt>
+        </dl>
+        <dl>
+            <dt>
+                <img th:src="@{/img/code.png}"/>
+            </dt>
+        </dl>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/train.js}"></script>
+</html>

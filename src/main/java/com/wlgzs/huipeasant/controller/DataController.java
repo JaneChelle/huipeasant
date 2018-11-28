@@ -114,7 +114,6 @@ public class DataController extends BaseController {
         return new ModelAndView("phone/List-of-articles");
     }
 
-
     @RequestMapping("toaddData")
 
     public ModelAndView toaddData(Model model) {
@@ -146,10 +145,10 @@ public class DataController extends BaseController {
 
     @GetMapping("textview/{dataId}")   //进入文章页面
     public ModelAndView textView(Model model, @PathVariable("dataId") long dataId) {
-        Data data = dataService.dataView(dataId);
-        model.addAttribute("data", data);
-        model.addAttribute("user", userDao.findById(data.getUserId()));
-
+        Data data =  dataService.dataView(dataId);
+        System.out.println(data.toString());
+        model.addAttribute("data",data);
+        model.addAttribute("user",userDao.findById(data.getUserId()));
         if (dataService.jundegeView(dataId)) {
             model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
             model.addAttribute("question", dataService.relevantIssues());
@@ -224,7 +223,5 @@ public class DataController extends BaseController {
         model.addAttribute("paragraphs", dataService.paragraphList(dataService.textView(dataId).getContents()));
         return new ModelAndView("phone/Article");
     }
-
-
 }
 

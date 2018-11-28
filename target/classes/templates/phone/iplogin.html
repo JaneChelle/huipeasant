@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" type="img/x-icon" th:href="@{/img/favicon.ico}"/>
+	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/ipcss/iplogin.css}" />
+</head>
+<body>
+    <!--<div id="secion">-->
+    	<div class="header">
+	    	<a th:href="@{/user/toipindex}">
+	    		<i class="fa fa-chevron-left"></i>
+	    	</a>
+	    	<b><a th:href="@{/LogUserController/toIpRegistered}">注册</a></b>
+	    </div>
+	    <div class="first_section">
+			<img th:src="@{/img/peasanter.png}"/>
+	    </div>
+	    <div class="second_section">
+			<form th:action="@{/LogUserController/Iplogin}" th:method="post" onsubmit="return login()">
+				<div class="login">
+					<span>手机号</span>
+					<input type="text" name="phoneNumber" id="user" value="" placeholder="手机号" onchange="users();" required="required"/>
+					<p class="user-wain"></p>
+				</div>
+				<div class="login">
+					<span>密码</span>
+					<input type="password" name="password" id="password" value="" placeholder="请输入密码" onchange="passWord();" required="required"/>
+					<span class="ico" id="ico" title="显示密码" onclick="disPword()">
+	    			<i class="iconfont" id="cols_1">&#xe7a6;</i>
+	    		</span>
+					<p class="pword-wain"></p>
+				</div>
+				<div class="login">
+					<input type="submit" class="login-in" th:value="登录" readonly="readonly">
+				</div>
+			</form>
+			<div class="login-b">
+				<b>温馨提示:若登录密码填写错误 需重新需重新填写您的手机号.</b>
+			</div>
+	    </div>
+    <!--</div>-->
+</body>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript" th:src="@{/ipjs/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/ipjs/iplogin.js}" ></script>
+</html>
